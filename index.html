@@ -315,22 +315,25 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
       </div>
 
       <!-- SUB: BALANCE / AR AGING -->
+      
+      <!-- SUB: BALANCE / AR AGING -->
       <div id="sb-balance-apr" hidden>
+        
         <div class="kpi-grid" style="margin-bottom:20px">
           <div class="kpi blue">
-            <div class="kpi-lbl">Balance Total &mdash; Abr 30, 2026</div>
-            <div class="kpi-val">$2,652,953</div>
-            <div class="kpi-foot"><span class="badge">10,024 registros con balance positivo</span></div>
+            <div class="kpi-lbl">Balance Neto &mdash; 30 de abril 2026</div>
+            <div class="kpi-val">$376,263</div>
+            <div class="kpi-foot"><span class="badge">Balance neto (positivos + cr&eacute;ditos)</span></div>
           </div>
           <div class="kpi amber">
             <div class="kpi-lbl">Balance Cr&iacute;tico (+90 d&iacute;as)</div>
-            <div class="kpi-val">$520,757</div>
-            <div class="kpi-foot"><span class="badge dn">19.6% del total</span></div>
+            <div class="kpi-val">$152,683</div>
+            <div class="kpi-foot"><span class="badge dn">40.6% del total</span></div>
           </div>
           <div class="kpi green">
             <div class="kpi-lbl">Balance Corriente (0&ndash;30 d&iacute;as)</div>
-            <div class="kpi-val">$840,750</div>
-            <div class="kpi-foot"><span class="badge up">31.7% del total</span></div>
+            <div class="kpi-val">$156,635</div>
+            <div class="kpi-foot"><span class="badge up">41.6% del total</span></div>
           </div>
         </div>
 
@@ -339,165 +342,103 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
           <!-- Bars -->
           <div class="table-wrap" style="padding:18px 20px">
-            <div style="margin-bottom:16px;font-size:12px;color:var(--t3)">Balance por tramo &mdash; % del total</div>
+            <div style="margin-bottom:16px;font-size:12px;color:var(--t3)">Balance neto por tramo &mdash; % del total</div>
             <div class="pl-bars" style="gap:14px">
-
+              
               <div>
                 <div style="display:flex;justify-content:space-between;margin-bottom:4px">
-                  <span style="font-size:13px;color:var(--t1);font-weight:600">0&ndash;30 d&iacute;as</span>
-                  <span style="font-size:12px;color:var(--t3)">Abr 1&ndash;30, 2026</span>
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">0-30 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Abr 2026</span>
                 </div>
-                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:31.7%;background:#3DAA82"></div></div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:41.6%;background:#3DAA82"></div></div>
                 <div style="display:flex;justify-content:space-between;margin-top:3px">
-                  <span style="font-size:12px;font-weight:600" id="ar-b-030-apr-apr">$840,750</span>
-                  <span style="font-size:12px;color:var(--t3)">31.7%</span>
+                  <span style="font-size:12px;font-weight:600;color:#3DAA82">$156,635</span>
+                  <span style="font-size:12px;color:var(--t3)">41.6% &mdash; 156,635 registros</span>
                 </div>
               </div>
-
               <div>
                 <div style="display:flex;justify-content:space-between;margin-bottom:4px">
-                  <span style="font-size:13px;color:var(--t1);font-weight:600">30&ndash;60 d&iacute;as</span>
-                  <span style="font-size:12px;color:var(--t3)">Mar 2 &ndash; Abr 1, 2026</span>
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">30-60 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Mar 2026</span>
                 </div>
-                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:23.5%;background:#E86428"></div></div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:42.6%;background:#3DAA82"></div></div>
                 <div style="display:flex;justify-content:space-between;margin-top:3px">
-                  <span style="font-size:12px;font-weight:600" id="ar-b-3060-apr-apr">$622,537</span>
-                  <span style="font-size:12px;color:var(--t3)">23.5%</span>
+                  <span style="font-size:12px;font-weight:600;color:#3DAA82">$160,462</span>
+                  <span style="font-size:12px;color:var(--t3)">42.6% &mdash; 160,462 registros</span>
                 </div>
               </div>
-
               <div>
                 <div style="display:flex;justify-content:space-between;margin-bottom:4px">
-                  <span style="font-size:13px;color:var(--t1);font-weight:600">60&ndash;90 d&iacute;as</span>
-                  <span style="font-size:12px;color:var(--t3)">Ene&ndash;Feb 2026</span>
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">60-90 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Ene-Feb 2026</span>
                 </div>
-                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:25.2%;background:#E86428"></div></div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:0.0%;background:#5a7a92"></div></div>
                 <div style="display:flex;justify-content:space-between;margin-top:3px">
-                  <span style="font-size:12px;font-weight:600" id="ar-b-6090-apr-apr">$668,909</span>
-                  <span style="font-size:12px;color:var(--t3)">25.2%</span>
+                  <span style="font-size:12px;font-weight:600;color:#5a7a92">-$93,517 <span style="font-size:10px;color:var(--t3)">(cr&eacute;dito neto)</span></span>
+                  <span style="font-size:12px;color:var(--t3)">-24.9% &mdash; -93,517 registros</span>
                 </div>
               </div>
-
               <div>
                 <div style="display:flex;justify-content:space-between;margin-bottom:4px">
-                  <span style="font-size:13px;color:var(--t1);font-weight:600">90&ndash;120 d&iacute;as</span>
-                  <span style="font-size:12px;color:var(--t3)">(sin datos)</span>
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">90-120 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">&mdash;</span>
                 </div>
-                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:0.0%;background:#ccc"></div></div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:0.0%;background:#3DAA82"></div></div>
                 <div style="display:flex;justify-content:space-between;margin-top:3px">
-                  <span style="font-size:12px;font-weight:600" id="ar-b-9120-apr-apr">$0</span>
-                  <span style="font-size:12px;color:var(--t3)">0.0%</span>
+                  <span style="font-size:12px;font-weight:600;color:#3DAA82">$0</span>
+                  <span style="font-size:12px;color:var(--t3)">0.0% &mdash; 0 registros</span>
                 </div>
               </div>
-
               <div>
                 <div style="display:flex;justify-content:space-between;margin-bottom:4px">
-                  <span style="font-size:13px;color:var(--t1);font-weight:600">120&ndash;180 d&iacute;as</span>
-                  <span style="font-size:12px;color:var(--t3)">Nov&ndash;Dic 2025</span>
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">120-180 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Nov-Dic 2025</span>
                 </div>
-                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:10.9%;background:#c0392b"></div></div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:42.2%;background:#3DAA82"></div></div>
                 <div style="display:flex;justify-content:space-between;margin-top:3px">
-                  <span style="font-size:12px;font-weight:600" id="ar-b-120180-apr-apr">$289,114</span>
-                  <span style="font-size:12px;color:var(--t3)">10.9%</span>
+                  <span style="font-size:12px;font-weight:600;color:#3DAA82">$158,930</span>
+                  <span style="font-size:12px;color:var(--t3)">42.2% &mdash; 158,930 registros</span>
                 </div>
               </div>
-
               <div>
                 <div style="display:flex;justify-content:space-between;margin-bottom:4px">
                   <span style="font-size:13px;color:var(--t1);font-weight:600">+180 d&iacute;as</span>
                   <span style="font-size:12px;color:var(--t3)">Pre-Nov 2025</span>
                 </div>
-                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:8.7%;background:#c0392b"></div></div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:0.0%;background:#5a7a92"></div></div>
                 <div style="display:flex;justify-content:space-between;margin-top:3px">
-                  <span style="font-size:12px;font-weight:600" id="ar-b-180p-apr-apr">$231,643</span>
-                  <span style="font-size:12px;color:var(--t3)">8.7%</span>
+                  <span style="font-size:12px;font-weight:600;color:#5a7a92">-$6,247 <span style="font-size:10px;color:var(--t3)">(cr&eacute;dito neto)</span></span>
+                  <span style="font-size:12px;color:var(--t3)">-1.7% &mdash; -6,247 registros</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Table -->
+          <!-- Payer table -->
           <div class="table-wrap" style="padding:16px 20px">
-            <div class="div-row" style="margin-bottom:10px"><span class="div-lbl">AR por Aseguradora</span><div class="div-rule"></div></div>
+            <div class="div-row" style="margin-bottom:10px"><span class="div-lbl">AR Neto por Aseguradora</span><div class="div-rule"></div></div>
             <div style="overflow-x:auto"><table>
               <thead>
-                <tr><th>Payer</th><th class="cur">Total</th><th>0–30d</th><th>30–60d</th><th>60–90d</th><th>90–120d</th><th>120–180d</th><th>+180d</th><th>Cobro Esp.</th></tr>
+                <tr><th>Payer</th><th class="cur">Neto</th><th>0-30d</th><th>30-60d</th><th>60-90d</th><th>90-120d</th><th>120-180d</th><th>+180d</th><th>Cobro Esp.</th></tr>
               </thead>
               <tbody>
-                <tr class="rg"><td>LEON MEDICAL CENTER</td><td class="cur">$356,938</td><td>$338,908</td><td>$2,038</td><td>$2,066</td><td>$0</td><td>$0</td><td>$13,926</td><td style="color:var(--green)">$78,526</td></tr>
-<tr class="rg"><td>MEDICARE-PART B</td><td class="cur">$316,878</td><td>$73,344</td><td>$91,138</td><td>$70,334</td><td>$0</td><td>$15,488</td><td>$66,574</td><td style="color:var(--green)">$69,713</td></tr>
-<tr class="rg"><td>BCBS OF FLORIDA</td><td class="cur">$233,130</td><td>$72,105</td><td>$34,561</td><td>$52,935</td><td>$0</td><td>$63,106</td><td>$10,423</td><td style="color:var(--green)">$51,289</td></tr>
-<tr class="rg"><td>Patient</td><td class="cur">$203,926</td><td>$44,072</td><td>$63,933</td><td>$67,852</td><td>$0</td><td>$15,016</td><td>$13,053</td><td style="color:var(--green)">$44,864</td></tr>
-<tr class="rg"><td>Solis Health Plans</td><td class="cur">$174,892</td><td>$25,005</td><td>$116,706</td><td>$23,674</td><td>$0</td><td>$8,111</td><td>$1,396</td><td style="color:var(--green)">$38,476</td></tr>
-<tr class="rg"><td>OSCAR HEALTH INSURANCE</td><td class="cur">$163,358</td><td>$56,103</td><td>$50,254</td><td>$36,213</td><td>$0</td><td>$9,113</td><td>$11,675</td><td style="color:var(--green)">$35,939</td></tr>
-<tr class="rg"><td>UNITED HEALTH CARE</td><td class="cur">$126,073</td><td>$12,651</td><td>$13,361</td><td>$67,892</td><td>$0</td><td>$25,454</td><td>$6,715</td><td style="color:var(--green)">$27,736</td></tr>
-<tr class="rg"><td>PREFERRED CARE PARTNERS DUAL</td><td class="cur">$95,909</td><td>$30,578</td><td>$38,454</td><td>$21,373</td><td>$0</td><td>$4,749</td><td>$755</td><td style="color:var(--green)">$21,100</td></tr>
-<tr class="rg"><td>PREFERRED CARE PARTNERS</td><td class="cur">$99,531</td><td>$3,649</td><td>$34,219</td><td>$40,706</td><td>$0</td><td>$0</td><td>$20,957</td><td style="color:var(--green)">$21,897</td></tr>
+                <tr class="rg"><td>MEDICARE-PART B</td><td class="cur">$215,325</td><td>$25,838</td><td>$29,806</td><td>$11,895</td><td>$0</td><td>$39,880</td><td>$107,906</td><td style="color:var(--green)">$47,372</td></tr>
+<tr class="rg"><td>PREFERRED CARE PARTNERS</td><td class="cur">$105,672</td><td>$3,424</td><td>$3,178</td><td>$39,218</td><td>$0</td><td>$6,717</td><td>$53,135</td><td style="color:var(--green)">$23,248</td></tr>
+<tr class="rg"><td>MEDSOLUTIONS</td><td class="cur">$100,282</td><td>$5,750</td><td>$9,820</td><td>-$9,285</td><td>$0</td><td>$87,919</td><td>$6,077</td><td style="color:var(--green)">$22,062</td></tr>
+<tr class="rg"><td>SIMPLY an Anthem Company MCR  MCD</td><td class="cur">$88,097</td><td>$13,483</td><td>$2,748</td><td>$2,050</td><td>$0</td><td>$56,302</td><td>$13,515</td><td style="color:var(--green)">$19,381</td></tr>
+<tr class="rg"><td>PREFERRED CARE NETWORK</td><td class="cur">$72,931</td><td>$12,137</td><td>$9,520</td><td>$18,026</td><td>$0</td><td>$22,829</td><td>$10,418</td><td style="color:var(--green)">$16,045</td></tr>
+<tr class="rg"><td>United Health Care</td><td class="cur">$70,293</td><td>-$1,125</td><td>-$5,690</td><td>$54,397</td><td>$0</td><td>$26,074</td><td>-$3,363</td><td style="color:var(--green)">$15,464</td></tr>
+<tr class="rg"><td>DOCTORS HEALTHCARE PLANS INC.</td><td class="cur">$57,376</td><td>$5,219</td><td>$41,618</td><td>-$1,841</td><td>$0</td><td>$7,669</td><td>$4,711</td><td style="color:var(--green)">$12,623</td></tr>
+<tr class="rg"><td>WELLCARE</td><td class="cur">$56,671</td><td>$1,600</td><td>$3,952</td><td>$5,033</td><td>$0</td><td>$44,153</td><td>$1,934</td><td style="color:var(--green)">$12,468</td></tr>
+<tr class="rg"><td>CorVel Corporation</td><td class="cur">$51,849</td><td>$20,316</td><td>$1,350</td><td>$19,350</td><td>$0</td><td>$0</td><td>$10,833</td><td style="color:var(--green)">$11,407</td></tr>
+
               </tbody>
             </table></div>
           </div>
         </div>
 
-        <!-- Expandable payer-by-bucket detail -->
-        <div class="div-row" style="margin-top:16px"><span class="div-lbl">Detalle por Tramo</span><div class="div-rule"></div></div>
-        <div style="overflow-x:auto"><table>
-          <thead>
-            <tr><th>Payer</th><th class="cur">Total</th><th>0–30d</th><th>30–60d</th><th>60–90d</th><th>90–120d</th><th>120–180d</th><th>+180d</th><th>Cobro Esp.</th></tr>
-          </thead>
-          <tbody>
-            <tr class="pl-toggle-row" onclick="plToggle('apr030')"><td colspan="9" style="font-size:11px;color:var(--t3);padding:4px 8px;cursor:pointer"><span id="ic-apr030" style="margin-right:6px">&#9654;</span>0–30 días &mdash; $840,750</td></tr>
-<tr class="pl-detail rg" data-group="apr030" hidden><td style="padding-left:20px;font-size:12px">LEON MEDICAL CENTER</td><td class="cur">$356,938</td><td>$338,908</td><td>$2,038</td><td>$2,066</td><td>$0</td><td>$0</td><td>$13,926</td><td style="color:var(--green)">$74,560</td></tr>
-<tr class="pl-detail rg" data-group="apr030" hidden><td style="padding-left:20px;font-size:12px">MEDICARE-PART B</td><td class="cur">$316,878</td><td>$73,344</td><td>$91,138</td><td>$70,334</td><td>$0</td><td>$15,488</td><td>$66,574</td><td style="color:var(--green)">$16,136</td></tr>
-<tr class="pl-detail rg" data-group="apr030" hidden><td style="padding-left:20px;font-size:12px">BCBS OF FLORIDA</td><td class="cur">$233,130</td><td>$72,105</td><td>$34,561</td><td>$52,935</td><td>$0</td><td>$63,106</td><td>$10,423</td><td style="color:var(--green)">$15,863</td></tr>
-<tr class="pl-detail rg" data-group="apr030" hidden><td style="padding-left:20px;font-size:12px">Patient</td><td class="cur">$203,926</td><td>$44,072</td><td>$63,933</td><td>$67,852</td><td>$0</td><td>$15,016</td><td>$13,053</td><td style="color:var(--green)">$9,696</td></tr>
-<tr class="pl-detail rg" data-group="apr030" hidden><td style="padding-left:20px;font-size:12px">Solis Health Plans</td><td class="cur">$174,892</td><td>$25,005</td><td>$116,706</td><td>$23,674</td><td>$0</td><td>$8,111</td><td>$1,396</td><td style="color:var(--green)">$5,501</td></tr>
-<tr class="pl-detail rg" data-group="apr030" hidden><td style="padding-left:20px;font-size:12px">OSCAR HEALTH INSURANCE</td><td class="cur">$163,358</td><td>$56,103</td><td>$50,254</td><td>$36,213</td><td>$0</td><td>$9,113</td><td>$11,675</td><td style="color:var(--green)">$12,343</td></tr>
-<tr class="pl-detail rg" data-group="apr030" hidden><td style="padding-left:20px;font-size:12px">UNITED HEALTH CARE</td><td class="cur">$126,073</td><td>$12,651</td><td>$13,361</td><td>$67,892</td><td>$0</td><td>$25,454</td><td>$6,715</td><td style="color:var(--green)">$2,783</td></tr>
-<tr class="pl-detail rg" data-group="apr030" hidden><td style="padding-left:20px;font-size:12px">PREFERRED CARE PARTNERS DUAL</td><td class="cur">$95,909</td><td>$30,578</td><td>$38,454</td><td>$21,373</td><td>$0</td><td>$4,749</td><td>$755</td><td style="color:var(--green)">$6,727</td></tr>
-<tr class="pl-detail rg" data-group="apr030" hidden><td style="padding-left:20px;font-size:12px">PREFERRED CARE PARTNERS</td><td class="cur">$99,531</td><td>$3,649</td><td>$34,219</td><td>$40,706</td><td>$0</td><td>$0</td><td>$20,957</td><td style="color:var(--green)">$803</td></tr>
-            <tr class="pl-toggle-row" onclick="plToggle('apr3060')"><td colspan="9" style="font-size:11px;color:var(--t3);padding:4px 8px;cursor:pointer"><span id="ic-apr3060" style="margin-right:6px">&#9654;</span>30–60 días &mdash; $622,537</td></tr>
-<tr class="pl-detail rg" data-group="apr3060" hidden><td style="padding-left:20px;font-size:12px">LEON MEDICAL CENTER</td><td class="cur">$356,938</td><td>$338,908</td><td>$2,038</td><td>$2,066</td><td>$0</td><td>$0</td><td>$13,926</td><td style="color:var(--green)">$448</td></tr>
-<tr class="pl-detail rg" data-group="apr3060" hidden><td style="padding-left:20px;font-size:12px">MEDICARE-PART B</td><td class="cur">$316,878</td><td>$73,344</td><td>$91,138</td><td>$70,334</td><td>$0</td><td>$15,488</td><td>$66,574</td><td style="color:var(--green)">$20,050</td></tr>
-<tr class="pl-detail rg" data-group="apr3060" hidden><td style="padding-left:20px;font-size:12px">BCBS OF FLORIDA</td><td class="cur">$233,130</td><td>$72,105</td><td>$34,561</td><td>$52,935</td><td>$0</td><td>$63,106</td><td>$10,423</td><td style="color:var(--green)">$7,603</td></tr>
-<tr class="pl-detail rg" data-group="apr3060" hidden><td style="padding-left:20px;font-size:12px">Patient</td><td class="cur">$203,926</td><td>$44,072</td><td>$63,933</td><td>$67,852</td><td>$0</td><td>$15,016</td><td>$13,053</td><td style="color:var(--green)">$14,065</td></tr>
-<tr class="pl-detail rg" data-group="apr3060" hidden><td style="padding-left:20px;font-size:12px">Solis Health Plans</td><td class="cur">$174,892</td><td>$25,005</td><td>$116,706</td><td>$23,674</td><td>$0</td><td>$8,111</td><td>$1,396</td><td style="color:var(--green)">$25,675</td></tr>
-<tr class="pl-detail rg" data-group="apr3060" hidden><td style="padding-left:20px;font-size:12px">OSCAR HEALTH INSURANCE</td><td class="cur">$163,358</td><td>$56,103</td><td>$50,254</td><td>$36,213</td><td>$0</td><td>$9,113</td><td>$11,675</td><td style="color:var(--green)">$11,056</td></tr>
-<tr class="pl-detail rg" data-group="apr3060" hidden><td style="padding-left:20px;font-size:12px">UNITED HEALTH CARE</td><td class="cur">$126,073</td><td>$12,651</td><td>$13,361</td><td>$67,892</td><td>$0</td><td>$25,454</td><td>$6,715</td><td style="color:var(--green)">$2,939</td></tr>
-<tr class="pl-detail rg" data-group="apr3060" hidden><td style="padding-left:20px;font-size:12px">PREFERRED CARE PARTNERS DUAL</td><td class="cur">$95,909</td><td>$30,578</td><td>$38,454</td><td>$21,373</td><td>$0</td><td>$4,749</td><td>$755</td><td style="color:var(--green)">$8,460</td></tr>
-<tr class="pl-detail rg" data-group="apr3060" hidden><td style="padding-left:20px;font-size:12px">PREFERRED CARE PARTNERS</td><td class="cur">$99,531</td><td>$3,649</td><td>$34,219</td><td>$40,706</td><td>$0</td><td>$0</td><td>$20,957</td><td style="color:var(--green)">$7,528</td></tr>
-            <tr class="pl-toggle-row" onclick="plToggle('apr6090')"><td colspan="9" style="font-size:11px;color:var(--t3);padding:4px 8px;cursor:pointer"><span id="ic-apr6090" style="margin-right:6px">&#9654;</span>60–90 días &mdash; $668,909</td></tr>
-<tr class="pl-detail rg" data-group="apr6090" hidden><td style="padding-left:20px;font-size:12px">LEON MEDICAL CENTER</td><td class="cur">$356,938</td><td>$338,908</td><td>$2,038</td><td>$2,066</td><td>$0</td><td>$0</td><td>$13,926</td><td style="color:var(--green)">$455</td></tr>
-<tr class="pl-detail rg" data-group="apr6090" hidden><td style="padding-left:20px;font-size:12px">MEDICARE-PART B</td><td class="cur">$316,878</td><td>$73,344</td><td>$91,138</td><td>$70,334</td><td>$0</td><td>$15,488</td><td>$66,574</td><td style="color:var(--green)">$15,473</td></tr>
-<tr class="pl-detail rg" data-group="apr6090" hidden><td style="padding-left:20px;font-size:12px">BCBS OF FLORIDA</td><td class="cur">$233,130</td><td>$72,105</td><td>$34,561</td><td>$52,935</td><td>$0</td><td>$63,106</td><td>$10,423</td><td style="color:var(--green)">$11,646</td></tr>
-<tr class="pl-detail rg" data-group="apr6090" hidden><td style="padding-left:20px;font-size:12px">Patient</td><td class="cur">$203,926</td><td>$44,072</td><td>$63,933</td><td>$67,852</td><td>$0</td><td>$15,016</td><td>$13,053</td><td style="color:var(--green)">$14,927</td></tr>
-<tr class="pl-detail rg" data-group="apr6090" hidden><td style="padding-left:20px;font-size:12px">Solis Health Plans</td><td class="cur">$174,892</td><td>$25,005</td><td>$116,706</td><td>$23,674</td><td>$0</td><td>$8,111</td><td>$1,396</td><td style="color:var(--green)">$5,208</td></tr>
-<tr class="pl-detail rg" data-group="apr6090" hidden><td style="padding-left:20px;font-size:12px">OSCAR HEALTH INSURANCE</td><td class="cur">$163,358</td><td>$56,103</td><td>$50,254</td><td>$36,213</td><td>$0</td><td>$9,113</td><td>$11,675</td><td style="color:var(--green)">$7,967</td></tr>
-<tr class="pl-detail rg" data-group="apr6090" hidden><td style="padding-left:20px;font-size:12px">UNITED HEALTH CARE</td><td class="cur">$126,073</td><td>$12,651</td><td>$13,361</td><td>$67,892</td><td>$0</td><td>$25,454</td><td>$6,715</td><td style="color:var(--green)">$14,936</td></tr>
-<tr class="pl-detail rg" data-group="apr6090" hidden><td style="padding-left:20px;font-size:12px">PREFERRED CARE PARTNERS DUAL</td><td class="cur">$95,909</td><td>$30,578</td><td>$38,454</td><td>$21,373</td><td>$0</td><td>$4,749</td><td>$755</td><td style="color:var(--green)">$4,702</td></tr>
-<tr class="pl-detail rg" data-group="apr6090" hidden><td style="padding-left:20px;font-size:12px">PREFERRED CARE PARTNERS</td><td class="cur">$99,531</td><td>$3,649</td><td>$34,219</td><td>$40,706</td><td>$0</td><td>$0</td><td>$20,957</td><td style="color:var(--green)">$8,955</td></tr>
-            <tr class="pl-toggle-row" onclick="plToggle('apr9120')"><td colspan="9" style="font-size:11px;color:var(--t3);padding:4px 8px;cursor:pointer"><span id="ic-apr9120" style="margin-right:6px">&#9654;</span>90–120 días &mdash; $0</td></tr>
-            <tr class="pl-toggle-row" onclick="plToggle('apr12180')"><td colspan="9" style="font-size:11px;color:var(--t3);padding:4px 8px;cursor:pointer"><span id="ic-apr12180" style="margin-right:6px">&#9654;</span>120–180 días &mdash; $289,114</td></tr>
-<tr class="pl-detail rg" data-group="apr12180" hidden><td style="padding-left:20px;font-size:12px">MEDICARE-PART B</td><td class="cur">$316,878</td><td>$73,344</td><td>$91,138</td><td>$70,334</td><td>$0</td><td>$15,488</td><td>$66,574</td><td style="color:var(--green)">$3,407</td></tr>
-<tr class="pl-detail rg" data-group="apr12180" hidden><td style="padding-left:20px;font-size:12px">BCBS OF FLORIDA</td><td class="cur">$233,130</td><td>$72,105</td><td>$34,561</td><td>$52,935</td><td>$0</td><td>$63,106</td><td>$10,423</td><td style="color:var(--green)">$13,883</td></tr>
-<tr class="pl-detail rg" data-group="apr12180" hidden><td style="padding-left:20px;font-size:12px">Patient</td><td class="cur">$203,926</td><td>$44,072</td><td>$63,933</td><td>$67,852</td><td>$0</td><td>$15,016</td><td>$13,053</td><td style="color:var(--green)">$3,304</td></tr>
-<tr class="pl-detail rg" data-group="apr12180" hidden><td style="padding-left:20px;font-size:12px">Solis Health Plans</td><td class="cur">$174,892</td><td>$25,005</td><td>$116,706</td><td>$23,674</td><td>$0</td><td>$8,111</td><td>$1,396</td><td style="color:var(--green)">$1,784</td></tr>
-<tr class="pl-detail rg" data-group="apr12180" hidden><td style="padding-left:20px;font-size:12px">OSCAR HEALTH INSURANCE</td><td class="cur">$163,358</td><td>$56,103</td><td>$50,254</td><td>$36,213</td><td>$0</td><td>$9,113</td><td>$11,675</td><td style="color:var(--green)">$2,005</td></tr>
-<tr class="pl-detail rg" data-group="apr12180" hidden><td style="padding-left:20px;font-size:12px">UNITED HEALTH CARE</td><td class="cur">$126,073</td><td>$12,651</td><td>$13,361</td><td>$67,892</td><td>$0</td><td>$25,454</td><td>$6,715</td><td style="color:var(--green)">$5,600</td></tr>
-<tr class="pl-detail rg" data-group="apr12180" hidden><td style="padding-left:20px;font-size:12px">PREFERRED CARE PARTNERS DUAL</td><td class="cur">$95,909</td><td>$30,578</td><td>$38,454</td><td>$21,373</td><td>$0</td><td>$4,749</td><td>$755</td><td style="color:var(--green)">$1,045</td></tr>
-            <tr class="pl-toggle-row" onclick="plToggle('apr180p')"><td colspan="9" style="font-size:11px;color:var(--t3);padding:4px 8px;cursor:pointer"><span id="ic-apr180p" style="margin-right:6px">&#9654;</span>+180 días &mdash; $231,643</td></tr>
-<tr class="pl-detail rg" data-group="apr180p" hidden><td style="padding-left:20px;font-size:12px">LEON MEDICAL CENTER</td><td class="cur">$356,938</td><td>$338,908</td><td>$2,038</td><td>$2,066</td><td>$0</td><td>$0</td><td>$13,926</td><td style="color:var(--green)">$3,064</td></tr>
-<tr class="pl-detail rg" data-group="apr180p" hidden><td style="padding-left:20px;font-size:12px">MEDICARE-PART B</td><td class="cur">$316,878</td><td>$73,344</td><td>$91,138</td><td>$70,334</td><td>$0</td><td>$15,488</td><td>$66,574</td><td style="color:var(--green)">$14,646</td></tr>
-<tr class="pl-detail rg" data-group="apr180p" hidden><td style="padding-left:20px;font-size:12px">BCBS OF FLORIDA</td><td class="cur">$233,130</td><td>$72,105</td><td>$34,561</td><td>$52,935</td><td>$0</td><td>$63,106</td><td>$10,423</td><td style="color:var(--green)">$2,293</td></tr>
-<tr class="pl-detail rg" data-group="apr180p" hidden><td style="padding-left:20px;font-size:12px">Patient</td><td class="cur">$203,926</td><td>$44,072</td><td>$63,933</td><td>$67,852</td><td>$0</td><td>$15,016</td><td>$13,053</td><td style="color:var(--green)">$2,872</td></tr>
-<tr class="pl-detail rg" data-group="apr180p" hidden><td style="padding-left:20px;font-size:12px">Solis Health Plans</td><td class="cur">$174,892</td><td>$25,005</td><td>$116,706</td><td>$23,674</td><td>$0</td><td>$8,111</td><td>$1,396</td><td style="color:var(--green)">$307</td></tr>
-<tr class="pl-detail rg" data-group="apr180p" hidden><td style="padding-left:20px;font-size:12px">OSCAR HEALTH INSURANCE</td><td class="cur">$163,358</td><td>$56,103</td><td>$50,254</td><td>$36,213</td><td>$0</td><td>$9,113</td><td>$11,675</td><td style="color:var(--green)">$2,568</td></tr>
-<tr class="pl-detail rg" data-group="apr180p" hidden><td style="padding-left:20px;font-size:12px">UNITED HEALTH CARE</td><td class="cur">$126,073</td><td>$12,651</td><td>$13,361</td><td>$67,892</td><td>$0</td><td>$25,454</td><td>$6,715</td><td style="color:var(--green)">$1,477</td></tr>
-<tr class="pl-detail rg" data-group="apr180p" hidden><td style="padding-left:20px;font-size:12px">PREFERRED CARE PARTNERS DUAL</td><td class="cur">$95,909</td><td>$30,578</td><td>$38,454</td><td>$21,373</td><td>$0</td><td>$4,749</td><td>$755</td><td style="color:var(--green)">$166</td></tr>
-<tr class="pl-detail rg" data-group="apr180p" hidden><td style="padding-left:20px;font-size:12px">PREFERRED CARE PARTNERS</td><td class="cur">$99,531</td><td>$3,649</td><td>$34,219</td><td>$40,706</td><td>$0</td><td>$0</td><td>$20,957</td><td style="color:var(--green)">$4,611</td></tr>
-          </tbody>
-        </table></div>
-        <div style="margin-top:8px;font-size:11px;color:var(--t3)">
-          Nota: balances reflejan estado al 26 jun 2026 (archivo fuente Pivot_MTDYTDCMS20260626). El bucket 90&ndash;120 est&aacute; vac&iacute;o porque ning&uacute;n mes de servicio cae en ese rango desde la ref. Abr 30.
+        <div style="margin-top:10px;padding:8px 12px;background:rgba(40,153,170,.06);border-radius:4px;border-left:3px solid var(--blue);font-size:12px;color:var(--t2)">
+          <strong>Metodolog&iacute;a:</strong> Balance neto = suma de todos los registros de Balance (positivos + negativos/cr&eacute;ditos), igual a la Suma de Balance de la Pivot de Excel. Los valores negativos indican meses donde se cobraron m&aacute;s pagos que cargos (cr&eacute;dito neto a favor del asegurador). Fuente: Pivot JUNIO.xlsx.
         </div>
       </div>
 
@@ -594,238 +535,131 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
       </div>
 
       <!-- SUB: BALANCE -->
+      
+      <!-- SUB: BALANCE / AR AGING -->
       <div id="sb-balance" hidden>
-
+        
         <div class="kpi-grid" style="margin-bottom:20px">
           <div class="kpi blue">
-            <div class="kpi-lbl">Balance Total — May 31, 2026</div>
-            <div class="kpi-val">$5,685,726</div>
-            <div class="kpi-foot"><span class="badge">13,734 registros con balance positivo</span></div>
+            <div class="kpi-lbl">Balance Neto &mdash; 31 de mayo 2026</div>
+            <div class="kpi-val">$1,180,021</div>
+            <div class="kpi-foot"><span class="badge">Balance neto (positivos + cr&eacute;ditos)</span></div>
           </div>
           <div class="kpi amber">
-            <div class="kpi-lbl">Balance Crítico (+90 días)</div>
-            <div class="kpi-val">$1,198,532</div>
-            <div class="kpi-foot"><span class="badge dn">21.1% — mayor riesgo de no cobro</span></div>
+            <div class="kpi-lbl">Balance Cr&iacute;tico (+90 d&iacute;as)</div>
+            <div class="kpi-val">$59,166</div>
+            <div class="kpi-foot"><span class="badge dn">5.0% del total</span></div>
           </div>
           <div class="kpi green">
-            <div class="kpi-lbl">Balance Corriente (0–30 días)</div>
-            <div class="kpi-val">$2,759,812</div>
-            <div class="kpi-foot"><span class="badge up">48.5% — en proceso normal</span></div>
+            <div class="kpi-lbl">Balance Corriente (0&ndash;30 d&iacute;as)</div>
+            <div class="kpi-val">$803,758</div>
+            <div class="kpi-foot"><span class="badge up">68.1% del total</span></div>
           </div>
         </div>
 
-        <div class="div-row"><span class="div-lbl">Aging de Balance — AR por Antigüedad</span><div class="div-rule"></div><span style="font-size:11px;color:var(--t3)">Fecha de referencia: 31 de mayo 2026</span></div>
+        <div class="div-row"><span class="div-lbl">Aging de Balance &mdash; AR por Antig&uuml;edad</span><div class="div-rule"></div><span style="font-size:11px;color:var(--t3)">Fecha de referencia: 31 de mayo 2026</span></div>
 
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-
+          <!-- Bars -->
           <div class="table-wrap" style="padding:18px 20px">
-            <div style="margin-bottom:16px;font-size:12px;color:var(--t3)">Balance por tramo · % del total</div>
+            <div style="margin-bottom:16px;font-size:12px;color:var(--t3)">Balance neto por tramo &mdash; % del total</div>
             <div class="pl-bars" style="gap:14px">
-
+              
               <div>
                 <div style="display:flex;justify-content:space-between;margin-bottom:4px">
-                  <span style="font-size:13px;color:var(--t1);font-weight:600">0–30 días</span>
-                  <span style="font-size:12px;color:var(--t3)">May 2–31, 2026</span>
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">0-30 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">May 2026</span>
                 </div>
-                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:48.5%;background:#3DAA82"></div></div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:68.1%;background:#3DAA82"></div></div>
                 <div style="display:flex;justify-content:space-between;margin-top:3px">
-                  <span style="font-size:12px;color:var(--green);font-weight:600">$2,759,812</span>
-                  <span style="font-size:12px;color:var(--t3)">48.5% · 3,569 cuentas</span>
+                  <span style="font-size:12px;font-weight:600;color:#3DAA82">$803,758</span>
+                  <span style="font-size:12px;color:var(--t3)">68.1% &mdash; 803,758 registros</span>
                 </div>
               </div>
-
               <div>
                 <div style="display:flex;justify-content:space-between;margin-bottom:4px">
-                  <span style="font-size:13px;color:var(--t1);font-weight:600">30–60 días</span>
-                  <span style="font-size:12px;color:var(--t3)">Abr 2 – May 1, 2026</span>
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">30-60 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Abr 2026</span>
                 </div>
-                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:19.4%;background:#E86428"></div></div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:13.3%;background:#3DAA82"></div></div>
                 <div style="display:flex;justify-content:space-between;margin-top:3px">
-                  <span style="font-size:12px;color:var(--amber);font-weight:600">$1,103,538</span>
-                  <span style="font-size:12px;color:var(--t3)">19.4% · 2,675 cuentas</span>
+                  <span style="font-size:12px;font-weight:600;color:#3DAA82">$156,635</span>
+                  <span style="font-size:12px;color:var(--t3)">13.3% &mdash; 156,635 registros</span>
                 </div>
               </div>
-
               <div>
                 <div style="display:flex;justify-content:space-between;margin-bottom:4px">
-                  <span style="font-size:13px;color:var(--t1);font-weight:600">60–90 días</span>
-                  <span style="font-size:12px;color:var(--t3)">Mar 3 – Abr 1, 2026</span>
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">60-90 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Mar 2026</span>
                 </div>
-                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:11%;background:#C85020"></div></div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:13.6%;background:#3DAA82"></div></div>
                 <div style="display:flex;justify-content:space-between;margin-top:3px">
-                  <span style="font-size:12px;color:var(--neg);font-weight:600">$623,844</span>
-                  <span style="font-size:12px;color:var(--t3)">11.0% · 2,517 cuentas</span>
+                  <span style="font-size:12px;font-weight:600;color:#3DAA82">$160,462</span>
+                  <span style="font-size:12px;color:var(--t3)">13.6% &mdash; 160,462 registros</span>
                 </div>
               </div>
-
               <div>
                 <div style="display:flex;justify-content:space-between;margin-bottom:4px">
-                  <span style="font-size:13px;color:var(--t1);font-weight:600">90–120 días</span>
-                  <span style="font-size:12px;color:var(--t3)">Feb 1 – Mar 2, 2026</span>
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">90-120 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Feb 2026</span>
                 </div>
-                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:6.2%;background:#9B1D10"></div></div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:0.0%;background:#5a7a92"></div></div>
                 <div style="display:flex;justify-content:space-between;margin-top:3px">
-                  <span style="font-size:12px;color:#9B1D10;font-weight:600">$350,958</span>
-                  <span style="font-size:12px;color:var(--t3)">6.2% · 2,062 cuentas</span>
+                  <span style="font-size:12px;font-weight:600;color:#5a7a92">-$76,718 <span style="font-size:10px;color:var(--t3)">(cr&eacute;dito neto)</span></span>
+                  <span style="font-size:12px;color:var(--t3)">-6.5% &mdash; -76,718 registros</span>
                 </div>
               </div>
-
               <div>
                 <div style="display:flex;justify-content:space-between;margin-bottom:4px">
-                  <span style="font-size:13px;color:var(--t1);font-weight:600">120–180 días</span>
-                  <span style="font-size:12px;color:var(--t3)">Dic 1, 2025 – Ene 31, 2026</span>
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">120-180 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Dic 2025-Ene 2026</span>
                 </div>
-                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:8.8%;background:#7A1209"></div></div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:0.0%;background:#5a7a92"></div></div>
                 <div style="display:flex;justify-content:space-between;margin-top:3px">
-                  <span style="font-size:12px;color:#7A1209;font-weight:600">$501,374</span>
-                  <span style="font-size:12px;color:var(--t3)">8.8% · 2,227 cuentas</span>
+                  <span style="font-size:12px;font-weight:600;color:#5a7a92">-$127,486 <span style="font-size:10px;color:var(--t3)">(cr&eacute;dito neto)</span></span>
+                  <span style="font-size:12px;color:var(--t3)">-10.8% &mdash; -127,486 registros</span>
                 </div>
               </div>
-
               <div>
                 <div style="display:flex;justify-content:space-between;margin-bottom:4px">
-                  <span style="font-size:13px;font-weight:700;color:var(--neg)">⚠ +180 días</span>
-                  <span style="font-size:12px;color:var(--t3)">Antes Nov 30, 2025</span>
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">+180 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Pre-Dic 2025</span>
                 </div>
-                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:6.1%;background:#500000"></div></div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:22.3%;background:#3DAA82"></div></div>
                 <div style="display:flex;justify-content:space-between;margin-top:3px">
-                  <span style="font-size:12px;color:#500000;font-weight:700">$346,200</span>
-                  <span style="font-size:12px;color:var(--t3)">6.1% · 684 cuentas · Mayor riesgo</span>
+                  <span style="font-size:12px;font-weight:600;color:#3DAA82">$263,369</span>
+                  <span style="font-size:12px;color:var(--t3)">22.3% &mdash; 263,369 registros</span>
                 </div>
               </div>
-
             </div>
           </div>
 
-          <div class="table-wrap" style="padding:0;overflow-x:auto">
-            <table style="font-size:13px;min-width:700px;border-collapse:collapse;font-variant-numeric:tabular-nums">
+          <!-- Payer table -->
+          <div class="table-wrap" style="padding:16px 20px">
+            <div class="div-row" style="margin-bottom:10px"><span class="div-lbl">AR Neto por Aseguradora</span><div class="div-rule"></div></div>
+            <div style="overflow-x:auto"><table>
               <thead>
-                <tr>
-                  <th style="text-align:left;padding:10px 14px;font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid var(--bd);background:var(--bg2)">Tramo</th>
-                  <th style="text-align:right;padding:10px 14px;font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid var(--bd);background:var(--bg2)">Cuentas</th>
-                  <th style="text-align:right;padding:10px 14px;font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid var(--bd);background:var(--bg2)">Balance</th>
-                  <th style="text-align:right;padding:10px 14px;font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid var(--bd);background:var(--bg2)">%</th><th style="text-align:right;padding:10px 14px;font-size:11px;font-weight:700;color:#2899aa;letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid var(--bd);background:var(--bg2)">Cobro Esp.</th>
-                </tr>
+                <tr><th>Payer</th><th class="cur">Neto</th><th>0-30d</th><th>30-60d</th><th>60-90d</th><th>90-120d</th><th>120-180d</th><th>+180d</th><th>Cobro Esp.</th></tr>
               </thead>
               <tbody>
+                <tr class="rg"><td>MEDICARE-PART B</td><td class="cur">$299,092</td><td>$83,767</td><td>$25,838</td><td>$29,806</td><td>$3,704</td><td>$11,123</td><td>$144,854</td><td style="color:var(--green)">$65,800</td></tr>
+<tr class="rg"><td>PREFERRED CARE PARTNERS</td><td class="cur">$168,451</td><td>$62,779</td><td>$3,424</td><td>$3,178</td><td>$35,770</td><td>$4,382</td><td>$58,918</td><td style="color:var(--green)">$37,059</td></tr>
+<tr class="rg"><td>Solis Health Plans</td><td class="cur">$162,092</td><td>$158,358</td><td>$25,005</td><td>$12,506</td><td>$11,997</td><td>-$54,987</td><td>$9,213</td><td style="color:var(--green)">$35,660</td></tr>
+<tr class="rg"><td>PREFERRED CARE NETWORK</td><td class="cur">$150,505</td><td>$77,574</td><td>$12,137</td><td>$9,520</td><td>$7,997</td><td>$11,709</td><td>$31,568</td><td style="color:var(--green)">$33,111</td></tr>
+<tr class="rg"><td>CorVel Corporation</td><td class="cur">$98,641</td><td>$46,792</td><td>$20,316</td><td>$1,350</td><td>$7,350</td><td>$12,000</td><td>$10,833</td><td style="color:var(--green)">$21,701</td></tr>
+<tr class="rg"><td>SIMPLY an Anthem Company MCR  MCD</td><td class="cur">$94,457</td><td>$6,360</td><td>$13,483</td><td>$2,748</td><td>$1,032</td><td>$57,100</td><td>$13,735</td><td style="color:var(--green)">$20,781</td></tr>
+<tr class="rg"><td>United Health Care</td><td class="cur">$93,070</td><td>$22,776</td><td>-$1,125</td><td>-$5,690</td><td>$11,685</td><td>$59,192</td><td>$6,231</td><td style="color:var(--green)">$20,475</td></tr>
+<tr class="rg"><td>PREFERRED CARE PARTNERS DUAL</td><td class="cur">$74,862</td><td>$30,104</td><td>$25,600</td><td>$34,548</td><td>$7,680</td><td>$13,377</td><td>-$36,446</td><td style="color:var(--green)">$16,470</td></tr>
+<tr class="rg"><td>DOCTORS HEALTHCARE PLANS INC.</td><td class="cur">$65,993</td><td>$8,617</td><td>$5,219</td><td>$41,618</td><td>-$2,032</td><td>$861</td><td>$11,710</td><td style="color:var(--green)">$14,518</td></tr>
 
-                <!-- 0-30 -->
-                <tr class="ra pl-toggle-row" onclick="plToggle('ag0030')">
-                  <td style="padding:10px 14px"><span class="pl-toggle-icon" id="ic-ag0030">▶</span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#3DAA82;margin-right:6px;vertical-align:middle"></span><strong>0–30 días</strong><span style="font-size:11px;color:var(--t3);margin-left:8px">May 2–31, 2026</span></td>
-                  <td style="padding:10px 14px;text-align:right">3,569</td>
-                  <td style="padding:10px 14px;text-align:right;color:var(--green)"><strong>$2,759,812</strong></td>
-                  <td style="padding:10px 14px;text-align:right">48.5%</td><td style="padding:10px 14px;text-align:right;color:#2899aa;font-weight:600">$607,159</td>
-                </tr>
-                <tr class="pl-detail" data-group="ag0030" style="background:rgba(61,170,130,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">LEON MEDICAL CENTER</td><td style="padding:4px 14px;text-align:right;font-size:12px">105</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$1,132,795</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">41.1%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$249,215</td></tr>
-                <tr class="pl-detail" data-group="ag0030" style="background:rgba(61,170,130,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">PREFERRED CARE NETWORK</td><td style="padding:4px 14px;text-align:right;font-size:12px">288</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$280,957</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">10.2%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$61,811</td></tr>
-                <tr class="pl-detail" data-group="ag0030" style="background:rgba(61,170,130,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">Patient</td><td style="padding:4px 14px;text-align:right;font-size:12px">409</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$215,807</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">7.8%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$47,478</td></tr>
-                <tr class="pl-detail" data-group="ag0030" style="background:rgba(61,170,130,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">Solis Health Plans</td><td style="padding:4px 14px;text-align:right;font-size:12px">122</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$158,378</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">5.7%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$34,843</td></tr>
-                <tr class="pl-detail" data-group="ag0030" style="background:rgba(61,170,130,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">PREFERRED CARE PARTNERS</td><td style="padding:4px 14px;text-align:right;font-size:12px">126</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$158,026</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">5.7%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$34,766</td></tr>
-                <tr class="pl-detail" data-group="ag0030" style="background:rgba(61,170,130,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">MEDICARE-PART B</td><td style="padding:4px 14px;text-align:right;font-size:12px">335</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$127,269</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">4.6%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$27,999</td></tr>
-                <tr class="pl-detail" data-group="ag0030" style="background:rgba(61,170,130,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">PREFERRED CARE PARTNERS DUAL</td><td style="padding:4px 14px;text-align:right;font-size:12px">307</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$120,296</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">4.4%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$26,465</td></tr>
-                <tr class="pl-detail" data-group="ag0030" style="background:rgba(61,170,130,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">BCBS OF FLORIDA</td><td style="padding:4px 14px;text-align:right;font-size:12px">253</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$88,916</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">3.2%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$19,562</td></tr>
-                <tr class="pl-detail" data-group="ag0030" style="background:rgba(61,170,130,.04)"><td style="padding:4px 14px 4px 38px 4px;font-size:12px;color:var(--t3);font-style:italic">Otras aseguradoras</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">1,724</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">$477,368</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">17.3%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$105,021</td></tr>
-
-                <!-- 30-60 -->
-                <tr class="ra pl-toggle-row" onclick="plToggle('ag3060')">
-                  <td style="padding:10px 14px"><span class="pl-toggle-icon" id="ic-ag3060">▶</span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#E86428;margin-right:6px;vertical-align:middle"></span><strong>30–60 días</strong><span style="font-size:11px;color:var(--t3);margin-left:8px">Abr 2 – May 1, 2026</span></td>
-                  <td style="padding:10px 14px;text-align:right">2,675</td>
-                  <td style="padding:10px 14px;text-align:right;color:var(--amber)"><strong>$1,103,538</strong></td>
-                  <td style="padding:10px 14px;text-align:right">19.4%</td><td style="padding:10px 14px;text-align:right;color:#2899aa;font-weight:600">$242,778</td>
-                </tr>
-                <tr class="pl-detail" data-group="ag3060" style="background:rgba(232,100,40,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">LEON MEDICAL CENTER</td><td style="padding:4px 14px;text-align:right;font-size:12px">33</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$598,908</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">54.3%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$131,760</td></tr>
-                <tr class="pl-detail" data-group="ag3060" style="background:rgba(232,100,40,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">MEDICARE-PART B</td><td style="padding:4px 14px;text-align:right;font-size:12px">216</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$72,154</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">6.5%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$15,874</td></tr>
-                <tr class="pl-detail" data-group="ag3060" style="background:rgba(232,100,40,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">BCBS OF FLORIDA</td><td style="padding:4px 14px;text-align:right;font-size:12px">264</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$71,819</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">6.5%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$15,800</td></tr>
-                <tr class="pl-detail" data-group="ag3060" style="background:rgba(232,100,40,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">Patient</td><td style="padding:4px 14px;text-align:right;font-size:12px">381</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$67,476</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">6.1%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$14,845</td></tr>
-                <tr class="pl-detail" data-group="ag3060" style="background:rgba(232,100,40,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">OSCAR HEALTH INSURANCE</td><td style="padding:4px 14px;text-align:right;font-size:12px">711</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$56,551</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">5.1%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$12,441</td></tr>
-                <tr class="pl-detail" data-group="ag3060" style="background:rgba(232,100,40,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">PREFERRED CARE PARTNERS DUAL</td><td style="padding:4px 14px;text-align:right;font-size:12px">117</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$30,578</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">2.8%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$6,727</td></tr>
-                <tr class="pl-detail" data-group="ag3060" style="background:rgba(232,100,40,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">Solis Health Plans</td><td style="padding:4px 14px;text-align:right;font-size:12px">29</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$24,855</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">2.3%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$5,468</td></tr>
-                <tr class="pl-detail" data-group="ag3060" style="background:rgba(232,100,40,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">CorVel Corporation</td><td style="padding:4px 14px;text-align:right;font-size:12px">10</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$20,316</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">1.8%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$4,470</td></tr>
-                <tr class="pl-detail" data-group="ag3060" style="background:rgba(232,100,40,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t3);font-style:italic">Otras aseguradoras</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">924</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">$160,881</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">14.6%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$35,394</td></tr>
-
-                <!-- 60-90 -->
-                <tr class="ra pl-toggle-row" onclick="plToggle('ag6090')">
-                  <td style="padding:10px 14px"><span class="pl-toggle-icon" id="ic-ag6090">▶</span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#C85020;margin-right:6px;vertical-align:middle"></span><strong>60–90 días</strong><span style="font-size:11px;color:var(--t3);margin-left:8px">Mar 3 – Abr 1, 2026</span></td>
-                  <td style="padding:10px 14px;text-align:right">2,517</td>
-                  <td style="padding:10px 14px;text-align:right;color:var(--neg)"><strong>$623,844</strong></td>
-                  <td style="padding:10px 14px;text-align:right">11.0%</td><td style="padding:10px 14px;text-align:right;color:#2899aa;font-weight:600">$137,246</td>
-                </tr>
-                <tr class="pl-detail" data-group="ag6090" style="background:rgba(200,80,32,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">Solis Health Plans</td><td style="padding:4px 14px;text-align:right;font-size:12px">26</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$116,856</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">18.7%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$25,708</td></tr>
-                <tr class="pl-detail" data-group="ag6090" style="background:rgba(200,80,32,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">MEDICARE-PART B</td><td style="padding:4px 14px;text-align:right;font-size:12px">180</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$93,299</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">15.0%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$20,526</td></tr>
-                <tr class="pl-detail" data-group="ag6090" style="background:rgba(200,80,32,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">Patient</td><td style="padding:4px 14px;text-align:right;font-size:12px">408</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$88,383</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">14.2%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$19,444</td></tr>
-                <tr class="pl-detail" data-group="ag6090" style="background:rgba(200,80,32,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">OSCAR HEALTH INSURANCE</td><td style="padding:4px 14px;text-align:right;font-size:12px">774</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$49,486</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">7.9%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$10,887</td></tr>
-                <tr class="pl-detail" data-group="ag6090" style="background:rgba(200,80,32,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">DOCTORS HEALTHCARE PLANS INC.</td><td style="padding:4px 14px;text-align:right;font-size:12px">16</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$42,534</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">6.8%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$9,357</td></tr>
-                <tr class="pl-detail" data-group="ag6090" style="background:rgba(200,80,32,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">PREFERRED CARE PARTNERS DUAL</td><td style="padding:4px 14px;text-align:right;font-size:12px">119</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$38,454</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">6.2%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$8,460</td></tr>
-                <tr class="pl-detail" data-group="ag6090" style="background:rgba(200,80,32,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">BCBS OF FLORIDA</td><td style="padding:4px 14px;text-align:right;font-size:12px">237</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$34,081</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">5.5%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$7,498</td></tr>
-                <tr class="pl-detail" data-group="ag6090" style="background:rgba(200,80,32,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">HUMANA</td><td style="padding:4px 14px;text-align:right;font-size:12px">58</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$24,274</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">3.9%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$5,340</td></tr>
-                <tr class="pl-detail" data-group="ag6090" style="background:rgba(200,80,32,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t3);font-style:italic">Otras aseguradoras</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">699</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">$136,477</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">21.9%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$30,025</td></tr>
-
-                <!-- 90-120 -->
-                <tr class="ra pl-toggle-row" onclick="plToggle('ag90120')">
-                  <td style="padding:10px 14px"><span class="pl-toggle-icon" id="ic-ag90120">▶</span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#9B1D10;margin-right:6px;vertical-align:middle"></span><strong>90–120 días</strong><span style="font-size:11px;color:var(--t3);margin-left:8px">Feb 1 – Mar 2, 2026</span></td>
-                  <td style="padding:10px 14px;text-align:right">2,062</td>
-                  <td style="padding:10px 14px;text-align:right;color:#9B1D10"><strong>$350,958</strong></td>
-                  <td style="padding:10px 14px;text-align:right">6.2%</td><td style="padding:10px 14px;text-align:right;color:#2899aa;font-weight:600">$77,211</td>
-                </tr>
-                <tr class="pl-detail" data-group="ag90120" style="background:rgba(155,29,16,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">Patient</td><td style="padding:4px 14px;text-align:right;font-size:12px">267</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$45,480</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">13.0%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$10,006</td></tr>
-                <tr class="pl-detail" data-group="ag90120" style="background:rgba(155,29,16,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">BCBS OF FLORIDA</td><td style="padding:4px 14px;text-align:right;font-size:12px">238</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$39,997</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">11.4%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$8,799</td></tr>
-                <tr class="pl-detail" data-group="ag90120" style="background:rgba(155,29,16,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">MEDICARE-PART B</td><td style="padding:4px 14px;text-align:right;font-size:12px">152</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$39,840</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">11.4%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$8,765</td></tr>
-                <tr class="pl-detail" data-group="ag90120" style="background:rgba(155,29,16,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">PREFERRED CARE PARTNERS</td><td style="padding:4px 14px;text-align:right;font-size:12px">100</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$37,097</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">10.6%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$8,161</td></tr>
-                <tr class="pl-detail" data-group="ag90120" style="background:rgba(155,29,16,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">OSCAR HEALTH INSURANCE</td><td style="padding:4px 14px;text-align:right;font-size:12px">490</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$26,967</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">7.7%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$5,933</td></tr>
-                <tr class="pl-detail" data-group="ag90120" style="background:rgba(155,29,16,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">UNITED HEALTH CARE</td><td style="padding:4px 14px;text-align:right;font-size:12px">139</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$21,425</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">6.1%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$4,714</td></tr>
-                <tr class="pl-detail" data-group="ag90120" style="background:rgba(155,29,16,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">Solis Health Plans</td><td style="padding:4px 14px;text-align:right;font-size:12px">54</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$11,387</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">3.2%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$2,505</td></tr>
-                <tr class="pl-detail" data-group="ag90120" style="background:rgba(155,29,16,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">PREFERRED CARE NETWORK</td><td style="padding:4px 14px;text-align:right;font-size:12px">135</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$10,604</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">3.0%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$2,333</td></tr>
-                <tr class="pl-detail" data-group="ag90120" style="background:rgba(155,29,16,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t3);font-style:italic">Otras aseguradoras</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">487</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">$118,161</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">33.7%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$25,995</td></tr>
-
-                <!-- 120-180 -->
-                <tr class="ra pl-toggle-row" onclick="plToggle('ag120180')">
-                  <td style="padding:10px 14px"><span class="pl-toggle-icon" id="ic-ag120180">▶</span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#7A1209;margin-right:6px;vertical-align:middle"></span><strong>120–180 días</strong><span style="font-size:11px;color:var(--t3);margin-left:8px">Dic 1, 2025 – Ene 31, 2026</span></td>
-                  <td style="padding:10px 14px;text-align:right">2,227</td>
-                  <td style="padding:10px 14px;text-align:right;color:#7A1209"><strong>$501,374</strong></td>
-                  <td style="padding:10px 14px;text-align:right">8.8%</td><td style="padding:10px 14px;text-align:right;color:#2899aa;font-weight:600">$110,302</td>
-                </tr>
-                <tr class="pl-detail" data-group="ag120180" style="background:rgba(122,18,9,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">UNITED HEALTH CARE</td><td style="padding:4px 14px;text-align:right;font-size:12px">173</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$77,060</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">15.4%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$16,953</td></tr>
-                <tr class="pl-detail" data-group="ag120180" style="background:rgba(122,18,9,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">BCBS OF FLORIDA</td><td style="padding:4px 14px;text-align:right;font-size:12px">185</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$73,880</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">14.7%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$16,254</td></tr>
-                <tr class="pl-detail" data-group="ag120180" style="background:rgba(122,18,9,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">Patient</td><td style="padding:4px 14px;text-align:right;font-size:12px">267</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$58,577</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">11.7%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$12,887</td></tr>
-                <tr class="pl-detail" data-group="ag120180" style="background:rgba(122,18,9,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">SIMPLY an Anthem MCR+MCD</td><td style="padding:4px 14px;text-align:right;font-size:12px">16</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$48,445</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">9.7%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$10,658</td></tr>
-                <tr class="pl-detail" data-group="ag120180" style="background:rgba(122,18,9,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">MEDICARE-PART B</td><td style="padding:4px 14px;text-align:right;font-size:12px">175</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$33,788</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">6.7%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$7,433</td></tr>
-                <tr class="pl-detail" data-group="ag120180" style="background:rgba(122,18,9,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">AETNA</td><td style="padding:4px 14px;text-align:right;font-size:12px">77</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$17,941</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">3.6%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$3,947</td></tr>
-                <tr class="pl-detail" data-group="ag120180" style="background:rgba(122,18,9,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">OSCAR HEALTH INSURANCE</td><td style="padding:4px 14px;text-align:right;font-size:12px">406</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$17,002</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">3.4%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$3,740</td></tr>
-                <tr class="pl-detail" data-group="ag120180" style="background:rgba(122,18,9,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">PREFERRED CARE PARTNERS DUAL</td><td style="padding:4px 14px;text-align:right;font-size:12px">102</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$15,390</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">3.1%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$3,386</td></tr>
-                <tr class="pl-detail" data-group="ag120180" style="background:rgba(122,18,9,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t3);font-style:italic">Otras aseguradoras</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">826</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">$159,291</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">31.8%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$35,044</td></tr>
-
-                <!-- +180 -->
-                <tr class="ra pl-toggle-row" onclick="plToggle('ag180p')" style="background:rgba(200,80,32,.05)">
-                  <td style="padding:10px 14px"><span class="pl-toggle-icon" id="ic-ag180p">▶</span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#500000;margin-right:6px;vertical-align:middle"></span><strong style="color:#500000">⚠ +180 días</strong><span style="font-size:11px;color:var(--t3);margin-left:8px">Antes Nov 30, 2025</span></td>
-                  <td style="padding:10px 14px;text-align:right">684</td>
-                  <td style="padding:10px 14px;text-align:right;color:#500000"><strong>$346,200</strong></td>
-                  <td style="padding:10px 14px;text-align:right;color:#500000"><strong>6.1%</strong></td><td style="padding:10px 14px;text-align:right;color:#2899aa;font-weight:600">$76,164</td>
-                </tr>
-                <tr class="pl-detail" data-group="ag180p" style="background:rgba(80,0,0,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">MEDICARE-PART B</td><td style="padding:4px 14px;text-align:right;font-size:12px">86</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$79,024</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">22.8%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$17,385</td></tr>
-                <tr class="pl-detail" data-group="ag180p" style="background:rgba(80,0,0,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">CAREPLUS</td><td style="padding:4px 14px;text-align:right;font-size:12px">24</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$41,727</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">12.1%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$9,180</td></tr>
-                <tr class="pl-detail" data-group="ag180p" style="background:rgba(80,0,0,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">Patient</td><td style="padding:4px 14px;text-align:right;font-size:12px">147</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$29,553</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">8.5%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$6,502</td></tr>
-                <tr class="pl-detail" data-group="ag180p" style="background:rgba(80,0,0,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">WELLCARE</td><td style="padding:4px 14px;text-align:right;font-size:12px">11</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$28,477</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">8.2%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$6,265</td></tr>
-                <tr class="pl-detail" data-group="ag180p" style="background:rgba(80,0,0,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">PREFERRED CARE PARTNERS</td><td style="padding:4px 14px;text-align:right;font-size:12px">14</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$20,957</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">6.1%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$4,611</td></tr>
-                <tr class="pl-detail" data-group="ag180p" style="background:rgba(80,0,0,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">UNITED HEALTHCARE GLOBAL</td><td style="padding:4px 14px;text-align:right;font-size:12px">5</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$17,050</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">4.9%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$3,751</td></tr>
-                <tr class="pl-detail" data-group="ag180p" style="background:rgba(80,0,0,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">MOLINA</td><td style="padding:4px 14px;text-align:right;font-size:12px">52</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$14,789</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">4.3%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$3,254</td></tr>
-                <tr class="pl-detail" data-group="ag180p" style="background:rgba(80,0,0,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">OSCAR HEALTH INSURANCE</td><td style="padding:4px 14px;text-align:right;font-size:12px">79</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$14,596</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">4.2%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$3,211</td></tr>
-                <tr class="pl-detail" data-group="ag180p" style="background:rgba(80,0,0,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t3);font-style:italic">Otras aseguradoras</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">266</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">$100,027</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">28.9%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$22,006</td></tr>
-
-                <tr style="border-top:2px solid var(--bd);background:rgba(27,58,92,.04)">
-                  <td style="padding:10px 14px"><strong>TOTAL</strong></td>
-                  <td style="padding:10px 14px;text-align:right"><strong>13,734</strong></td>
-                  <td style="padding:10px 14px;text-align:right"><strong>$5,685,726</strong></td>
-                  <td style="padding:10px 14px;text-align:right"><strong>100%</strong></td><td style="padding:10px 14px;text-align:right;color:#2899aa;font-weight:700"><strong>$1,250,860</strong></td>
-                </tr>
               </tbody>
-            </table>
-            <div style="padding:12px 14px;background:rgba(200,80,32,.05);border-top:1px solid var(--border-lo);font-size:12px;color:var(--t2)">
-              <strong>Balance +90 días:</strong> $1,198,532 en 4,973 cuentas (21.1%) — requieren gestión activa de cobro
-            </div>
+            </table></div>
           </div>
-
         </div>
 
+        <div style="margin-top:10px;padding:8px 12px;background:rgba(40,153,170,.06);border-radius:4px;border-left:3px solid var(--blue);font-size:12px;color:var(--t2)">
+          <strong>Metodolog&iacute;a:</strong> Balance neto = suma de todos los registros de Balance (positivos + negativos/cr&eacute;ditos), igual a la Suma de Balance de la Pivot de Excel. Los valores negativos indican meses donde se cobraron m&aacute;s pagos que cargos (cr&eacute;dito neto a favor del asegurador). Fuente: Pivot JUNIO.xlsx.
+        </div>
       </div>
 
       <!-- SUB: DENIALS -->
@@ -1942,64 +1776,130 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
         </div>
       </div>
 
+      
+      <!-- SUB: BALANCE / AR AGING -->
       <div id="sb-balance-jun" hidden>
+        
         <div class="kpi-grid" style="margin-bottom:20px">
           <div class="kpi blue">
-            <div class="kpi-lbl">Balance Total &mdash; Jun 30, 2026</div>
-            <div class="kpi-val">$8,124,440</div>
-            <div class="kpi-foot"><span class="badge">13,132 registros con balance positivo</span></div>
+            <div class="kpi-lbl">Balance Neto &mdash; 30 de junio 2026</div>
+            <div class="kpi-val">$4,926,000</div>
+            <div class="kpi-foot"><span class="badge">Balance neto (positivos + cr&eacute;ditos)</span></div>
           </div>
           <div class="kpi amber">
             <div class="kpi-lbl">Balance Cr&iacute;tico (+90 d&iacute;as)</div>
-            <div class="kpi-val">$2,680,339</div>
-            <div class="kpi-foot"><span class="badge dn">33.0% del total</span></div>
+            <div class="kpi-val">$219,628</div>
+            <div class="kpi-foot"><span class="badge dn">4.5% del total</span></div>
           </div>
           <div class="kpi green">
             <div class="kpi-lbl">Balance Corriente (0&ndash;30 d&iacute;as)</div>
-            <div class="kpi-val">$3,927,259</div>
-            <div class="kpi-foot"><span class="badge up">48.3% del total</span></div>
+            <div class="kpi-val">$3,745,979</div>
+            <div class="kpi-foot"><span class="badge up">76.0% del total</span></div>
           </div>
         </div>
 
-        <div style="display:grid;grid-template-columns:1fr 2fr;gap:16px;margin-bottom:16px">
+        <div class="div-row"><span class="div-lbl">Aging de Balance &mdash; AR por Antig&uuml;edad</span><div class="div-rule"></div><span style="font-size:11px;color:var(--t3)">Fecha de referencia: 30 de junio 2026</span></div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
           <!-- Bars -->
-          <div class="table-wrap" style="padding:16px 20px">
-            <div class="div-row" style="margin-bottom:14px"><span class="div-lbl">AR por Edad</span><div class="div-rule"></div></div>
-            <div class="pl-bars">
-              <div class="pl-bar-row"><div class="pl-bar-lbl">0–30 días<span style="font-size:10px;color:var(--t3);margin-left:6px">48.3%</span></div><div class="pl-bar-track"><div class="pl-bar-fill" style="width:48.3%;background:#3DAA82"></div></div><div class="pl-bar-val">$3,927,259 <span class="pl-bar-pct">48.3%</span></div></div><div class="pl-bar-row"><div class="pl-bar-lbl">30–60 días<span style="font-size:10px;color:var(--t3);margin-left:6px">12.1%</span></div><div class="pl-bar-track"><div class="pl-bar-fill" style="width:12.1%;background:#E86428"></div></div><div class="pl-bar-val">$986,658 <span class="pl-bar-pct">12.1%</span></div></div><div class="pl-bar-row"><div class="pl-bar-lbl">60–90 días<span style="font-size:10px;color:var(--t3);margin-left:6px">6.5%</span></div><div class="pl-bar-track"><div class="pl-bar-fill" style="width:6.5%;background:#C85020"></div></div><div class="pl-bar-val">$530,184 <span class="pl-bar-pct">6.5%</span></div></div><div class="pl-bar-row"><div class="pl-bar-lbl">90–120 días<span style="font-size:10px;color:var(--t3);margin-left:6px">5.8%</span></div><div class="pl-bar-track"><div class="pl-bar-fill" style="width:5.8%;background:#9B1D10"></div></div><div class="pl-bar-val">$469,907 <span class="pl-bar-pct">5.8%</span></div></div><div class="pl-bar-row"><div class="pl-bar-lbl">120–180 días<span style="font-size:10px;color:var(--t3);margin-left:6px">7.2%</span></div><div class="pl-bar-track"><div class="pl-bar-fill" style="width:7.2%;background:#7A1209"></div></div><div class="pl-bar-val">$583,004 <span class="pl-bar-pct">7.2%</span></div></div><div class="pl-bar-row"><div class="pl-bar-lbl">+180 días<span style="font-size:10px;color:var(--t3);margin-left:6px">20.0%</span></div><div class="pl-bar-track"><div class="pl-bar-fill" style="width:20.0%;background:#500000"></div></div><div class="pl-bar-val">$1,627,428 <span class="pl-bar-pct">20.0%</span></div></div>
-            </div>
-            <div style="margin-top:12px;padding:8px 10px;background:rgba(200,80,32,.06);border-radius:4px;border-left:3px solid var(--amber);font-size:12px;color:var(--t2)">
-              <strong>Cobro Esperado Total:</strong> $1,787,378<br>
-              <span style="color:var(--t3)">Estimado al 22% de recuperaci&oacute;n sobre balance pendiente</span>
+          <div class="table-wrap" style="padding:18px 20px">
+            <div style="margin-bottom:16px;font-size:12px;color:var(--t3)">Balance neto por tramo &mdash; % del total</div>
+            <div class="pl-bars" style="gap:14px">
+              
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">0-30 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Jun 2026</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:76.0%;background:#3DAA82"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;font-weight:600;color:#3DAA82">$3,745,979</span>
+                  <span style="font-size:12px;color:var(--t3)">76.0% &mdash; 3,745,979 registros</span>
+                </div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">30-60 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">May 2026</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:16.3%;background:#3DAA82"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;font-weight:600;color:#3DAA82">$803,758</span>
+                  <span style="font-size:12px;color:var(--t3)">16.3% &mdash; 803,758 registros</span>
+                </div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">60-90 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Abr 2026</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:3.2%;background:#3DAA82"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;font-weight:600;color:#3DAA82">$156,635</span>
+                  <span style="font-size:12px;color:var(--t3)">3.2% &mdash; 156,635 registros</span>
+                </div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">90-120 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Mar 2026</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:3.3%;background:#3DAA82"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;font-weight:600;color:#3DAA82">$160,462</span>
+                  <span style="font-size:12px;color:var(--t3)">3.3% &mdash; 160,462 registros</span>
+                </div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">120-180 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Ene-Feb 2026</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:0.0%;background:#5a7a92"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;font-weight:600;color:#5a7a92">-$93,517 <span style="font-size:10px;color:var(--t3)">(cr&eacute;dito neto)</span></span>
+                  <span style="font-size:12px;color:var(--t3)">-1.9% &mdash; -93,517 registros</span>
+                </div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">+180 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Pre-Ene 2026</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:3.1%;background:#3DAA82"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;font-weight:600;color:#3DAA82">$152,683</span>
+                  <span style="font-size:12px;color:var(--t3)">3.1% &mdash; 152,683 registros</span>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Table with toggle rows -->
-          <div class="table-wrap" style="padding:0">
-            <div style="overflow-x:auto">
-              <table style="font-size:13px;width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums">
-                <thead>
-                  <tr>
-                    <th style="text-align:left;padding:8px 12px;font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid var(--bd);background:var(--bg2)">Tramo / Aseguradora</th>
-                    <th style="text-align:right;padding:8px 12px;font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid var(--bd);background:var(--bg2)">Cuentas</th>
-                    <th style="text-align:right;padding:8px 12px;font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid var(--bd);background:var(--bg2)">Balance</th>
-                    <th style="text-align:right;padding:8px 12px;font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid var(--bd);background:var(--bg2)">%</th>
-                    <th style="text-align:right;padding:8px 12px;font-size:11px;font-weight:700;color:#2899aa;letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid var(--bd);background:var(--bg2)">Cobro Esp.</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="ra pl-toggle-row" onclick="plToggle('j0030')"><td style="padding:10px 14px"><span class="pl-toggle-icon" id="ic-j0030">&#9658;</span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#3DAA82;margin-right:6px;vertical-align:middle"></span><strong>0–30 días</strong><span style="font-size:11px;color:var(--t3);margin-left:8px">Jun 2026</span></td><td style="padding:10px 14px;text-align:right">3,997</td><td style="padding:10px 14px;text-align:right;color:var(--green)"><strong>$3,927,259</strong></td><td style="padding:10px 14px;text-align:right">48.3%</td><td style="padding:10px 14px;text-align:right;color:#2899aa;font-weight:600">$863,997</td></tr><tr class="pl-detail" data-group="j0030" style="background:rgba(61,170,130,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">PREFERRED CARE PARTNERS DUAL</td><td style="padding:4px 14px;text-align:right;font-size:12px">276</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$521,476</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">13.3%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$114,725</td></tr><tr class="pl-detail" data-group="j0030" style="background:rgba(61,170,130,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">PREFERRED CARE NETWORK</td><td style="padding:4px 14px;text-align:right;font-size:12px">282</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$444,615</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">11.3%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$97,815</td></tr><tr class="pl-detail" data-group="j0030" style="background:rgba(61,170,130,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">HUMANA</td><td style="padding:4px 14px;text-align:right;font-size:12px">129</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$424,182</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">10.8%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$93,320</td></tr><tr class="pl-detail" data-group="j0030" style="background:rgba(61,170,130,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">Patient</td><td style="padding:4px 14px;text-align:right;font-size:12px">522</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$391,606</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">10.0%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$86,153</td></tr><tr class="pl-detail" data-group="j0030" style="background:rgba(61,170,130,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">OSCAR HEALTH INSURANCE</td><td style="padding:4px 14px;text-align:right;font-size:12px">945</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$358,134</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">9.1%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$78,789</td></tr><tr class="pl-detail" data-group="j0030" style="background:rgba(61,170,130,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">MEDICARE-PART B</td><td style="padding:4px 14px;text-align:right;font-size:12px">147</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$242,025</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">6.2%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$53,246</td></tr><tr class="pl-detail" data-group="j0030" style="background:rgba(61,170,130,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">PREFERRED CARE PARTNERS</td><td style="padding:4px 14px;text-align:right;font-size:12px">87</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$215,817</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">5.5%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$47,480</td></tr><tr class="pl-detail" data-group="j0030" style="background:rgba(61,170,130,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">DOCTORS HEALTHCARE PLANS INC.</td><td style="padding:4px 14px;text-align:right;font-size:12px">204</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$204,194</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">5.2%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$44,923</td></tr><tr class="pl-detail" data-group="j0030" style="background:rgba(61,170,130,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)"><strong>Otras aseguradoras</strong></td><td style="padding:4px 14px;text-align:right;font-size:12px">1,405</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$1,125,211</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">28.7%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$247,546</td></tr><tr class="ra pl-toggle-row" onclick="plToggle('j3060')"><td style="padding:10px 14px"><span class="pl-toggle-icon" id="ic-j3060">&#9658;</span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#E86428;margin-right:6px;vertical-align:middle"></span><strong>30–60 días</strong><span style="font-size:11px;color:var(--t3);margin-left:8px">May 2026</span></td><td style="padding:10px 14px;text-align:right">1,433</td><td style="padding:10px 14px;text-align:right;color:var(--green)"><strong>$986,658</strong></td><td style="padding:10px 14px;text-align:right">12.1%</td><td style="padding:10px 14px;text-align:right;color:#2899aa;font-weight:600">$217,065</td></tr><tr class="pl-detail" data-group="j3060" style="background:rgba(232,100,40,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">Solis Health Plans</td><td style="padding:4px 14px;text-align:right;font-size:12px">86</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$158,378</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">16.1%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$34,843</td></tr><tr class="pl-detail" data-group="j3060" style="background:rgba(232,100,40,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">Patient</td><td style="padding:4px 14px;text-align:right;font-size:12px">276</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$123,151</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">12.5%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$27,093</td></tr><tr class="pl-detail" data-group="j3060" style="background:rgba(232,100,40,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">MEDICARE-PART B</td><td style="padding:4px 14px;text-align:right;font-size:12px">122</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$87,186</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">8.8%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$19,181</td></tr><tr class="pl-detail" data-group="j3060" style="background:rgba(232,100,40,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">BCBS OF FLORIDA</td><td style="padding:4px 14px;text-align:right;font-size:12px">94</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$81,760</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">8.3%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$17,987</td></tr><tr class="pl-detail" data-group="j3060" style="background:rgba(232,100,40,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">PREFERRED CARE NETWORK</td><td style="padding:4px 14px;text-align:right;font-size:12px">83</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$79,269</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">8.0%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$17,439</td></tr><tr class="pl-detail" data-group="j3060" style="background:rgba(232,100,40,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">PREFERRED CARE PARTNERS</td><td style="padding:4px 14px;text-align:right;font-size:12px">47</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$63,519</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">6.4%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$13,974</td></tr><tr class="pl-detail" data-group="j3060" style="background:rgba(232,100,40,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">LEON MEDICAL CENTER</td><td style="padding:4px 14px;text-align:right;font-size:12px">5</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$61,888</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">6.3%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$13,615</td></tr><tr class="pl-detail" data-group="j3060" style="background:rgba(232,100,40,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">CorVel Corporation</td><td style="padding:4px 14px;text-align:right;font-size:12px">10</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$46,792</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">4.7%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$10,294</td></tr><tr class="pl-detail" data-group="j3060" style="background:rgba(232,100,40,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)"><strong>Otras aseguradoras</strong></td><td style="padding:4px 14px;text-align:right;font-size:12px">710</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$284,715</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">28.9%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$62,637</td></tr><tr class="ra pl-toggle-row" onclick="plToggle('j6090')"><td style="padding:10px 14px"><span class="pl-toggle-icon" id="ic-j6090">&#9658;</span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#C85020;margin-right:6px;vertical-align:middle"></span><strong>60–90 días</strong><span style="font-size:11px;color:var(--t3);margin-left:8px">Abr 2026</span></td><td style="padding:10px 14px;text-align:right">1,240</td><td style="padding:10px 14px;text-align:right;color:var(--green)"><strong>$530,184</strong></td><td style="padding:10px 14px;text-align:right">6.5%</td><td style="padding:10px 14px;text-align:right;color:#2899aa;font-weight:600">$116,641</td></tr><tr class="pl-detail" data-group="j6090" style="background:rgba(200,80,32,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">LEON MEDICAL CENTER</td><td style="padding:4px 14px;text-align:right;font-size:12px">7</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$77,588</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">14.6%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$17,069</td></tr><tr class="pl-detail" data-group="j6090" style="background:rgba(200,80,32,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">BCBS OF FLORIDA</td><td style="padding:4px 14px;text-align:right;font-size:12px">93</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$71,607</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">13.5%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$15,754</td></tr><tr class="pl-detail" data-group="j6090" style="background:rgba(200,80,32,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">Patient</td><td style="padding:4px 14px;text-align:right;font-size:12px">262</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$65,338</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">12.3%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$14,374</td></tr><tr class="pl-detail" data-group="j6090" style="background:rgba(200,80,32,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">OSCAR HEALTH INSURANCE</td><td style="padding:4px 14px;text-align:right;font-size:12px">309</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$54,308</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">10.2%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$11,948</td></tr><tr class="pl-detail" data-group="j6090" style="background:rgba(200,80,32,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">MEDICARE-PART B</td><td style="padding:4px 14px;text-align:right;font-size:12px">105</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$45,627</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">8.6%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$10,038</td></tr><tr class="pl-detail" data-group="j6090" style="background:rgba(200,80,32,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">PREFERRED CARE PARTNERS DUAL</td><td style="padding:4px 14px;text-align:right;font-size:12px">34</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$29,953</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">5.6%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$6,590</td></tr><tr class="pl-detail" data-group="j6090" style="background:rgba(200,80,32,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">Solis Health Plans</td><td style="padding:4px 14px;text-align:right;font-size:12px">24</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$25,005</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">4.7%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$5,501</td></tr><tr class="pl-detail" data-group="j6090" style="background:rgba(200,80,32,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">CorVel Corporation</td><td style="padding:4px 14px;text-align:right;font-size:12px">4</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$20,316</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">3.8%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$4,470</td></tr><tr class="pl-detail" data-group="j6090" style="background:rgba(200,80,32,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)"><strong>Otras aseguradoras</strong></td><td style="padding:4px 14px;text-align:right;font-size:12px">402</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$140,443</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">26.5%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$30,897</td></tr><tr class="ra pl-toggle-row" onclick="plToggle('j90120')"><td style="padding:10px 14px"><span class="pl-toggle-icon" id="ic-j90120">&#9658;</span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#9B1D10;margin-right:6px;vertical-align:middle"></span><strong>90–120 días</strong><span style="font-size:11px;color:var(--t3);margin-left:8px">Mar 2026</span></td><td style="padding:10px 14px;text-align:right">1,176</td><td style="padding:10px 14px;text-align:right;color:var(--green)"><strong>$469,907</strong></td><td style="padding:10px 14px;text-align:right">5.8%</td><td style="padding:10px 14px;text-align:right;color:#2899aa;font-weight:600">$103,380</td></tr><tr class="pl-detail" data-group="j90120" style="background:rgba(155,29,16,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">Patient</td><td style="padding:4px 14px;text-align:right;font-size:12px">273</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$86,929</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">18.5%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$19,124</td></tr><tr class="pl-detail" data-group="j90120" style="background:rgba(155,29,16,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">MEDICARE-PART B</td><td style="padding:4px 14px;text-align:right;font-size:12px">80</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$66,670</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">14.2%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$14,667</td></tr><tr class="pl-detail" data-group="j90120" style="background:rgba(155,29,16,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">OSCAR HEALTH INSURANCE</td><td style="padding:4px 14px;text-align:right;font-size:12px">344</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$50,070</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">10.7%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$11,015</td></tr><tr class="pl-detail" data-group="j90120" style="background:rgba(155,29,16,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">DOCTORS HEALTHCARE PLANS INC.</td><td style="padding:4px 14px;text-align:right;font-size:12px">9</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$42,188</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">9.0%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$9,281</td></tr><tr class="pl-detail" data-group="j90120" style="background:rgba(155,29,16,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">PREFERRED CARE PARTNERS DUAL</td><td style="padding:4px 14px;text-align:right;font-size:12px">39</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$38,454</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">8.2%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$8,460</td></tr><tr class="pl-detail" data-group="j90120" style="background:rgba(155,29,16,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">BCBS OF FLORIDA</td><td style="padding:4px 14px;text-align:right;font-size:12px">82</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$24,763</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">5.3%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$5,448</td></tr><tr class="pl-detail" data-group="j90120" style="background:rgba(155,29,16,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">HUMANA</td><td style="padding:4px 14px;text-align:right;font-size:12px">24</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$24,274</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">5.2%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$5,340</td></tr><tr class="pl-detail" data-group="j90120" style="background:rgba(155,29,16,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">MEDSOLUTIONS</td><td style="padding:4px 14px;text-align:right;font-size:12px">17</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$13,986</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">3.0%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$3,077</td></tr><tr class="pl-detail" data-group="j90120" style="background:rgba(155,29,16,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)"><strong>Otras aseguradoras</strong></td><td style="padding:4px 14px;text-align:right;font-size:12px">308</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$122,573</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">26.1%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$26,966</td></tr><tr class="ra pl-toggle-row" onclick="plToggle('j120180')"><td style="padding:10px 14px"><span class="pl-toggle-icon" id="ic-j120180">&#9658;</span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#7A1209;margin-right:6px;vertical-align:middle"></span><strong>120–180 días</strong><span style="font-size:11px;color:var(--t3);margin-left:8px">Ene–Feb 2026</span></td><td style="padding:10px 14px;text-align:right">1,634</td><td style="padding:10px 14px;text-align:right;color:var(--green)"><strong>$583,004</strong></td><td style="padding:10px 14px;text-align:right">7.2%</td><td style="padding:10px 14px;text-align:right;color:#2899aa;font-weight:600">$128,261</td></tr><tr class="pl-detail" data-group="j120180" style="background:rgba(122,18,9,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">Patient</td><td style="padding:4px 14px;text-align:right;font-size:12px">343</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$87,791</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">15.1%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$19,314</td></tr><tr class="pl-detail" data-group="j120180" style="background:rgba(122,18,9,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">United Health Care</td><td style="padding:4px 14px;text-align:right;font-size:12px">100</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$72,893</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">12.5%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$16,036</td></tr><tr class="pl-detail" data-group="j120180" style="background:rgba(122,18,9,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">BCBS OF FLORIDA</td><td style="padding:4px 14px;text-align:right;font-size:12px">127</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$50,206</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">8.6%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$11,045</td></tr><tr class="pl-detail" data-group="j120180" style="background:rgba(122,18,9,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">PREFERRED CARE PARTNERS</td><td style="padding:4px 14px;text-align:right;font-size:12px">68</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$40,676</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">7.0%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$8,949</td></tr><tr class="pl-detail" data-group="j120180" style="background:rgba(122,18,9,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">MEDICARE-PART B</td><td style="padding:4px 14px;text-align:right;font-size:12px">120</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$30,792</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">5.3%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$6,774</td></tr><tr class="pl-detail" data-group="j120180" style="background:rgba(122,18,9,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">OSCAR HEALTH INSURANCE</td><td style="padding:4px 14px;text-align:right;font-size:12px">314</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$28,150</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">4.8%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$6,193</td></tr><tr class="pl-detail" data-group="j120180" style="background:rgba(122,18,9,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">AETNA</td><td style="padding:4px 14px;text-align:right;font-size:12px">44</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$21,441</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">3.7%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$4,717</td></tr><tr class="pl-detail" data-group="j120180" style="background:rgba(122,18,9,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">PREFERRED CARE PARTNERS DUAL</td><td style="padding:4px 14px;text-align:right;font-size:12px">38</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$21,015</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">3.6%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$4,623</td></tr><tr class="pl-detail" data-group="j120180" style="background:rgba(122,18,9,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)"><strong>Otras aseguradoras</strong></td><td style="padding:4px 14px;text-align:right;font-size:12px">480</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$230,040</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">39.5%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$50,609</td></tr><tr class="ra pl-toggle-row" onclick="plToggle('j180p')"><td style="padding:10px 14px"><span class="pl-toggle-icon" id="ic-j180p">&#9658;</span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#500000;margin-right:6px;vertical-align:middle"></span><strong>+180 días</strong><span style="font-size:11px;color:var(--t3);margin-left:8px">Pre-2026</span></td><td style="padding:10px 14px;text-align:right">3,652</td><td style="padding:10px 14px;text-align:right;color:var(--green)"><strong>$1,627,428</strong></td><td style="padding:10px 14px;text-align:right">20.0%</td><td style="padding:10px 14px;text-align:right;color:#2899aa;font-weight:600">$358,034</td></tr><tr class="pl-detail" data-group="j180p" style="background:rgba(80,0,0,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">Patient</td><td style="padding:4px 14px;text-align:right;font-size:12px">704</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$212,820</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">13.1%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$46,820</td></tr><tr class="pl-detail" data-group="j180p" style="background:rgba(80,0,0,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">BCBS OF FLORIDA</td><td style="padding:4px 14px;text-align:right;font-size:12px">380</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$189,063</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">11.6%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$41,594</td></tr><tr class="pl-detail" data-group="j180p" style="background:rgba(80,0,0,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">MEDICARE-PART B</td><td style="padding:4px 14px;text-align:right;font-size:12px">198</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$177,550</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">10.9%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$39,061</td></tr><tr class="pl-detail" data-group="j180p" style="background:rgba(80,0,0,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">MEDSOLUTIONS</td><td style="padding:4px 14px;text-align:right;font-size:12px">75</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$116,017</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">7.1%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$25,524</td></tr><tr class="pl-detail" data-group="j180p" style="background:rgba(80,0,0,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">OSCAR HEALTH INSURANCE</td><td style="padding:4px 14px;text-align:right;font-size:12px">949</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$102,998</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">6.3%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$22,660</td></tr><tr class="pl-detail" data-group="j180p" style="background:rgba(80,0,0,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">SIMPLY an Anthem Company MCR MCD</td><td style="padding:4px 14px;text-align:right;font-size:12px">23</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$70,097</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">4.3%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$15,421</td></tr><tr class="pl-detail" data-group="j180p" style="background:rgba(80,0,0,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">United Health Care</td><td style="padding:4px 14px;text-align:right;font-size:12px">178</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$66,391</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">4.1%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$14,606</td></tr><tr class="pl-detail" data-group="j180p" style="background:rgba(80,0,0,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)">PREFERRED CARE PARTNERS</td><td style="padding:4px 14px;text-align:right;font-size:12px">22</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$63,562</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">3.9%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$13,984</td></tr><tr class="pl-detail" data-group="j180p" style="background:rgba(80,0,0,.04)"><td style="padding:4px 14px 4px 38px;font-size:12px;color:var(--t2)"><strong>Otras aseguradoras</strong></td><td style="padding:4px 14px;text-align:right;font-size:12px">1,123</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t2)">$628,931</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:var(--t3)">38.6%</td><td style="padding:4px 14px;text-align:right;font-size:12px;color:#2899aa">$138,365</td></tr>
-                  <tr style="border-top:2px solid var(--bd);background:var(--bg2)">
-                    <td style="padding:10px 14px;font-weight:700">TOTAL</td>
-                    <td style="padding:10px 14px;text-align:right;font-weight:700">13,132</td>
-                    <td style="padding:10px 14px;text-align:right;font-weight:700;color:var(--blue)">$8,124,440</td>
-                    <td style="padding:10px 14px;text-align:right;font-weight:700">100%</td>
-                    <td style="padding:10px 14px;text-align:right;font-weight:700;color:#2899aa">$1,787,378</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+          <!-- Payer table -->
+          <div class="table-wrap" style="padding:16px 20px">
+            <div class="div-row" style="margin-bottom:10px"><span class="div-lbl">AR Neto por Aseguradora</span><div class="div-rule"></div></div>
+            <div style="overflow-x:auto"><table>
+              <thead>
+                <tr><th>Payer</th><th class="cur">Neto</th><th>0-30d</th><th>30-60d</th><th>60-90d</th><th>90-120d</th><th>120-180d</th><th>+180d</th><th>Cobro Esp.</th></tr>
+              </thead>
+              <tbody>
+                <tr class="rg"><td>PREFERRED CARE PARTNERS DUAL</td><td class="cur">$596,091</td><td>$521,229</td><td>$30,104</td><td>$25,600</td><td>$34,548</td><td>$20,025</td><td>-$35,415</td><td style="color:var(--green)">$131,140</td></tr>
+<tr class="rg"><td>PREFERRED CARE NETWORK</td><td class="cur">$593,891</td><td>$443,386</td><td>$77,574</td><td>$12,137</td><td>$9,520</td><td>$18,026</td><td>$33,247</td><td style="color:var(--green)">$130,656</td></tr>
+<tr class="rg"><td>MEDICARE-PART B</td><td class="cur">$508,287</td><td>$209,195</td><td>$83,767</td><td>$25,838</td><td>$29,806</td><td>$11,895</td><td>$147,787</td><td style="color:var(--green)">$111,823</td></tr>
+<tr class="rg"><td>PREFERRED CARE PARTNERS</td><td class="cur">$383,623</td><td>$215,172</td><td>$62,779</td><td>$3,424</td><td>$3,178</td><td>$39,218</td><td>$59,852</td><td style="color:var(--green)">$84,397</td></tr>
+<tr class="rg"><td>HUMANA</td><td class="cur">$317,746</td><td>$423,429</td><td>$11,812</td><td>$7,789</td><td>$22,226</td><td>-$41,899</td><td>-$105,610</td><td style="color:var(--green)">$69,904</td></tr>
+<tr class="rg"><td>Solis Health Plans</td><td class="cur">$315,855</td><td>$153,763</td><td>$158,358</td><td>$25,005</td><td>$12,506</td><td>-$49,362</td><td>$15,585</td><td style="color:var(--green)">$69,488</td></tr>
+<tr class="rg"><td>OSCAR HEALTH INSURANCE</td><td class="cur">$308,704</td><td>$329,961</td><td>$16,220</td><td>$22,137</td><td>$20,087</td><td>-$37,701</td><td>-$42,001</td><td style="color:var(--green)">$67,915</td></tr>
+<tr class="rg"><td>DOCTORS HEALTHCARE PLANS INC.</td><td class="cur">$269,967</td><td>$203,974</td><td>$8,617</td><td>$5,219</td><td>$41,618</td><td>-$1,841</td><td>$12,380</td><td style="color:var(--green)">$59,393</td></tr>
+<tr class="rg"><td>United Health Care</td><td class="cur">$227,808</td><td>$134,739</td><td>$22,776</td><td>-$1,125</td><td>-$5,690</td><td>$54,397</td><td>$22,711</td><td style="color:var(--green)">$50,118</td></tr>
+
+              </tbody>
+            </table></div>
           </div>
+        </div>
+
+        <div style="margin-top:10px;padding:8px 12px;background:rgba(40,153,170,.06);border-radius:4px;border-left:3px solid var(--blue);font-size:12px;color:var(--t2)">
+          <strong>Metodolog&iacute;a:</strong> Balance neto = suma de todos los registros de Balance (positivos + negativos/cr&eacute;ditos), igual a la Suma de Balance de la Pivot de Excel. Los valores negativos indican meses donde se cobraron m&aacute;s pagos que cargos (cr&eacute;dito neto a favor del asegurador). Fuente: Pivot JUNIO.xlsx.
         </div>
       </div>
 
