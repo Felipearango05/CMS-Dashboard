@@ -1595,42 +1595,318 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
       <div class="sec-hdr">
         <div class="sec-eye">Section 1</div>
         <div class="sec-title">Billing</div>
-        <div class="sec-desc">Charges, collections, and balance &mdash; Jun 2026.</div>
+        <div class="sec-desc">Charges, collections, and balance &mdash; Jun 2026. Click any breakdown row to drill deeper.</div>
       </div>
+
       <div class="sub-nav">
-        <div class="sub-tab active" onclick="showSub('sb-billing','',this)">Billing</div>
-        <div class="sub-tab" onclick="showSub('sb-collections','',this)">Collections</div>
-        <div class="sub-tab" onclick="showSub('sb-balance','',this)">Balance</div>
+        <div class="sub-tab active" onclick="showSub('sb-billing','billing',this)">Billing</div>
+        <div class="sub-tab" onclick="showSub('sb-collections','collections',this)">Collections</div>
+        <div class="sub-tab" onclick="showSub('sb-balance','balance',this)">Balance</div>
         <div class="sub-tab" onclick="showSub('sb-denials','',this)">Denials</div>
       </div>
-      <div id="sb-billing-jun">
-        <div class="empty-state" style="margin-top:40px">
-          <div class="empty-icon">&#128203;</div>
-          <div class="empty-title">Billing Jun 2026 &mdash; Pendiente</div>
-          <div class="empty-sub">Los datos de billing de junio 2026 estar&aacute;n disponibles cuando se reciba el reporte mensual.</div>
+
+      <!-- SUB: BILLING -->
+      <div id="sb-billing">
+        <div class="kpi-grid">
+          <div class="kpi blue"><div class="kpi-lbl">Current Month</div><div class="kpi-val">$4.70M</div><div class="kpi-foot"><span class="badge down">&darr; &minus;20.4%</span><span class="kpi-vs">vs. May 2026</span></div><div class="spark"><div class="spark-bar" style="height:59%"></div><div class="spark-bar" style="height:76%"></div><div class="spark-bar" style="height:90%"></div><div class="spark-bar" style="height:100%"></div><div class="spark-bar" style="height:80%"></div></div></div>
+          <div class="kpi blue"><div class="kpi-lbl">Prior Month (May 2026)</div><div class="kpi-val">$5.90M</div><div class="kpi-foot"><span class="kpi-vs">May 2026</span></div><div class="spark"><div class="spark-bar" style="height:59%"></div><div class="spark-bar" style="height:76%"></div><div class="spark-bar" style="height:90%"></div><div class="spark-bar" style="height:91%"></div><div class="spark-bar" style="height:100%"></div></div></div>
+          <div class="kpi blue"><div class="kpi-lbl">YTD 2026 (Jan&ndash;Jun)</div><div class="kpi-val">$29.19M</div><div class="kpi-foot"><span class="badge up">&uarr; 6 months</span></div><div class="spark"><div class="spark-bar" style="height:59%"></div><div class="spark-bar" style="height:76%"></div><div class="spark-bar" style="height:90%"></div><div class="spark-bar" style="height:91%"></div><div class="spark-bar" style="height:100%"></div><div class="spark-bar" style="height:80%"></div></div></div>
+          <div class="kpi blue"><div class="kpi-lbl">Prior Year (Jun 2025)</div><div class="kpi-val empty">&mdash;</div><div class="kpi-foot"><span class="badge empty">No data</span></div><div class="spark"><div class="spark-bar" style="height:40%"></div><div class="spark-bar" style="height:40%"></div><div class="spark-bar" style="height:40%"></div><div class="spark-bar" style="height:40%"></div><div class="spark-bar" style="height:40%"></div></div></div>
+        </div>
+        <div class="div-row"><span class="div-lbl">Period Comparison</span><div class="div-rule"></div></div>
+        <div class="table-wrap"><table>
+          <thead><tr class="cg-row"><th></th><th class="cur">Current</th><th colspan="3">2026 Comparison</th><th class="sep" colspan="2">Prior Year</th></tr>
+          <tr><th>Metric</th><th class="cur">Jun 2026</th><th>May 2026</th><th>MoM &Delta;</th><th>YTD 2026</th><th class="sep">Jun 2025</th><th>YTD 2025</th></tr></thead>
+          <tbody><tr class="rb"><td>Billing (Charges)</td><td class="cur">$4,698,856</td><td>$5,904,578</td><td class="dn">&darr; &minus;20.4%</td><td>$29,190,553</td><td class="sep na">&mdash;</td><td class="na">&mdash;</td></tr></tbody>
+        </table></div>
+      </div>
+
+      <!-- SUB: COLLECTIONS -->
+      <div id="sb-collections" hidden>
+        <div class="kpi-grid">
+          <div class="kpi green"><div class="kpi-lbl">Current Month</div><div class="kpi-val">$417K</div><div class="kpi-foot"><span class="badge down">&darr; &minus;69.0%</span><span class="kpi-vs">vs. May 2026</span></div><div class="spark"><div class="spark-bar" style="height:56%"></div><div class="spark-bar" style="height:67%"></div><div class="spark-bar" style="height:86%"></div><div class="spark-bar" style="height:97%"></div><div class="spark-bar" style="height:100%"></div><div class="spark-bar" style="height:31%"></div></div></div>
+          <div class="kpi green"><div class="kpi-lbl">Prior Month (May 2026)</div><div class="kpi-val">$1.35M</div><div class="kpi-foot"><span class="kpi-vs">May 2026</span></div><div class="spark"><div class="spark-bar" style="height:56%"></div><div class="spark-bar" style="height:67%"></div><div class="spark-bar" style="height:86%"></div><div class="spark-bar" style="height:100%"></div><div class="spark-bar" style="height:97%"></div></div></div>
+          <div class="kpi green"><div class="kpi-lbl">YTD 2026 (Jan&ndash;Jun)</div><div class="kpi-val">$5.93M</div><div class="kpi-foot"><span class="badge up">&uarr; 6 months</span></div><div class="spark"><div class="spark-bar" style="height:56%"></div><div class="spark-bar" style="height:67%"></div><div class="spark-bar" style="height:86%"></div><div class="spark-bar" style="height:97%"></div><div class="spark-bar" style="height:100%"></div><div class="spark-bar" style="height:31%"></div></div></div>
+          <div class="kpi violet"><div class="kpi-lbl">Collection Rate</div><div class="kpi-val">8.9%</div><div class="kpi-foot"><span class="badge down">&darr; &minus;13.9 pp</span><span class="kpi-vs">vs. May 2026</span></div><div class="spark"><div class="spark-bar" style="height:89%"></div><div class="spark-bar" style="height:83%"></div><div class="spark-bar" style="height:90%"></div><div class="spark-bar" style="height:100%"></div><div class="spark-bar" style="height:94%"></div><div class="spark-bar" style="height:39%"></div></div></div>
+        </div>
+        <div class="div-row"><span class="div-lbl">Period Comparison</span><div class="div-rule"></div></div>
+        <div class="table-wrap"><table>
+          <thead><tr class="cg-row"><th></th><th class="cur">Current</th><th colspan="3">2026 Comparison</th><th class="sep" colspan="2">Prior Year</th></tr>
+          <tr><th>Metric</th><th class="cur">Jun 2026</th><th>May 2026</th><th>MoM &Delta;</th><th>YTD 2026</th><th class="sep">Jun 2025</th><th>YTD 2025</th></tr></thead>
+          <tbody>
+            <tr class="rg"><td>Collections (Payments)</td><td class="cur">$417,033</td><td>$1,345,830</td><td class="dn">&darr; &minus;69.0%</td><td>$5,931,561</td><td class="sep na">&mdash;</td><td class="na">&mdash;</td></tr>
+            <tr class="rv"><td>Collection Rate</td><td class="cur">8.9%</td><td>22.8%</td><td class="dn">&darr; &minus;13.9 pp</td><td>20.3%</td><td class="sep na">&mdash;</td><td class="na">&mdash;</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <!-- SUB: BALANCE -->
+      <div id="sb-balance" hidden>
+
+        <div class="kpi-grid" style="margin-bottom:20px">
+          <div class="kpi blue">
+            <div class="kpi-lbl">Balance Total &mdash; Jun 30, 2026</div>
+            <div class="kpi-val">$8,124,440</div>
+            <div class="kpi-foot"><span class="badge">13,132 registros con balance positivo</span></div>
+          </div>
+          <div class="kpi amber">
+            <div class="kpi-lbl">Balance Cr&iacute;tico (+90 d&iacute;as)</div>
+            <div class="kpi-val">$2,680,339</div>
+            <div class="kpi-foot"><span class="badge dn">33.0% &mdash; mayor riesgo de no cobro</span></div>
+          </div>
+          <div class="kpi green">
+            <div class="kpi-lbl">Balance Corriente (0&ndash;30 d&iacute;as)</div>
+            <div class="kpi-val">$3,927,259</div>
+            <div class="kpi-foot"><span class="badge up">48.3% &mdash; en proceso normal</span></div>
+          </div>
+        </div>
+
+        <div class="div-row"><span class="div-lbl">Aging de Balance &mdash; AR por Antig&uuml;edad</span><div class="div-rule"></div><span style="font-size:11px;color:var(--t3)">Fecha de referencia: 30 de junio 2026</span></div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+
+          <div class="table-wrap" style="padding:18px 20px">
+            <div style="margin-bottom:16px;font-size:12px;color:var(--t3)">Balance por tramo &middot; % del total</div>
+            <div class="pl-bars" style="gap:14px">
+
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">0&ndash;30 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Jun 1&ndash;30, 2026</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:48.3%;background:#3DAA82"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;color:var(--green);font-weight:600">$3,927,259</span>
+                  <span style="font-size:12px;color:var(--t3)">48.3% &middot; 3,997 cuentas</span>
+                </div>
+              </div>
+
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">30&ndash;60 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">May 1&ndash;31, 2026</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:12.1%;background:#E86428"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;color:var(--amber);font-weight:600">$986,658</span>
+                  <span style="font-size:12px;color:var(--t3)">12.1% &middot; 1,433 cuentas</span>
+                </div>
+              </div>
+
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">60&ndash;90 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Abr 1&ndash;30, 2026</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:6.5%;background:#C85020"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;color:var(--neg);font-weight:600">$530,184</span>
+                  <span style="font-size:12px;color:var(--t3)">6.5% &middot; 1,240 cuentas</span>
+                </div>
+              </div>
+
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">90&ndash;120 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Mar 1&ndash;31, 2026</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:5.8%;background:#9B1D10"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;color:#9B1D10;font-weight:600">$469,907</span>
+                  <span style="font-size:12px;color:var(--t3)">5.8% &middot; 1,176 cuentas</span>
+                </div>
+              </div>
+
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">120&ndash;180 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Ene 1 &ndash; Feb 28, 2026</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:7.2%;background:#7A1209"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;color:#7A1209;font-weight:600">$583,004</span>
+                  <span style="font-size:12px;color:var(--t3)">7.2% &middot; 1,634 cuentas</span>
+                </div>
+              </div>
+
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;font-weight:700;color:var(--neg)">&#x26A0; +180 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Antes Ene 1, 2026</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:20%;background:#500000"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;color:#500000;font-weight:700">$1,627,428</span>
+                  <span style="font-size:12px;color:var(--t3)">20.0% &middot; 3,652 cuentas &middot; Mayor riesgo</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="table-wrap" style="padding:0;overflow-x:auto">
+            <table style="font-size:13px;min-width:700px;border-collapse:collapse;font-variant-numeric:tabular-nums">
+              <thead>
+                <tr>
+                  <th style="text-align:left;padding:10px 14px;font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid var(--bd);background:var(--bg2)">Tramo</th>
+                  <th style="text-align:right;padding:10px 14px;font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid var(--bd);background:var(--bg2)">Cuentas</th>
+                  <th style="text-align:right;padding:10px 14px;font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid var(--bd);background:var(--bg2)">Balance</th>
+                  <th style="text-align:right;padding:10px 14px;font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid var(--bd);background:var(--bg2)">%</th>
+                  <th style="text-align:right;padding:10px 14px;font-size:11px;font-weight:700;color:#2899aa;letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid var(--bd);background:var(--bg2)">Cobro Esp.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background:var(--bg);border-bottom:1px solid var(--bd)">
+                  <td style="padding:10px 14px"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#3DAA82;margin-right:6px;vertical-align:middle"></span><strong>0&ndash;30 d&iacute;as</strong><span style="font-size:11px;color:var(--t3);margin-left:8px">Jun 2026</span></td>
+                  <td style="padding:10px 14px;text-align:right">3,997</td>
+                  <td style="padding:10px 14px;text-align:right;color:var(--green);font-weight:600">$3,927,259</td>
+                  <td style="padding:10px 14px;text-align:right">48.3%</td>
+                  <td style="padding:10px 14px;text-align:right;color:#2899aa">Alto</td>
+                </tr>
+                <tr style="background:#fff;border-bottom:1px solid var(--bd)">
+                  <td style="padding:10px 14px"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#E86428;margin-right:6px;vertical-align:middle"></span><strong>30&ndash;60 d&iacute;as</strong><span style="font-size:11px;color:var(--t3);margin-left:8px">May 2026</span></td>
+                  <td style="padding:10px 14px;text-align:right">1,433</td>
+                  <td style="padding:10px 14px;text-align:right;color:var(--amber);font-weight:600">$986,658</td>
+                  <td style="padding:10px 14px;text-align:right">12.1%</td>
+                  <td style="padding:10px 14px;text-align:right;color:#2899aa">Medio</td>
+                </tr>
+                <tr style="background:var(--bg);border-bottom:1px solid var(--bd)">
+                  <td style="padding:10px 14px"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#C85020;margin-right:6px;vertical-align:middle"></span><strong>60&ndash;90 d&iacute;as</strong><span style="font-size:11px;color:var(--t3);margin-left:8px">Abr 2026</span></td>
+                  <td style="padding:10px 14px;text-align:right">1,240</td>
+                  <td style="padding:10px 14px;text-align:right;color:var(--neg);font-weight:600">$530,184</td>
+                  <td style="padding:10px 14px;text-align:right">6.5%</td>
+                  <td style="padding:10px 14px;text-align:right;color:#C85020">Bajo</td>
+                </tr>
+                <tr style="background:#fff;border-bottom:1px solid var(--bd)">
+                  <td style="padding:10px 14px"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#9B1D10;margin-right:6px;vertical-align:middle"></span><strong>90&ndash;120 d&iacute;as</strong><span style="font-size:11px;color:var(--t3);margin-left:8px">Mar 2026</span></td>
+                  <td style="padding:10px 14px;text-align:right">1,176</td>
+                  <td style="padding:10px 14px;text-align:right;color:#9B1D10;font-weight:600">$469,907</td>
+                  <td style="padding:10px 14px;text-align:right">5.8%</td>
+                  <td style="padding:10px 14px;text-align:right;color:#9B1D10">Muy bajo</td>
+                </tr>
+                <tr style="background:var(--bg);border-bottom:1px solid var(--bd)">
+                  <td style="padding:10px 14px"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#7A1209;margin-right:6px;vertical-align:middle"></span><strong>120&ndash;180 d&iacute;as</strong><span style="font-size:11px;color:var(--t3);margin-left:8px">Ene&ndash;Feb 2026</span></td>
+                  <td style="padding:10px 14px;text-align:right">1,634</td>
+                  <td style="padding:10px 14px;text-align:right;color:#7A1209;font-weight:600">$583,004</td>
+                  <td style="padding:10px 14px;text-align:right">7.2%</td>
+                  <td style="padding:10px 14px;text-align:right;color:#7A1209">Cr&iacute;tico</td>
+                </tr>
+                <tr style="background:#fff;border-bottom:2px solid var(--bd)">
+                  <td style="padding:10px 14px"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#500000;margin-right:6px;vertical-align:middle"></span><strong style="color:var(--neg)">+180 d&iacute;as</strong><span style="font-size:11px;color:var(--t3);margin-left:8px">Pre-2026</span></td>
+                  <td style="padding:10px 14px;text-align:right">3,652</td>
+                  <td style="padding:10px 14px;text-align:right;color:#500000;font-weight:700">$1,627,428</td>
+                  <td style="padding:10px 14px;text-align:right">20.0%</td>
+                  <td style="padding:10px 14px;text-align:right;color:#500000">Irrecuperable</td>
+                </tr>
+                <tr style="background:var(--bg2)">
+                  <td style="padding:10px 14px;font-weight:700">TOTAL</td>
+                  <td style="padding:10px 14px;text-align:right;font-weight:700">13,132</td>
+                  <td style="padding:10px 14px;text-align:right;font-weight:700">$8,124,440</td>
+                  <td style="padding:10px 14px;text-align:right;font-weight:700">100%</td>
+                  <td style="padding:10px 14px;text-align:right"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
         </div>
       </div>
-      <div id="sb-collections-jun" hidden>
-        <div class="empty-state" style="margin-top:40px">
-          <div class="empty-icon">&#128203;</div>
-          <div class="empty-title">Collections Jun 2026 &mdash; Pendiente</div>
-          <div class="empty-sub">Datos pendientes de recibir.</div>
+
+      <!-- SUB: DENIALS -->
+      <div id="sb-denials" hidden>
+
+        <div class="kpi-grid" style="margin-bottom:20px">
+          <div class="kpi amber">
+            <div class="kpi-lbl">Cargos Denegados &mdash; Jun 2026</div>
+            <div class="kpi-val">$321,443</div>
+            <div class="kpi-foot"><span class="badge">352 claims</span></div>
+          </div>
+          <div class="kpi green">
+            <div class="kpi-lbl">Pagos Recibidos en Denials</div>
+            <div class="kpi-val">$13,931</div>
+            <div class="kpi-foot"><span class="badge up">4.3% recovery</span></div>
+          </div>
+          <div class="kpi blue">
+            <div class="kpi-lbl">Ajustes / Write-offs</div>
+            <div class="kpi-val">$21,755</div>
+            <div class="kpi-foot"><span class="badge">6.8% de cargos</span></div>
+          </div>
+          <div class="kpi amber">
+            <div class="kpi-lbl">Balance Pendiente</div>
+            <div class="kpi-val">$45,141</div>
+            <div class="kpi-foot"><span class="badge dn">Recuperable</span></div>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
+
+          <div class="table-wrap" style="padding:16px 20px">
+            <div class="div-row" style="margin-bottom:14px"><span class="div-lbl">Razones de Denial</span><div class="div-rule"></div><span style="font-size:11px;color:var(--t3)">por $ denegado</span></div>
+            <div class="pl-bars">
+              <div class="pl-bar-row">
+                <div class="pl-bar-lbl" title="253 - Sequestration Reduction">Sequestration Reduction <span style="font-size:10px;color:var(--t3)">#253</span></div>
+                <div class="pl-bar-track"><div class="pl-bar-fill" style="width:100%;background:var(--amber)"></div></div>
+                <div class="pl-bar-val">$188,472 <span class="pl-bar-pct">58.6%</span></div>
+              </div>
+              <div style="font-size:11px;color:var(--t3);padding:2px 0 6px 0;border-bottom:1px dashed var(--border-lo);margin-bottom:6px">&#9650; Reducci&oacute;n autom&aacute;tica Medicare 2% &mdash; administrativa / esperada</div>
+              <div class="pl-bar-row">
+                <div class="pl-bar-lbl" title="23 - Impact of Prior Payer Adjudication">COB &mdash; Prior Payer Adj. <span style="font-size:10px;color:var(--t3)">#23</span></div>
+                <div class="pl-bar-track"><div class="pl-bar-fill" style="width:20.6%;background:var(--blue)"></div></div>
+                <div class="pl-bar-val">$38,882 <span class="pl-bar-pct">12.1%</span></div>
+              </div>
+              <div style="font-size:11px;color:var(--t3);padding:2px 0 6px 0;border-bottom:1px dashed var(--border-lo);margin-bottom:6px">&#9650; Coordinaci&oacute;n de beneficios (COB) &mdash; administrativa / esperada</div>
+              <div class="pl-bar-row">
+                <div class="pl-bar-lbl" title="59 - Multiple Procedure Guidelines">Multiple Procedure Reduction <span style="font-size:10px;color:var(--t3)">#59</span></div>
+                <div class="pl-bar-track"><div class="pl-bar-fill" style="width:17.5%;background:var(--violet)"></div></div>
+                <div class="pl-bar-val">$33,063 <span class="pl-bar-pct">10.3%</span></div>
+              </div>
+              <div class="pl-bar-row">
+                <div class="pl-bar-lbl" title="97 - Benefit Included in Another Procedure">Incluido en Otro Procedimiento <span style="font-size:10px;color:var(--t3)">#97</span></div>
+                <div class="pl-bar-track"><div class="pl-bar-fill" style="width:6.9%;background:var(--t3)"></div></div>
+                <div class="pl-bar-val">$13,049 <span class="pl-bar-pct">4.1%</span></div>
+              </div>
+              <div class="pl-bar-row">
+                <div class="pl-bar-lbl" title="234 - Procedure Not Paid Separately">Bundled &mdash; No Paid Separately <span style="font-size:10px;color:var(--t3)">#234</span></div>
+                <div class="pl-bar-track"><div class="pl-bar-fill" style="width:4.8%;background:var(--t3)"></div></div>
+                <div class="pl-bar-val">$9,000 <span class="pl-bar-pct">2.8%</span></div>
+              </div>
+              <div class="pl-bar-row">
+                <div class="pl-bar-lbl" title="252 - Attachment Required">Attachment Required <span style="font-size:10px;color:var(--t3)">#252</span></div>
+                <div class="pl-bar-track"><div class="pl-bar-fill" style="width:4.2%;background:var(--neg)"></div></div>
+                <div class="pl-bar-val">$7,850 <span class="pl-bar-pct">2.4%</span></div>
+              </div>
+              <div class="pl-bar-row">
+                <div class="pl-bar-lbl" title="183 - Referring Provider Not Eligible">Referring Provider Not Eligible <span style="font-size:10px;color:var(--t3)">#183</span></div>
+                <div class="pl-bar-track"><div class="pl-bar-fill" style="width:3.8%;background:var(--neg)"></div></div>
+                <div class="pl-bar-val">$7,075 <span class="pl-bar-pct">2.2%</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="table-wrap" style="padding:16px 20px">
+            <div class="div-row" style="margin-bottom:14px"><span class="div-lbl">Resumen Denial</span><div class="div-rule"></div><span style="font-size:11px;color:var(--t3)">Jun 2026</span></div>
+            <table style="font-size:13px;width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums">
+              <thead>
+                <tr>
+                  <th style="text-align:left;padding:8px 12px;font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid var(--bd);background:var(--bg2)">Categor&iacute;a</th>
+                  <th style="text-align:right;padding:8px 12px;font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid var(--bd);background:var(--bg2)">Claims</th>
+                  <th style="text-align:right;padding:8px 12px;font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid var(--bd);background:var(--bg2)">Cargos</th>
+                  <th style="text-align:right;padding:8px 12px;font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid var(--bd);background:var(--bg2)">%</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background:var(--bg)"><td style="padding:8px 12px">Administrativa / Esperada</td><td style="padding:8px 12px;text-align:right">243</td><td style="padding:8px 12px;text-align:right;color:var(--t3)">$227,354</td><td style="padding:8px 12px;text-align:right">70.7%</td></tr>
+                <tr style="background:#fff"><td style="padding:8px 12px">Coordinaci&oacute;n / COB</td><td style="padding:8px 12px;text-align:right">36</td><td style="padding:8px 12px;text-align:right;color:var(--amber)">$38,882</td><td style="padding:8px 12px;text-align:right">12.1%</td></tr>
+                <tr style="background:var(--bg)"><td style="padding:8px 12px">Procedimiento / Bundled</td><td style="padding:8px 12px;text-align:right">24</td><td style="padding:8px 12px;text-align:right;color:var(--amber)">$42,063</td><td style="padding:8px 12px;text-align:right">13.1%</td></tr>
+                <tr style="background:#fff"><td style="padding:8px 12px">Provider / Autorizaci&oacute;n</td><td style="padding:8px 12px;text-align:right">5</td><td style="padding:8px 12px;text-align:right;color:var(--neg)">$14,925</td><td style="padding:8px 12px;text-align:right">4.6%</td></tr>
+                <tr style="background:var(--bg);font-weight:700;border-top:2px solid var(--bd)"><td style="padding:8px 12px">TOTAL</td><td style="padding:8px 12px;text-align:right">352</td><td style="padding:8px 12px;text-align:right">$321,443</td><td style="padding:8px 12px;text-align:right">100%</td></tr>
+              </tbody>
+            </table>
+          </div>
+
         </div>
       </div>
-      <div id="sb-balance-jun" hidden>
-        <div class="empty-state" style="margin-top:40px">
-          <div class="empty-icon">&#128203;</div>
-          <div class="empty-title">Balance Jun 2026 &mdash; Pendiente</div>
-          <div class="empty-sub">Datos pendientes de recibir.</div>
-        </div>
-      </div>
-      <div id="sb-denials-jun" hidden>
-        <div class="empty-state" style="margin-top:40px">
-          <div class="empty-icon">&#128203;</div>
-          <div class="empty-title">Denials Jun 2026 &mdash; Pendiente</div>
-          <div class="empty-sub">Datos pendientes de recibir.</div>
-        </div>
-      </div>
+
     </div><!-- /billing-jun -->
 
     <!-- OPERATIVOS JUN 2026 -->
