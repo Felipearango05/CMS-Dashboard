@@ -241,6 +241,7 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
     <div class="topbar-bc" id="breadcrumb">Dashboard <span class="sep">/</span><span>Billing</span></div>
     <div class="topbar-r">
       <div class="period-selector" id="period-selector">
+        <button class="period-btn" onclick="switchPeriod('apr-2026',this)">Apr 2026</button>
         <button class="period-btn active" onclick="switchPeriod('may-2026',this)">May 2026</button>
         <button class="period-btn" onclick="switchPeriod('jun-2026',this)">Jun 2026</button>
         <button class="period-btn" onclick="switchPeriod('jul-2026',this)">Jul 2026</button>
@@ -250,6 +251,296 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
   </div>
 
   <div class="content">
+  
+  <!-- ══════════════════════════════════ APRIL 2026 ══════════════════════════════════ -->
+  <div class="period-data" id="pd-apr-2026">
+
+    <!-- ══ BILLING ══ -->
+    <div id="billing-apr">
+      <div class="sec-hdr">
+        <div class="sec-eye">Section 1</div>
+        <div class="sec-title">Billing</div>
+        <div class="sec-desc">Charges, collections y balance &mdash; Abril 2026.</div>
+      </div>
+
+      <div class="sub-nav">
+        <div class="sub-tab active" onclick="showSub('sb-billing','billing',this)">Billing</div>
+        <div class="sub-tab" onclick="showSub('sb-collections','collections',this)">Collections</div>
+        <div class="sub-tab" onclick="showSub('sb-balance','balance',this)">Balance</div>
+        <div class="sub-tab" onclick="showSub('sb-denials','denials',this)">Denials</div>
+      </div>
+
+      <!-- SUB: BILLING -->
+      <div id="sb-billing-apr">
+        <div class="kpi-grid">
+          <div class="kpi blue"><div class="kpi-lbl">Current Month</div><div class="kpi-val">$5.37M</div><div class="kpi-foot"><span class="badge up">&uarr; +3.9%</span><span class="kpi-vs">vs. Mar 2026</span></div><div class="spark"><div class="spark-bar" style="height:88%;background:var(--green)"></div><div class="spark-bar" style="height:92%;background:var(--green)"></div><div class="spark-bar" style="height:97%;background:var(--green)"></div><div class="spark-bar" style="height:100%;background:var(--green)"></div><div class="spark-bar" style="height:91%;background:var(--green)"></div></div></div>
+          <div class="kpi blue"><div class="kpi-lbl">Prior Month (Mar 2026)</div><div class="kpi-val">$5.17M</div><div class="kpi-foot"><span class="kpi-vs">Mar 2026</span></div><div class="spark"><div class="spark-bar" style="height:85%;background:var(--green)"></div><div class="spark-bar" style="height:88%;background:var(--green)"></div><div class="spark-bar" style="height:92%;background:var(--green)"></div><div class="spark-bar" style="height:97%;background:var(--green)"></div><div class="spark-bar" style="height:100%;background:var(--green)"></div></div></div>
+          <div class="kpi blue"><div class="kpi-lbl">YTD 2026 (Ene&ndash;Abr)</div><div class="kpi-val">$18.43M</div><div class="kpi-foot"><span class="badge up">&uarr; 4 meses</span></div><div class="spark"><div class="spark-bar" style="height:70%;background:var(--green)"></div><div class="spark-bar" style="height:80%;background:var(--green)"></div><div class="spark-bar" style="height:90%;background:var(--green)"></div><div class="spark-bar" style="height:100%;background:var(--green)"></div></div></div>
+          <div class="kpi violet"><div class="kpi-lbl">Avg Mensual YTD</div><div class="kpi-val">$4.61M</div><div class="kpi-foot"><span class="kpi-vs">Ene&ndash;Abr 2026</span></div><div class="spark"><div class="spark-bar" style="height:88%;background:var(--green)"></div><div class="spark-bar" style="height:92%;background:var(--green)"></div><div class="spark-bar" style="height:97%;background:var(--green)"></div><div class="spark-bar" style="height:100%;background:var(--green)"></div></div></div>
+        </div>
+        <div class="div-row"><span class="div-lbl">Period Comparison</span><div class="div-rule"></div></div>
+        <div class="table-wrap"><table>
+          <thead>
+            <tr class="cg-row"><th></th><th class="cur">Current</th><th colspan="3">2026 Comparison</th><th class="sep" colspan="2">Prior Year</th></tr>
+            <tr><th>Metric</th><th class="cur">Abr 2026</th><th>Mar 2026</th><th>MoM &Delta;</th><th>YTD 2026</th><th class="sep">Abr 2025</th><th>YTD 2025</th></tr>
+          </thead>
+          <tbody>
+            <tr class="rg"><td>Charges (Billing)</td><td class="cur">$5,368,017</td><td>$5,166,863</td><td class="dp">&uarr; +3.9%</td><td>$18,429,347</td><td class="sep na">&mdash;</td><td class="na">&mdash;</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <!-- SUB: COLLECTIONS -->
+      <div id="sb-collections-apr" hidden>
+        <div class="kpi-grid">
+          <div class="kpi green"><div class="kpi-lbl">Current Month</div><div class="kpi-val">$1.30M</div><div class="kpi-foot"><span class="badge up">&uarr; +12.8%</span><span class="kpi-vs">vs. Mar 2026</span></div><div class="spark"><div class="spark-bar" style="height:72%;background:var(--green)"></div><div class="spark-bar" style="height:81%;background:var(--green)"></div><div class="spark-bar" style="height:91%;background:var(--green)"></div><div class="spark-bar" style="height:100%;background:var(--green)"></div></div></div>
+          <div class="kpi green"><div class="kpi-lbl">Prior Month (Mar 2026)</div><div class="kpi-val">$1.16M</div><div class="kpi-foot"><span class="kpi-vs">Mar 2026</span></div><div class="spark"><div class="spark-bar" style="height:72%;background:var(--green)"></div><div class="spark-bar" style="height:81%;background:var(--green)"></div><div class="spark-bar" style="height:91%;background:var(--green)"></div><div class="spark-bar" style="height:100%;background:var(--green)"></div></div></div>
+          <div class="kpi green"><div class="kpi-lbl">YTD 2026 (Ene&ndash;Abr)</div><div class="kpi-val">$4.12M</div><div class="kpi-foot"><span class="badge up">&uarr; 4 meses</span></div><div class="spark"><div class="spark-bar" style="height:70%;background:var(--green)"></div><div class="spark-bar" style="height:80%;background:var(--green)"></div><div class="spark-bar" style="height:90%;background:var(--green)"></div><div class="spark-bar" style="height:100%;background:var(--green)"></div></div></div>
+          <div class="kpi violet"><div class="kpi-lbl">Collection Rate</div><div class="kpi-val">24.3%</div><div class="kpi-foot"><span class="kpi-vs">Abr 2026</span></div><div class="spark"><div class="spark-bar" style="height:80%;background:var(--green)"></div><div class="spark-bar" style="height:85%;background:var(--green)"></div><div class="spark-bar" style="height:90%;background:var(--green)"></div><div class="spark-bar" style="height:100%;background:var(--green)"></div><div class="spark-bar" style="height:95%;background:var(--green)"></div></div></div>
+        </div>
+        <div class="div-row"><span class="div-lbl">Period Comparison</span><div class="div-rule"></div></div>
+        <div class="table-wrap"><table>
+          <thead>
+            <tr class="cg-row"><th></th><th class="cur">Current</th><th colspan="3">2026 Comparison</th><th class="sep" colspan="2">Prior Year</th></tr>
+            <tr><th>Metric</th><th class="cur">Abr 2026</th><th>Mar 2026</th><th>MoM &Delta;</th><th>YTD 2026</th><th class="sep">Abr 2025</th><th>YTD 2025</th></tr>
+          </thead>
+          <tbody>
+            <tr class="rg"><td>Collections (Payments)</td><td class="cur">$1,303,326</td><td>$1,155,104</td><td class="dp">&uarr; +12.8%</td><td>$4,117,734</td><td class="sep na">&mdash;</td><td class="na">&mdash;</td></tr>
+            <tr class="rv"><td>Collection Rate</td><td class="cur">24.3%</td><td>22.4%</td><td class="dp">&uarr; +1.9 pp</td><td>22.3%</td><td class="sep na">&mdash;</td><td class="na">&mdash;</td></tr>
+          </tbody>
+        </table></div>
+        <div style="margin-top:10px;padding:8px 12px;background:rgba(61,170,130,.06);border-radius:4px;border-left:3px solid var(--green);font-size:12px;color:var(--t2)">
+          <strong>Nota metodol&oacute;gica:</strong> Collections filtrado por <em>PostYrMo = Abr 2026</em>. Billing por <em>ServiceYrMo = Abr 2026</em>.
+        </div>
+      </div>
+
+      <!-- SUB: BALANCE / AR AGING -->
+      <div id="sb-balance-apr" hidden>
+        <div class="kpi-grid" style="margin-bottom:20px">
+          <div class="kpi blue">
+            <div class="kpi-lbl">Balance Total &mdash; Abr 30, 2026</div>
+            <div class="kpi-val">$2,652,953</div>
+            <div class="kpi-foot"><span class="badge">10,024 registros con balance positivo</span></div>
+          </div>
+          <div class="kpi amber">
+            <div class="kpi-lbl">Balance Cr&iacute;tico (+90 d&iacute;as)</div>
+            <div class="kpi-val">$520,757</div>
+            <div class="kpi-foot"><span class="badge dn">19.6% del total</span></div>
+          </div>
+          <div class="kpi green">
+            <div class="kpi-lbl">Balance Corriente (0&ndash;30 d&iacute;as)</div>
+            <div class="kpi-val">$840,750</div>
+            <div class="kpi-foot"><span class="badge up">31.7% del total</span></div>
+          </div>
+        </div>
+
+        <div class="div-row"><span class="div-lbl">Aging de Balance &mdash; AR por Antig&uuml;edad</span><div class="div-rule"></div><span style="font-size:11px;color:var(--t3)">Fecha de referencia: 30 de abril 2026</span></div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <!-- Bars -->
+          <div class="table-wrap" style="padding:18px 20px">
+            <div style="margin-bottom:16px;font-size:12px;color:var(--t3)">Balance por tramo &mdash; % del total</div>
+            <div class="pl-bars" style="gap:14px">
+
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">0&ndash;30 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Abr 1&ndash;30, 2026</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:31.7%;background:#3DAA82"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;font-weight:600" id="ar-b-030-apr-apr">$840,750</span>
+                  <span style="font-size:12px;color:var(--t3)">31.7%</span>
+                </div>
+              </div>
+
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">30&ndash;60 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Mar 2 &ndash; Abr 1, 2026</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:23.5%;background:#E86428"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;font-weight:600" id="ar-b-3060-apr-apr">$622,537</span>
+                  <span style="font-size:12px;color:var(--t3)">23.5%</span>
+                </div>
+              </div>
+
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">60&ndash;90 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Ene&ndash;Feb 2026</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:25.2%;background:#E86428"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;font-weight:600" id="ar-b-6090-apr-apr">$668,909</span>
+                  <span style="font-size:12px;color:var(--t3)">25.2%</span>
+                </div>
+              </div>
+
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">90&ndash;120 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">(sin datos)</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:0.0%;background:#ccc"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;font-weight:600" id="ar-b-9120-apr-apr">$0</span>
+                  <span style="font-size:12px;color:var(--t3)">0.0%</span>
+                </div>
+              </div>
+
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">120&ndash;180 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Nov&ndash;Dic 2025</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:10.9%;background:#c0392b"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;font-weight:600" id="ar-b-120180-apr-apr">$289,114</span>
+                  <span style="font-size:12px;color:var(--t3)">10.9%</span>
+                </div>
+              </div>
+
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">+180 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Pre-Nov 2025</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:8.7%;background:#c0392b"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;font-weight:600" id="ar-b-180p-apr-apr">$231,643</span>
+                  <span style="font-size:12px;color:var(--t3)">8.7%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Table -->
+          <div class="table-wrap" style="padding:16px 20px">
+            <div class="div-row" style="margin-bottom:10px"><span class="div-lbl">AR por Aseguradora</span><div class="div-rule"></div></div>
+            <div style="overflow-x:auto"><table>
+              <thead>
+                <tr><th>Payer</th><th class="cur">Total</th><th>0–30d</th><th>30–60d</th><th>60–90d</th><th>90–120d</th><th>120–180d</th><th>+180d</th><th>Cobro Esp.</th></tr>
+              </thead>
+              <tbody>
+                <tr class="rg"><td>LEON MEDICAL CENTER</td><td class="cur">$356,938</td><td>$338,908</td><td>$2,038</td><td>$2,066</td><td>$0</td><td>$0</td><td>$13,926</td><td style="color:var(--green)">$78,526</td></tr>
+<tr class="rg"><td>MEDICARE-PART B</td><td class="cur">$316,878</td><td>$73,344</td><td>$91,138</td><td>$70,334</td><td>$0</td><td>$15,488</td><td>$66,574</td><td style="color:var(--green)">$69,713</td></tr>
+<tr class="rg"><td>BCBS OF FLORIDA</td><td class="cur">$233,130</td><td>$72,105</td><td>$34,561</td><td>$52,935</td><td>$0</td><td>$63,106</td><td>$10,423</td><td style="color:var(--green)">$51,289</td></tr>
+<tr class="rg"><td>Patient</td><td class="cur">$203,926</td><td>$44,072</td><td>$63,933</td><td>$67,852</td><td>$0</td><td>$15,016</td><td>$13,053</td><td style="color:var(--green)">$44,864</td></tr>
+<tr class="rg"><td>Solis Health Plans</td><td class="cur">$174,892</td><td>$25,005</td><td>$116,706</td><td>$23,674</td><td>$0</td><td>$8,111</td><td>$1,396</td><td style="color:var(--green)">$38,476</td></tr>
+<tr class="rg"><td>OSCAR HEALTH INSURANCE</td><td class="cur">$163,358</td><td>$56,103</td><td>$50,254</td><td>$36,213</td><td>$0</td><td>$9,113</td><td>$11,675</td><td style="color:var(--green)">$35,939</td></tr>
+<tr class="rg"><td>UNITED HEALTH CARE</td><td class="cur">$126,073</td><td>$12,651</td><td>$13,361</td><td>$67,892</td><td>$0</td><td>$25,454</td><td>$6,715</td><td style="color:var(--green)">$27,736</td></tr>
+<tr class="rg"><td>PREFERRED CARE PARTNERS DUAL</td><td class="cur">$95,909</td><td>$30,578</td><td>$38,454</td><td>$21,373</td><td>$0</td><td>$4,749</td><td>$755</td><td style="color:var(--green)">$21,100</td></tr>
+<tr class="rg"><td>PREFERRED CARE PARTNERS</td><td class="cur">$99,531</td><td>$3,649</td><td>$34,219</td><td>$40,706</td><td>$0</td><td>$0</td><td>$20,957</td><td style="color:var(--green)">$21,897</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+        </div>
+
+        <!-- Expandable payer-by-bucket detail -->
+        <div class="div-row" style="margin-top:16px"><span class="div-lbl">Detalle por Tramo</span><div class="div-rule"></div></div>
+        <div style="overflow-x:auto"><table>
+          <thead>
+            <tr><th>Payer</th><th class="cur">Total</th><th>0–30d</th><th>30–60d</th><th>60–90d</th><th>90–120d</th><th>120–180d</th><th>+180d</th><th>Cobro Esp.</th></tr>
+          </thead>
+          <tbody>
+            <tr class="pl-toggle-row" onclick="plToggle('apr030')"><td colspan="9" style="font-size:11px;color:var(--t3);padding:4px 8px;cursor:pointer"><span id="ic-apr030" style="margin-right:6px">&#9654;</span>0–30 días &mdash; $840,750</td></tr>
+<tr class="pl-detail rg" data-group="apr030" hidden><td style="padding-left:20px;font-size:12px">LEON MEDICAL CENTER</td><td class="cur">$356,938</td><td>$338,908</td><td>$2,038</td><td>$2,066</td><td>$0</td><td>$0</td><td>$13,926</td><td style="color:var(--green)">$74,560</td></tr>
+<tr class="pl-detail rg" data-group="apr030" hidden><td style="padding-left:20px;font-size:12px">MEDICARE-PART B</td><td class="cur">$316,878</td><td>$73,344</td><td>$91,138</td><td>$70,334</td><td>$0</td><td>$15,488</td><td>$66,574</td><td style="color:var(--green)">$16,136</td></tr>
+<tr class="pl-detail rg" data-group="apr030" hidden><td style="padding-left:20px;font-size:12px">BCBS OF FLORIDA</td><td class="cur">$233,130</td><td>$72,105</td><td>$34,561</td><td>$52,935</td><td>$0</td><td>$63,106</td><td>$10,423</td><td style="color:var(--green)">$15,863</td></tr>
+<tr class="pl-detail rg" data-group="apr030" hidden><td style="padding-left:20px;font-size:12px">Patient</td><td class="cur">$203,926</td><td>$44,072</td><td>$63,933</td><td>$67,852</td><td>$0</td><td>$15,016</td><td>$13,053</td><td style="color:var(--green)">$9,696</td></tr>
+<tr class="pl-detail rg" data-group="apr030" hidden><td style="padding-left:20px;font-size:12px">Solis Health Plans</td><td class="cur">$174,892</td><td>$25,005</td><td>$116,706</td><td>$23,674</td><td>$0</td><td>$8,111</td><td>$1,396</td><td style="color:var(--green)">$5,501</td></tr>
+<tr class="pl-detail rg" data-group="apr030" hidden><td style="padding-left:20px;font-size:12px">OSCAR HEALTH INSURANCE</td><td class="cur">$163,358</td><td>$56,103</td><td>$50,254</td><td>$36,213</td><td>$0</td><td>$9,113</td><td>$11,675</td><td style="color:var(--green)">$12,343</td></tr>
+<tr class="pl-detail rg" data-group="apr030" hidden><td style="padding-left:20px;font-size:12px">UNITED HEALTH CARE</td><td class="cur">$126,073</td><td>$12,651</td><td>$13,361</td><td>$67,892</td><td>$0</td><td>$25,454</td><td>$6,715</td><td style="color:var(--green)">$2,783</td></tr>
+<tr class="pl-detail rg" data-group="apr030" hidden><td style="padding-left:20px;font-size:12px">PREFERRED CARE PARTNERS DUAL</td><td class="cur">$95,909</td><td>$30,578</td><td>$38,454</td><td>$21,373</td><td>$0</td><td>$4,749</td><td>$755</td><td style="color:var(--green)">$6,727</td></tr>
+<tr class="pl-detail rg" data-group="apr030" hidden><td style="padding-left:20px;font-size:12px">PREFERRED CARE PARTNERS</td><td class="cur">$99,531</td><td>$3,649</td><td>$34,219</td><td>$40,706</td><td>$0</td><td>$0</td><td>$20,957</td><td style="color:var(--green)">$803</td></tr>
+            <tr class="pl-toggle-row" onclick="plToggle('apr3060')"><td colspan="9" style="font-size:11px;color:var(--t3);padding:4px 8px;cursor:pointer"><span id="ic-apr3060" style="margin-right:6px">&#9654;</span>30–60 días &mdash; $622,537</td></tr>
+<tr class="pl-detail rg" data-group="apr3060" hidden><td style="padding-left:20px;font-size:12px">LEON MEDICAL CENTER</td><td class="cur">$356,938</td><td>$338,908</td><td>$2,038</td><td>$2,066</td><td>$0</td><td>$0</td><td>$13,926</td><td style="color:var(--green)">$448</td></tr>
+<tr class="pl-detail rg" data-group="apr3060" hidden><td style="padding-left:20px;font-size:12px">MEDICARE-PART B</td><td class="cur">$316,878</td><td>$73,344</td><td>$91,138</td><td>$70,334</td><td>$0</td><td>$15,488</td><td>$66,574</td><td style="color:var(--green)">$20,050</td></tr>
+<tr class="pl-detail rg" data-group="apr3060" hidden><td style="padding-left:20px;font-size:12px">BCBS OF FLORIDA</td><td class="cur">$233,130</td><td>$72,105</td><td>$34,561</td><td>$52,935</td><td>$0</td><td>$63,106</td><td>$10,423</td><td style="color:var(--green)">$7,603</td></tr>
+<tr class="pl-detail rg" data-group="apr3060" hidden><td style="padding-left:20px;font-size:12px">Patient</td><td class="cur">$203,926</td><td>$44,072</td><td>$63,933</td><td>$67,852</td><td>$0</td><td>$15,016</td><td>$13,053</td><td style="color:var(--green)">$14,065</td></tr>
+<tr class="pl-detail rg" data-group="apr3060" hidden><td style="padding-left:20px;font-size:12px">Solis Health Plans</td><td class="cur">$174,892</td><td>$25,005</td><td>$116,706</td><td>$23,674</td><td>$0</td><td>$8,111</td><td>$1,396</td><td style="color:var(--green)">$25,675</td></tr>
+<tr class="pl-detail rg" data-group="apr3060" hidden><td style="padding-left:20px;font-size:12px">OSCAR HEALTH INSURANCE</td><td class="cur">$163,358</td><td>$56,103</td><td>$50,254</td><td>$36,213</td><td>$0</td><td>$9,113</td><td>$11,675</td><td style="color:var(--green)">$11,056</td></tr>
+<tr class="pl-detail rg" data-group="apr3060" hidden><td style="padding-left:20px;font-size:12px">UNITED HEALTH CARE</td><td class="cur">$126,073</td><td>$12,651</td><td>$13,361</td><td>$67,892</td><td>$0</td><td>$25,454</td><td>$6,715</td><td style="color:var(--green)">$2,939</td></tr>
+<tr class="pl-detail rg" data-group="apr3060" hidden><td style="padding-left:20px;font-size:12px">PREFERRED CARE PARTNERS DUAL</td><td class="cur">$95,909</td><td>$30,578</td><td>$38,454</td><td>$21,373</td><td>$0</td><td>$4,749</td><td>$755</td><td style="color:var(--green)">$8,460</td></tr>
+<tr class="pl-detail rg" data-group="apr3060" hidden><td style="padding-left:20px;font-size:12px">PREFERRED CARE PARTNERS</td><td class="cur">$99,531</td><td>$3,649</td><td>$34,219</td><td>$40,706</td><td>$0</td><td>$0</td><td>$20,957</td><td style="color:var(--green)">$7,528</td></tr>
+            <tr class="pl-toggle-row" onclick="plToggle('apr6090')"><td colspan="9" style="font-size:11px;color:var(--t3);padding:4px 8px;cursor:pointer"><span id="ic-apr6090" style="margin-right:6px">&#9654;</span>60–90 días &mdash; $668,909</td></tr>
+<tr class="pl-detail rg" data-group="apr6090" hidden><td style="padding-left:20px;font-size:12px">LEON MEDICAL CENTER</td><td class="cur">$356,938</td><td>$338,908</td><td>$2,038</td><td>$2,066</td><td>$0</td><td>$0</td><td>$13,926</td><td style="color:var(--green)">$455</td></tr>
+<tr class="pl-detail rg" data-group="apr6090" hidden><td style="padding-left:20px;font-size:12px">MEDICARE-PART B</td><td class="cur">$316,878</td><td>$73,344</td><td>$91,138</td><td>$70,334</td><td>$0</td><td>$15,488</td><td>$66,574</td><td style="color:var(--green)">$15,473</td></tr>
+<tr class="pl-detail rg" data-group="apr6090" hidden><td style="padding-left:20px;font-size:12px">BCBS OF FLORIDA</td><td class="cur">$233,130</td><td>$72,105</td><td>$34,561</td><td>$52,935</td><td>$0</td><td>$63,106</td><td>$10,423</td><td style="color:var(--green)">$11,646</td></tr>
+<tr class="pl-detail rg" data-group="apr6090" hidden><td style="padding-left:20px;font-size:12px">Patient</td><td class="cur">$203,926</td><td>$44,072</td><td>$63,933</td><td>$67,852</td><td>$0</td><td>$15,016</td><td>$13,053</td><td style="color:var(--green)">$14,927</td></tr>
+<tr class="pl-detail rg" data-group="apr6090" hidden><td style="padding-left:20px;font-size:12px">Solis Health Plans</td><td class="cur">$174,892</td><td>$25,005</td><td>$116,706</td><td>$23,674</td><td>$0</td><td>$8,111</td><td>$1,396</td><td style="color:var(--green)">$5,208</td></tr>
+<tr class="pl-detail rg" data-group="apr6090" hidden><td style="padding-left:20px;font-size:12px">OSCAR HEALTH INSURANCE</td><td class="cur">$163,358</td><td>$56,103</td><td>$50,254</td><td>$36,213</td><td>$0</td><td>$9,113</td><td>$11,675</td><td style="color:var(--green)">$7,967</td></tr>
+<tr class="pl-detail rg" data-group="apr6090" hidden><td style="padding-left:20px;font-size:12px">UNITED HEALTH CARE</td><td class="cur">$126,073</td><td>$12,651</td><td>$13,361</td><td>$67,892</td><td>$0</td><td>$25,454</td><td>$6,715</td><td style="color:var(--green)">$14,936</td></tr>
+<tr class="pl-detail rg" data-group="apr6090" hidden><td style="padding-left:20px;font-size:12px">PREFERRED CARE PARTNERS DUAL</td><td class="cur">$95,909</td><td>$30,578</td><td>$38,454</td><td>$21,373</td><td>$0</td><td>$4,749</td><td>$755</td><td style="color:var(--green)">$4,702</td></tr>
+<tr class="pl-detail rg" data-group="apr6090" hidden><td style="padding-left:20px;font-size:12px">PREFERRED CARE PARTNERS</td><td class="cur">$99,531</td><td>$3,649</td><td>$34,219</td><td>$40,706</td><td>$0</td><td>$0</td><td>$20,957</td><td style="color:var(--green)">$8,955</td></tr>
+            <tr class="pl-toggle-row" onclick="plToggle('apr9120')"><td colspan="9" style="font-size:11px;color:var(--t3);padding:4px 8px;cursor:pointer"><span id="ic-apr9120" style="margin-right:6px">&#9654;</span>90–120 días &mdash; $0</td></tr>
+            <tr class="pl-toggle-row" onclick="plToggle('apr12180')"><td colspan="9" style="font-size:11px;color:var(--t3);padding:4px 8px;cursor:pointer"><span id="ic-apr12180" style="margin-right:6px">&#9654;</span>120–180 días &mdash; $289,114</td></tr>
+<tr class="pl-detail rg" data-group="apr12180" hidden><td style="padding-left:20px;font-size:12px">MEDICARE-PART B</td><td class="cur">$316,878</td><td>$73,344</td><td>$91,138</td><td>$70,334</td><td>$0</td><td>$15,488</td><td>$66,574</td><td style="color:var(--green)">$3,407</td></tr>
+<tr class="pl-detail rg" data-group="apr12180" hidden><td style="padding-left:20px;font-size:12px">BCBS OF FLORIDA</td><td class="cur">$233,130</td><td>$72,105</td><td>$34,561</td><td>$52,935</td><td>$0</td><td>$63,106</td><td>$10,423</td><td style="color:var(--green)">$13,883</td></tr>
+<tr class="pl-detail rg" data-group="apr12180" hidden><td style="padding-left:20px;font-size:12px">Patient</td><td class="cur">$203,926</td><td>$44,072</td><td>$63,933</td><td>$67,852</td><td>$0</td><td>$15,016</td><td>$13,053</td><td style="color:var(--green)">$3,304</td></tr>
+<tr class="pl-detail rg" data-group="apr12180" hidden><td style="padding-left:20px;font-size:12px">Solis Health Plans</td><td class="cur">$174,892</td><td>$25,005</td><td>$116,706</td><td>$23,674</td><td>$0</td><td>$8,111</td><td>$1,396</td><td style="color:var(--green)">$1,784</td></tr>
+<tr class="pl-detail rg" data-group="apr12180" hidden><td style="padding-left:20px;font-size:12px">OSCAR HEALTH INSURANCE</td><td class="cur">$163,358</td><td>$56,103</td><td>$50,254</td><td>$36,213</td><td>$0</td><td>$9,113</td><td>$11,675</td><td style="color:var(--green)">$2,005</td></tr>
+<tr class="pl-detail rg" data-group="apr12180" hidden><td style="padding-left:20px;font-size:12px">UNITED HEALTH CARE</td><td class="cur">$126,073</td><td>$12,651</td><td>$13,361</td><td>$67,892</td><td>$0</td><td>$25,454</td><td>$6,715</td><td style="color:var(--green)">$5,600</td></tr>
+<tr class="pl-detail rg" data-group="apr12180" hidden><td style="padding-left:20px;font-size:12px">PREFERRED CARE PARTNERS DUAL</td><td class="cur">$95,909</td><td>$30,578</td><td>$38,454</td><td>$21,373</td><td>$0</td><td>$4,749</td><td>$755</td><td style="color:var(--green)">$1,045</td></tr>
+            <tr class="pl-toggle-row" onclick="plToggle('apr180p')"><td colspan="9" style="font-size:11px;color:var(--t3);padding:4px 8px;cursor:pointer"><span id="ic-apr180p" style="margin-right:6px">&#9654;</span>+180 días &mdash; $231,643</td></tr>
+<tr class="pl-detail rg" data-group="apr180p" hidden><td style="padding-left:20px;font-size:12px">LEON MEDICAL CENTER</td><td class="cur">$356,938</td><td>$338,908</td><td>$2,038</td><td>$2,066</td><td>$0</td><td>$0</td><td>$13,926</td><td style="color:var(--green)">$3,064</td></tr>
+<tr class="pl-detail rg" data-group="apr180p" hidden><td style="padding-left:20px;font-size:12px">MEDICARE-PART B</td><td class="cur">$316,878</td><td>$73,344</td><td>$91,138</td><td>$70,334</td><td>$0</td><td>$15,488</td><td>$66,574</td><td style="color:var(--green)">$14,646</td></tr>
+<tr class="pl-detail rg" data-group="apr180p" hidden><td style="padding-left:20px;font-size:12px">BCBS OF FLORIDA</td><td class="cur">$233,130</td><td>$72,105</td><td>$34,561</td><td>$52,935</td><td>$0</td><td>$63,106</td><td>$10,423</td><td style="color:var(--green)">$2,293</td></tr>
+<tr class="pl-detail rg" data-group="apr180p" hidden><td style="padding-left:20px;font-size:12px">Patient</td><td class="cur">$203,926</td><td>$44,072</td><td>$63,933</td><td>$67,852</td><td>$0</td><td>$15,016</td><td>$13,053</td><td style="color:var(--green)">$2,872</td></tr>
+<tr class="pl-detail rg" data-group="apr180p" hidden><td style="padding-left:20px;font-size:12px">Solis Health Plans</td><td class="cur">$174,892</td><td>$25,005</td><td>$116,706</td><td>$23,674</td><td>$0</td><td>$8,111</td><td>$1,396</td><td style="color:var(--green)">$307</td></tr>
+<tr class="pl-detail rg" data-group="apr180p" hidden><td style="padding-left:20px;font-size:12px">OSCAR HEALTH INSURANCE</td><td class="cur">$163,358</td><td>$56,103</td><td>$50,254</td><td>$36,213</td><td>$0</td><td>$9,113</td><td>$11,675</td><td style="color:var(--green)">$2,568</td></tr>
+<tr class="pl-detail rg" data-group="apr180p" hidden><td style="padding-left:20px;font-size:12px">UNITED HEALTH CARE</td><td class="cur">$126,073</td><td>$12,651</td><td>$13,361</td><td>$67,892</td><td>$0</td><td>$25,454</td><td>$6,715</td><td style="color:var(--green)">$1,477</td></tr>
+<tr class="pl-detail rg" data-group="apr180p" hidden><td style="padding-left:20px;font-size:12px">PREFERRED CARE PARTNERS DUAL</td><td class="cur">$95,909</td><td>$30,578</td><td>$38,454</td><td>$21,373</td><td>$0</td><td>$4,749</td><td>$755</td><td style="color:var(--green)">$166</td></tr>
+<tr class="pl-detail rg" data-group="apr180p" hidden><td style="padding-left:20px;font-size:12px">PREFERRED CARE PARTNERS</td><td class="cur">$99,531</td><td>$3,649</td><td>$34,219</td><td>$40,706</td><td>$0</td><td>$0</td><td>$20,957</td><td style="color:var(--green)">$4,611</td></tr>
+          </tbody>
+        </table></div>
+        <div style="margin-top:8px;font-size:11px;color:var(--t3)">
+          Nota: balances reflejan estado al 26 jun 2026 (archivo fuente Pivot_MTDYTDCMS20260626). El bucket 90&ndash;120 est&aacute; vac&iacute;o porque ning&uacute;n mes de servicio cae en ese rango desde la ref. Abr 30.
+        </div>
+      </div>
+
+      <!-- SUB: DENIALS (placeholder) -->
+      <div id="sb-denials-apr" hidden>
+        <div style="padding:40px;text-align:center;color:var(--t3)">
+          <div style="font-size:32px;margin-bottom:12px">&#9203;</div>
+          <div style="font-size:15px;font-weight:600">Denials &mdash; Pr&oacute;ximamente</div>
+          <div style="font-size:13px;margin-top:6px">Datos de Denials de Abril 2026 pendientes de carga.</div>
+        </div>
+      </div>
+
+    </div><!-- /billing-apr -->
+
+    <!-- BREAKDOWN PANEL APR -->
+    <div id="breakdown-panel-apr" class="breakdown-panel" hidden>
+      <div class="bp-hdr">
+        <div class="bp-title">Breakdown &mdash; Abr 2026</div>
+        <div class="bp-controls">
+          <div class="bp-grp">
+            <span class="bp-lbl">Period</span>
+            <button class="bp-btn active" onclick="setPeriodA('current',this)">Current</button>
+            <button class="bp-btn" onclick="setPeriodA('ytd',this)">YTD</button>
+          </div>
+          <div class="bp-grp">
+            <span class="bp-lbl">Dimension</span>
+            <button class="bp-btn active" onclick="setDimA('by_modality',this)">Modality</button>
+            <button class="bp-btn" onclick="setDimA('by_payer',this)">Payer</button>
+          </div>
+          <div class="bp-grp">
+            <span class="bp-lbl">Metric</span>
+            <button class="bp-btn active" onclick="setMetricA('billing',this)">Billing</button>
+            <button class="bp-btn" onclick="setMetricA('collections',this)">Collections</button>
+            <button class="bp-btn" onclick="setMetricA('balance',this)">Balance</button>
+          </div>
+          <button class="bp-close" onclick="document.getElementById('breakdown-panel-apr').hidden=true">&times;</button>
+        </div>
+      </div>
+      <div id="bp-chart-apr" class="bp-chart"></div>
+    </div>
+
+  </div><!-- /pd-apr-2026 -->
+
   <div class="period-data active" id="pd-may-2026">
 
     <!-- ══ BILLING ══ -->
@@ -2724,8 +3015,9 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
 
 <script>
 const DD = {"current":{"by_modality":[{"name":"PET","billing":4333164,"collections":758850,"balance":2886288,"rate":17.5},{"name":"US","billing":338645,"collections":124157,"balance":180142,"rate":36.7},{"name":"MRI","billing":300992,"collections":108515,"balance":180860,"rate":36.1},{"name":"NM","billing":267127,"collections":66707,"balance":200891,"rate":25.0},{"name":"CT","billing":174004,"collections":51989,"balance":140355,"rate":29.9},{"name":"MG","billing":160520,"collections":55990,"balance":-1682,"rate":34.9},{"name":"SL","billing":138459,"collections":52681,"balance":94479,"rate":38.0},{"name":"NCV","billing":109389,"collections":75583,"balance":57168,"rate":69.1},{"name":"XRAY","billing":52622,"collections":23141,"balance":-21344,"rate":44.0},{"name":"DEXA","billing":14820,"collections":7060,"balance":-13509,"rate":47.6},{"name":"EEG","billing":7760,"collections":1800,"balance":8491,"rate":23.2},{"name":"MRA","billing":7076,"collections":4371,"balance":22296,"rate":61.8}],"by_payer":[{"name":"LEON MEDICAL CENTER","billing":1446215,"collections":19429,"balance":1392795,"rate":1.3},{"name":"OSCAR HEALTH INSURANCE","billing":712277,"collections":129577,"balance":30323,"rate":18.2},{"name":"PREFERRED CARE PARTNERS DUAL","billing":575560,"collections":105916,"balance":119523,"rate":18.4},{"name":"PREFERRED CARE NETWORK","billing":538552,"collections":61555,"balance":282750,"rate":11.4},{"name":"HUMANA","billing":460360,"collections":84247,"balance":31657,"rate":18.3},{"name":"MEDICARE-PART B","billing":328332,"collections":65354,"balance":128475,"rate":19.9},{"name":"BCBS OF FLORIDA","billing":301317,"collections":59633,"balance":73662,"rate":19.8},{"name":"PREFERRED CARE PARTNERS","billing":243821,"collections":20159,"balance":157316,"rate":8.3},{"name":"Solis Health Plans","billing":197913,"collections":12167,"balance":158358,"rate":6.1},{"name":"UNITED HEALTH CARE","billing":188144,"collections":40644,"balance":54079,"rate":21.6},{"name":"DOCTORS HEALTHCARE PLANS INC.","billing":140660,"collections":12560,"balance":76661,"rate":8.9},{"name":"CAREPLUS","billing":136900,"collections":19496,"balance":22887,"rate":14.2},{"name":"AETNA","billing":126963,"collections":18314,"balance":4051,"rate":14.4},{"name":"SIMPLY an Anthem MCR+MCD","billing":113939,"collections":18174,"balance":7198,"rate":16.0},{"name":"Patient","billing":82706,"collections":150084,"balance":157142,"rate":181.5}]},"ytd":{"by_modality":[{"name":"PET","billing":16359900,"collections":2992103,"balance":2886288,"rate":18.3},{"name":"US","billing":1631326,"collections":518078,"balance":180142,"rate":31.8},{"name":"MRI","billing":1624251,"collections":498646,"balance":180860,"rate":30.7},{"name":"NM","billing":1346356,"collections":279577,"balance":200891,"rate":20.8},{"name":"CT","billing":831768,"collections":237098,"balance":140355,"rate":28.5},{"name":"MG","billing":822150,"collections":250458,"balance":-1682,"rate":30.5},{"name":"SL","billing":814385,"collections":225206,"balance":94479,"rate":27.7},{"name":"NCV","billing":718042,"collections":267245,"balance":57168,"rate":37.2},{"name":"XRAY","billing":257380,"collections":100602,"balance":-21344,"rate":39.1},{"name":"DEXA","billing":84474,"collections":29686,"balance":-13509,"rate":35.1},{"name":"MRA","billing":78602,"collections":18090,"balance":22296,"rate":23.0},{"name":"EEG","billing":24775,"collections":6272,"balance":8491,"rate":25.3}],"by_payer":[{"name":"OSCAR HEALTH INSURANCE","billing":3374775,"collections":616950,"balance":39947,"rate":18.3},{"name":"PREFERRED CARE NETWORK","billing":2456733,"collections":477850,"balance":323904,"rate":19.5},{"name":"HUMANA","billing":2434967,"collections":451751,"balance":-9617,"rate":18.6},{"name":"PREFERRED CARE PARTNERS DUAL","billing":2316000,"collections":504072,"balance":203451,"rate":21.8},{"name":"LEON MEDICAL CENTER","billing":2275027,"collections":181369,"balance":1556364,"rate":8.0},{"name":"BCBS OF FLORIDA","billing":1857443,"collections":389941,"balance":7736,"rate":21.0},{"name":"MEDICARE-PART B","billing":1646372,"collections":416736,"balance":306001,"rate":25.3},{"name":"PREFERRED CARE PARTNERS","billing":1038799,"collections":174951,"balance":203156,"rate":16.8},{"name":"DOCTORS HEALTHCARE PLANS INC.","billing":937486,"collections":156382,"balance":118659,"rate":16.7},{"name":"Solis Health Plans","billing":903732,"collections":192947,"balance":262546,"rate":21.4},{"name":"UNITED HEALTH CARE","billing":849640,"collections":203282,"balance":99494,"rate":23.9},{"name":"CAREPLUS","billing":716416,"collections":110246,"balance":31321,"rate":15.4},{"name":"AETNA","billing":611867,"collections":83523,"balance":17917,"rate":13.7},{"name":"SIMPLY an Anthem MCR+MCD","billing":436707,"collections":79045,"balance":25099,"rate":18.1},{"name":"HEALTHSUN HEALTH PLANS INC","billing":392573,"collections":73371,"balance":45749,"rate":18.7}]}};
+const DD_apr = {"current":{"by_modality":[{"name":"PET","billing":3517623,"collections":762538,"balance":556540,"rate":21.7},{"name":"MRI","billing":375149,"collections":107464,"balance":74505,"rate":28.6},{"name":"US","billing":374319,"collections":105008,"balance":77294,"rate":28.1},{"name":"NM","billing":299503,"collections":60026,"balance":39813,"rate":20.0},{"name":"CT","billing":186690,"collections":52058,"balance":37417,"rate":27.9},{"name":"MG","billing":182890,"collections":58253,"balance":9557,"rate":31.9},{"name":"NCV","billing":168911,"collections":53714,"balance":14994,"rate":31.8},{"name":"SL","billing":162936,"collections":65585,"balance":13759,"rate":40.3},{"name":"XRAY","billing":57649,"collections":23088,"balance":12031,"rate":40.0},{"name":"DEXA","billing":19308,"collections":7267,"balance":1508,"rate":37.6},{"name":"MRA","billing":17174,"collections":1924,"balance":2167,"rate":11.2},{"name":"EEG","billing":5865,"collections":765,"balance":1165,"rate":13.0}],"by_payer":[{"name":"OSCAR HEALTH INSURANCE","billing":753948,"collections":147804,"balance":56103,"rate":19.6},{"name":"HUMANA","billing":594627,"collections":102968,"balance":13826,"rate":17.3},{"name":"LEON MEDICAL CENTER","billing":526283,"collections":36362,"balance":338908,"rate":6.9},{"name":"BCBS OF FLORIDA","billing":495370,"collections":118367,"balance":72105,"rate":23.9},{"name":"PREFERRED CARE PARTNERS DUAL","billing":459030,"collections":129389,"balance":30578,"rate":28.2},{"name":"PREFERRED CARE NETWORK","billing":454716,"collections":136307,"balance":15979,"rate":30.0},{"name":"MEDICARE-PART B","billing":338293,"collections":70724,"balance":73344,"rate":20.9},{"name":"CAREPLUS","billing":223869,"collections":29708,"balance":2903,"rate":13.3},{"name":"Solis Health Plans","billing":213950,"collections":65107,"balance":25005,"rate":30.4},{"name":"UNITED HEALTH CARE","billing":209368,"collections":63590,"balance":12651,"rate":30.4},{"name":"PREFERRED CARE PARTNERS","billing":161995,"collections":37628,"balance":3649,"rate":23.2},{"name":"DOCTORS HEALTHCARE PLANS INC.","billing":157507,"collections":35248,"balance":5579,"rate":22.4},{"name":"AETNA","billing":109341,"collections":17509,"balance":6725,"rate":16.0},{"name":"HEALTHSUN HEALTH PLANS INC","billing":86580,"collections":19305,"balance":2109,"rate":22.3},{"name":"SIMPLY an Anthem Company MCR MCD","billing":78992,"collections":18073,"balance":13293,"rate":22.9}]},"ytd":{"by_modality":[{"name":"PET","billing":14208245,"collections":2984246,"balance":2866464,"rate":21.0},{"name":"US","billing":1643378,"collections":520262,"balance":92722,"rate":31.7},{"name":"MRI","billing":1628056,"collections":499701,"balance":86598,"rate":30.7},{"name":"NM","billing":1389090,"collections":280267,"balance":140877,"rate":20.2},{"name":"CT","billing":836856,"collections":248916,"balance":152972,"rate":29.7},{"name":"MG","billing":828610,"collections":250550,"balance":75060,"rate":30.2},{"name":"NCV","billing":721465,"collections":252418,"balance":108846,"rate":35.0},{"name":"SL","billing":787099,"collections":228249,"balance":123260,"rate":29.0},{"name":"XRAY","billing":259416,"collections":101831,"balance":-22278,"rate":39.3},{"name":"DEXA","billing":85354,"collections":28190,"balance":-9205,"rate":33.0},{"name":"MRA","billing":80342,"collections":18090,"balance":16307,"rate":22.5},{"name":"EEG","billing":22485,"collections":6254,"balance":13676,"rate":27.8}],"by_payer":[{"name":"OSCAR HEALTH INSURANCE","billing":3340265,"collections":603270,"balance":296910,"rate":18.1},{"name":"HUMANA","billing":2391199,"collections":427447,"balance":417691,"rate":17.9},{"name":"PREFERRED CARE PARTNERS DUAL","billing":2308150,"collections":504397,"balance":610280,"rate":21.9},{"name":"PREFERRED CARE NETWORK","billing":2449668,"collections":474586,"balance":544665,"rate":19.4},{"name":"LEON MEDICAL CENTER","billing":2275027,"collections":215097,"balance":36077,"rate":9.5},{"name":"BCBS OF FLORIDA","billing":1857443,"collections":404247,"balance":61617,"rate":21.8},{"name":"MEDICARE-PART B","billing":1653222,"collections":413190,"balance":287157,"rate":25.0},{"name":"PREFERRED CARE PARTNERS","billing":1038799,"collections":193900,"balance":108598,"rate":18.7},{"name":"DOCTORS HEALTHCARE PLANS INC.","billing":1003275,"collections":162974,"balance":252008,"rate":16.2},{"name":"Solis Health Plans","billing":954522,"collections":178310,"balance":274874,"rate":18.7},{"name":"United Health Care","billing":854875,"collections":226240,"balance":192446,"rate":26.5},{"name":"CAREPLUS","billing":715416,"collections":112662,"balance":168563,"rate":15.8},{"name":"AETNA","billing":636619,"collections":85072,"balance":80527,"rate":13.4},{"name":"SIMPLY an Anthem Company MCR MCD","billing":448937,"collections":82136,"balance":94951,"rate":18.3},{"name":"HEALTHSUN HEALTH PLANS INC","billing":439801,"collections":91149,"balance":34633,"rate":20.7}]}};
 const DD_jun = {"current":{"by_modality":[{"name":"PET","billing":3054921,"collections":651255,"balance":2727795,"rate":21.3},{"name":"US","billing":365407,"collections":124651,"balance":242096,"rate":34.1},{"name":"MRI","billing":332465,"collections":114727,"balance":238979,"rate":34.5},{"name":"NM","billing":262040,"collections":63996,"balance":177370,"rate":24.4},{"name":"MG","billing":181605,"collections":58095,"balance":100275,"rate":32.0},{"name":"CT","billing":175392,"collections":62486,"balance":107310,"rate":35.6},{"name":"SL","billing":115304,"collections":36668,"balance":76126,"rate":31.8},{"name":"NCV","billing":115302,"collections":38887,"balance":96179,"rate":33.7},{"name":"XRAY","billing":51027,"collections":24065,"balance":24605,"rate":47.2},{"name":"MRA","billing":20754,"collections":6556,"balance":17137,"rate":31.6},{"name":"DEXA","billing":17424,"collections":5452,"balance":7624,"rate":31.3},{"name":"EEG","billing":7215,"collections":529,"balance":6450,"rate":7.3}],"by_payer":[{"name":"OSCAR HEALTH INSURANCE","billing":718283,"collections":117159,"balance":329961,"rate":16.3},{"name":"PREFERRED CARE PARTNERS DUAL","billing":607911,"collections":97695,"balance":521229,"rate":16.1},{"name":"HUMANA","billing":550859,"collections":71539,"balance":423429,"rate":13.0},{"name":"PREFERRED CARE NETWORK","billing":447651,"collections":122619,"balance":443386,"rate":27.4},{"name":"MEDICARE-PART B","billing":337732,"collections":158112,"balance":209195,"rate":46.8},{"name":"BCBS OF FLORIDA","billing":252784,"collections":78700,"balance":139522,"rate":31.1},{"name":"DOCTORS HEALTHCARE PLANS INC.","billing":222296,"collections":39537,"balance":203974,"rate":17.8},{"name":"PREFERRED CARE PARTNERS","billing":216372,"collections":42484,"balance":215172,"rate":19.6},{"name":"United Health Care","billing":172109,"collections":45706,"balance":134739,"rate":26.6},{"name":"CAREPLUS","billing":169120,"collections":28852,"balance":139475,"rate":17.1},{"name":"Solis Health Plans","billing":153773,"collections":28344,"balance":153763,"rate":18.4},{"name":"LEON MEDICAL CENTER","billing":140481,"collections":57422,"balance":75906,"rate":40.9},{"name":"AETNA","billing":134093,"collections":26720,"balance":69462,"rate":19.9},{"name":"SIMPLY an Anthem Company MCR MCD","billing":94801,"collections":18188,"balance":63524,"rate":19.2},{"name":"Patient","billing":62158,"collections":183216,"balance":321413,"rate":294.8}]},"ytd":{"by_modality":[{"name":"PET","billing":19262818,"collections":3647800,"balance":3423004,"rate":18.9},{"name":"US","billing":2008785,"collections":644913,"balance":335318,"rate":32.1},{"name":"MRI","billing":1960521,"collections":614428,"balance":325577,"rate":31.3},{"name":"NM","billing":1651130,"collections":343863,"balance":318247,"rate":20.8},{"name":"CT","billing":1012248,"collections":301374,"balance":190382,"rate":29.8},{"name":"MG","billing":1010215,"collections":308643,"balance":84617,"rate":30.6},{"name":"SL","billing":903403,"collections":264834,"balance":136525,"rate":29.3},{"name":"NCV","billing":836767,"collections":306132,"balance":123840,"rate":36.6},{"name":"XRAY","billing":310443,"collections":124919,"balance":-10247,"rate":40.2},{"name":"DEXA","billing":102778,"collections":35247,"balance":-7581,"rate":34.3},{"name":"MRA","billing":101096,"collections":24646,"balance":33474,"rate":24.4},{"name":"EEG","billing":30350,"collections":7019,"balance":14126,"rate":23.1}],"by_payer":[{"name":"OSCAR HEALTH INSURANCE","billing":4094548,"collections":751074,"balance":353149,"rate":18.3},{"name":"HUMANA","billing":2985826,"collections":530415,"balance":423357,"rate":17.8},{"name":"PREFERRED CARE PARTNERS DUAL","billing":2916061,"collections":601786,"balance":631506,"rate":20.6},{"name":"PREFERRED CARE NETWORK","billing":2904384,"collections":596905,"balance":560644,"rate":20.6},{"name":"LEON MEDICAL CENTER","billing":2415508,"collections":251519,"balance":39242,"rate":10.4},{"name":"BCBS OF FLORIDA","billing":2110227,"collections":482947,"balance":133628,"rate":22.9},{"name":"MEDICARE-PART B","billing":1990954,"collections":571302,"balance":360501,"rate":28.7},{"name":"PREFERRED CARE PARTNERS","billing":1255171,"collections":236528,"balance":323770,"rate":18.8},{"name":"DOCTORS HEALTHCARE PLANS INC.","billing":1160782,"collections":198511,"balance":257587,"rate":17.1},{"name":"Solis Health Plans","billing":1108295,"collections":206654,"balance":300270,"rate":18.6},{"name":"United Health Care","billing":1027184,"collections":271946,"balance":205097,"rate":26.5},{"name":"CAREPLUS","billing":885536,"collections":141514,"balance":171466,"rate":16.0},{"name":"AETNA","billing":745960,"collections":103581,"balance":87252,"rate":13.9},{"name":"SIMPLY an Anthem Company MCR MCD","billing":543987,"collections":100209,"balance":108419,"rate":18.4},{"name":"HEALTHSUN HEALTH PLANS INC","billing":439801,"collections":91149,"balance":34633,"rate":20.7}]}};
-const DD_MAP = {'': DD, '-jun': DD_jun};
+const DD_MAP = {'': DD, '-apr': DD_apr, '-jun': DD_jun};
 
 
 const METRIC_COLOR = {billing:'var(--blue)',collections:'var(--green)',balance:'var(--amber)'};
@@ -2820,7 +3112,41 @@ function setMetric(m, el) {
 
 // June-specific breakdown handlers
 let stateJ = {dim:'by_modality', period:'current', metric:'billing'};
-function renderBreakdownJ() {
+
+// ── April breakdown state ──
+const stateA = {period:'current', dim:'by_modality', metric:'billing'};
+function renderBreakdownA() {
+  const data = DD_apr[stateA.period][stateA.dim];
+  const ctnr = document.getElementById('bp-chart-apr');
+  if (!ctnr || !data) return;
+  const vals = data.map(r => r[stateA.metric]);
+  const mx = Math.max(...vals, 1);
+  const fmt = n => n >= 1e6 ? '$' + (n/1e6).toFixed(2) + 'M' : '$' + n.toLocaleString();
+  ctnr.innerHTML = data.map(r => {
+    const v = r[stateA.metric]; const pct = (v/mx*100).toFixed(1);
+    return '<div class="bp-row"><span class="bp-lbl">' + r.name + '</span>' +
+           '<div class="bp-bar-track"><div class="bp-bar-fill" style="width:' + pct + '%"></div></div>' +
+           '<span class="bp-val">' + fmt(v) + '</span></div>';
+  }).join('');
+}
+function setDimA(d, btn) {
+  stateA.dim = d;
+  btn.closest('.bp-grp').querySelectorAll('.bp-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderBreakdownA();
+}
+function setPeriodA(p, btn) {
+  stateA.period = p;
+  btn.closest('.bp-grp').querySelectorAll('.bp-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderBreakdownA();
+}
+function setMetricA(m, btn) {
+  stateA.metric = m;
+  btn.closest('.bp-grp').querySelectorAll('.bp-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderBreakdownA();
+}function renderBreakdownJ() {
   const data = DD_jun[stateJ.period][stateJ.dim];
   const m = stateJ.metric;
   const color = METRIC_COLOR[m];
@@ -2887,7 +3213,8 @@ function showSub(id, defaultMetric, el) {
   el.classList.add('active');
   const bp = document.getElementById('breakdown-panel' + sfx) || document.getElementById('breakdown-panel');
   if (defaultMetric && bp) { bp.hidden = false;
-    if (sfx === '-jun') { stateJ.metric = defaultMetric; renderBreakdownJ(); }
+    if (sfx === '-apr') { stateA.metric = defaultMetric; renderBreakdownA(); }
+      else if (sfx === '-jun') { stateJ.metric = defaultMetric; renderBreakdownJ(); }
     else { state.metric = defaultMetric; renderBreakdown(); }
   }
   else if (bp) { bp.hidden = true; }
