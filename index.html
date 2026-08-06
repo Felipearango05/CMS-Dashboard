@@ -2710,11 +2710,198 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
         <div class="sub-tab op-tab" onclick="showOpSub('op-kpis',this)">KPIs</div>
         <div class="sub-tab op-tab" onclick="showOpSub('op-comerciales',this)">Comerciales y Top 200</div>
       </div>
-      <div id="op-procs-jul"><div class="empty-state" style="margin-top:40px"><div class="empty-icon">&#128203;</div><div class="empty-title">Procedimientos Jul 2026 &mdash; Pendiente</div><div class="empty-sub">Mes en curso.</div></div></div>
-      <div id="op-referrals-jul" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Top Referrals Jul &mdash; Pendiente</div></div></div>
-      <div id="op-rev-jul" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Revenue Jul &mdash; Pendiente</div></div></div>
-      <div id="op-kpis-jul" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">KPIs Jul &mdash; Pendiente</div></div></div>
-      <div id="op-comerciales-jul" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Comerciales Jul &mdash; Pendiente</div></div></div>
+      <div id="op-procs-jul">
+        <div class="kpi-grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:20px">
+          <div class="kpi blue"><div class="kpi-lbl">Budget Julio 2026</div><div class="kpi-val">6,265</div><div class="kpi-foot"><span class="badge">Procedimientos presupuestados</span></div></div>
+          <div class="kpi blue"><div class="kpi-lbl">Procedimientos Julio 2026</div><div class="kpi-val">5,497</div><div class="kpi-foot"><span class="badge">vs 5,233 en Junio 2026</span></div></div>
+          <div class="kpi blue"><div class="kpi-lbl">Cumplimiento Presupuesto</div><div class="kpi-val">87.7%</div><div class="kpi-foot"><span class="badge dp">5,497 de 6,265 procs</span></div></div>
+        </div>
+        <div class="div-row"><span class="div-lbl">Procedimientos por Modalidad &mdash; Julio 2026</span><div class="div-rule"></div></div>
+        <div class="table-wrap">
+          <table class="data-tbl">
+            <thead><tr>
+              <th style="text-align:left">Modalidad</th>
+              <th class="cur">Julio 2026</th>
+              <th>Junio 2026</th>
+              <th>PPTO Julio</th>
+              <th class="sep">Julio 2025</th>
+              <th>&Delta;% vs Mes Ant.</th>
+              <th>% del PPTO</th>
+              <th>&Delta;% vs A&ntilde;o Ant.</th>
+            </tr></thead>
+            <tbody>
+              <tr><td>US</td><td class="cur">1,514</td><td>1,497</td><td>1,820</td><td class="sep">1,568</td><td class="dp">+1.1%</td><td class="dn">83.2%</td><td class="dn">-3.4%</td></tr>
+              <tr><td>XRAY</td><td class="cur">818</td><td>810</td><td>1,092</td><td class="sep">882</td><td class="dp">+1.0%</td><td class="dn">74.9%</td><td class="dn">-7.3%</td></tr>
+              <tr><td>MRI</td><td class="cur">617</td><td>677</td><td>672</td><td class="sep">535</td><td class="dn">-8.9%</td><td class="dn">91.8%</td><td class="dp">+15.3%</td></tr>
+              <tr><td>MG</td><td class="cur">623</td><td>619</td><td>832</td><td class="sep">794</td><td class="dp">+0.6%</td><td class="dn">74.9%</td><td class="dn">-21.5%</td></tr>
+              <tr><td>CT</td><td class="cur">664</td><td>557</td><td>546</td><td class="sep">463</td><td class="dp">+19.2%</td><td class="dp">121.6%</td><td class="dp">+43.4%</td></tr>
+              <tr><td>NCV</td><td class="cur">323</td><td>260</td><td>266</td><td class="sep">226</td><td class="dp">+24.2%</td><td class="dp">121.4%</td><td class="dp">+42.9%</td></tr>
+              <tr><td>CP</td><td class="cur">266</td><td>217</td><td>286</td><td class="sep">201</td><td class="dp">+22.6%</td><td class="dn">93.0%</td><td class="dp">+32.3%</td></tr>
+              <tr><td>DEXA</td><td class="cur">215</td><td>215</td><td>220</td><td class="sep">211</td><td class="">0.0%</td><td class="dn">97.7%</td><td class="dp">+1.9%</td></tr>
+              <tr><td>SL</td><td class="cur">202</td><td>153</td><td>208</td><td class="sep">177</td><td class="dp">+32.0%</td><td class="dn">97.1%</td><td class="dp">+14.1%</td></tr>
+              <tr><td>EKG</td><td class="cur">86</td><td>95</td><td>131</td><td class="sep na">&mdash;</td><td class="dn">-9.5%</td><td class="dn">65.6%</td><td class="na">&mdash;</td></tr>
+              <tr><td>NM</td><td class="cur">79</td><td>42</td><td>77</td><td class="sep">175</td><td class="dp">+88.1%</td><td class="dp">102.6%</td><td class="dn">-54.9%</td></tr>
+              <tr><td>PT</td><td class="cur">83</td><td>82</td><td>99</td><td class="sep">39</td><td class="dp">+1.2%</td><td class="dn">83.8%</td><td class="dp">+112.8%</td></tr>
+              <tr><td>EEG</td><td class="cur">7</td><td>9</td><td>16</td><td class="sep">11</td><td class="dn">-22.2%</td><td class="dn">43.8%</td><td class="dn">-36.4%</td></tr>
+              <tr style="font-weight:600;border-top:2px solid var(--bd)"><td>TOTAL</td><td class="cur">5,497</td><td>5,233</td><td>6,265</td><td class="sep">5,282</td><td class="dp">+5.0%</td><td>87.7%</td><td class="dp">+4.1%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div><!-- /op-procs-jul -->
+      <div id="op-referrals-jul" hidden>
+        <div class="div-row"><span class="div-lbl">Top 20 M&eacute;dicos Referidores &mdash; Julio 2026</span><div class="div-rule"></div></div>
+        <div class="kpi-grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:16px">
+          <div class="kpi blue"><div class="kpi-lbl">Total Procedimientos Julio</div><div class="kpi-val">5,497</div><div class="kpi-foot"><span class="badge">RIS Complete + TechComplete</span></div></div>
+          <div class="kpi blue"><div class="kpi-lbl">M&eacute;dicos Referidores</div><div class="kpi-val">1,334</div><div class="kpi-foot"><span class="badge">Doctores &uacute;nicos</span></div></div>
+          <div class="kpi blue"><div class="kpi-lbl">Top 20 vs Total</div><div class="kpi-val">1,180</div><div class="kpi-foot"><span class="badge dp">Top 20 = 21.5% del total</span></div></div>
+        </div>
+        <div class="table-wrap">
+          <table class="data-tbl">
+            <thead><tr>
+              <th>#</th>
+              <th style="text-align:left">M&eacute;dico</th>
+              <th>Modalidad Principal</th>
+              <th class="cur">Referidos Jul</th>
+              <th>% del Total</th>
+            </tr></thead>
+            <tbody>
+            <tr class="rb"><td>1</td><td style="text-align:left">Cespedes, Edgardo</td><td>CT</td><td class="cur">153</td><td>2.8%</td></tr>
+            <tr class="ra"><td>2</td><td style="text-align:left">Almaguer, Katia</td><td>US</td><td class="cur">145</td><td>2.6%</td></tr>
+            <tr class="rb"><td>3</td><td style="text-align:left">Aguiar, Oricel</td><td>XRAY</td><td class="cur">100</td><td>1.8%</td></tr>
+            <tr class="ra"><td>4</td><td style="text-align:left">Bencomo Ruiz, Rosabel</td><td>US</td><td class="cur">93</td><td>1.7%</td></tr>
+            <tr class="rb"><td>5</td><td style="text-align:left">Diego, Joaquin</td><td>CP</td><td class="cur">76</td><td>1.4%</td></tr>
+            <tr class="ra"><td>6</td><td style="text-align:left">Pardo, Alfredo</td><td>US</td><td class="cur">74</td><td>1.3%</td></tr>
+            <tr class="rb"><td>7</td><td style="text-align:left">Molina, Noel</td><td>US</td><td class="cur">66</td><td>1.2%</td></tr>
+            <tr class="ra"><td>8</td><td style="text-align:left">Hernandez, Oscar</td><td>US</td><td class="cur">65</td><td>1.2%</td></tr>
+            <tr class="rb"><td>9</td><td style="text-align:left">Hernandez Alfonso, Sandro</td><td>US</td><td class="cur">46</td><td>0.8%</td></tr>
+            <tr class="ra"><td>10</td><td style="text-align:left">Canino, Pablo</td><td>CT</td><td class="cur">41</td><td>0.7%</td></tr>
+            <tr class="rb"><td>11</td><td style="text-align:left">Heller, Dean</td><td>CP</td><td class="cur">40</td><td>0.7%</td></tr>
+            <tr class="ra"><td>12</td><td style="text-align:left">Otero, Juan</td><td>XRAY</td><td class="cur">36</td><td>0.7%</td></tr>
+            <tr class="rb"><td>13</td><td style="text-align:left">Pelayo, Enrique</td><td>MG</td><td class="cur">33</td><td>0.6%</td></tr>
+            <tr class="ra"><td>14</td><td style="text-align:left">Prieto, Juan</td><td>US</td><td class="cur">33</td><td>0.6%</td></tr>
+            <tr class="rb"><td>15</td><td style="text-align:left">Bombino, Aesthor</td><td>XRAY</td><td class="cur">32</td><td>0.6%</td></tr>
+            <tr class="ra"><td>16</td><td style="text-align:left">Rodriguez, Mara</td><td>US</td><td class="cur">31</td><td>0.6%</td></tr>
+            <tr class="rb"><td>17</td><td style="text-align:left">Rivero, Homero</td><td>US</td><td class="cur">29</td><td>0.5%</td></tr>
+            <tr class="ra"><td>18</td><td style="text-align:left">Valdes Perez, Irina</td><td>US</td><td class="cur">29</td><td>0.5%</td></tr>
+            <tr class="rb"><td>19</td><td style="text-align:left">Casola, Regla Maria</td><td>XRAY</td><td class="cur">29</td><td>0.5%</td></tr>
+            <tr class="ra"><td>20</td><td style="text-align:left">Acosta, Mayra</td><td>XRAY</td><td class="cur">29</td><td>0.5%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div><!-- /op-referrals-jul -->
+      <div id="op-rev-jul" hidden>
+        <div class="div-row"><span class="div-lbl">Revenue y Contribuci&oacute;n por Modalidad &mdash; Julio 2026</span><div class="div-rule"></div></div>
+        <p style="font-family:var(--sans);font-size:11px;color:var(--t3);margin:-4px 0 12px">Revenue estimado = Reembolso promedio 2026 &times; Procedimientos Julio. Margen y reembolso reusados de Junio 2026. PSMA contabilizado dentro de PT (Onco PET).</p>
+        <div class="kpi-grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:16px">
+          <div class="kpi green"><div class="kpi-lbl">Revenue Estimado Julio</div><div class="kpi-val">$1.39M</div></div>
+          <div class="kpi green"><div class="kpi-lbl">Contribuci&oacute;n Total Julio</div><div class="kpi-val">$636,876</div><div class="kpi-foot"><span class="badge">Margen ponderado: 45.7%</span></div></div>
+          <div class="kpi green"><div class="kpi-lbl">Mayor Contribuci&oacute;n: CP</div><div class="kpi-val">$227,489</div><div class="kpi-foot"><span class="badge dp">35.7% del total</span></div></div>
+        </div>
+        <div class="table-wrap">
+          <table class="data-tbl">
+            <thead><tr>
+              <th style="text-align:left">Modalidad</th><th>Tipo</th><th>Procs</th><th>Avg Reimb.</th>
+              <th class="cur">Revenue</th><th class="cur">% Total</th>
+              <th class="sep">Contribuci&oacute;n</th><th>Margen</th>
+            </tr></thead>
+            <tbody>
+              <tr style="background:var(--bg2);font-weight:600"><td colspan="8" style="text-align:left;padding-left:8px;font-size:11px;letter-spacing:.04em;color:var(--t2)">SPECIALIZED</td></tr>
+              <tr><td style="text-align:left">CP</td><td>Specialized</td><td>266</td><td>$2,215.60</td><td class="cur">$589,350</td><td class="cur">42.3%</td><td class="sep dp">$227,489</td><td class="dp">38.6%</td></tr>
+              <tr><td style="text-align:left">PT</td><td>Specialized</td><td>83</td><td>$1,152.17</td><td class="cur">$95,630</td><td class="cur">6.9%</td><td class="sep dp">$63,881</td><td class="dp">66.8%</td></tr>
+              <tr style="font-style:italic;color:var(--t2)"><td style="text-align:left">Subtotal</td><td></td><td>349</td><td></td><td class="cur">$684,980</td><td class="cur">49.1%</td><td class="sep">$291,370</td><td>42.5%</td></tr>
+              <tr style="background:var(--bg2);font-weight:600"><td colspan="8" style="text-align:left;padding-left:8px;font-size:11px;letter-spacing:.04em;color:var(--t2)">HIGH IMAGING</td></tr>
+              <tr><td style="text-align:left">MRI</td><td>High Imaging</td><td>617</td><td>$199.60</td><td class="cur">$123,153</td><td class="cur">8.8%</td><td class="sep dp">$58,251</td><td class="dp">47.3%</td></tr>
+              <tr><td style="text-align:left">NCV</td><td>High Imaging</td><td>323</td><td>$374.10</td><td class="cur">$120,834</td><td class="cur">8.7%</td><td class="sep dp">$85,309</td><td class="dp">70.6%</td></tr>
+              <tr><td style="text-align:left">MG</td><td>High Imaging</td><td>623</td><td>$130.63</td><td class="cur">$81,382</td><td class="cur">5.8%</td><td class="sep dp">$42,156</td><td class="dp">51.8%</td></tr>
+              <tr><td style="text-align:left">CT</td><td>High Imaging</td><td>664</td><td>$130.01</td><td class="cur">$86,327</td><td class="cur">6.2%</td><td class="sep dp">$38,502</td><td class="dp">44.6%</td></tr>
+              <tr><td style="text-align:left">SL</td><td>High Imaging</td><td>202</td><td>$429.30</td><td class="cur">$86,719</td><td class="cur">6.2%</td><td class="sep dp">$33,820</td><td class="dp">39.0%</td></tr>
+              <tr><td style="text-align:left">NM</td><td>High Imaging</td><td>79</td><td>$439.52</td><td class="cur">$34,722</td><td class="cur">2.5%</td><td class="sep dp">$19,722</td><td class="dp">56.8%</td></tr>
+              <tr style="font-style:italic;color:var(--t2)"><td style="text-align:left">Subtotal</td><td></td><td>2,508</td><td></td><td class="cur">$533,137</td><td class="cur">38.2%</td><td class="sep">$277,761</td><td>52.1%</td></tr>
+              <tr style="background:var(--bg2);font-weight:600"><td colspan="8" style="text-align:left;padding-left:8px;font-size:11px;letter-spacing:.04em;color:var(--t2)">LOW IMAGING</td></tr>
+              <tr><td style="text-align:left">US</td><td>Low Imaging</td><td>1,514</td><td>$92.59</td><td class="cur">$140,181</td><td class="cur">10.1%</td><td class="sep dp">$62,941</td><td class="dp">44.9%</td></tr>
+              <tr><td style="text-align:left">XRAY</td><td>Low Imaging</td><td>818</td><td>$30.10</td><td class="cur">$24,622</td><td class="cur">1.8%</td><td class="sep dp">$4,161</td><td class="dp">16.9%</td></tr>
+              <tr><td style="text-align:left">EEG</td><td>Low Imaging</td><td>7</td><td>$282.97</td><td class="cur">$1,981</td><td class="cur">0.1%</td><td class="sep dp">$1,000</td><td class="dp">50.5%</td></tr>
+              <tr><td style="text-align:left">EKG</td><td>Low Imaging</td><td>86</td><td>$32.91</td><td class="cur">$2,830</td><td class="cur">0.2%</td><td class="sep dp">$767</td><td class="dp">27.1%</td></tr>
+              <tr><td style="text-align:left">DEXA</td><td>Low Imaging</td><td>215</td><td>$30.77</td><td class="cur">$6,616</td><td class="cur">0.5%</td><td class="sep dn">$-1,125</td><td class="dn">-17.0%</td></tr>
+              <tr style="font-style:italic;color:var(--t2)"><td style="text-align:left">Subtotal</td><td></td><td>2,640</td><td></td><td class="cur">$176,230</td><td class="cur">12.6%</td><td class="sep">$67,745</td><td>38.4%</td></tr>
+              <tr style="font-weight:700;border-top:2px solid var(--bd)"><td style="text-align:left">TOTAL</td><td></td><td>5,497</td><td></td><td class="cur">$1,394,347</td><td class="cur">100%</td><td class="sep dp">$636,876</td><td class="dp">45.7%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div><!-- /op-rev-jul -->
+      <div id="op-kpis-jul" hidden>
+        <div class="div-row"><span class="div-lbl">KPIs Operacionales &mdash; Julio 2026</span><div class="div-rule"></div></div>
+        <div class="kpi-grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:20px">
+          <div class="kpi blue"><div class="kpi-lbl">No Show Rate (NSR)</div><div class="kpi-val">2%</div><div class="kpi-foot"><span class="badge">igual que Junio 2% &mdash; Grand Total</span></div></div>
+          <div class="kpi blue"><div class="kpi-lbl">Wait Time Promedio</div><div class="kpi-val">59.0 min</div><div class="kpi-foot"><span class="badge dn">sube vs Junio 49.0 min</span></div></div>
+          <div class="kpi blue"><div class="kpi-lbl">Delay Time Promedio</div><div class="kpi-val">34.0 min</div><div class="kpi-foot"><span class="badge">Junio (Door): 28.6 min</span></div></div>
+          <div class="kpi blue"><div class="kpi-lbl">Exam Duration Prom.</div><div class="kpi-val">76.0 min</div><div class="kpi-foot"><span class="badge dp">mejora vs Junio 78.3 min</span></div></div>
+          <div class="kpi blue"><div class="kpi-lbl">Reading Time (RT)</div><div class="kpi-val">4.0 d&iacute;as</div><div class="kpi-foot"><span class="badge dn">sube vs Junio 2.8 d&iacute;as</span></div></div>
+          <div class="kpi blue"><div class="kpi-lbl">Tech Completion (TC)</div><div class="kpi-val">2%</div><div class="kpi-foot"><span class="badge">74 procs pendientes de completar</span></div></div>
+        </div>
+        <div class="div-row"><span class="div-lbl">Resumen KPIs &mdash; Grand Total Julio 2026</span><div class="div-rule"></div></div>
+        <div class="table-wrap">
+          <table class="data-tbl">
+            <thead><tr>
+              <th style="text-align:left">Indicador</th>
+              <th class="cur">Julio 2026</th>
+              <th>Junio 2026</th>
+              <th>Tendencia</th>
+            </tr></thead>
+            <tbody>
+              <tr class="rb"><td>No Show Rate (NSR)</td><td class="cur">2%</td><td>2%</td><td class="na">&mdash; Igual</td></tr>
+              <tr class="ra"><td>Wait Time (WT) min</td><td class="cur">59.0</td><td>49.0</td><td class="dn">&#9660; Sube</td></tr>
+              <tr class="rb"><td>Delay Time (DT) min</td><td class="cur">34.0</td><td>28.6</td><td class="dn">&#9660; Sube</td></tr>
+              <tr class="ra"><td>Exam Duration (ED) min</td><td class="cur">76.0</td><td>78.3</td><td class="dp">&#9650; Mejora</td></tr>
+              <tr class="rb"><td>Reading Time (RT) d&iacute;as</td><td class="cur">4.0</td><td>2.8</td><td class="dn">&#9660; Sube</td></tr>
+              <tr class="ra"><td>Tech Completion (TC)</td><td class="cur">2%</td><td>4%</td><td class="dp">&#9650; Mejora</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top:12px;font-size:11px;color:var(--t3)">Fuente: reporte de KPIs por modalidad (Grand Total). &laquo;Delay Time&raquo; corresponde al &laquo;Door Time&raquo; de Junio.</div>
+      </div><!-- /op-kpis-jul -->
+      <div id="op-comerciales-jul" hidden>
+        <div class="kpi-grid kpi-grid-3">
+          <div class="kpi amber"><div class="kpi-lbl">Doctores Activos Jul &mdash; Sin PET</div><div class="kpi-val">168</div><div class="kpi-foot"><span class="badge">de 193 asignados</span></div></div>
+          <div class="kpi amber"><div class="kpi-lbl">Referrals Jul &mdash; Sin PET</div><div class="kpi-val">2,429</div><div class="kpi-foot"><span class="badge dp">vs 2,339 en Jun &mdash; +3.8%</span></div></div>
+          <div class="kpi amber"><div class="kpi-lbl">Referrals Jul &mdash; PET</div><div class="kpi-val">408</div><div class="kpi-foot"><span class="badge dp">vs 342 en Jun &mdash; +19.3%</span></div></div>
+        </div>
+        <div class="div-row"><span class="div-lbl">Top 200 Sin PET &mdash; Referrals por Responsable</span><div class="div-rule"></div></div>
+        <div class="table-wrap"><table style="font-variant-numeric:tabular-nums">
+          <thead><tr>
+            <th style="text-align:left;min-width:100px">Responsable</th>
+            <th># Doctores<br>Asignados</th>
+            <th class="cur"># Doctores que<br>Refirieron Jul</th>
+            <th>Referrals<br>Jun 2026</th>
+            <th class="cur">Referrals<br>Jul 2026</th>
+            <th>Variaci&oacute;n<br>Jul vs Jun</th>
+          </tr></thead>
+          <tbody>
+            <tr><td style="text-align:left">Luis</td><td>43</td><td class="cur">39</td><td>816</td><td class="cur">823</td><td class="dp">+7 (+0.9%)</td></tr>
+            <tr><td style="text-align:left">Gerardo</td><td>116</td><td class="cur">105</td><td>1,232</td><td class="cur">1,256</td><td class="dp">+24 (+1.9%)</td></tr>
+            <tr><td style="text-align:left">Alex</td><td>6</td><td class="cur">6</td><td>247</td><td class="cur">298</td><td class="dp">+51 (+20.6%)</td></tr>
+            <tr><td style="text-align:left">Leonora</td><td>28</td><td class="cur">18</td><td>44</td><td class="cur">52</td><td class="dp">+8 (+18.2%)</td></tr>
+            <tr style="font-weight:600;border-top:2px solid var(--bd)"><td style="text-align:left">Total</td><td>193</td><td class="cur">168</td><td>2,339</td><td class="cur">2,429</td><td class="dp">+90 (+3.8%)</td></tr>
+          </tbody>
+        </table></div>
+        <div class="div-row" style="margin-top:24px"><span class="div-lbl">Top 32 PET &mdash; Referrals por Responsable</span><div class="div-rule"></div></div>
+        <div class="table-wrap"><table style="font-variant-numeric:tabular-nums">
+          <thead><tr>
+            <th style="text-align:left;min-width:100px">Responsable</th>
+            <th># Doctores<br>Asignados</th>
+            <th class="cur"># Doctores que<br>Refirieron Jul</th>
+            <th>Referrals<br>Jun 2026</th>
+            <th class="cur">Referrals<br>Jul 2026</th>
+            <th>Variaci&oacute;n<br>Jul vs Jun</th>
+          </tr></thead>
+          <tbody>
+            <tr><td style="text-align:left">Alex</td><td>11</td><td class="cur">11</td><td>292</td><td class="cur">366</td><td class="dp">+74 (+25.3%)</td></tr>
+            <tr><td style="text-align:left">Leonora</td><td>15</td><td class="cur">9</td><td>20</td><td class="cur">23</td><td class="dp">+3 (+15.0%)</td></tr>
+            <tr><td style="text-align:left">Gerardo</td><td>6</td><td class="cur">6</td><td>30</td><td class="cur">19</td><td class="dn">-11 (-36.7%)</td></tr>
+            <tr style="font-weight:600;border-top:2px solid var(--bd)"><td style="text-align:left">Total</td><td>32</td><td class="cur">26</td><td>342</td><td class="cur">408</td><td class="dp">+66 (+19.3%)</td></tr>
+          </tbody>
+        </table></div>
+      </div><!-- /op-comerciales-jul -->
     </div><!-- /operativos-jul -->
 
     <!-- ADMIN JUL -->
