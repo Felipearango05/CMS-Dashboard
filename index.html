@@ -2694,13 +2694,48 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
         <div class="sub-tab" onclick="showSub('sb-denials','',this)">Denials</div>
       </div>
       <div id="sb-billing-jul">
-        <div class="empty-state" style="margin-top:40px">
-          <div class="empty-icon">&#128203;</div>
-          <div class="empty-title">Billing Jul 2026 &mdash; Pendiente</div>
-          <div class="empty-sub">Datos pendientes de recibir.</div>
+        <div class="kpi-grid">
+          <div class="kpi blue"><div class="kpi-lbl">Current Month</div><div class="kpi-val">$6.06M</div><div class="kpi-foot"><span class="badge up">&uarr; +29.0%</span><span class="kpi-vs">vs. Jun 2026</span></div><div class="spark"><div class="spark-bar" style="height:59%"></div><div class="spark-bar" style="height:76%"></div><div class="spark-bar" style="height:80%"></div><div class="spark-bar" style="height:77%"></div><div class="spark-bar" style="height:100%"></div></div></div>
+          <div class="kpi blue"><div class="kpi-lbl">Prior Month (Jun 2026)</div><div class="kpi-val">$4.70M</div><div class="kpi-foot"><span class="kpi-vs">Jun 2026</span></div><div class="spark"><div class="spark-bar" style="height:59%"></div><div class="spark-bar" style="height:76%"></div><div class="spark-bar" style="height:90%"></div><div class="spark-bar" style="height:100%"></div><div class="spark-bar" style="height:80%"></div></div></div>
+          <div class="kpi blue"><div class="kpi-lbl">YTD 2026 (Ene&ndash;Jul)</div><div class="kpi-val">$35.35M</div><div class="kpi-foot"><span class="badge up">&uarr; 7 meses</span></div><div class="spark"><div class="spark-bar" style="height:59%"></div><div class="spark-bar" style="height:70%"></div><div class="spark-bar" style="height:80%"></div><div class="spark-bar" style="height:88%"></div><div class="spark-bar" style="height:100%"></div></div></div>
+          <div class="kpi blue"><div class="kpi-lbl">Prior Year (Jul 2025)</div><div class="kpi-val"><span class="empty">&mdash;</span></div><div class="kpi-foot"><span class="badge empty">No data</span></div><div class="spark"><div class="spark-bar" style="height:40%"></div><div class="spark-bar" style="height:40%"></div><div class="spark-bar" style="height:40%"></div><div class="spark-bar" style="height:40%"></div><div class="spark-bar" style="height:40%"></div></div></div>
+        </div>
+        <div class="div-row"><span class="div-lbl">Period Comparison</span><div class="div-rule"></div></div>
+        <div class="table-wrap"><table>
+          <thead>
+            <tr class="cg-row"><th></th><th class="cur">Current</th><th colspan="3">2026 Comparison</th><th class="sep" colspan="2">Prior Year</th></tr>
+            <tr><th>Metric</th><th class="cur">Jul 2026</th><th>Jun 2026</th><th>MoM &Delta;</th><th>YTD 2026</th><th class="sep">Jul 2025</th><th>YTD 2025</th></tr>
+          </thead>
+          <tbody>
+            <tr class="rb"><td>Billing (Charges)</td><td class="cur">$6,061,508</td><td>$4,698,856</td><td class="dp">&uarr; +29.0%</td><td>$35,353,774</td><td class="sep na">&mdash;</td><td class="na">&mdash;</td></tr>
+          </tbody>
+        </table></div>
+        <div style="margin-top:10px;padding:8px 12px;background:rgba(40,153,170,.06);border-radius:4px;border-left:3px solid var(--blue);font-size:12px;color:var(--t2)">
+          <strong>Nota:</strong> Incluye <strong>CMS + ZEN</strong> (sleep lab). Charges filtrado por <em>ServiceYrMo = Jul 2026</em>. Fuente: Pivot CMS JULIO + Pivot ZEN JULIO (data cruda del cach&eacute;).
         </div>
       </div>
-      <div id="sb-collections-jul" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Collections Jul 2026 &mdash; Pendiente</div></div></div>
+      <div id="sb-collections-jul" hidden>
+        <div class="kpi-grid">
+          <div class="kpi green"><div class="kpi-lbl">Current Month</div><div class="kpi-val">$1.31M</div><div class="kpi-foot"><span class="badge up">&uarr; +7.5%</span><span class="kpi-vs">vs. Jun 2026</span></div><div class="spark"><div class="spark-bar" style="height:56%"></div><div class="spark-bar" style="height:67%"></div><div class="spark-bar" style="height:86%"></div><div class="spark-bar" style="height:80%"></div><div class="spark-bar" style="height:86%"></div></div></div>
+          <div class="kpi green"><div class="kpi-lbl">Prior Month (Jun 2026)</div><div class="kpi-val">$1.22M</div><div class="kpi-foot"><span class="kpi-vs">Jun 2026</span></div><div class="spark"><div class="spark-bar" style="height:56%"></div><div class="spark-bar" style="height:67%"></div><div class="spark-bar" style="height:100%"></div><div class="spark-bar" style="height:97%"></div><div class="spark-bar" style="height:80%"></div></div></div>
+          <div class="kpi green"><div class="kpi-lbl">YTD 2026 (Ene&ndash;Jul)</div><div class="kpi-val">$8.01M</div><div class="kpi-foot"><span class="badge up">&uarr; 7 meses</span></div><div class="spark"><div class="spark-bar" style="height:56%"></div><div class="spark-bar" style="height:67%"></div><div class="spark-bar" style="height:86%"></div><div class="spark-bar" style="height:94%"></div><div class="spark-bar" style="height:100%"></div></div></div>
+          <div class="kpi violet"><div class="kpi-lbl">Collection Rate</div><div class="kpi-val">21.7%</div><div class="kpi-foot"><span class="badge dn">&darr; &minus;4.3 pp</span><span class="kpi-vs">vs. Jun 2026</span></div><div class="spark"><div class="spark-bar" style="height:100%"></div><div class="spark-bar" style="height:90%"></div><div class="spark-bar" style="height:94%"></div><div class="spark-bar" style="height:100%"></div><div class="spark-bar" style="height:83%"></div></div></div>
+        </div>
+        <div class="div-row"><span class="div-lbl">Period Comparison</span><div class="div-rule"></div></div>
+        <div class="table-wrap"><table>
+          <thead>
+            <tr class="cg-row"><th></th><th class="cur">Current</th><th colspan="3">2026 Comparison</th><th class="sep" colspan="2">Prior Year</th></tr>
+            <tr><th>Metric</th><th class="cur">Jul 2026</th><th>Jun 2026</th><th>MoM &Delta;</th><th>YTD 2026</th><th class="sep">Jul 2025</th><th>YTD 2025</th></tr>
+          </thead>
+          <tbody>
+            <tr class="rg"><td>Collections (Payments)</td><td class="cur">$1,313,789</td><td>$1,222,663</td><td class="dp">&uarr; +7.5%</td><td>$8,007,697</td><td class="sep na">&mdash;</td><td class="na">&mdash;</td></tr>
+            <tr class="rv"><td>Collection Rate</td><td class="cur">21.7%</td><td>26.0%</td><td class="dn">&darr; &minus;4.3 pp</td><td>22.6%</td><td class="sep na">&mdash;</td><td class="na">&mdash;</td></tr>
+          </tbody>
+        </table></div>
+        <div style="margin-top:10px;padding:8px 12px;background:rgba(61,170,130,.06);border-radius:4px;border-left:3px solid var(--green);font-size:12px;color:var(--t2)">
+          <strong>Nota metodol&oacute;gica:</strong> Incluye <strong>CMS + ZEN</strong>. Collections filtrado por <em>PostYrMo = Jul 2026</em> (pagos posteados en Julio, sin importar mes de servicio). Collection Rate = Collections / Charges del mes. Fuente: Pivot CMS + ZEN Julio.
+        </div>
+      </div>
       <div id="sb-balance-jul" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Balance Jul 2026 &mdash; Pendiente</div></div></div>
       <div id="sb-denials-jul" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Denials Jul 2026 &mdash; Pendiente</div></div></div>
     </div><!-- /billing-jul -->
