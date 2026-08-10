@@ -2710,6 +2710,25 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
             <tr class="rb"><td>Billing (Charges)</td><td class="cur">$6,061,508</td><td>$4,698,856</td><td class="dp">&uarr; +29.0%</td><td>$35,353,774</td><td class="sep na">&mdash;</td><td class="na">&mdash;</td></tr>
           </tbody>
         </table></div>
+        <div class="div-row" style="margin-top:20px"><span class="div-lbl">Charges y Collections por Modalidad &mdash; Julio 2026</span><div class="div-rule"></div><span style="font-size:11px;color:var(--t3)">CMS + ZEN</span></div>
+        <div class="table-wrap"><table class="data-tbl">
+          <thead><tr><th style="text-align:left">Modalidad</th><th class="cur">Charges</th><th>% Charges</th><th>Collections</th></tr></thead>
+          <tbody>
+              <tr><td style="text-align:left">PET</td><td class="cur">$4,156,954</td><td>68.6%</td><td>$730,076</td></tr>
+              <tr><td style="text-align:left">US</td><td class="cur">$381,684</td><td>6.3%</td><td>$128,532</td></tr>
+              <tr><td style="text-align:left">MRI</td><td class="cur">$373,108</td><td>6.2%</td><td>$106,715</td></tr>
+              <tr><td style="text-align:left">MG</td><td class="cur">$310,860</td><td>5.1%</td><td>$89,091</td></tr>
+              <tr><td style="text-align:left">CT</td><td class="cur">$240,986</td><td>4.0%</td><td>$64,386</td></tr>
+              <tr><td style="text-align:left">SL</td><td class="cur">$227,575</td><td>3.8%</td><td>$61,245</td></tr>
+              <tr><td style="text-align:left">NCV</td><td class="cur">$168,204</td><td>2.8%</td><td>$29,264</td></tr>
+              <tr><td style="text-align:left">NM</td><td class="cur">$99,766</td><td>1.6%</td><td>$24,661</td></tr>
+              <tr><td style="text-align:left">XRAY</td><td class="cur">$78,926</td><td>1.3%</td><td>$31,928</td></tr>
+              <tr><td style="text-align:left">DEXA</td><td class="cur">$17,760</td><td>0.3%</td><td>$6,406</td></tr>
+              <tr><td style="text-align:left">EEG</td><td class="cur">$5,685</td><td>0.1%</td><td>$2,908</td></tr>
+              <tr><td style="text-align:left">Otros (pagos s/mod.)</td><td class="cur">$0</td><td>0.0%</td><td>$38,577</td></tr>
+            <tr style="font-weight:700;border-top:2px solid var(--bd)"><td style="text-align:left">TOTAL</td><td class="cur">$6,061,508</td><td>100%</td><td>$1,313,789</td></tr>
+          </tbody>
+        </table></div>
         <div style="margin-top:10px;padding:8px 12px;background:rgba(40,153,170,.06);border-radius:4px;border-left:3px solid var(--blue);font-size:12px;color:var(--t2)">
           <strong>Nota:</strong> Incluye <strong>CMS + ZEN</strong> (sleep lab). Charges filtrado por <em>ServiceYrMo = Jul 2026</em>. Fuente: Pivot CMS JULIO + Pivot ZEN JULIO (data cruda del cach&eacute;).
         </div>
@@ -2736,7 +2755,120 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
           <strong>Nota metodol&oacute;gica:</strong> Incluye <strong>CMS + ZEN</strong>. Collections filtrado por <em>PostYrMo = Jul 2026</em> (pagos posteados en Julio, sin importar mes de servicio). Collection Rate = Collections / Charges del mes. Fuente: Pivot CMS + ZEN Julio.
         </div>
       </div>
-      <div id="sb-balance-jul" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Balance Jul 2026 &mdash; Pendiente</div></div></div>
+      <div id="sb-balance-jul" hidden>
+        <div class="kpi-grid" style="margin-bottom:20px">
+          <div class="kpi blue">
+            <div class="kpi-lbl">Balance Neto &mdash; 31 de julio 2026</div>
+            <div class="kpi-val">$7,199,324</div>
+            <div class="kpi-foot"><span class="badge">Balance neto (cargos, positivos + cr&eacute;ditos)</span></div>
+          </div>
+          <div class="kpi amber">
+            <div class="kpi-lbl">Balance Cr&iacute;tico (+90 d&iacute;as)</div>
+            <div class="kpi-val">$779,373</div>
+            <div class="kpi-foot"><span class="badge dn">10.8% del total</span></div>
+          </div>
+          <div class="kpi green">
+            <div class="kpi-lbl">Balance Corriente (0&ndash;30 d&iacute;as)</div>
+            <div class="kpi-val">$4,125,141</div>
+            <div class="kpi-foot"><span class="badge up">57.3% del total</span></div>
+          </div>
+        </div>
+        <div class="div-row"><span class="div-lbl">Aging de Balance &mdash; AR por Antig&uuml;edad</span><div class="div-rule"></div><span style="font-size:11px;color:var(--t3)">Fecha de referencia: 31 de julio 2026</span></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div class="table-wrap" style="padding:18px 20px">
+            <div style="margin-bottom:16px;font-size:12px;color:var(--t3)">Balance neto por tramo &mdash; % del total</div>
+            <div class="pl-bars" style="gap:14px">
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">0-30 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Jul 2026</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:57.3%;background:#3DAA82"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;font-weight:600;color:#3DAA82">$4,125,141</span>
+                  <span style="font-size:12px;color:var(--t3)">57.3% del total</span>
+                </div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">30-60 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Jun 2026</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:11.9%;background:#3DAA82"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;font-weight:600;color:#3DAA82">$855,673</span>
+                  <span style="font-size:12px;color:var(--t3)">11.9% del total</span>
+                </div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">60-90 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">May 2026</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:20.0%;background:#3DAA82"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;font-weight:600;color:#3DAA82">$1,439,137</span>
+                  <span style="font-size:12px;color:var(--t3)">20.0% del total</span>
+                </div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">90-120 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Abr 2026</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:6.0%;background:#3DAA82"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;font-weight:600;color:#3DAA82">$431,064</span>
+                  <span style="font-size:12px;color:var(--t3)">6.0% del total</span>
+                </div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">120-180 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Feb-Mar 2026</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:1.3%;background:#3DAA82"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;font-weight:600;color:#3DAA82">$94,274</span>
+                  <span style="font-size:12px;color:var(--t3)">1.3% del total</span>
+                </div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">+180 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Pre-Feb 2026</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:3.5%;background:#3DAA82"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;font-weight:600;color:#3DAA82">$254,035</span>
+                  <span style="font-size:12px;color:var(--t3)">3.5% del total</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="table-wrap" style="padding:16px 20px">
+            <div class="div-row" style="margin-bottom:10px"><span class="div-lbl">AR Neto por Aseguradora</span><div class="div-rule"></div></div>
+            <div style="overflow-x:auto"><table>
+              <thead>
+                <tr><th>Payer</th><th class="cur">Neto</th><th>0-30d</th><th>30-60d</th><th>60-90d</th><th>90-120d</th><th>120-180d</th><th>+180d</th><th>Cobro Esp.</th></tr>
+              </thead>
+              <tbody>
+                <tr class="rg"><td>Commercial</td><td class="cur">$2,020,263</td><td>$1,236,843</td><td>$392,087</td><td>$215,066</td><td>$83,256</td><td>$31,941</td><td>$61,070</td><td style="color:var(--green)">$444,458</td></tr>
+                <tr class="rg"><td>PATIENT</td><td class="cur">$1,928,493</td><td>$26,241</td><td>$117,149</td><td>$1,180,570</td><td>$341,621</td><td>$18,812</td><td>$244,101</td><td style="color:var(--green)">$424,268</td></tr>
+                <tr class="rg"><td>PCP</td><td class="cur">$1,605,027</td><td>$1,367,567</td><td>$231,219</td><td>$9,732</td><td>$2,834</td><td>$1,324</td><td>-$7,650</td><td style="color:var(--green)">$353,106</td></tr>
+                <tr class="rg"><td>Humana</td><td class="cur">$311,176</td><td>$301,879</td><td>$17,748</td><td>$2,267</td><td>$3,719</td><td>$9,119</td><td>-$23,556</td><td style="color:var(--green)">$68,459</td></tr>
+                <tr class="rg"><td>Oscar</td><td class="cur">$284,713</td><td>$327,622</td><td>-$5,242</td><td>-$2,922</td><td>-$2,749</td><td>-$3,380</td><td>-$28,616</td><td style="color:var(--green)">$62,637</td></tr>
+                <tr class="rg"><td>Medicare</td><td class="cur">$272,907</td><td>$243,955</td><td>$15,427</td><td>$2,199</td><td>$740</td><td>$8,585</td><td>$2,001</td><td style="color:var(--green)">$60,040</td></tr>
+                <tr class="rg"><td>Workers Comp</td><td class="cur">$250,435</td><td>$120,952</td><td>$47,892</td><td>$15,655</td><td>$1,824</td><td>$37,398</td><td>$26,714</td><td style="color:var(--green)">$55,096</td></tr>
+                <tr class="rg"><td>United</td><td class="cur">$189,838</td><td>$202,701</td><td>$2,559</td><td>-$3,624</td><td>-$6,173</td><td>-$5,721</td><td>$97</td><td style="color:var(--green)">$41,764</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+        </div>
+        <div style="margin-top:10px;padding:8px 12px;background:rgba(40,153,170,.06);border-radius:4px;border-left:3px solid var(--blue);font-size:12px;color:var(--t2)">
+          <strong>Metodolog&iacute;a:</strong> Balance neto = suma del campo Balance de los registros de <em>cargo</em> (RecordType C), agrupado por mes de servicio (aging). Incluye CMS + ZEN. Cobro Esp. = Neto &times; 22% (tasa esperada). Fuente: Pivot CMS + ZEN Julio (cach&eacute;).
+        </div>
+      </div><!-- /sb-balance-jul -->
       <div id="sb-denials-jul" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Denials Jul 2026 &mdash; Pendiente</div></div></div>
     </div><!-- /billing-jul -->
 
