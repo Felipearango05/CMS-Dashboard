@@ -268,6 +268,7 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
         <button class="period-btn" onclick="switchPeriod('jun-2026',this)">Jun 2026</button>
         <button class="period-btn" onclick="switchPeriod('jul-2026',this)">Jul 2026</button>
         <button class="period-btn active" onclick="switchPeriod('aug-2026',this)">Aug 2026</button>
+        <button class="period-btn" onclick="switchPeriod('sep-2026',this)">Sep 2026</button>
       </div>
       <div class="period-pill"><span class="dot"></span> <span id="active-period-label">Aug 2026</span></div>
     </div>
@@ -3955,6 +3956,211 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
     </div><!-- /ris-aug -->
 
   </div><!-- /pd-aug-2026 -->
+  <div class="period-data" id="pd-sep-2026">
+      <div id="hdc-ris-sep" hidden>
+        <div class="sec-hdr">
+          <div class="sec-eye" style="color:#7c3aed">HDC &middot; Live</div>
+          <div class="sec-title">RIS Actual &mdash; HDC</div>
+          <div class="sec-desc">Procedimientos del mes &mdash; Sep 2026 &middot; Fuente: ABLE RIS (Modality Insurance Report).</div>
+        </div>
+        <div class="empty-state" style="margin-top:40px">
+          <div class="empty-icon">&#128203;</div>
+          <div class="empty-title">RIS Actual HDC &mdash; Sep 2026</div>
+          <div class="empty-sub">Se actualiza autom&aacute;ticamente cada d&iacute;a con el robot de HDC.</div>
+        </div>
+      </div>
+
+    <!-- BILLING SEP -->
+    <div id="billing-sep">
+      <div class="sec-hdr">
+        <div class="sec-eye">Section 1</div>
+        <div class="sec-title">Billing</div>
+        <div class="sec-desc">Charges, collections, and balance &mdash; Sep 2026.</div>
+      </div>
+      <div class="sub-nav">
+        <div class="sub-tab active" onclick="showSub('sb-billing','',this)">Billing</div>
+        <div class="sub-tab" onclick="showSub('sb-collections','',this)">Collections</div>
+        <div class="sub-tab" onclick="showSub('sb-balance','',this)">Balance</div>
+        <div class="sub-tab" onclick="showSub('sb-denials','',this)">Denials</div>
+      </div>
+      <div id="sb-billing-sep">
+        <div class="empty-state" style="margin-top:40px">
+          <div class="empty-icon">&#128203;</div>
+          <div class="empty-title">Billing Sep 2026 &mdash; Pendiente</div>
+          <div class="empty-sub">Mes en curso. Datos al cierre de mes.</div>
+        </div>
+      </div>
+      <div id="sb-collections-sep" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Collections Sep 2026 &mdash; Pendiente</div></div></div>
+      <div id="sb-balance-sep" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Balance Sep 2026 &mdash; Pendiente</div></div></div>
+      <div id="sb-denials-sep" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Denials Sep 2026 &mdash; Pendiente</div></div></div>
+    </div><!-- /billing-sep -->
+
+    <!-- OPERATIVOS SEP -->
+    <div id="operativos-sep" hidden>
+      <div class="sec-hdr">
+        <div class="sec-eye">Section 2</div>
+        <div class="sec-title">Resultados Operativos</div>
+        <div class="sec-desc">Procedimientos, referidos, revenue, KPIs &mdash; Sep 2026.</div>
+      </div>
+      <div class="sub-nav">
+        <div class="sub-tab op-tab active" onclick="showOpSub('op-procs',this)">Procedures x Modality</div>
+        <div class="sub-tab op-tab" onclick="showOpSub('op-referrals',this)">Top Referrals</div>
+        <div class="sub-tab op-tab" onclick="showOpSub('op-rev',this)">Rev y Contribuci&oacute;n</div>
+        <div class="sub-tab op-tab" onclick="showOpSub('op-kpis',this)">KPIs</div>
+        <div class="sub-tab op-tab" onclick="showOpSub('op-comerciales',this)">Comerciales y Top 200</div>
+      </div>
+      <div id="op-procs-sep"><div class="empty-state" style="margin-top:40px"><div class="empty-icon">&#128203;</div><div class="empty-title">Procedimientos Sep 2026 &mdash; Pendiente</div><div class="empty-sub">Mes en curso.</div></div></div>
+      <div id="op-referrals-sep" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Top Referrals Sep &mdash; Pendiente</div></div></div>
+      <div id="op-rev-sep" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Revenue Sep &mdash; Pendiente</div></div></div>
+      <div id="op-kpis-sep" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">KPIs Sep &mdash; Pendiente</div></div></div>
+      <div id="op-comerciales-sep" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Comerciales Sep &mdash; Pendiente</div></div></div>
+    </div><!-- /operativos-sep -->
+
+    <!-- ADMIN SEP -->
+    <div id="admin-sep" hidden>
+      <div class="sec-hdr">
+        <div class="sec-eye">Section 3</div>
+        <div class="sec-title">Admin</div>
+        <div class="sec-desc">P&amp;L y n&oacute;mina &mdash; Sep 2026.</div>
+      </div>
+      <div class="sub-nav">
+        <div class="sub-tab adm-tab active" onclick="showAdmSub('adm-pl',this)">P&amp;L</div>
+        <div class="sub-tab adm-tab" onclick="showAdmSub('adm-nomina',this)">N&oacute;mina</div>
+      </div>
+      <div id="adm-pl-sep"><div class="empty-state" style="margin-top:40px"><div class="empty-icon">&#128203;</div><div class="empty-title">P&amp;L Sep 2026 &mdash; Pendiente</div></div></div>
+      <div id="adm-nomina-sep" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">N&oacute;mina Sep &mdash; Pendiente</div></div></div>
+    </div><!-- /admin-sep -->
+
+    <!-- COMPLIANCE SEP -->
+    <div id="compliance-sep" hidden>
+      <div class="sec-hdr">
+        <div class="sec-eye">Section 4</div>
+        <div class="sec-title">Compliance</div>
+        <div class="sec-desc">Licencias y permisos &mdash; Sep 2026.</div>
+      </div>
+      <div class="empty-state" style="margin-top:40px">
+        <div class="empty-icon">&#128203;</div>
+        <div class="empty-title">Compliance Sep 2026 &mdash; sin cambios desde agosto</div>
+        <div class="empty-sub">El tracker de licencias se revisa mensualmente. Ver Ago 2026 para el detalle vigente.</div>
+      </div>
+    </div><!-- /compliance-sep -->
+
+    <!-- RIS SEP 2026 — LIVE -->
+    <div id="ris-sep" hidden>
+      <div class="sec-hdr">
+        <div class="sec-eye">Live</div>
+        <div class="sec-title">RIS Actual</div>
+        <div class="sec-desc">Procedimientos del mes corrido &mdash; Fuente: Abbadox RIS, actualizado autom&aacute;ticamente.</div>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="kpi" style="border-top:3px solid var(--blue)">
+          <div class="kpi-lbl">Per&iacute;odo</div>
+          <div class="kpi-val" style="font-size:18px">Sep 01 &ndash; Sep 30</div>
+          <div class="kpi-foot"><span class="badge">Mes corrido 2026</span></div>
+        </div>
+        <div class="kpi" style="border-top:3px solid var(--green)">
+          <div class="kpi-lbl">D&iacute;as H&aacute;biles</div>
+          <div class="kpi-val">0</div>
+          <div class="kpi-foot"><span class="badge">&mdash;</span></div>
+        </div>
+        <div class="kpi" style="border-top:3px solid var(--blue)">
+          <div class="kpi-lbl">Total Procedimientos</div>
+          <div class="kpi-val">0</div>
+          <div class="kpi-foot"><span class="badge">Complete + TechComplete &middot; sin courtesy</span></div>
+        </div>
+        <div class="kpi" style="border-top:3px solid var(--amber)">
+          <div class="kpi-lbl">Promedio Diario</div>
+          <div class="kpi-val">0</div>
+          <div class="kpi-foot"><span class="badge">Procs / d&iacute;a h&aacute;bil</span></div>
+        </div>
+      </div>
+
+      <div class="div-row"><span class="div-lbl">Procedimientos por Modalidad</span><div class="div-rule"></div><span style="font-size:11px;color:var(--t3)">Solo Complete &middot; TechComplete &middot; sin courtesy</span></div>
+      <div class="table-wrap" style="padding:20px 24px">
+        <div class="ris-mod-bars">
+        </div>
+        <div style="margin-top:16px;padding-top:12px;border-top:2px solid var(--bd);display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:13px;font-weight:700;color:var(--t1)">TOTAL MES</span>
+          <span style="font-size:15px;font-weight:700;color:var(--t1);font-variant-numeric:tabular-nums">0</span>
+        </div>
+      </div>
+
+      <div class="div-row" style="margin-top:20px"><span class="div-lbl">Procedimientos por D&iacute;a &mdash; September 2026</span><div class="div-rule"></div><span style="font-size:11px;color:var(--t3)">Espicha un d&iacute;a para ver el detalle</span></div>
+      <div class="table-wrap" style="padding:20px 24px">
+        <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:6px;text-align:center">
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Lun</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Mar</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Mi&eacute;</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Jue</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Vie</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">S&aacute;b</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Dom</div>
+        </div>
+        <div id="ris-9cal-grid" style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;text-align:center"></div>
+        <div id="ris-9day-detail" style="display:none;margin-top:16px;padding:16px 20px;background:var(--bg);border-radius:var(--r);border:1px solid var(--bd)">
+          <div id="ris-9detail-title" style="font-size:14px;font-weight:700;color:var(--t1);margin-bottom:14px"></div>
+          <div id="ris-9detail-bars"></div>
+        </div>
+        <div style="margin-top:16px;padding-top:12px;border-top:2px solid var(--bd);display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:13px;font-weight:700;color:var(--t1)">TOTAL MES</span>
+          <span style="font-size:15px;font-weight:700;color:var(--t1);font-variant-numeric:tabular-nums">0</span>
+        </div>
+      </div>
+
+      <script>
+      (function() {
+        const RIS_DAILY = {};
+        const grid = document.getElementById('ris-9cal-grid');
+        let activeDay = null;
+        for (let i=0;i<1;i++) grid.appendChild(document.createElement('div'));
+        for (let d=1;d<=30;d++) {
+          const data = RIS_DAILY[d] && RIS_DAILY[d].total>0 ? RIS_DAILY[d] : null;
+          const cell = document.createElement('div');
+          const isToday = d===1;
+          cell.style.cssText = ['border-radius:8px','padding:6px 2px','min-height:54px','display:flex',
+            'flex-direction:column','align-items:center','justify-content:center','gap:3px',
+            'transition:transform .1s, box-shadow .1s',
+            data?'cursor:pointer;background:var(--blue);color:#fff':'cursor:default;background:var(--bg2);color:var(--t4)',
+            isToday?'outline:2px solid var(--amber);outline-offset:2px':''
+          ].join(';');
+          cell.innerHTML='<span style="font-size:12px;font-weight:700">'+d+'</span>'+(data?'<span style="font-size:11px;opacity:.85;font-variant-numeric:tabular-nums">'+data.total+'</span>':'');
+          if(data){
+            cell.addEventListener('click',(function(dd){return function(){toggle9Day(dd);};})(d));
+            cell.addEventListener('mouseover',function(){if(activeDay!==d){this.style.transform='scale(1.07)';this.style.boxShadow='0 4px 12px rgba(40,153,170,.35)';}});
+            cell.addEventListener('mouseout',function(){this.style.transform='';this.style.boxShadow='';});
+          }
+          cell.id='ris-9day-'+d;
+          grid.appendChild(cell);
+        }
+        for(let i=0;i<4;i++) grid.appendChild(document.createElement('div'));
+        function toggle9Day(d){
+          const data=RIS_DAILY[d];if(!data||data.total===0)return;
+          const detail=document.getElementById('ris-9day-detail');
+          if(activeDay!==null){const prev=document.getElementById('ris-9day-'+activeDay);if(prev)prev.style.background='var(--blue)';}
+          if(activeDay===d){detail.style.display='none';activeDay=null;return;}
+          activeDay=d;
+          const cell=document.getElementById('ris-9day-'+d);if(cell)cell.style.background='var(--pos)';
+          document.getElementById('ris-9detail-title').innerHTML='Sep '+String(d).padStart(2,'0')+' &mdash; <span style="color:var(--blue)">'+data.total+' procedimientos</span>';
+          const maxVal=Math.max(...Object.values(data.m));
+          document.getElementById('ris-9detail-bars').innerHTML=Object.entries(data.m).map(function(e){
+            const mod=e[0],cnt=e[1];
+            return '<div style="display:grid;grid-template-columns:56px 1fr 64px;align-items:center;gap:10px;margin-bottom:9px">'
+              +'<span style="font-size:12px;color:var(--t2);font-weight:600">'+mod+'</span>'
+              +'<div style="height:9px;background:var(--bg2);border-radius:5px;overflow:hidden"><div style="height:100%;width:'+(cnt/maxVal*100).toFixed(1)+'%;background:var(--blue);border-radius:5px"></div></div>'
+              +'<span style="font-size:12px;color:var(--t1);font-variant-numeric:tabular-nums;text-align:right">'+cnt+' <span style="color:var(--t3)">'+(cnt/data.total*100).toFixed(0)+'%</span></span></div>';
+          }).join('');
+          detail.style.display='block';detail.scrollIntoView({behavior:'smooth',block:'nearest'});
+        }
+      })();
+      </script>
+
+      <div style="margin-top:14px;font-size:11px;color:var(--t3);text-align:right">
+        Fuente: Abbadox RIS &nbsp;&middot;&nbsp; Actualizado autom&aacute;ticamente cada ma&ntilde;ana
+      </div>
+    </div><!-- /ris-sep -->
+
+  </div><!-- /pd-sep-2026 -->
 
     </div><!-- /content -->
 </div><!-- /main -->
