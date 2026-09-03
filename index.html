@@ -3792,7 +3792,45 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
           </table>
         </div>
       </div><!-- /op-rev-aug -->
-      <div id="op-kpis-aug" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">KPIs Ago &mdash; Pendiente</div></div></div>
+      <div id="op-kpis-aug" hidden>
+        <div class="kpi-grid kpi-grid-3" style="grid-template-columns:repeat(4,1fr)">
+          <div class="kpi blue"><div class="kpi-lbl">No Show Rate Agosto</div><div class="kpi-val">3%</div><div class="kpi-foot"><span class="badge dn">sube vs Julio 2% &mdash; Grand Total</span></div><div class="spark"><div class="spark-bar" style="height:60%"></div><div class="spark-bar" style="height:70%"></div><div class="spark-bar" style="height:80%"></div><div class="spark-bar" style="height:90%"></div><div class="spark-bar" style="height:100%"></div></div></div>
+          <div class="kpi blue"><div class="kpi-lbl">Wait Time Promedio</div><div class="kpi-val">51</div><div class="kpi-foot"><span class="badge dp">baja vs Julio 59 min</span></div><div class="spark"><div class="spark-bar" style="height:100%"></div><div class="spark-bar" style="height:90%"></div><div class="spark-bar" style="height:85%"></div><div class="spark-bar" style="height:80%"></div><div class="spark-bar" style="height:75%"></div></div></div>
+          <div class="kpi blue"><div class="kpi-lbl">Reading Time Promedio</div><div class="kpi-val">2.0</div><div class="kpi-foot"><span class="badge dp">baja vs Julio 4.0 d&iacute;as</span></div><div class="spark"><div class="spark-bar" style="height:100%"></div><div class="spark-bar" style="height:90%"></div><div class="spark-bar" style="height:70%"></div><div class="spark-bar" style="height:55%"></div><div class="spark-bar" style="height:50%"></div></div></div>
+          <div class="kpi blue"><div class="kpi-lbl">Tech Complete Rate</div><div class="kpi-val">3%</div><div class="kpi-foot"><span class="badge">122 procs &mdash; Grand Total</span></div><div class="spark"><div class="spark-bar" style="height:60%"></div><div class="spark-bar" style="height:70%"></div><div class="spark-bar" style="height:80%"></div><div class="spark-bar" style="height:90%"></div><div class="spark-bar" style="height:100%"></div></div></div>
+        </div>
+        <div class="div-row" style="margin-top:8px"><span class="div-lbl">Indicadores Operacionales por Modalidad &mdash; Agosto 2026</span><div class="div-rule"></div></div>
+        <p style="font-family:var(--sans);font-size:11px;color:var(--t3);margin:-4px 0 12px">No Show Rate = Total No Shows / (Scheduled &minus; Cancelled).</p>
+        <div class="table-wrap"><table style="font-variant-numeric:tabular-nums">
+          <thead>
+            <tr>
+              <th style="text-align:left">Modalidad</th>
+              <th>No Show Rate<br>Jul</th>
+              <th class="cur">No Show Rate<br>Ago</th>
+              <th>Wait Time<br>(Mins)</th>
+              <th>Delay Time<br>(Mins)</th>
+              <th>Exam Duration<br>(Mins)</th>
+              <th>Reading Time<br>(Days)</th>
+              <th>Tech Complete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="text-align:left">CP</td><td>0%</td><td class="cur dn">1%</td><td>59</td><td>48</td><td>17</td><td>1.5</td><td>4% (5)</td></tr>
+            <tr><td style="text-align:left">CT</td><td>3%</td><td class="cur">3%</td><td>14</td><td>-8</td><td>5</td><td>1.6</td><td>3% (13)</td></tr>
+            <tr><td style="text-align:left">DEXA</td><td>0%</td><td class="cur dn">1%</td><td class="na">&mdash;</td><td class="na">&mdash;</td><td class="na">&mdash;</td><td>1.6</td><td>8% (10)</td></tr>
+            <tr><td style="text-align:left">EKG</td><td>0%</td><td class="cur dn">1%</td><td>20</td><td>3</td><td>16</td><td>1.6</td><td>6% (4)</td></tr>
+            <tr><td style="text-align:left">MG</td><td>6%</td><td class="cur dp">5%</td><td>27</td><td>16</td><td>21</td><td>3.9</td><td>0% (1)</td></tr>
+            <tr><td style="text-align:left">MRI</td><td>1%</td><td class="cur dn">2%</td><td>71</td><td>56</td><td>19</td><td>0.9</td><td>0% (2)</td></tr>
+            <tr><td style="text-align:left">NCV</td><td>0%</td><td class="cur">0%</td><td class="na">&mdash;</td><td class="na">&mdash;</td><td class="na">&mdash;</td><td>8.5</td><td>27% (25)</td></tr>
+            <tr><td style="text-align:left">NM</td><td>0%</td><td class="cur dn">5%</td><td>100</td><td>79</td><td>81</td><td>2.4</td><td>6% (4)</td></tr>
+            <tr><td style="text-align:left">PT</td><td>0%</td><td class="cur dn">1%</td><td>97</td><td>50</td><td>65</td><td>1.4</td><td>4% (3)</td></tr>
+            <tr><td style="text-align:left">SL</td><td>3%</td><td class="cur dn">8%</td><td class="na">&mdash;</td><td class="na">&mdash;</td><td class="na">&mdash;</td><td>2.3</td><td>2% (3)</td></tr>
+            <tr><td style="text-align:left">US</td><td>4%</td><td class="cur">4%</td><td>65</td><td>49</td><td>184</td><td>2.6</td><td>4% (49)</td></tr>
+            <tr><td style="text-align:left">XRAY</td><td>0%</td><td class="cur dn">2%</td><td>37</td><td>-1</td><td>24</td><td>0.7</td><td>0% (3)</td></tr>
+            <tr style="font-weight:600;border-top:2px solid var(--bd)"><td style="text-align:left">Grand Total</td><td>2%</td><td class="cur dn">3%</td><td>51</td><td>29</td><td>62</td><td>2.0</td><td>3% (122)</td></tr>
+          </tbody>
+        </table></div>
+      </div><!-- /op-kpis-aug -->
       <div id="op-comerciales-aug" hidden>
         <div class="kpi-grid kpi-grid-3">
           <div class="kpi amber"><div class="kpi-lbl">Doctores Activos Ago &mdash; Sin PET</div><div class="kpi-val">329</div><div class="kpi-foot"><span class="badge">de 190 asignados</span></div></div>
