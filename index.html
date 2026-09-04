@@ -5081,6 +5081,8 @@ function setMetric7(m,el) { stateJ7.metric=m; renderBreakdown7(); }
 
 let center = 'cms';
 let sfx = '-aug';
+let activeCmsSection = 'billing';
+let activeHdcSection = 'hdc-ris';
 
 function switchPeriod(period, btn) {
   document.querySelectorAll('.period-data').forEach(d => d.classList.remove('active'));
@@ -5095,19 +5097,31 @@ function switchPeriod(period, btn) {
 
   SECTIONS.forEach(s => { const e = document.getElementById(s + sfx); if (e) e.hidden = true; });
   const hdcE = document.getElementById('hdc-ris' + sfx); if (hdcE) hdcE.hidden = true;
+  const hdcP = document.getElementById('hdc-pagos' + sfx); if (hdcP) hdcP.hidden = true;
+  // Mantener la seccion (RIS Actual / Pagos Esperados / Billing / Operativos / etc.) en la
+  // que el usuario estaba parado -- no resetear al default al cambiar de mes.
   if (center === 'hdc') {
-    if (hdcE) hdcE.hidden = false;
+    const targetId = activeHdcSection;
+    let target = document.getElementById(targetId + sfx);
+    if (!target) { target = document.getElementById('hdc-ris' + sfx); }
+    if (target) target.hidden = false;
     document.querySelectorAll('#nav-hdc .nav-item').forEach(n => n.classList.remove('active'));
-    const fh = document.querySelector('#nav-hdc .nav-item'); if (fh) fh.classList.add('active');
-    document.getElementById('breadcrumb').innerHTML = 'HDC <span class="sep">/</span><span>RIS Actual</span>';
-  } else {
-    const defSec = document.getElementById('billing' + sfx);
-    if (defSec) defSec.hidden = false;
-    document.querySelectorAll('#nav-cms .nav-item').forEach(n => n.classList.remove('active'));
-    const firstNav = document.querySelector('#nav-cms .nav-item');
-    if (firstNav) firstNav.classList.add('active');
+    const navBtn = document.querySelector('#nav-hdc .nav-item[onclick*="\'' + targetId + '\'"]');
+    if (navBtn) navBtn.classList.add('active');
+    else { const fh = document.querySelector('#nav-hdc .nav-item'); if (fh) fh.classList.add('active'); }
     document.getElementById('breadcrumb').innerHTML =
-      'Dashboard <span class="sep">/</span><span>' + SEC_LABELS['billing'] + '</span>';
+      'HDC <span class="sep">/</span><span>' + (SEC_LABELS[targetId] || 'RIS Actual') + '</span>';
+  } else {
+    const targetId = activeCmsSection;
+    let target = document.getElementById(targetId + sfx);
+    if (!target) { target = document.getElementById('billing' + sfx); }
+    if (target) target.hidden = false;
+    document.querySelectorAll('#nav-cms .nav-item').forEach(n => n.classList.remove('active'));
+    const navBtn = document.querySelector('#nav-cms .nav-item[onclick*="\'' + targetId + '\'"]');
+    if (navBtn) navBtn.classList.add('active');
+    else { const firstNav = document.querySelector('#nav-cms .nav-item'); if (firstNav) firstNav.classList.add('active'); }
+    document.getElementById('breadcrumb').innerHTML =
+      'Dashboard <span class="sep">/</span><span>' + (SEC_LABELS[targetId] || 'Billing') + '</span>';
   }
 }
 
@@ -5119,6 +5133,7 @@ function showSection(id, el) {
   const sec = document.getElementById(id + sfx);
   if (sec) sec.hidden = false;
   el.classList.add('active');
+  if (center === 'hdc') { activeHdcSection = id; } else { activeCmsSection = id; }
   const crumb = (center === 'hdc') ? 'HDC' : 'Dashboard';
   document.getElementById('breadcrumb').innerHTML =
     crumb + ' <span class="sep">/</span><span>' + (SEC_LABELS[id] || 'RIS Actual') + '</span>';
