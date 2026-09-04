@@ -4354,22 +4354,25 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
           <div id="hdc-sepcal-grid" style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;text-align:center"></div>
           <div id="hdc-sepday-detail" style="display:none;margin-top:16px;padding:16px 20px;background:var(--bg);border-radius:var(--r);border:1px solid var(--bd)">
             <div id="hdc-sepday-detail-title" style="font-size:14px;font-weight:700;color:var(--t1);margin-bottom:14px"></div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
-              <div>
-                <div style="font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--t3);text-transform:uppercase;margin-bottom:8px">Por Modalidad</div>
-                <div id="hdc-sepday-detail-mod"></div>
-              </div>
-              <div>
-                <div style="font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--t3);text-transform:uppercase;margin-bottom:8px">Por L&iacute;nea de Negocio</div>
-                <div id="hdc-sepday-detail-lob"></div>
-              </div>
+            <div class="table-wrap" style="margin-bottom:0">
+              <table class="data-tbl">
+                <thead><tr>
+                  <th style="text-align:left">Modalidad</th>
+                  <th class="cur">Total</th>
+                  <th>Primary Insurance</th>
+                  <th>PIP</th>
+                  <th>LOP</th>
+                  <th>Workers Comp</th>
+                </tr></thead>
+                <tbody id="hdc-sepday-detail-tbody"></tbody>
+              </table>
             </div>
           </div>
         </div>
 
         <script>
         (function() {
-          const HDC_DAILY = {1:{total:75,range:'Sep 01',mod:{US:28,DEXA:0,XRAY:0,MG:15,PET:0,CT:9,MRI:14},lob:{Primary:66,PIP:8,LOP:0,WC:1}},2:{total:72,range:'Sep 02',mod:{US:23,XRAY:1,MG:19,MRI:12,DEXA:0,PET:0,CT:7},lob:{Primary:62,PIP:6,LOP:3,WC:1}},3:{total:107,range:'Sep 03',mod:{US:40,XRAY:4,MG:20,MRI:11,DEXA:12,PET:0,CT:10},lob:{Primary:97,PIP:10,LOP:0,WC:0}}};
+          const HDC_DAILY = {1:{total:75,range:'Sep 01',mod:{US:[28,0,0,0],MRI:[14,7,0,1],MG:[15,0,0,0],CT:[9,1,0,0],DEXA:[0,0,0,0],XRAY:[0,0,0,0],PET:[0,0,0,0]}},2:{total:72,range:'Sep 02',mod:{US:[23,0,0,0],MRI:[12,6,2,0],MG:[19,0,0,0],CT:[7,0,1,1],DEXA:[0,0,0,0],XRAY:[1,0,0,0],PET:[0,0,0,0]}},3:{total:107,range:'Sep 03',mod:{US:[40,0,0,0],MRI:[11,4,0,0],MG:[20,0,0,0],CT:[10,0,0,0],DEXA:[12,0,0,0],XRAY:[4,6,0,0],PET:[0,0,0,0]}}};
           const grid = document.getElementById('hdc-sepcal-grid');
           let activeDay = null;
           for (let i=0;i<1;i++) grid.appendChild(document.createElement('div'));
@@ -4390,16 +4393,24 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
             cell.id='hdc-sepcal-grid-'+d;
             grid.appendChild(cell);
           }
-          function bars(obj,total,color){
-            const vals=Object.values(obj); const maxVal=vals.length?Math.max(...vals):0;
-            return Object.entries(obj).map(function(e){
-              const k=e[0],cnt=e[1];
-              if(cnt===0) return '';
-              return '<div style="display:grid;grid-template-columns:64px 1fr 60px;align-items:center;gap:8px;margin-bottom:8px">'
-                +'<span style="font-size:12px;color:var(--t2);font-weight:600">'+k+'</span>'
-                +'<div style="height:9px;background:var(--bg2);border-radius:5px;overflow:hidden"><div style="height:100%;width:'+(maxVal?(cnt/maxVal*100):0).toFixed(1)+'%;background:'+color+';border-radius:5px"></div></div>'
-                +'<span style="font-size:12px;color:var(--t1);font-variant-numeric:tabular-nums;text-align:right">'+cnt+' <span style="color:var(--t3)">'+(total?(cnt/total*100):0).toFixed(0)+'%</span></span></div>';
-            }).join('');
+          function dash(v){ return v ? v : '&mdash;'; }
+          function buildRows(mod,total){
+            const mods=Object.keys(mod);
+            let rows='';
+            let tot=[0,0,0,0];
+            mods.forEach(function(m){
+              const v=mod[m];
+              const t=v[0]+v[1]+v[2]+v[3];
+              for(let i=0;i<4;i++) tot[i]+=v[i];
+              rows+='<tr><td style="text-align:left">'+m+'</td>'
+                +'<td class="cur" style="font-weight:700">'+t+'</td>'
+                +'<td>'+dash(v[0])+'</td><td>'+dash(v[1])+'</td>'
+                +'<td>'+dash(v[2])+'</td><td>'+dash(v[3])+'</td></tr>';
+            });
+            rows+='<tr style="font-weight:700;border-top:2px solid var(--bd)"><td style="text-align:left">TOTAL</td>'
+              +'<td class="cur">'+total+'</td><td>'+tot[0]+'</td><td>'+dash(tot[1])+'</td>'
+              +'<td>'+dash(tot[2])+'</td><td>'+dash(tot[3])+'</td></tr>';
+            return rows;
           }
           window.toggleHdcDaySep = function(d) {
             const data=HDC_DAILY[d];if(!data||data.total===0)return;
@@ -4409,8 +4420,7 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
             activeDay=d;
             const cell=document.getElementById('hdc-sepcal-grid-'+d);if(cell)cell.style.background='var(--pos)';
             document.getElementById('hdc-sepday-detail-title').innerHTML=data.range+' &mdash; <span style="color:#7c3aed">'+data.total+' procedimientos</span>';
-            document.getElementById('hdc-sepday-detail-mod').innerHTML=bars(data.mod,data.total,'#7c3aed')||'<span style="font-size:12px;color:var(--t3)">Sin datos</span>';
-            document.getElementById('hdc-sepday-detail-lob').innerHTML=bars(data.lob,data.total,'var(--blue)')||'<span style="font-size:12px;color:var(--t3)">Sin datos</span>';
+            document.getElementById('hdc-sepday-detail-tbody').innerHTML=buildRows(data.mod,data.total);
             detail.style.display='block';detail.scrollIntoView({behavior:'smooth',block:'nearest'});
           };
         })();
