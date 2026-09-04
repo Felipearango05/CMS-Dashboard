@@ -4338,6 +4338,85 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
             </tbody>
           </table>
         </div>
+        
+        <!-- HDC-CALENDAR-sep-START -->
+        <div class="div-row" style="margin-top:20px"><span class="div-lbl">Procedimientos por D&iacute;a &mdash; Sep 2026</span><div class="div-rule"></div><span style="font-size:11px;color:var(--t3)">Espicha un d&iacute;a para ver el detalle</span></div>
+        <div class="table-wrap" style="padding:20px 24px">
+          <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:6px;text-align:center">
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Lun</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Mar</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Mié</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Jue</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Vie</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Sáb</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Dom</div>
+          </div>
+          <div id="hdc-sepcal-grid" style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;text-align:center"></div>
+          <div id="hdc-sepday-detail" style="display:none;margin-top:16px;padding:16px 20px;background:var(--bg);border-radius:var(--r);border:1px solid var(--bd)">
+            <div id="hdc-sepday-detail-title" style="font-size:14px;font-weight:700;color:var(--t1);margin-bottom:14px"></div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+              <div>
+                <div style="font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--t3);text-transform:uppercase;margin-bottom:8px">Por Modalidad</div>
+                <div id="hdc-sepday-detail-mod"></div>
+              </div>
+              <div>
+                <div style="font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--t3);text-transform:uppercase;margin-bottom:8px">Por L&iacute;nea de Negocio</div>
+                <div id="hdc-sepday-detail-lob"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+        (function() {
+          const HDC_DAILY = {1:{total:75,range:'Sep 01',mod:{US:28,DEXA:0,XRAY:0,MG:15,PET:0,CT:9,MRI:14},lob:{Primary:66,PIP:8,LOP:0,WC:1}},2:{total:72,range:'Sep 02',mod:{US:23,XRAY:1,MG:19,MRI:12,DEXA:0,PET:0,CT:7},lob:{Primary:62,PIP:6,LOP:3,WC:1}},3:{total:107,range:'Sep 03',mod:{US:40,XRAY:4,MG:20,MRI:11,DEXA:12,PET:0,CT:10},lob:{Primary:97,PIP:10,LOP:0,WC:0}}};
+          const grid = document.getElementById('hdc-sepcal-grid');
+          let activeDay = null;
+          for (let i=0;i<1;i++) grid.appendChild(document.createElement('div'));
+          for (let d=1;d<=30;d++) {
+            const data = HDC_DAILY[d] && HDC_DAILY[d].total>0 ? HDC_DAILY[d] : null;
+            const cell = document.createElement('div');
+            cell.style.cssText = ['border-radius:8px','padding:6px 2px','min-height:54px','display:flex',
+              'flex-direction:column','align-items:center','justify-content:center','gap:3px',
+              'transition:transform .1s, box-shadow .1s',
+              data?'cursor:pointer;background:#7c3aed;color:#fff':'cursor:default;background:var(--bg2);color:var(--t4)'
+            ].join(';');
+            cell.innerHTML='<span style="font-size:12px;font-weight:700">'+d+'</span>'+(data?'<span style="font-size:11px;opacity:.85;font-variant-numeric:tabular-nums">'+data.total+'</span>':'');
+            if(data){
+              cell.addEventListener('click',(function(dd){return function(){ toggleHdcDaySep(dd); };})(d));
+              cell.addEventListener('mouseover',function(){if(activeDay!==d){this.style.transform='scale(1.07)';this.style.boxShadow='0 4px 12px rgba(124,58,237,.35)';}});
+              cell.addEventListener('mouseout',function(){this.style.transform='';this.style.boxShadow='';});
+            }
+            cell.id='hdc-sepcal-grid-'+d;
+            grid.appendChild(cell);
+          }
+          function bars(obj,total,color){
+            const vals=Object.values(obj); const maxVal=vals.length?Math.max(...vals):0;
+            return Object.entries(obj).map(function(e){
+              const k=e[0],cnt=e[1];
+              if(cnt===0) return '';
+              return '<div style="display:grid;grid-template-columns:64px 1fr 60px;align-items:center;gap:8px;margin-bottom:8px">'
+                +'<span style="font-size:12px;color:var(--t2);font-weight:600">'+k+'</span>'
+                +'<div style="height:9px;background:var(--bg2);border-radius:5px;overflow:hidden"><div style="height:100%;width:'+(maxVal?(cnt/maxVal*100):0).toFixed(1)+'%;background:'+color+';border-radius:5px"></div></div>'
+                +'<span style="font-size:12px;color:var(--t1);font-variant-numeric:tabular-nums;text-align:right">'+cnt+' <span style="color:var(--t3)">'+(total?(cnt/total*100):0).toFixed(0)+'%</span></span></div>';
+            }).join('');
+          }
+          window.toggleHdcDaySep = function(d) {
+            const data=HDC_DAILY[d];if(!data||data.total===0)return;
+            const detail=document.getElementById('hdc-sepday-detail');
+            if(activeDay!==null){const prev=document.getElementById('hdc-sepcal-grid-'+activeDay);if(prev)prev.style.background='#7c3aed';}
+            if(activeDay===d){detail.style.display='none';activeDay=null;return;}
+            activeDay=d;
+            const cell=document.getElementById('hdc-sepcal-grid-'+d);if(cell)cell.style.background='var(--pos)';
+            document.getElementById('hdc-sepday-detail-title').innerHTML=data.range+' &mdash; <span style="color:#7c3aed">'+data.total+' procedimientos</span>';
+            document.getElementById('hdc-sepday-detail-mod').innerHTML=bars(data.mod,data.total,'#7c3aed')||'<span style="font-size:12px;color:var(--t3)">Sin datos</span>';
+            document.getElementById('hdc-sepday-detail-lob').innerHTML=bars(data.lob,data.total,'var(--blue)')||'<span style="font-size:12px;color:var(--t3)">Sin datos</span>';
+            detail.style.display='block';detail.scrollIntoView({behavior:'smooth',block:'nearest'});
+          };
+        })();
+        </script>
+        <!-- HDC-CALENDAR-sep-END -->
+
         <div style="margin-top:12px;font-size:11px;color:var(--t3)">US = todas las salas &middot; MRI = Open + Closed &middot; MG = MG + MG 2 &middot; XRAY = DX &middot; PET = PT CT. Fuente: ABLE RIS PACS.</div>
       </div>
 
