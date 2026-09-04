@@ -248,6 +248,11 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
       RIS Actual
       <span class="nav-badge">HDC</span>
     </div>
+    <div class="nav-item" onclick="showSection('hdc-pagos',this)">
+      <svg class="nav-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 1v14M4.5 3.5h5.25a2 2 0 0 1 0 4H6a2 2 0 0 0 0 4h5.5" stroke-linecap="round"/></svg>
+      Pagos Esperados
+      <span class="nav-badge">HDC</span>
+    </div>
   </div>
   <div class="sb-footer">
     <div class="sb-footer-txt">
@@ -315,7 +320,45 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
           </table>
         </div>
         <div style="margin-top:12px;font-size:11px;color:var(--t3)">US = todas las salas &middot; MRI = Open + Closed &middot; MG = MG + MG 2 &middot; XRAY = DX &middot; PET = PT CT. Fuente: ABLE RIS PACS.</div>
-      </div><!-- /hdc-ris-apr -->
+      </div>
+
+      <div id="hdc-pagos-apr" hidden>
+        <div class="sec-hdr">
+          <div class="sec-eye" style="color:#7c3aed">HDC</div>
+          <div class="sec-title">Pagos Esperados</div>
+          <div class="sec-desc">Estimado de pago por modalidad y l&iacute;nea de negocio &mdash; Abril 2026 &middot; Volumen &times; Promedio Actual Payment.</div>
+        </div>
+        <div class="kpi-grid" style="margin-bottom:20px">
+          <div class="kpi" style="border-top:3px solid #7c3aed"><div class="kpi-lbl">Pago Esperado Total</div><div class="kpi-val">$247,820</div><div class="kpi-foot"><span class="badge">Abril 2026</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--blue)"><div class="kpi-lbl">Mayor Contribuci&oacute;n: MRI</div><div class="kpi-val">$109,110</div><div class="kpi-foot"><span class="badge dp">44.0% del total</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--amber)"><div class="kpi-lbl">Primary Insurance</div><div class="kpi-val">$169,270</div><div class="kpi-foot"><span class="badge">68.3%</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--amber)"><div class="kpi-lbl">PIP + LOP + Workers Comp</div><div class="kpi-val">$78,550</div><div class="kpi-foot"><span class="badge">PIP $67,357 &middot; LOP $6,232 &middot; WC $4,961</span></div></div>
+        </div>
+        <div class="div-row"><span class="div-lbl">Pago Esperado por Modalidad y L&iacute;nea de Negocio &mdash; Abril 2026</span><div class="div-rule"></div></div>
+        <div class="table-wrap">
+          <table class="data-tbl">
+            <thead><tr>
+              <th style="text-align:left">Modalidad</th>
+              <th class="cur">Total</th>
+              <th>Primary Insurance</th>
+              <th>PIP</th>
+              <th>LOP</th>
+              <th>Workers Comp</th>
+            </tr></thead>
+            <tbody>
+              <tr><td style="text-align:left">MRI</td><td class="cur" style="font-weight:700">$109,110</td><td>$39,936</td><td>$59,670</td><td>$5,440</td><td>$4,064</td></tr>
+              <tr><td style="text-align:left">US</td><td class="cur" style="font-weight:700">$41,504</td><td>$41,344</td><td>$160</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">MG</td><td class="cur" style="font-weight:700">$35,979</td><td>$35,979</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">CT</td><td class="cur" style="font-weight:700">$30,809</td><td>$23,652</td><td>$5,580</td><td>$680</td><td>$897</td></tr>
+              <tr><td style="text-align:left">PET</td><td class="cur" style="font-weight:700">$21,245</td><td>$21,245</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">DEXA</td><td class="cur" style="font-weight:700">$6,160</td><td>$6,160</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">XRAY</td><td class="cur" style="font-weight:700">$3,013</td><td>$954</td><td>$1,947</td><td>$112</td><td>&mdash;</td></tr>
+              <tr style="font-weight:700;border-top:2px solid var(--bd)"><td style="text-align:left">TOTAL</td><td class="cur">$247,820</td><td>$169,270</td><td>$67,357</td><td>$6,232</td><td>$4,961</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top:12px;font-size:11px;color:var(--t3)">Pago esperado = # procedimientos &times; Promedio Actual Payment por modalidad y l&iacute;nea de negocio (tabla provista por el usuario). Volumen: mismo cruce Modalidad&times;L&iacute;nea que la pesta&ntilde;a RIS Actual. <span style="color:var(--amber)">Sin tasa definida para: DEXA PIP (1 procs) &mdash; se asume $0 en el estimado.</span></div>
+      </div><!-- /hdc-pagos-apr --><!-- /hdc-ris-apr -->
 
     <!-- ══ BILLING ══ -->
     <div id="billing-apr">
@@ -587,7 +630,45 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
           </table>
         </div>
         <div style="margin-top:12px;font-size:11px;color:var(--t3)">US = todas las salas &middot; MRI = Open + Closed &middot; MG = MG + MG 2 &middot; XRAY = DX &middot; PET = PT CT. Fuente: ABLE RIS PACS.</div>
-      </div><!-- /hdc-ris -->
+      </div>
+
+      <div id="hdc-pagos" hidden>
+        <div class="sec-hdr">
+          <div class="sec-eye" style="color:#7c3aed">HDC</div>
+          <div class="sec-title">Pagos Esperados</div>
+          <div class="sec-desc">Estimado de pago por modalidad y l&iacute;nea de negocio &mdash; Mayo 2026 &middot; Volumen &times; Promedio Actual Payment.</div>
+        </div>
+        <div class="kpi-grid" style="margin-bottom:20px">
+          <div class="kpi" style="border-top:3px solid #7c3aed"><div class="kpi-lbl">Pago Esperado Total</div><div class="kpi-val">$244,582</div><div class="kpi-foot"><span class="badge">Mayo 2026</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--blue)"><div class="kpi-lbl">Mayor Contribuci&oacute;n: MRI</div><div class="kpi-val">$113,688</div><div class="kpi-foot"><span class="badge dp">46.5% del total</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--amber)"><div class="kpi-lbl">Primary Insurance</div><div class="kpi-val">$160,203</div><div class="kpi-foot"><span class="badge">65.5%</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--amber)"><div class="kpi-lbl">PIP + LOP + Workers Comp</div><div class="kpi-val">$84,379</div><div class="kpi-foot"><span class="badge">PIP $74,692 &middot; LOP $4,077 &middot; WC $5,610</span></div></div>
+        </div>
+        <div class="div-row"><span class="div-lbl">Pago Esperado por Modalidad y L&iacute;nea de Negocio &mdash; Mayo 2026</span><div class="div-rule"></div></div>
+        <div class="table-wrap">
+          <table class="data-tbl">
+            <thead><tr>
+              <th style="text-align:left">Modalidad</th>
+              <th class="cur">Total</th>
+              <th>Primary Insurance</th>
+              <th>PIP</th>
+              <th>LOP</th>
+              <th>Workers Comp</th>
+            </tr></thead>
+            <tbody>
+              <tr><td style="text-align:left">MRI</td><td class="cur" style="font-weight:700">$113,688</td><td>$39,296</td><td>$67,626</td><td>$2,448</td><td>$4,318</td></tr>
+              <tr><td style="text-align:left">US</td><td class="cur" style="font-weight:700">$37,768</td><td>$37,672</td><td>&mdash;</td><td>&mdash;</td><td>$96</td></tr>
+              <tr><td style="text-align:left">CT</td><td class="cur" style="font-weight:700">$33,096</td><td>$23,868</td><td>$6,417</td><td>$1,615</td><td>$1,196</td></tr>
+              <tr><td style="text-align:left">MG</td><td class="cur" style="font-weight:700">$31,088</td><td>$31,088</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">PET</td><td class="cur" style="font-weight:700">$22,459</td><td>$22,459</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">DEXA</td><td class="cur" style="font-weight:700">$5,208</td><td>$5,208</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">XRAY</td><td class="cur" style="font-weight:700">$1,275</td><td>$612</td><td>$649</td><td>$14</td><td>&mdash;</td></tr>
+              <tr style="font-weight:700;border-top:2px solid var(--bd)"><td style="text-align:left">TOTAL</td><td class="cur">$244,582</td><td>$160,203</td><td>$74,692</td><td>$4,077</td><td>$5,610</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top:12px;font-size:11px;color:var(--t3)">Pago esperado = # procedimientos &times; Promedio Actual Payment por modalidad y l&iacute;nea de negocio (tabla provista por el usuario). Volumen: mismo cruce Modalidad&times;L&iacute;nea que la pesta&ntilde;a RIS Actual.</div>
+      </div><!-- /hdc-pagos --><!-- /hdc-ris -->
 
     <!-- ══ BILLING ══ -->
     <div id="billing">
@@ -1863,7 +1944,45 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
           </table>
         </div>
         <div style="margin-top:12px;font-size:11px;color:var(--t3)">US = todas las salas &middot; MRI = Open + Closed &middot; MG = MG + MG 2 &middot; XRAY = DX &middot; PET = PT CT. Fuente: ABLE RIS PACS.</div>
-      </div><!-- /hdc-ris-jun -->
+      </div>
+
+      <div id="hdc-pagos-jun" hidden>
+        <div class="sec-hdr">
+          <div class="sec-eye" style="color:#7c3aed">HDC</div>
+          <div class="sec-title">Pagos Esperados</div>
+          <div class="sec-desc">Estimado de pago por modalidad y l&iacute;nea de negocio &mdash; Junio 2026 &middot; Volumen &times; Promedio Actual Payment.</div>
+        </div>
+        <div class="kpi-grid" style="margin-bottom:20px">
+          <div class="kpi" style="border-top:3px solid #7c3aed"><div class="kpi-lbl">Pago Esperado Total</div><div class="kpi-val">$257,947</div><div class="kpi-foot"><span class="badge">Junio 2026</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--blue)"><div class="kpi-lbl">Mayor Contribuci&oacute;n: MRI</div><div class="kpi-val">$117,172</div><div class="kpi-foot"><span class="badge dp">45.4% del total</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--amber)"><div class="kpi-lbl">Primary Insurance</div><div class="kpi-val">$162,549</div><div class="kpi-foot"><span class="badge">63.0%</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--amber)"><div class="kpi-lbl">PIP + LOP + Workers Comp</div><div class="kpi-val">$95,398</div><div class="kpi-foot"><span class="badge">PIP $87,049 &middot; LOP $4,240 &middot; WC $4,109</span></div></div>
+        </div>
+        <div class="div-row"><span class="div-lbl">Pago Esperado por Modalidad y L&iacute;nea de Negocio &mdash; Junio 2026</span><div class="div-rule"></div></div>
+        <div class="table-wrap">
+          <table class="data-tbl">
+            <thead><tr>
+              <th style="text-align:left">Modalidad</th>
+              <th class="cur">Total</th>
+              <th>Primary Insurance</th>
+              <th>PIP</th>
+              <th>LOP</th>
+              <th>Workers Comp</th>
+            </tr></thead>
+            <tbody>
+              <tr><td style="text-align:left">MRI</td><td class="cur" style="font-weight:700">$117,172</td><td>$32,000</td><td>$78,234</td><td>$3,128</td><td>$3,810</td></tr>
+              <tr><td style="text-align:left">US</td><td class="cur" style="font-weight:700">$44,132</td><td>$44,132</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">MG</td><td class="cur" style="font-weight:700">$37,922</td><td>$37,922</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">CT</td><td class="cur" style="font-weight:700">$34,812</td><td>$25,596</td><td>$7,812</td><td>$1,105</td><td>$299</td></tr>
+              <tr><td style="text-align:left">PET</td><td class="cur" style="font-weight:700">$16,389</td><td>$16,389</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">DEXA</td><td class="cur" style="font-weight:700">$5,628</td><td>$5,628</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">XRAY</td><td class="cur" style="font-weight:700">$1,892</td><td>$882</td><td>$1,003</td><td>$7</td><td>&mdash;</td></tr>
+              <tr style="font-weight:700;border-top:2px solid var(--bd)"><td style="text-align:left">TOTAL</td><td class="cur">$257,947</td><td>$162,549</td><td>$87,049</td><td>$4,240</td><td>$4,109</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top:12px;font-size:11px;color:var(--t3)">Pago esperado = # procedimientos &times; Promedio Actual Payment por modalidad y l&iacute;nea de negocio (tabla provista por el usuario). Volumen: mismo cruce Modalidad&times;L&iacute;nea que la pesta&ntilde;a RIS Actual.</div>
+      </div><!-- /hdc-pagos-jun --><!-- /hdc-ris-jun -->
 
     <!-- BILLING JUN 2026 -->
     <div id="billing-jun">
@@ -2849,7 +2968,45 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
           </table>
         </div>
         <div style="margin-top:12px;font-size:11px;color:var(--t3)">US = todas las salas &middot; MRI = Open + Closed &middot; MG = MG + MG 2 &middot; XRAY = DX &middot; PET = PT CT. Fuente: ABLE RIS PACS.</div>
-      </div><!-- /hdc-ris-jul -->
+      </div>
+
+      <div id="hdc-pagos-jul" hidden>
+        <div class="sec-hdr">
+          <div class="sec-eye" style="color:#7c3aed">HDC</div>
+          <div class="sec-title">Pagos Esperados</div>
+          <div class="sec-desc">Estimado de pago por modalidad y l&iacute;nea de negocio &mdash; Julio 2026 &middot; Volumen &times; Promedio Actual Payment.</div>
+        </div>
+        <div class="kpi-grid" style="margin-bottom:20px">
+          <div class="kpi" style="border-top:3px solid #7c3aed"><div class="kpi-lbl">Pago Esperado Total</div><div class="kpi-val">$259,998</div><div class="kpi-foot"><span class="badge">Julio 2026</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--blue)"><div class="kpi-lbl">Mayor Contribuci&oacute;n: MRI</div><div class="kpi-val">$119,272</div><div class="kpi-foot"><span class="badge dp">45.9% del total</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--amber)"><div class="kpi-lbl">Primary Insurance</div><div class="kpi-val">$161,041</div><div class="kpi-foot"><span class="badge">61.9%</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--amber)"><div class="kpi-lbl">PIP + LOP + Workers Comp</div><div class="kpi-val">$98,957</div><div class="kpi-foot"><span class="badge">PIP $88,035 &middot; LOP $7,784 &middot; WC $3,138</span></div></div>
+        </div>
+        <div class="div-row"><span class="div-lbl">Pago Esperado por Modalidad y L&iacute;nea de Negocio &mdash; Julio 2026</span><div class="div-rule"></div></div>
+        <div class="table-wrap">
+          <table class="data-tbl">
+            <thead><tr>
+              <th style="text-align:left">Modalidad</th>
+              <th class="cur">Total</th>
+              <th>Primary Insurance</th>
+              <th>PIP</th>
+              <th>LOP</th>
+              <th>Workers Comp</th>
+            </tr></thead>
+            <tbody>
+              <tr><td style="text-align:left">MRI</td><td class="cur" style="font-weight:700">$119,272</td><td>$33,024</td><td>$76,908</td><td>$6,800</td><td>$2,540</td></tr>
+              <tr><td style="text-align:left">US</td><td class="cur" style="font-weight:700">$43,532</td><td>$43,452</td><td>$80</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">MG</td><td class="cur" style="font-weight:700">$35,510</td><td>$35,510</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">CT</td><td class="cur" style="font-weight:700">$34,581</td><td>$23,004</td><td>$10,044</td><td>$935</td><td>$598</td></tr>
+              <tr><td style="text-align:left">PET</td><td class="cur" style="font-weight:700">$20,031</td><td>$20,031</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">DEXA</td><td class="cur" style="font-weight:700">$5,012</td><td>$5,012</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">XRAY</td><td class="cur" style="font-weight:700">$2,060</td><td>$1,008</td><td>$1,003</td><td>$49</td><td>&mdash;</td></tr>
+              <tr style="font-weight:700;border-top:2px solid var(--bd)"><td style="text-align:left">TOTAL</td><td class="cur">$259,998</td><td>$161,041</td><td>$88,035</td><td>$7,784</td><td>$3,138</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top:12px;font-size:11px;color:var(--t3)">Pago esperado = # procedimientos &times; Promedio Actual Payment por modalidad y l&iacute;nea de negocio (tabla provista por el usuario). Volumen: mismo cruce Modalidad&times;L&iacute;nea que la pesta&ntilde;a RIS Actual. <span style="color:var(--amber)">Sin tasa definida para: XRAY WC (2 procs) &mdash; se asume $0 en el estimado.</span></div>
+      </div><!-- /hdc-pagos-jul --><!-- /hdc-ris-jul -->
 
     <!-- BILLING JUL -->
     <div id="billing-jul">
@@ -3735,6 +3892,44 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
         <div style="margin-top:12px;font-size:11px;color:var(--t3)">US = todas las salas &middot; MRI = Open + Closed &middot; MG = MG + MG 2 &middot; XRAY = DX &middot; PET = PT CT. Fuente: ABLE RIS PACS.</div>
       </div>
 
+      <div id="hdc-pagos-aug" hidden>
+        <div class="sec-hdr">
+          <div class="sec-eye" style="color:#7c3aed">HDC</div>
+          <div class="sec-title">Pagos Esperados</div>
+          <div class="sec-desc">Estimado de pago por modalidad y l&iacute;nea de negocio &mdash; Agosto 2026 &middot; Volumen &times; Promedio Actual Payment.</div>
+        </div>
+        <div class="kpi-grid" style="margin-bottom:20px">
+          <div class="kpi" style="border-top:3px solid #7c3aed"><div class="kpi-lbl">Pago Esperado Total</div><div class="kpi-val">$219,232</div><div class="kpi-foot"><span class="badge">Agosto 2026</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--blue)"><div class="kpi-lbl">Mayor Contribuci&oacute;n: MRI</div><div class="kpi-val">$93,612</div><div class="kpi-foot"><span class="badge dp">42.7% del total</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--amber)"><div class="kpi-lbl">Primary Insurance</div><div class="kpi-val">$148,129</div><div class="kpi-foot"><span class="badge">67.6%</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--amber)"><div class="kpi-lbl">PIP + LOP + Workers Comp</div><div class="kpi-val">$71,103</div><div class="kpi-foot"><span class="badge">PIP $58,780 &middot; LOP $6,002 &middot; WC $6,321</span></div></div>
+        </div>
+        <div class="div-row"><span class="div-lbl">Pago Esperado por Modalidad y L&iacute;nea de Negocio &mdash; Agosto 2026</span><div class="div-rule"></div></div>
+        <div class="table-wrap">
+          <table class="data-tbl">
+            <thead><tr>
+              <th style="text-align:left">Modalidad</th>
+              <th class="cur">Total</th>
+              <th>Primary Insurance</th>
+              <th>PIP</th>
+              <th>LOP</th>
+              <th>Workers Comp</th>
+            </tr></thead>
+            <tbody>
+              <tr><td style="text-align:left">MRI</td><td class="cur" style="font-weight:700">$93,612</td><td>$31,360</td><td>$51,714</td><td>$5,712</td><td>$4,826</td></tr>
+              <tr><td style="text-align:left">US</td><td class="cur" style="font-weight:700">$41,684</td><td>$41,684</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">CT</td><td class="cur" style="font-weight:700">$33,979</td><td>$25,812</td><td>$6,417</td><td>$255</td><td>$1,495</td></tr>
+              <tr><td style="text-align:left">MG</td><td class="cur" style="font-weight:700">$29,949</td><td>$29,949</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">PET</td><td class="cur" style="font-weight:700">$13,354</td><td>$13,354</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">DEXA</td><td class="cur" style="font-weight:700">$4,872</td><td>$4,872</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">XRAY</td><td class="cur" style="font-weight:700">$1,782</td><td>$1,098</td><td>$649</td><td>$35</td><td>&mdash;</td></tr>
+              <tr style="font-weight:700;border-top:2px solid var(--bd)"><td style="text-align:left">TOTAL</td><td class="cur">$219,232</td><td>$148,129</td><td>$58,780</td><td>$6,002</td><td>$6,321</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top:12px;font-size:11px;color:var(--t3)">Pago esperado = # procedimientos &times; Promedio Actual Payment por modalidad y l&iacute;nea de negocio (tabla provista por el usuario). Volumen: mismo cruce Modalidad&times;L&iacute;nea que la pesta&ntilde;a RIS Actual.</div>
+      </div><!-- /hdc-pagos-aug -->
+
     <!-- BILLING AGO -->
     <div id="billing-aug">
       <div class="sec-hdr">
@@ -4382,6 +4577,44 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
         <div style="margin-top:12px;font-size:11px;color:var(--t3)">US = todas las salas &middot; MRI = Open + Closed &middot; MG = MG + MG 2 &middot; XRAY = DX &middot; PET = PT CT. Fuente: ABLE RIS PACS.</div>
       </div>
 
+      <div id="hdc-pagos-sep" hidden>
+        <div class="sec-hdr">
+          <div class="sec-eye" style="color:#7c3aed">HDC</div>
+          <div class="sec-title">Pagos Esperados</div>
+          <div class="sec-desc">Estimado de pago por modalidad y l&iacute;nea de negocio &mdash; Septiembre 2026 &middot; Volumen &times; Promedio Actual Payment.</div>
+        </div>
+        <div class="kpi-grid" style="margin-bottom:20px">
+          <div class="kpi" style="border-top:3px solid #7c3aed"><div class="kpi-lbl">Pago Esperado Total</div><div class="kpi-val">$30,590</div><div class="kpi-foot"><span class="badge">Septiembre 2026</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--blue)"><div class="kpi-lbl">Mayor Contribuci&oacute;n: MRI</div><div class="kpi-val">$16,533</div><div class="kpi-foot"><span class="badge dp">54.0% del total</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--amber)"><div class="kpi-lbl">Primary Insurance</div><div class="kpi-val">$17,776</div><div class="kpi-foot"><span class="badge">58.1%</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--amber)"><div class="kpi-lbl">PIP + LOP + Workers Comp</div><div class="kpi-val">$12,814</div><div class="kpi-foot"><span class="badge">PIP $11,904 &middot; LOP $357 &middot; WC $553</span></div></div>
+        </div>
+        <div class="div-row"><span class="div-lbl">Pago Esperado por Modalidad y L&iacute;nea de Negocio &mdash; Septiembre 2026</span><div class="div-rule"></div></div>
+        <div class="table-wrap">
+          <table class="data-tbl">
+            <thead><tr>
+              <th style="text-align:left">Modalidad</th>
+              <th class="cur">Total</th>
+              <th>Primary Insurance</th>
+              <th>PIP</th>
+              <th>LOP</th>
+              <th>Workers Comp</th>
+            </tr></thead>
+            <tbody>
+              <tr><td style="text-align:left">MRI</td><td class="cur" style="font-weight:700">$16,533</td><td>$4,736</td><td>$11,271</td><td>$272</td><td>$254</td></tr>
+              <tr><td style="text-align:left">US</td><td class="cur" style="font-weight:700">$6,188</td><td>$6,188</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">MG</td><td class="cur" style="font-weight:700">$3,618</td><td>$3,618</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">CT</td><td class="cur" style="font-weight:700">$3,471</td><td>$2,808</td><td>$279</td><td>$85</td><td>$299</td></tr>
+              <tr><td style="text-align:left">XRAY</td><td class="cur" style="font-weight:700">$444</td><td>$90</td><td>$354</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">DEXA</td><td class="cur" style="font-weight:700">$336</td><td>$336</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">PET</td><td class="cur" style="font-weight:700">$0</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr style="font-weight:700;border-top:2px solid var(--bd)"><td style="text-align:left">TOTAL</td><td class="cur">$30,590</td><td>$17,776</td><td>$11,904</td><td>$357</td><td>$553</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top:12px;font-size:11px;color:var(--t3)">Pago esperado = # procedimientos &times; Promedio Actual Payment por modalidad y l&iacute;nea de negocio (tabla provista por el usuario). Volumen: mismo cruce Modalidad&times;L&iacute;nea que la pesta&ntilde;a RIS Actual.</div>
+      </div><!-- /hdc-pagos-sep -->
+
     <!-- BILLING SEP -->
     <div id="billing-sep">
       <div class="sec-hdr">
@@ -4672,7 +4905,7 @@ const METRIC_LABEL = {billing:'Billing',collections:'Collections',balance:'Balan
 const SUB_METRIC   = {'sb-billing':'billing','sb-collections':'collections','sb-balance':'balance','sb-denials':''};
 const SECTIONS = ['billing','operativos','admin','compliance','ris'];
 const SUBS = ['sb-billing','sb-collections','sb-balance','sb-denials'];
-const SEC_LABELS = {billing:'Billing',operativos:'Resultados Operativos',admin:'Admin',compliance:'Compliance',ris:'RIS Actual','hdc-ris':'RIS Actual'};
+const SEC_LABELS = {billing:'Billing',operativos:'Resultados Operativos',admin:'Admin',compliance:'Compliance',ris:'RIS Actual','hdc-ris':'RIS Actual','hdc-pagos':'Pagos Esperados'};
 
 let state = {dim:'by_modality', period:'current', metric:'billing'};
 
@@ -4881,6 +5114,7 @@ function switchPeriod(period, btn) {
 function showSection(id, el) {
   SECTIONS.forEach(s => { const e = document.getElementById(s + sfx); if (e) e.hidden = true; });
   const hdcE = document.getElementById('hdc-ris' + sfx); if (hdcE) hdcE.hidden = true;
+  const hdcP = document.getElementById('hdc-pagos' + sfx); if (hdcP) hdcP.hidden = true;
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
   const sec = document.getElementById(id + sfx);
   if (sec) sec.hidden = false;
@@ -4899,6 +5133,7 @@ function switchCenter(c, btn) {
   { const br = document.querySelector('.brand'); if (br) br.classList.toggle('show-hdc', c === 'hdc'); }
   SECTIONS.forEach(s => { const e = document.getElementById(s + sfx); if (e) e.hidden = true; });
   const hdcE = document.getElementById('hdc-ris' + sfx); if (hdcE) hdcE.hidden = true;
+  const hdcP = document.getElementById('hdc-pagos' + sfx); if (hdcP) hdcP.hidden = true;
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
   if (c === 'hdc') {
     if (hdcE) hdcE.hidden = false;
