@@ -275,6 +275,7 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
         <button class="period-btn" onclick="switchPeriod('jul-2026',this)">Jul 2026</button>
         <button class="period-btn active" onclick="switchPeriod('aug-2026',this)">Aug 2026</button>
         <button class="period-btn" onclick="switchPeriod('sep-2026',this)">Sep 2026</button>
+        <button class="period-btn" onclick="switchPeriod('oct-2026',this)">Oct 2026</button>
       </div>
       <div class="period-pill"><span class="dot"></span> <span id="active-period-label">Aug 2026</span></div>
     </div>
@@ -5277,6 +5278,476 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
     </div><!-- /ris-sep -->
 
   </div><!-- /pd-sep-2026 -->
+  <div class="period-data" id="pd-oct-2026">
+      <div id="hdc-ris-oct" hidden>
+        <div class="sec-hdr">
+          <div class="sec-eye" style="color:#7c3aed">HDC &middot; Live</div>
+          <div class="sec-title">RIS Actual &mdash; HDC</div>
+          <div class="sec-desc">Procedimientos del mes &mdash; Oct 2026 &middot; Fuente: ABLE RIS (Modality Insurance Report).</div>
+        </div>
+        <div class="kpi-grid" style="margin-bottom:20px">
+          <div class="kpi" style="border-top:3px solid #7c3aed"><div class="kpi-lbl">Total Procedimientos</div><div class="kpi-val">2,049</div><div class="kpi-foot"><span class="badge">Octubre 2026</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--blue)"><div class="kpi-lbl">Primary Insurance</div><div class="kpi-val">1,879</div><div class="kpi-foot"><span class="badge">91.7% del total</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--amber)"><div class="kpi-lbl">PIP (Personal Injury)</div><div class="kpi-val">116</div><div class="kpi-foot"><span class="badge">5.7%</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--amber)"><div class="kpi-lbl">LOP &middot; Workers Comp</div><div class="kpi-val">54</div><div class="kpi-foot"><span class="badge">LOP 47 &middot; WC 7</span></div></div>
+        </div>
+        <div class="div-row"><span class="div-lbl">Procedimientos por Modalidad y L&iacute;nea de Negocio &mdash; Octubre 2026</span><div class="div-rule"></div></div>
+        <div class="table-wrap">
+          <table class="data-tbl">
+            <thead><tr>
+              <th style="text-align:left">Modalidad</th>
+              <th class="cur">Total</th>
+              <th>Primary Insurance</th>
+              <th>PIP</th>
+              <th>LOP</th>
+              <th>Workers Comp</th>
+            </tr></thead>
+            <tbody>
+              <tr><td style="text-align:left">US</td><td class="cur" style="font-weight:700">637</td><td>636</td><td>&mdash;</td><td>1</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">MG</td><td class="cur" style="font-weight:700">445</td><td>445</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">MRI</td><td class="cur" style="font-weight:700">397</td><td>272</td><td>87</td><td>32</td><td>6</td></tr>
+              <tr><td style="text-align:left">CT</td><td class="cur" style="font-weight:700">224</td><td>206</td><td>11</td><td>6</td><td>1</td></tr>
+              <tr><td style="text-align:left">DEXA</td><td class="cur" style="font-weight:700">182</td><td>182</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">XRAY</td><td class="cur" style="font-weight:700">132</td><td>106</td><td>18</td><td>8</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">PET</td><td class="cur" style="font-weight:700">32</td><td>32</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr style="font-weight:700;border-top:2px solid var(--bd)"><td style="text-align:left">TOTAL</td><td class="cur">2,049</td><td>1,879</td><td>116</td><td>47</td><td>7</td></tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <!-- HDC-CALENDAR-oct-START -->
+        <div class="div-row" style="margin-top:20px"><span class="div-lbl">Procedimientos por D&iacute;a &mdash; Oct 2026</span><div class="div-rule"></div><span style="font-size:11px;color:var(--t3)">Espicha un d&iacute;a para ver el detalle</span></div>
+        <div class="table-wrap" style="padding:20px 24px">
+          <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:6px;text-align:center">
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Lun</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Mar</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Mié</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Jue</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Vie</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Sáb</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Dom</div>
+          </div>
+          <div id="hdc-octcal-grid" style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;text-align:center"></div>
+          <div id="hdc-octday-detail" style="display:none;margin-top:16px;padding:16px 20px;background:var(--bg);border-radius:var(--r);border:1px solid var(--bd)">
+            <div id="hdc-octday-detail-title" style="font-size:14px;font-weight:700;color:var(--t1);margin-bottom:14px"></div>
+            <div class="table-wrap" style="margin-bottom:0">
+              <table class="data-tbl">
+                <thead><tr>
+                  <th style="text-align:left">Modalidad</th>
+                  <th class="cur">Total</th>
+                  <th>Primary Insurance</th>
+                  <th>PIP</th>
+                  <th>LOP</th>
+                  <th>Workers Comp</th>
+                </tr></thead>
+                <tbody id="hdc-octday-detail-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <script>
+        (function() {
+          const HDC_DAILY = {1:{total:75,range:'Oct 01',mod:{US:[28,0,0,0],MRI:[14,7,0,1],MG:[15,0,0,0],CT:[9,1,0,0],DEXA:[0,0,0,0],XRAY:[0,0,0,0],PET:[0,0,0,0]}},2:{total:72,range:'Oct 02',mod:{US:[23,0,0,0],MRI:[12,6,2,0],MG:[19,0,0,0],CT:[7,0,1,1],DEXA:[0,0,0,0],XRAY:[1,0,0,0],PET:[0,0,0,0]}},3:{total:107,range:'Oct 03',mod:{US:[40,0,0,0],MRI:[11,4,0,0],MG:[20,0,0,0],CT:[10,0,0,0],DEXA:[12,0,0,0],XRAY:[4,6,0,0],PET:[0,0,0,0]}},4:{total:104,range:'Oct 04',mod:{US:[13,0,0,0],MRI:[11,6,3,1],MG:[23,0,0,0],CT:[12,1,1,0],DEXA:[13,0,0,0],XRAY:[9,1,8,0],PET:[2,0,0,0]}},5:{total:17,range:'Oct 05-07',mod:{US:[9,0,0,0],MRI:[4,1,2,0],MG:[0,0,0,0],CT:[0,0,1,0],DEXA:[0,0,0,0],XRAY:[0,0,0,0],PET:[0,0,0,0]}},8:{total:82,range:'Oct 08',mod:{US:[26,0,0,0],MRI:[14,2,0,0],MG:[18,0,0,0],CT:[13,0,0,0],DEXA:[0,0,0,0],XRAY:[2,1,5,0],PET:[1,0,0,0]}},9:{total:65,range:'Oct 09',mod:{US:[22,0,0,0],MRI:[7,0,2,0],MG:[17,0,0,0],CT:[14,0,0,0],DEXA:[3,0,0,0],XRAY:[0,0,0,0],PET:[0,0,0,0]}},10:{total:96,range:'Oct 10',mod:{US:[25,0,0,0],MRI:[8,4,3,0],MG:[20,0,0,0],CT:[12,1,0,0],DEXA:[18,0,0,0],XRAY:[5,0,0,0],PET:[0,0,0,0]}},11:{total:94,range:'Oct 11',mod:{US:[12,0,0,0],MRI:[8,4,2,1],MG:[20,0,0,0],CT:[13,0,1,0],DEXA:[18,0,0,0],XRAY:[9,0,3,0],PET:[3,0,0,0]}},12:{total:33,range:'Oct 12',mod:{US:[21,0,0,0],MRI:[8,0,2,0],MG:[0,0,0,0],CT:[1,0,0,0],DEXA:[0,0,0,0],XRAY:[0,0,0,0],PET:[1,0,0,0]}},14:{total:116,range:'Oct 13-14',mod:{US:[25,0,1,0],MRI:[14,11,0,0],MG:[23,0,0,0],CT:[12,0,2,0],DEXA:[17,0,0,0],XRAY:[7,3,0,0],PET:[1,0,0,0]}},15:{total:81,range:'Oct 15',mod:{US:[30,0,0,0],MRI:[5,3,3,0],MG:[17,0,0,0],CT:[12,1,0,0],DEXA:[3,0,0,0],XRAY:[2,3,0,0],PET:[2,0,0,0]}},16:{total:75,range:'Oct 16',mod:{US:[23,0,0,0],MRI:[13,0,1,0],MG:[20,0,0,0],CT:[4,0,0,0],DEXA:[6,0,0,0],XRAY:[5,0,0,0],PET:[3,0,0,0]}},17:{total:122,range:'Oct 17',mod:{US:[33,0,0,0],MRI:[10,7,2,0],MG:[32,0,0,0],CT:[12,2,0,0],DEXA:[14,0,0,0],XRAY:[8,0,0,0],PET:[2,0,0,0]}},18:{total:107,range:'Oct 18',mod:{US:[24,0,0,0],MRI:[15,1,1,2],MG:[20,0,0,0],CT:[13,0,0,0],DEXA:[16,0,0,0],XRAY:[13,0,0,0],PET:[2,0,0,0]}},19:{total:29,range:'Oct 19',mod:{US:[13,0,0,0],MRI:[9,4,0,0],MG:[0,0,0,0],CT:[2,0,0,0],DEXA:[0,0,0,0],XRAY:[0,0,0,0],PET:[1,0,0,0]}},21:{total:89,range:'Oct 20-21',mod:{US:[39,0,0,0],MRI:[11,0,2,0],MG:[16,0,0,0],CT:[11,4,0,0],DEXA:[5,0,0,0],XRAY:[0,0,0,0],PET:[1,0,0,0]}},22:{total:92,range:'Oct 22',mod:{US:[32,0,0,0],MRI:[13,3,2,1],MG:[18,0,0,0],CT:[14,0,0,0],DEXA:[3,0,0,0],XRAY:[2,0,0,0],PET:[4,0,0,0]}},23:{total:98,range:'Oct 23',mod:{US:[32,0,0,0],MRI:[14,7,0,0],MG:[23,0,0,0],CT:[13,3,1,0],DEXA:[3,0,0,0],XRAY:[1,0,0,0],PET:[1,0,0,0]}},24:{total:115,range:'Oct 24',mod:{US:[13,0,0,0],MRI:[17,8,0,0],MG:[39,0,0,0],CT:[11,0,0,0],DEXA:[20,0,0,0],XRAY:[6,0,0,0],PET:[1,0,0,0]}},25:{total:89,range:'Oct 25',mod:{US:[0,0,0,0],MRI:[12,7,1,0],MG:[19,0,0,0],CT:[12,0,0,0],DEXA:[20,0,0,0],XRAY:[16,0,0,0],PET:[2,0,0,0]}},26:{total:35,range:'Oct 26',mod:{US:[24,0,0,0],MRI:[5,0,0,0],MG:[0,0,0,0],CT:[0,0,0,0],DEXA:[0,0,0,0],XRAY:[1,0,0,0],PET:[5,0,0,0]}},28:{total:106,range:'Oct 27-28',mod:{US:[31,0,0,0],MRI:[13,0,2,0],MG:[29,0,0,0],CT:[0,0,0,0],DEXA:[16,0,0,0],XRAY:[15,0,0,0],PET:[0,0,0,0]}},29:{total:86,range:'Oct 29',mod:{US:[38,0,0,0],MRI:[17,1,0,0],MG:[25,0,0,0],CT:[0,0,0,0],DEXA:[0,0,0,0],XRAY:[0,5,0,0],PET:[0,0,0,0]}},30:{total:75,range:'Oct 30',mod:{US:[30,0,0,0],MRI:[14,5,4,0],MG:[22,0,0,0],CT:[0,0,0,0],DEXA:[0,0,0,0],XRAY:[0,0,0,0],PET:[0,0,0,0]}}};
+          const grid = document.getElementById('hdc-octcal-grid');
+          let activeDay = null;
+          for (let i=0;i<1;i++) grid.appendChild(document.createElement('div'));
+          for (let d=1;d<=30;d++) {
+            const data = HDC_DAILY[d] && HDC_DAILY[d].total>0 ? HDC_DAILY[d] : null;
+            const cell = document.createElement('div');
+            cell.style.cssText = ['border-radius:8px','padding:6px 2px','min-height:54px','display:flex',
+              'flex-direction:column','align-items:center','justify-content:center','gap:3px',
+              'transition:transform .1s, box-shadow .1s',
+              data?'cursor:pointer;background:#7c3aed;color:#fff':'cursor:default;background:var(--bg2);color:var(--t4)'
+            ].join(';');
+            cell.innerHTML='<span style="font-size:12px;font-weight:700">'+d+'</span>'+(data?'<span style="font-size:11px;opacity:.85;font-variant-numeric:tabular-nums">'+data.total+'</span>':'');
+            if(data){
+              cell.addEventListener('click',(function(dd){return function(){ toggleHdcDaySep(dd); };})(d));
+              cell.addEventListener('mouseover',function(){if(activeDay!==d){this.style.transform='scale(1.07)';this.style.boxShadow='0 4px 12px rgba(124,58,237,.35)';}});
+              cell.addEventListener('mouseout',function(){this.style.transform='';this.style.boxShadow='';});
+            }
+            cell.id='hdc-octcal-grid-'+d;
+            grid.appendChild(cell);
+          }
+          function dash(v){ return v ? v : '&mdash;'; }
+          function buildRows(mod,total){
+            const mods=Object.keys(mod);
+            let rows='';
+            let tot=[0,0,0,0];
+            mods.forEach(function(m){
+              const v=mod[m];
+              const t=v[0]+v[1]+v[2]+v[3];
+              for(let i=0;i<4;i++) tot[i]+=v[i];
+              rows+='<tr><td style="text-align:left">'+m+'</td>'
+                +'<td class="cur" style="font-weight:700">'+t+'</td>'
+                +'<td>'+dash(v[0])+'</td><td>'+dash(v[1])+'</td>'
+                +'<td>'+dash(v[2])+'</td><td>'+dash(v[3])+'</td></tr>';
+            });
+            rows+='<tr style="font-weight:700;border-top:2px solid var(--bd)"><td style="text-align:left">TOTAL</td>'
+              +'<td class="cur">'+total+'</td><td>'+tot[0]+'</td><td>'+dash(tot[1])+'</td>'
+              +'<td>'+dash(tot[2])+'</td><td>'+dash(tot[3])+'</td></tr>';
+            return rows;
+          }
+          window.toggleHdcDaySep = function(d) {
+            const data=HDC_DAILY[d];if(!data||data.total===0)return;
+            const detail=document.getElementById('hdc-octday-detail');
+            if(activeDay!==null){const prev=document.getElementById('hdc-octcal-grid-'+activeDay);if(prev)prev.style.background='#7c3aed';}
+            if(activeDay===d){detail.style.display='none';activeDay=null;return;}
+            activeDay=d;
+            const cell=document.getElementById('hdc-octcal-grid-'+d);if(cell)cell.style.background='var(--pos)';
+            document.getElementById('hdc-octday-detail-title').innerHTML=data.range+' &mdash; <span style="color:#7c3aed">'+data.total+' procedimientos</span>';
+            document.getElementById('hdc-octday-detail-tbody').innerHTML=buildRows(data.mod,data.total);
+            detail.style.display='block';detail.scrollIntoView({behavior:'smooth',block:'nearest'});
+          };
+        })();
+        </script>
+        <!-- HDC-CALENDAR-oct-END -->
+
+        <div style="margin-top:12px;font-size:11px;color:var(--t3)">US = todas las salas &middot; MRI = Open + Closed &middot; MG = MG + MG 2 &middot; XRAY = DX &middot; PET = PT CT. Fuente: ABLE RIS PACS.</div>
+      </div>
+
+      <div id="hdc-pagos-oct" hidden>
+        <div class="sec-hdr">
+          <div class="sec-eye" style="color:#7c3aed">HDC</div>
+          <div class="sec-title">Pagos Esperados</div>
+          <div class="sec-desc">Estimado de pago por modalidad y l&iacute;nea de negocio &mdash; Octubre 2026 &middot; Volumen &times; Promedio Actual Payment.</div>
+        </div>
+        <div class="kpi-grid" style="margin-bottom:20px">
+          <div class="kpi" style="border-top:3px solid #7c3aed"><div class="kpi-lbl">Pago Esperado Total</div><div class="kpi-val">$59,171</div><div class="kpi-foot"><span class="badge">Octubre 2026</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--blue)"><div class="kpi-lbl">Mayor Contribuci&oacute;n: MRI</div><div class="kpi-val">$29,188</div><div class="kpi-foot"><span class="badge dp">49.3% del total</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--amber)"><div class="kpi-lbl">Primary Insurance</div><div class="kpi-val">$37,845</div><div class="kpi-foot"><span class="badge">64.0%</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--amber)"><div class="kpi-lbl">PIP + LOP + Workers Comp</div><div class="kpi-val">$21,326</div><div class="kpi-foot"><span class="badge">PIP $19,613 &middot; LOP $906 &middot; WC $807</span></div></div>
+        </div>
+        <div class="div-row"><span class="div-lbl">Pago Esperado por Modalidad y L&iacute;nea de Negocio &mdash; Octubre 2026</span><div class="div-rule"></div></div>
+        <div class="table-wrap">
+          <table class="data-tbl">
+            <thead><tr>
+              <th style="text-align:left">Modalidad</th>
+              <th class="cur">Total</th>
+              <th>Primary Insurance</th>
+              <th>PIP</th>
+              <th>LOP</th>
+              <th>Workers Comp</th>
+            </tr></thead>
+            <tbody>
+              <tr><td style="text-align:left">MRI</td><td class="cur" style="font-weight:700">$29,188</td><td>$9,600</td><td>$18,400</td><td>$680</td><td>$508</td></tr>
+              <tr><td style="text-align:left">MG</td><td class="cur" style="font-weight:700">$10,164</td><td>$10,164</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">US</td><td class="cur" style="font-weight:700">$9,672</td><td>$9,672</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">CT</td><td class="cur" style="font-weight:700">$6,209</td><td>$4,940</td><td>$800</td><td>$170</td><td>$299</td></tr>
+              <tr><td style="text-align:left">PET</td><td class="cur" style="font-weight:700">$2,274</td><td>$2,274</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">XRAY</td><td class="cur" style="font-weight:700">$889</td><td>$420</td><td>$413</td><td>$56</td><td>&mdash;</td></tr>
+              <tr><td style="text-align:left">DEXA</td><td class="cur" style="font-weight:700">$775</td><td>$775</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+              <tr style="font-weight:700;border-top:2px solid var(--bd)"><td style="text-align:left">TOTAL</td><td class="cur">$59,171</td><td>$37,845</td><td>$19,613</td><td>$906</td><td>$807</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top:12px;font-size:11px;color:var(--t3)">Pago esperado = # procedimientos &times; Promedio Actual Payment por modalidad y l&iacute;nea de negocio (tabla provista por el usuario). Volumen: mismo cruce Modalidad&times;L&iacute;nea que la pesta&ntilde;a RIS Actual.</div>
+      </div><!-- /hdc-pagos-oct --><!-- /hdc-pagos-oct -->
+
+    <!-- BILLING SEP -->
+    <div id="billing-oct">
+      <div class="sec-hdr">
+        <div class="sec-eye">Section 1</div>
+        <div class="sec-title">Billing</div>
+        <div class="sec-desc">Charges, collections, and balance &mdash; Oct 2026.</div>
+      </div>
+      <div class="sub-nav">
+        <div class="sub-tab active" onclick="showSub('sb-billing','',this)">Billing</div>
+        <div class="sub-tab" onclick="showSub('sb-collections','',this)">Collections</div>
+        <div class="sub-tab" onclick="showSub('sb-balance','',this)">Balance</div>
+        <div class="sub-tab" onclick="showSub('sb-denials','',this)">Denials</div>
+      </div>
+      <div id="sb-billing-oct">
+        <div class="empty-state" style="margin-top:40px">
+          <div class="empty-icon">&#128203;</div>
+          <div class="empty-title">Billing Oct 2026 &mdash; Pendiente</div>
+          <div class="empty-sub">Mes en curso. Datos al cierre de mes.</div>
+        </div>
+      </div>
+      <div id="sb-collections-oct" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Collections Oct 2026 &mdash; Pendiente</div></div></div>
+      <div id="sb-balance-oct" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Balance Oct 2026 &mdash; Pendiente</div></div></div>
+      <div id="sb-denials-oct" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Denials Oct 2026 &mdash; Pendiente</div></div></div>
+    </div><!-- /billing-oct -->
+
+    <!-- OPERATIVOS SEP -->
+    <div id="operativos-oct" hidden>
+      <div class="sec-hdr">
+        <div class="sec-eye">Section 2</div>
+        <div class="sec-title">Resultados Operativos</div>
+        <div class="sec-desc">Procedimientos, referidos, revenue, KPIs &mdash; Oct 2026.</div>
+      </div>
+      <div class="sub-nav">
+        <div class="sub-tab op-tab active" onclick="showOpSub('op-procs',this)">Procedures x Modality</div>
+        <div class="sub-tab op-tab" onclick="showOpSub('op-referrals',this)">Top Referrals</div>
+        <div class="sub-tab op-tab" onclick="showOpSub('op-rev',this)">Rev y Contribuci&oacute;n</div>
+        <div class="sub-tab op-tab" onclick="showOpSub('op-kpis',this)">KPIs</div>
+        <div class="sub-tab op-tab" onclick="showOpSub('op-comerciales',this)">Comerciales y Top 200</div>
+      </div>
+      <div id="op-procs-oct"><div class="empty-state" style="margin-top:40px"><div class="empty-icon">&#128203;</div><div class="empty-title">Procedimientos Oct 2026 &mdash; Pendiente</div><div class="empty-sub">Mes en curso.</div></div></div>
+      <div id="op-referrals-oct" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Top Referrals Oct &mdash; Pendiente</div></div></div>
+      <div id="op-rev-oct" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Revenue Oct &mdash; Pendiente</div></div></div>
+      <div id="op-kpis-oct" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">KPIs Oct &mdash; Pendiente</div></div></div>
+      <div id="op-comerciales-oct" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Comerciales Oct &mdash; Pendiente</div></div></div>
+    </div><!-- /operativos-oct -->
+
+    <!-- ADMIN SEP -->
+    <div id="admin-oct" hidden>
+      <div class="sec-hdr">
+        <div class="sec-eye">Section 3</div>
+        <div class="sec-title">Admin</div>
+        <div class="sec-desc">P&amp;L y n&oacute;mina &mdash; Oct 2026.</div>
+      </div>
+      <div class="sub-nav">
+        <div class="sub-tab adm-tab active" onclick="showAdmSub('adm-pl',this)">P&amp;L</div>
+        <div class="sub-tab adm-tab" onclick="showAdmSub('adm-nomina',this)">N&oacute;mina</div>
+      </div>
+      <div id="adm-pl-oct"><div class="empty-state" style="margin-top:40px"><div class="empty-icon">&#128203;</div><div class="empty-title">P&amp;L Oct 2026 &mdash; Pendiente</div></div></div>
+      <div id="adm-nomina-oct" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">N&oacute;mina Oct &mdash; Pendiente</div></div></div>
+    </div><!-- /admin-oct -->
+
+    <!-- COMPLIANCE SEP -->
+    <div id="compliance-oct" hidden>
+      <div class="sec-hdr">
+        <div class="sec-eye">Section 4</div>
+        <div class="sec-title">Compliance</div>
+        <div class="sec-desc">Licencias y permisos &mdash; Oct 2026.</div>
+      </div>
+      <div class="div-row"><span class="div-lbl">Compliance &amp; Licencias &mdash; Estado al 3 de septiembre 2026</span><div class="div-rule"></div></div>
+      <div class="kpi-grid kpi-grid-4" style="margin-bottom:20px">
+        <div class="kpi" style="border-top:3px solid #e53935">
+          <div class="kpi-lbl">Vencidas</div>
+          <div class="kpi-val" style="color:#e53935">0</div>
+          <div class="kpi-foot"><span class="badge" style="background:rgba(229,57,53,.12);color:#e53935">Ninguna</span></div>
+        </div>
+        <div class="kpi" style="border-top:3px solid #e53935">
+          <div class="kpi-lbl">Cr&iacute;ticas <span style="font-weight:400;font-size:11px">&lt;30d</span></div>
+          <div class="kpi-val" style="color:#e53935">2</div>
+          <div class="kpi-foot"><span class="badge" style="background:rgba(229,57,53,.12);color:#e53935">Renovar urgente</span></div>
+        </div>
+        <div class="kpi" style="border-top:3px solid var(--amber)">
+          <div class="kpi-lbl">Advertencia <span style="font-weight:400;font-size:11px">&lt;90d</span></div>
+          <div class="kpi-val" style="color:var(--amber)">3</div>
+          <div class="kpi-foot"><span class="badge" style="background:rgba(204,119,0,.12);color:var(--amber)">Renovar pronto</span></div>
+        </div>
+        <div class="kpi" style="border-top:3px solid var(--pos)">
+          <div class="kpi-lbl">Activas</div>
+          <div class="kpi-val" style="color:var(--pos)">17</div>
+          <div class="kpi-foot"><span class="badge dp">23 licencias total</span></div>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table style="font-variant-numeric:tabular-nums;width:100%">
+          <thead>
+            <tr>
+              <th style="text-align:left;min-width:200px">Licencia / Agencia</th>
+              <th style="text-align:left;min-width:120px">ID / N&uacute;mero</th>
+              <th style="text-align:center;min-width:100px">Vencimiento</th>
+              <th style="text-align:center;min-width:80px">D&iacute;as</th>
+              <th style="text-align:center;min-width:90px">Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:rgba(27,58,92,.06)"><td colspan="5" style="text-align:left;font-weight:700;font-size:11px;letter-spacing:.06em;color:var(--t3);padding:7px 12px;text-transform:uppercase">Acreditaci&oacute;n</td></tr>
+            <tr class="ra" ><td style="text-align:left">AHCA <span title="El tracker sigue marcando esta fecha con la nota interna 'Renewed - update date' — la fecha ya figura como 2027 pero nunca se confirmo formalmente" style="color:var(--amber);cursor:help">&dagger;</span></td><td style="text-align:left;color:var(--t3);font-size:12px">#5026 / CERT #49615</td><td style="text-align:center">May 11, 2027</td><td style="text-align:center">250</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr class="ra"><td style="text-align:left">ACR</td><td style="text-align:left;color:var(--t3);font-size:12px">&mdash;</td><td style="text-align:center;color:var(--t3)">N/A</td><td style="text-align:center;color:var(--t3)">N/A</td><td style="text-align:center"><span class="badge" style="font-size:11px;background:rgba(0,0,0,.06);color:var(--t3)">N/A</span></td></tr>
+            <tr class="ra" ><td style="text-align:left">CMS &ndash; CLIA Waiver</td><td style="text-align:left;color:var(--t3);font-size:12px">#10D2061864</td><td style="text-align:center">Jul 7, 2027</td><td style="text-align:center">307</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr class="ra" ><td style="text-align:left">State of FL &ndash; DBPR</td><td style="text-align:left;color:var(--t3);font-size:12px">#603511</td><td style="text-align:center">Apr 30, 2028</td><td style="text-align:center">605</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr class="ra" ><td style="text-align:left">U.S. FDA Mammography Facility</td><td style="text-align:left;color:var(--t3);font-size:12px">Facility ID #238054</td><td style="text-align:center">Jul 24, 2029</td><td style="text-align:center">1,055</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr style="background:rgba(27,58,92,.06)"><td colspan="5" style="text-align:left;font-weight:700;font-size:11px;letter-spacing:.06em;color:var(--t3);padding:7px 12px;text-transform:uppercase">Im&aacute;genes</td></tr>
+            <tr class="ra" ><td style="text-align:left">Mammography &ndash; Room 1 <span title="Renovada hasta 2029, igual que Room 2. Se mantiene consistente desde julio — probable renovacion real, aun sin confirmacion formal" style="color:var(--amber);cursor:help">&dagger;</span></td><td style="text-align:left;color:var(--t3);font-size:12px">MAP #16744-03 DBT #06</td><td style="text-align:center">Jul 24, 2029</td><td style="text-align:center">1,055</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr class="ra" style="background:rgba(204,119,0,.05)"><td style="text-align:left;font-weight:600">DOH &ndash; Radiation Machine Reg.</td><td style="text-align:left;color:var(--t3);font-size:12px">Lic #JR 39745000</td><td style="text-align:center;font-weight:600;color:var(--amber)">Oct 28, 2026</td><td style="text-align:center;font-weight:700;color:var(--amber)">55</td><td style="text-align:center"><span style="font-size:11px;background:rgba(204,119,0,.15);color:var(--amber);font-weight:700">AVISO</span></td></tr>
+            <tr class="ra" style="background:rgba(204,119,0,.05)"><td style="text-align:left;font-weight:600">DOH &ndash; Mammography Radiation Reg.</td><td style="text-align:left;color:var(--t3);font-size:12px">Lic #JR 42938000</td><td style="text-align:center;font-weight:600;color:var(--amber)">Oct 28, 2026</td><td style="text-align:center;font-weight:700;color:var(--amber)">55</td><td style="text-align:center"><span style="font-size:11px;background:rgba(204,119,0,.15);color:var(--amber);font-weight:700">AVISO</span></td></tr>
+            <tr class="ra" ><td style="text-align:left">PET &ndash; Cardiac, Oncology</td><td style="text-align:left;color:var(--t3);font-size:12px">PETAP #50253-02</td><td style="text-align:center">Dec 17, 2026</td><td style="text-align:center">105</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr class="ra" ><td style="text-align:left">CT</td><td style="text-align:left;color:var(--t3);font-size:12px">CTAP #01532-02</td><td style="text-align:center">Oct 24, 2027</td><td style="text-align:center">386</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr class="ra" ><td style="text-align:left">NM &ndash; Nuclear, Planar</td><td style="text-align:left;color:var(--t3);font-size:12px">NMAP #50639-03</td><td style="text-align:center">Mar 22, 2028</td><td style="text-align:center">566</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr class="ra" ><td style="text-align:left">Ultrasound</td><td style="text-align:left;color:var(--t3);font-size:12px">UAP #03450</td><td style="text-align:center">Apr 4, 2028</td><td style="text-align:center">579</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr class="ra" ><td style="text-align:left">MRI &ndash; 3 Tesla</td><td style="text-align:left;color:var(--t3);font-size:12px">MRAP #04023-02</td><td style="text-align:center">Aug 2, 2028</td><td style="text-align:center">699</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr class="ra" ><td style="text-align:left">MRI &ndash; Open</td><td style="text-align:left;color:var(--t3);font-size:12px">MRAP #04023-03</td><td style="text-align:center">Aug 2, 2028</td><td style="text-align:center">699</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr class="ra" ><td style="text-align:left">Mammography &ndash; Room 2</td><td style="text-align:left;color:var(--t3);font-size:12px">MAP #16744-03 DBT #04</td><td style="text-align:center">Jul 24, 2029</td><td style="text-align:center">1,055</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr style="background:rgba(27,58,92,.06)"><td colspan="5" style="text-align:left;font-weight:700;font-size:11px;letter-spacing:.06em;color:var(--t3);padding:7px 12px;text-transform:uppercase">Permisos &amp; Impuestos</td></tr>
+            <tr class="ra" style="background:rgba(229,57,53,.06)"><td style="text-align:left;font-weight:600">Local Business Tax</td><td style="text-align:left;color:var(--t3);font-size:12px">#3354446</td><td style="text-align:center;font-weight:700;color:#e53935">Oct 30, 2026</td><td style="text-align:center;font-weight:700;color:#e53935">27</td><td style="text-align:center"><span style="font-size:11px;background:rgba(229,57,53,.15);color:#e53935;font-weight:700">CR&Iacute;TICO</span></td></tr>
+            <tr class="ra" style="background:rgba(229,57,53,.06)"><td style="text-align:left;font-weight:600">State of Florida Biomedical Waste</td><td style="text-align:left;color:var(--t3);font-size:12px">Permit #13-64-3000329</td><td style="text-align:center;font-weight:700;color:#e53935">Oct 30, 2026</td><td style="text-align:center;font-weight:700;color:#e53935">27</td><td style="text-align:center"><span style="font-size:11px;background:rgba(229,57,53,.15);color:#e53935;font-weight:700">CR&Iacute;TICO</span></td></tr>
+            <tr class="ra" style="background:rgba(204,119,0,.05)"><td style="text-align:left;font-weight:600">Miami-Dade Fire Operating Permit</td><td style="text-align:left;color:var(--t3);font-size:12px">Permit #16126-00280</td><td style="text-align:center;font-weight:600;color:var(--amber)">Nov 30, 2026</td><td style="text-align:center;font-weight:700;color:var(--amber)">88</td><td style="text-align:center"><span style="font-size:11px;background:rgba(204,119,0,.15);color:var(--amber);font-weight:700">AVISO</span></td></tr>
+            <tr style="background:rgba(27,58,92,.06)"><td colspan="5" style="text-align:left;font-weight:700;font-size:11px;letter-spacing:.06em;color:var(--t3);padding:7px 12px;text-transform:uppercase">Seguros</td></tr>
+            <tr class="ra" ><td style="text-align:left">Workers&#39; Compensation</td><td style="text-align:left;color:var(--t3);font-size:12px">UB3K7655032542G</td><td style="text-align:center">Mar 2, 2027</td><td style="text-align:center">180</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr class="ra" ><td style="text-align:left">General Liability &amp; Building</td><td style="text-align:left;color:var(--t3);font-size:12px">Policy #CCP 1122751</td><td style="text-align:center">Apr 1, 2027</td><td style="text-align:center">210</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr class="ra" ><td style="text-align:left">Professional Liability</td><td style="text-align:left;color:var(--t3);font-size:12px">Policy #LHM856524</td><td style="text-align:center">Apr 1, 2027</td><td style="text-align:center">210</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr style="background:rgba(27,58,92,.06)"><td colspan="5" style="text-align:left;font-weight:700;font-size:11px;letter-spacing:.06em;color:var(--t3);padding:7px 12px;text-transform:uppercase">Otros</td></tr>
+            <tr class="ra" ><td style="text-align:left">OSHA</td><td style="text-align:left;color:var(--t3);font-size:12px">&mdash;</td><td style="text-align:center">Dec 12, 2026</td><td style="text-align:center">100</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr class="ra" ><td style="text-align:left">Radioactive Materials License (RAM)</td><td style="text-align:left;color:var(--t3);font-size:12px">License #4098-1</td><td style="text-align:center">Mar 31, 2028</td><td style="text-align:center">575</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-top:14px;font-size:11px;color:var(--t3);text-align:right">
+        Fuente: Google Sheet &mdash; Compliance License Tracker &nbsp;&middot;&nbsp; D&iacute;as calculados al 3 de septiembre de 2026
+      </div>
+    </div><!-- /compliance-oct -->
+
+    <!-- RIS SEP 2026 — LIVE -->
+    <div id="ris-oct" hidden>
+      <div class="sec-hdr">
+        <div class="sec-eye">Live</div>
+        <div class="sec-title">RIS Actual</div>
+        <div class="sec-desc">Procedimientos del mes corrido &mdash; Fuente: Abbadox RIS, actualizado autom&aacute;ticamente.</div>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="kpi" style="border-top:3px solid var(--blue)">
+          <div class="kpi-lbl">Per&iacute;odo</div>
+          <div class="kpi-val" style="font-size:18px">Oct 01 &ndash; Oct 06</div>
+          <div class="kpi-foot"><span class="badge">Mes corrido 2026</span></div>
+        </div>
+        <div class="kpi" style="border-top:3px solid var(--green)">
+          <div class="kpi-lbl">D&iacute;as H&aacute;biles</div>
+          <div class="kpi-val">5</div>
+          <div class="kpi-foot"><span class="badge">Oct 1, 2, 3, 5 y 6</span></div>
+        </div>
+        <div class="kpi" style="border-top:3px solid var(--blue)">
+          <div class="kpi-lbl">Total Procedimientos</div>
+          <div class="kpi-val">4,911</div>
+          <div class="kpi-foot"><span class="badge">Complete + TechComplete &middot; sin courtesy</span></div>
+        </div>
+        <div class="kpi" style="border-top:3px solid var(--amber)">
+          <div class="kpi-lbl">Promedio Diario</div>
+          <div class="kpi-val">176</div>
+          <div class="kpi-foot"><span class="badge">Procs / d&iacute;a h&aacute;bil</span></div>
+        </div>
+      </div>
+
+      <div class="div-row"><span class="div-lbl">Procedimientos por Modalidad</span><div class="div-rule"></div><span style="font-size:11px;color:var(--t3)">Solo Complete &middot; TechComplete &middot; sin courtesy</span></div>
+      <div class="table-wrap" style="padding:20px 24px">
+        <div class="ris-mod-bars">
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <div class="pl-bar-row"><span class="pl-bar-lbl">US</span><div class="pl-bar-track"><div class="pl-bar-fill" style="width:100.0%;background:var(--blue)"></div></div><span class="pl-bar-val">257 <span class="pl-bar-pct">29.2%</span></span></div>
+          <div class="pl-bar-row"><span class="pl-bar-lbl">XRAY</span><div class="pl-bar-track"><div class="pl-bar-fill" style="width:58.8%;background:var(--blue)"></div></div><span class="pl-bar-val">151 <span class="pl-bar-pct">17.1%</span></span></div>
+          <div class="pl-bar-row"><span class="pl-bar-lbl">MRI</span><div class="pl-bar-track"><div class="pl-bar-fill" style="width:49.8%;background:var(--blue)"></div></div><span class="pl-bar-val">128 <span class="pl-bar-pct">14.5%</span></span></div>
+          <div class="pl-bar-row"><span class="pl-bar-lbl">CT</span><div class="pl-bar-track"><div class="pl-bar-fill" style="width:43.2%;background:var(--blue)"></div></div><span class="pl-bar-val">111 <span class="pl-bar-pct">12.6%</span></span></div>
+          <div class="pl-bar-row"><span class="pl-bar-lbl">MG</span><div class="pl-bar-track"><div class="pl-bar-fill" style="width:40.9%;background:var(--blue)"></div></div><span class="pl-bar-val">105 <span class="pl-bar-pct">11.9%</span></span></div>
+          <div class="pl-bar-row"><span class="pl-bar-lbl">CP</span><div class="pl-bar-track"><div class="pl-bar-fill" style="width:11.7%;background:var(--blue)"></div></div><span class="pl-bar-val">30 <span class="pl-bar-pct">3.4%</span></span></div>
+          <div class="pl-bar-row"><span class="pl-bar-lbl">SL</span><div class="pl-bar-track"><div class="pl-bar-fill" style="width:10.5%;background:var(--blue)"></div></div><span class="pl-bar-val">27 <span class="pl-bar-pct">3.1%</span></span></div>
+          <div class="pl-bar-row"><span class="pl-bar-lbl">NCV</span><div class="pl-bar-track"><div class="pl-bar-fill" style="width:6.6%;background:var(--blue)"></div></div><span class="pl-bar-val">17 <span class="pl-bar-pct">1.9%</span></span></div>
+          <div class="pl-bar-row"><span class="pl-bar-lbl">EKG</span><div class="pl-bar-track"><div class="pl-bar-fill" style="width:5.8%;background:var(--blue)"></div></div><span class="pl-bar-val">15 <span class="pl-bar-pct">1.7%</span></span></div>
+          <div class="pl-bar-row"><span class="pl-bar-lbl">PT</span><div class="pl-bar-track"><div class="pl-bar-fill" style="width:5.4%;background:var(--blue)"></div></div><span class="pl-bar-val">14 <span class="pl-bar-pct">1.6%</span></span></div>
+          <div class="pl-bar-row"><span class="pl-bar-lbl">NM</span><div class="pl-bar-track"><div class="pl-bar-fill" style="width:5.1%;background:var(--blue)"></div></div><span class="pl-bar-val">13 <span class="pl-bar-pct">1.5%</span></span></div>
+          <div class="pl-bar-row"><span class="pl-bar-lbl">DEXA</span><div class="pl-bar-track"><div class="pl-bar-fill" style="width:5.1%;background:var(--blue)"></div></div><span class="pl-bar-val">13 <span class="pl-bar-pct">1.5%</span></span></div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </div>
+        <div style="margin-top:16px;padding-top:12px;border-top:2px solid var(--bd);display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:13px;font-weight:700;color:var(--t1)">TOTAL MES</span>
+          <span style="font-size:15px;font-weight:700;color:var(--t1);font-variant-numeric:tabular-nums">881</span>
+        </div>
+      </div>
+
+      <div class="div-row" style="margin-top:20px"><span class="div-lbl">Procedimientos por D&iacute;a &mdash; September 2026</span><div class="div-rule"></div><span style="font-size:11px;color:var(--t3)">Espicha un d&iacute;a para ver el detalle</span></div>
+      <div class="table-wrap" style="padding:20px 24px">
+        <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:6px;text-align:center">
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Lun</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Mar</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Mi&eacute;</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Jue</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Vie</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">S&aacute;b</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Dom</div>
+        </div>
+        <div id="ris-10cal-grid" style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;text-align:center"></div>
+        <div id="ris-10day-detail" style="display:none;margin-top:16px;padding:16px 20px;background:var(--bg);border-radius:var(--r);border:1px solid var(--bd)">
+          <div id="ris-10detail-title" style="font-size:14px;font-weight:700;color:var(--t1);margin-bottom:14px"></div>
+          <div id="ris-10detail-bars"></div>
+        </div>
+        <div style="margin-top:16px;padding-top:12px;border-top:2px solid var(--bd);display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:13px;font-weight:700;color:var(--t1)">TOTAL MES</span>
+          <span style="font-size:15px;font-weight:700;color:var(--t1);font-variant-numeric:tabular-nums">881</span>
+        </div>
+      </div>
+
+      <script>
+      (function() {
+        const RIS_DAILY = {1:{total:160,m:{US:40,XRAY:32,MRI:30,CT:23,MG:22,SL:4,CP:3,EKG:2,DEXA:2,NM:1,PT:1}},
+          2:{total:191,m:{US:42,XRAY:33,MRI:24,CT:23,MG:22,DEXA:11,SL:9,NM:7,CP:6,EKG:6,PT:6,NCV:2}},
+          3:{total:132,m:{US:50,CT:21,XRAY:20,MRI:16,MG:16,CP:5,SL:3,EKG:1}},
+          5:{total:200,m:{US:67,XRAY:31,MRI:28,CT:24,MG:21,SL:9,CP:7,PT:7,EKG:3,NM:3}},
+          6:{total:198,m:{US:58,XRAY:35,MRI:30,MG:24,CT:20,NCV:15,CP:9,EKG:3,NM:2,SL:2}}};
+        const grid = document.getElementById('ris-10cal-grid');
+        let activeDay = null;
+        for (let i=0;i<1;i++) grid.appendChild(document.createElement('div'));
+        for (let d=1;d<=30;d++) {
+          const data = RIS_DAILY[d] && RIS_DAILY[d].total>0 ? RIS_DAILY[d] : null;
+          const cell = document.createElement('div');
+          const isToday = d===6;
+          cell.style.cssText = ['border-radius:8px','padding:6px 2px','min-height:54px','display:flex',
+            'flex-direction:column','align-items:center','justify-content:center','gap:3px',
+            'transition:transform .1s, box-shadow .1s',
+            data?'cursor:pointer;background:var(--blue);color:#fff':'cursor:default;background:var(--bg2);color:var(--t4)',
+            isToday?'outline:2px solid var(--amber);outline-offset:2px':''
+          ].join(';');
+          cell.innerHTML='<span style="font-size:12px;font-weight:700">'+d+'</span>'+(data?'<span style="font-size:11px;opacity:.85;font-variant-numeric:tabular-nums">'+data.total+'</span>':'');
+          if(data){
+            cell.addEventListener('click',(function(dd){return function(){toggle10Day(dd);};})(d));
+            cell.addEventListener('mouseover',function(){if(activeDay!==d){this.style.transform='scale(1.07)';this.style.boxShadow='0 4px 12px rgba(40,153,170,.35)';}});
+            cell.addEventListener('mouseout',function(){this.style.transform='';this.style.boxShadow='';});
+          }
+          cell.id='ris-10day-'+d;
+          grid.appendChild(cell);
+        }
+        for(let i=0;i<4;i++) grid.appendChild(document.createElement('div'));
+        function toggle10Day(d){
+          const data=RIS_DAILY[d];if(!data||data.total===0)return;
+          const detail=document.getElementById('ris-10day-detail');
+          if(activeDay!==null){const prev=document.getElementById('ris-10day-'+activeDay);if(prev)prev.style.background='var(--blue)';}
+          if(activeDay===d){detail.style.display='none';activeDay=null;return;}
+          activeDay=d;
+          const cell=document.getElementById('ris-10day-'+d);if(cell)cell.style.background='var(--pos)';
+          document.getElementById('ris-10detail-title').innerHTML='Oct '+String(d).padStart(2,'0')+' &mdash; <span style="color:var(--blue)">'+data.total+' procedimientos</span>';
+          const maxVal=Math.max(...Object.values(data.m));
+          document.getElementById('ris-10detail-bars').innerHTML=Object.entries(data.m).map(function(e){
+            const mod=e[0],cnt=e[1];
+            return '<div style="display:grid;grid-template-columns:56px 1fr 64px;align-items:center;gap:10px;margin-bottom:9px">'
+              +'<span style="font-size:12px;color:var(--t2);font-weight:600">'+mod+'</span>'
+              +'<div style="height:9px;background:var(--bg2);border-radius:5px;overflow:hidden"><div style="height:100%;width:'+(cnt/maxVal*100).toFixed(1)+'%;background:var(--blue);border-radius:5px"></div></div>'
+              +'<span style="font-size:12px;color:var(--t1);font-variant-numeric:tabular-nums;text-align:right">'+cnt+' <span style="color:var(--t3)">'+(cnt/data.total*100).toFixed(0)+'%</span></span></div>';
+          }).join('');
+          detail.style.display='block';detail.scrollIntoView({behavior:'smooth',block:'nearest'});
+        }
+      })();
+      </script>
+
+      <div style="margin-top:14px;font-size:11px;color:var(--t3);text-align:right">
+        Fuente: Abbadox RIS &nbsp;&middot;&nbsp; Actualizado autom&aacute;ticamente cada ma&ntilde;ana
+      </div>
+    </div><!-- /ris-oct -->
+
+  </div><!-- /pd-oct-2026 -->
 
     </div><!-- /content -->
 </div><!-- /main -->
