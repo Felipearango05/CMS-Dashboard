@@ -5314,6 +5314,95 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
             </tbody>
           </table>
         </div>
+        
+        <!-- HDC-CALENDAR-oct-START -->
+        <div class="div-row" style="margin-top:20px"><span class="div-lbl">Procedimientos por D&iacute;a &mdash; Oct 2026</span><div class="div-rule"></div><span style="font-size:11px;color:var(--t3)">Espicha un d&iacute;a para ver el detalle</span></div>
+        <div class="table-wrap" style="padding:20px 24px">
+          <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:6px;text-align:center">
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Lun</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Mar</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Mié</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Jue</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Vie</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Sáb</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Dom</div>
+          </div>
+          <div id="hdc-octcal-grid" style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;text-align:center"></div>
+          <div id="hdc-octday-detail" style="display:none;margin-top:16px;padding:16px 20px;background:var(--bg);border-radius:var(--r);border:1px solid var(--bd)">
+            <div id="hdc-octday-detail-title" style="font-size:14px;font-weight:700;color:var(--t1);margin-bottom:14px"></div>
+            <div class="table-wrap" style="margin-bottom:0">
+              <table class="data-tbl">
+                <thead><tr>
+                  <th style="text-align:left">Modalidad</th>
+                  <th class="cur">Total</th>
+                  <th>Primary Insurance</th>
+                  <th>PIP</th>
+                  <th>LOP</th>
+                  <th>Workers Comp</th>
+                </tr></thead>
+                <tbody id="hdc-octday-detail-tbody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <script>
+        (function() {
+          const HDC_DAILY = {6:{total:587,range:'Oct 01-06',mod:{US:[192,0,0,0],MRI:[42,21,8,1],MG:[123,0,0,0],CT:[59,3,3,0],DEXA:[46,0,0,0],XRAY:[66,8,0,0],PET:[15,0,0,0]}},7:{total:125,range:'Oct 07',mod:{US:[44,0,0,0],MRI:[13,1,3,1],MG:[20,0,0,0],CT:[14,0,0,0],DEXA:[10,0,0,0],XRAY:[15,1,0,0],PET:[3,0,0,0]}}};
+          const grid = document.getElementById('hdc-octcal-grid');
+          let activeDay = null;
+          for (let i=0;i<3;i++) grid.appendChild(document.createElement('div'));
+          for (let d=1;d<=31;d++) {
+            const data = HDC_DAILY[d] && HDC_DAILY[d].total>0 ? HDC_DAILY[d] : null;
+            const cell = document.createElement('div');
+            cell.style.cssText = ['border-radius:8px','padding:6px 2px','min-height:54px','display:flex',
+              'flex-direction:column','align-items:center','justify-content:center','gap:3px',
+              'transition:transform .1s, box-shadow .1s',
+              data?'cursor:pointer;background:#7c3aed;color:#fff':'cursor:default;background:var(--bg2);color:var(--t4)'
+            ].join(';');
+            cell.innerHTML='<span style="font-size:12px;font-weight:700">'+d+'</span>'+(data?'<span style="font-size:11px;opacity:.85;font-variant-numeric:tabular-nums">'+data.total+'</span>':'');
+            if(data){
+              cell.addEventListener('click',(function(dd){return function(){ toggleHdcDayOct(dd); };})(d));
+              cell.addEventListener('mouseover',function(){if(activeDay!==d){this.style.transform='scale(1.07)';this.style.boxShadow='0 4px 12px rgba(124,58,237,.35)';}});
+              cell.addEventListener('mouseout',function(){this.style.transform='';this.style.boxShadow='';});
+            }
+            cell.id='hdc-octcal-grid-'+d;
+            grid.appendChild(cell);
+          }
+          function dash(v){ return v ? v : '&mdash;'; }
+          function buildRows(mod,total){
+            const mods=Object.keys(mod);
+            let rows='';
+            let tot=[0,0,0,0];
+            mods.forEach(function(m){
+              const v=mod[m];
+              const t=v[0]+v[1]+v[2]+v[3];
+              for(let i=0;i<4;i++) tot[i]+=v[i];
+              rows+='<tr><td style="text-align:left">'+m+'</td>'
+                +'<td class="cur" style="font-weight:700">'+t+'</td>'
+                +'<td>'+dash(v[0])+'</td><td>'+dash(v[1])+'</td>'
+                +'<td>'+dash(v[2])+'</td><td>'+dash(v[3])+'</td></tr>';
+            });
+            rows+='<tr style="font-weight:700;border-top:2px solid var(--bd)"><td style="text-align:left">TOTAL</td>'
+              +'<td class="cur">'+total+'</td><td>'+tot[0]+'</td><td>'+dash(tot[1])+'</td>'
+              +'<td>'+dash(tot[2])+'</td><td>'+dash(tot[3])+'</td></tr>';
+            return rows;
+          }
+          window.toggleHdcDayOct = function(d) {
+            const data=HDC_DAILY[d];if(!data||data.total===0)return;
+            const detail=document.getElementById('hdc-octday-detail');
+            if(activeDay!==null){const prev=document.getElementById('hdc-octcal-grid-'+activeDay);if(prev)prev.style.background='#7c3aed';}
+            if(activeDay===d){detail.style.display='none';activeDay=null;return;}
+            activeDay=d;
+            const cell=document.getElementById('hdc-octcal-grid-'+d);if(cell)cell.style.background='var(--pos)';
+            document.getElementById('hdc-octday-detail-title').innerHTML=data.range+' &mdash; <span style="color:#7c3aed">'+data.total+' procedimientos</span>';
+            document.getElementById('hdc-octday-detail-tbody').innerHTML=buildRows(data.mod,data.total);
+            detail.style.display='block';detail.scrollIntoView({behavior:'smooth',block:'nearest'});
+          };
+        })();
+        </script>
+        <!-- HDC-CALENDAR-oct-END -->
+
         <div style="margin-top:12px;font-size:11px;color:var(--t3)">US = todas las salas &middot; MRI = Open + Closed &middot; MG = MG + MG 2 &middot; XRAY = DX &middot; PET = PT CT. Fuente: ABLE RIS PACS.</div>
       </div>
 
