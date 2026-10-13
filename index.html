@@ -5768,6 +5768,7 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
           
           
           
+          
           <div class="pl-bar-row"><span class="pl-bar-lbl">US</span><div class="pl-bar-track"><div class="pl-bar-fill" style="width:100.0%;background:var(--blue)"></div></div><span class="pl-bar-val">542 <span class="pl-bar-pct">28.2%</span></span></div>
           <div class="pl-bar-row"><span class="pl-bar-lbl">XRAY</span><div class="pl-bar-track"><div class="pl-bar-fill" style="width:59.4%;background:var(--blue)"></div></div><span class="pl-bar-val">322 <span class="pl-bar-pct">16.7%</span></span></div>
           <div class="pl-bar-row"><span class="pl-bar-lbl">MRI</span><div class="pl-bar-track"><div class="pl-bar-fill" style="width:46.9%;background:var(--blue)"></div></div><span class="pl-bar-val">254 <span class="pl-bar-pct">13.2%</span></span></div>
@@ -5799,6 +5800,7 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
         
         
         
+        
         </div>
         <div style="margin-top:16px;padding-top:12px;border-top:2px solid var(--bd);display:flex;justify-content:space-between;align-items:center">
           <span style="font-size:13px;font-weight:700;color:var(--t1)">TOTAL MES</span>
@@ -5806,7 +5808,7 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
         </div>
       </div>
 
-      <div class="div-row" style="margin-top:20px"><span class="div-lbl">Procedimientos por D&iacute;a &mdash; September 2026</span><div class="div-rule"></div><span style="font-size:11px;color:var(--t3)">Espicha un d&iacute;a para ver el detalle</span></div>
+      <div class="div-row" style="margin-top:20px"><span class="div-lbl">Procedimientos por D&iacute;a &mdash; October 2026</span><div class="div-rule"></div><span style="font-size:11px;color:var(--t3)">Espicha un d&iacute;a para ver el detalle</span></div>
       <div class="table-wrap" style="padding:20px 24px">
         <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:6px;text-align:center">
           <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Lun</div>
@@ -5843,8 +5845,8 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
           13:{total:102,m:{MG:19,CT:17,XRAY:17,MRI:11,NCV:9,US:8,DEXA:8,CP:7,EKG:6}}};
         const grid = document.getElementById('ris-10cal-grid');
         let activeDay = null;
-        for (let i=0;i<1;i++) grid.appendChild(document.createElement('div'));
-        for (let d=1;d<=30;d++) {
+        for (let i=0;i<3;i++) grid.appendChild(document.createElement('div'));
+        for (let d=1;d<=31;d++) {
           const data = RIS_DAILY[d] && RIS_DAILY[d].total>0 ? RIS_DAILY[d] : null;
           const cell = document.createElement('div');
           const isToday = d===13;
@@ -5863,7 +5865,7 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
           cell.id='ris-10day-'+d;
           grid.appendChild(cell);
         }
-        for(let i=0;i<4;i++) grid.appendChild(document.createElement('div'));
+        for(let i=0;i<3;i++) grid.appendChild(document.createElement('div'));
         function toggle10Day(d){
           const data=RIS_DAILY[d];if(!data||data.total===0)return;
           const detail=document.getElementById('ris-10day-detail');
