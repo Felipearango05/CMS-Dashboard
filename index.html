@@ -4994,21 +4994,198 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
         <div class="sec-desc">Charges, collections, and balance &mdash; Sep 2026.</div>
       </div>
       <div class="sub-nav">
-        <div class="sub-tab active" onclick="showSub('sb-billing','',this)">Billing</div>
-        <div class="sub-tab" onclick="showSub('sb-collections','',this)">Collections</div>
-        <div class="sub-tab" onclick="showSub('sb-balance','',this)">Balance</div>
+        <div class="sub-tab active" onclick="showSub('sb-billing','billing',this)">Billing</div>
+        <div class="sub-tab" onclick="showSub('sb-collections','collections',this)">Collections</div>
+        <div class="sub-tab" onclick="showSub('sb-balance','balance',this)">Balance</div>
         <div class="sub-tab" onclick="showSub('sb-denials','',this)">Denials</div>
       </div>
       <div id="sb-billing-sep">
-        <div class="empty-state" style="margin-top:40px">
-          <div class="empty-icon">&#128203;</div>
-          <div class="empty-title">Billing Sep 2026 &mdash; Pendiente</div>
-          <div class="empty-sub">Mes en curso. Datos al cierre de mes.</div>
+        <div class="kpi-grid">
+          <div class="kpi blue"><div class="kpi-lbl">Current Month</div><div class="kpi-val">$5.02M</div><div class="kpi-foot"><span class="badge up">&uarr; +1.4%</span><span class="kpi-vs">vs. Ago 2026</span></div><div class="spark"><div class="spark-bar" style="height:100%"></div><div class="spark-bar" style="height:83%"></div><div class="spark-bar" style="height:99%"></div><div class="spark-bar" style="height:82%"></div><div class="spark-bar" style="height:83%"></div></div></div>
+          <div class="kpi blue"><div class="kpi-lbl">Prior Month (Ago 2026)</div><div class="kpi-val">$4.95M</div><div class="kpi-foot"><span class="kpi-vs">Ago 2026</span></div><div class="spark"><div class="spark-bar" style="height:100%"></div><div class="spark-bar" style="height:83%"></div><div class="spark-bar" style="height:99%"></div><div class="spark-bar" style="height:82%"></div><div class="spark-bar" style="height:82%"></div></div></div>
+          <div class="kpi blue"><div class="kpi-lbl">YTD 2026 (Ene&ndash;Sep)</div><div class="kpi-val">$45.90M</div><div class="kpi-foot"><span class="badge up">&uarr; 9 meses</span></div><div class="spark"><div class="spark-bar" style="height:54%"></div><div class="spark-bar" style="height:65%"></div><div class="spark-bar" style="height:78%"></div><div class="spark-bar" style="height:89%"></div><div class="spark-bar" style="height:100%"></div></div></div>
+          <div class="kpi blue"><div class="kpi-lbl">Prior Year (Sep 2025)</div><div class="kpi-val"><span class="empty">&mdash;</span></div><div class="kpi-foot"><span class="badge empty">No data</span></div><div class="spark"><div class="spark-bar" style="height:100%"></div><div class="spark-bar" style="height:100%"></div><div class="spark-bar" style="height:100%"></div><div class="spark-bar" style="height:100%"></div><div class="spark-bar" style="height:100%"></div></div></div>
+        </div>
+        <div class="div-row"><span class="div-lbl">Period Comparison</span><div class="div-rule"></div></div>
+        <div class="table-wrap"><table>
+          <thead>
+            <tr class="cg-row"><th></th><th class="cur">Current</th><th colspan="3">2026 Comparison</th><th class="sep" colspan="2">Prior Year</th></tr>
+            <tr><th>Metric</th><th class="cur">Sep 2026</th><th>Ago 2026</th><th>MoM &Delta;</th><th>YTD 2026</th><th class="sep">Sep 2025</th><th>YTD 2025</th></tr>
+          </thead>
+          <tbody>
+            <tr class="rb"><td>Billing (Charges)</td><td class="cur">$5,024,867</td><td>$4,953,339</td><td class="dp">&uarr; +1.4%</td><td>$45,903,108</td><td class="sep na">&mdash;</td><td class="na">&mdash;</td></tr>
+          </tbody>
+        </table></div>
+        <div style="margin-top:10px;padding:8px 12px;background:rgba(40,153,170,.06);border-radius:4px;border-left:3px solid var(--blue);font-size:12px;color:var(--t2)">
+          <strong>Nota:</strong> Incluye <strong>CMS + ZEN</strong> (sleep lab). Charges filtrado por <em>ServiceYrMo = Sep 2026</em>. Fuente: Pivot CMS Septiembre + Pivot ZEN Septiembre (data cruda del cach&eacute;). El YTD se recalcula con este pivote, por eso incluye posteos tard&iacute;os de meses anteriores.
         </div>
       </div>
-      <div id="sb-collections-sep" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Collections Sep 2026 &mdash; Pendiente</div></div></div>
-      <div id="sb-balance-sep" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Balance Sep 2026 &mdash; Pendiente</div></div></div>
+      <div id="sb-collections-sep" hidden>
+        <div class="kpi-grid">
+          <div class="kpi green"><div class="kpi-lbl">Current Month</div><div class="kpi-val">$1.57M</div><div class="kpi-foot"><span class="badge up">&uarr; +24.6%</span><span class="kpi-vs">vs. Ago 2026</span></div><div class="spark"><div class="spark-bar" style="height:88%"></div><div class="spark-bar" style="height:79%"></div><div class="spark-bar" style="height:85%"></div><div class="spark-bar" style="height:82%"></div><div class="spark-bar" style="height:100%"></div></div></div>
+          <div class="kpi green"><div class="kpi-lbl">Prior Month (Ago 2026)</div><div class="kpi-val">$1.26M</div><div class="kpi-foot"><span class="kpi-vs">Ago 2026</span></div><div class="spark"><div class="spark-bar" style="height:100%"></div><div class="spark-bar" style="height:90%"></div><div class="spark-bar" style="height:97%"></div><div class="spark-bar" style="height:93%"></div><div class="spark-bar" style="height:93%"></div></div></div>
+          <div class="kpi green"><div class="kpi-lbl">YTD 2026 (Ene&ndash;Sep)</div><div class="kpi-val">$11.03M</div><div class="kpi-foot"><span class="badge up">&uarr; 9 meses</span></div><div class="spark"><div class="spark-bar" style="height:51%"></div><div class="spark-bar" style="height:62%"></div><div class="spark-bar" style="height:74%"></div><div class="spark-bar" style="height:86%"></div><div class="spark-bar" style="height:100%"></div></div></div>
+          <div class="kpi violet"><div class="kpi-lbl">Collection Rate</div><div class="kpi-val">31.2%</div><div class="kpi-foot"><span class="badge dp">&uarr; +5.8 pp</span><span class="kpi-vs">vs. Ago 2026</span></div><div class="spark"><div class="spark-bar" style="height:73%"></div><div class="spark-bar" style="height:79%"></div><div class="spark-bar" style="height:71%"></div><div class="spark-bar" style="height:83%"></div><div class="spark-bar" style="height:100%"></div></div></div>
+        </div>
+        <div class="div-row"><span class="div-lbl">Period Comparison</span><div class="div-rule"></div></div>
+        <div class="table-wrap"><table>
+          <thead>
+            <tr class="cg-row"><th></th><th class="cur">Current</th><th colspan="3">2026 Comparison</th><th class="sep" colspan="2">Prior Year</th></tr>
+            <tr><th>Metric</th><th class="cur">Sep 2026</th><th>Ago 2026</th><th>MoM &Delta;</th><th>YTD 2026</th><th class="sep">Sep 2025</th><th>YTD 2025</th></tr>
+          </thead>
+          <tbody>
+            <tr class="rg"><td>Collections (Payments)</td><td class="cur">$1,569,527</td><td>$1,259,395</td><td class="dp">&uarr; +24.6%</td><td>$11,025,058</td><td class="sep na">&mdash;</td><td class="na">&mdash;</td></tr>
+            <tr class="rv"><td>Collection Rate</td><td class="cur">31.2%</td><td>25.4%</td><td class="dp">&uarr; +5.8 pp</td><td>24.0%</td><td class="sep na">&mdash;</td><td class="na">&mdash;</td></tr>
+          </tbody>
+        </table></div>
+        <div style="margin-top:10px;padding:8px 12px;background:rgba(61,170,130,.06);border-radius:4px;border-left:3px solid var(--green);font-size:12px;color:var(--t2)">
+          <strong>Nota metodol&oacute;gica:</strong> Incluye <strong>CMS + ZEN</strong>. Collections filtrado por <em>PostYrMo = Sep 2026</em> (pagos posteados en septiembre, sin importar mes de servicio). Collection Rate = Collections / Charges del mes. <strong>Mes m&aacute;s alto del a&ntilde;o en recaudo.</strong> Fuente: Pivot CMS + ZEN Septiembre.
+        </div>
+      </div>
+      <div id="sb-balance-sep" hidden>
+        <div class="kpi-grid" style="margin-bottom:20px">
+          <div class="kpi blue">
+            <div class="kpi-lbl">Balance Neto &mdash; 30 de septiembre 2026</div>
+            <div class="kpi-val">$4,683,262</div>
+            <div class="kpi-foot"><span class="badge down">&darr; &minus;34.2%</span><span class="kpi-vs">vs. $7,114,977 en Ago</span></div>
+          </div>
+          <div class="kpi amber">
+            <div class="kpi-lbl">Balance Cr&iacute;tico (+90 d&iacute;as)</div>
+            <div class="kpi-val">$503,231</div>
+            <div class="kpi-foot"><span class="badge up">10.7% del total</span><span class="kpi-vs">vs. 27.5% en Ago</span></div>
+          </div>
+          <div class="kpi green">
+            <div class="kpi-lbl">Balance Corriente (0&ndash;30 d&iacute;as)</div>
+            <div class="kpi-val">$3,329,399</div>
+            <div class="kpi-foot"><span class="badge up">71.1% del total</span></div>
+          </div>
+        </div>
+        <div class="div-row"><span class="div-lbl">Aging de Balance &mdash; AR por Antig&uuml;edad</span><div class="div-rule"></div><span style="font-size:11px;color:var(--t3)">Fecha de referencia: 30 de septiembre 2026</span></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div class="table-wrap" style="padding:18px 20px">
+            <div style="margin-bottom:16px;font-size:12px;color:var(--t3)">Balance neto por tramo &mdash; % del total</div>
+            <div class="pl-bars" style="gap:14px">
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">0-30 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Sep 2026</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:71.1%;background:#3DAA82"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;font-weight:600;color:#3DAA82">$3,329,399</span>
+                  <span style="font-size:12px;color:var(--t3)">71.1% del total</span>
+                </div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">30-60 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Ago 2026</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:10.8%;background:#3DAA82"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;font-weight:600;color:#3DAA82">$507,048</span>
+                  <span style="font-size:12px;color:var(--t3)">10.8% del total</span>
+                </div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">60-90 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Jul 2026</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:7.3%;background:#3DAA82"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;font-weight:600;color:#3DAA82">$343,585</span>
+                  <span style="font-size:12px;color:var(--t3)">7.3% del total</span>
+                </div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">90-120 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Jun 2026</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:3.8%;background:#3DAA82"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;font-weight:600;color:#3DAA82">$177,043</span>
+                  <span style="font-size:12px;color:var(--t3)">3.8% del total</span>
+                </div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">120-180 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Abr-May 2026</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:3.1%;background:#3DAA82"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;font-weight:600;color:#3DAA82">$145,493</span>
+                  <span style="font-size:12px;color:var(--t3)">3.1% del total</span>
+                </div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                  <span style="font-size:13px;color:var(--t1);font-weight:600">+180 d&iacute;as</span>
+                  <span style="font-size:12px;color:var(--t3)">Pre-Abr 2026</span>
+                </div>
+                <div class="pl-bar-track" style="height:14px"><div class="pl-bar-fill" style="width:3.9%;background:#3DAA82"></div></div>
+                <div style="display:flex;justify-content:space-between;margin-top:3px">
+                  <span style="font-size:12px;font-weight:600;color:#3DAA82">$180,695</span>
+                  <span style="font-size:12px;color:var(--t3)">3.9% del total</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="table-wrap" style="padding:16px 20px">
+            <div class="div-row" style="margin-bottom:10px"><span class="div-lbl">AR Neto por Aseguradora</span><div class="div-rule"></div></div>
+            <div style="overflow-x:auto"><table>
+              <thead>
+                <tr><th>Payer</th><th class="cur">Neto</th><th>0-30d</th><th>30-60d</th><th>60-90d</th><th>90-120d</th><th>120-180d</th><th>+180d</th><th>Cobro Esp.</th></tr>
+              </thead>
+              <tbody>
+                <tr class="rg"><td>PCP</td><td class="cur">$1,503,918</td><td>$1,085,718</td><td>$149,671</td><td>$175,420</td><td>$92,672</td><td>$9,937</td><td>-$9,499</td><td style="color:var(--green)">$330,862</td></tr>
+                <tr class="rg"><td>Commercial</td><td class="cur">$984,844</td><td>$810,087</td><td>$118,732</td><td>$52,239</td><td>$5,264</td><td>-$3,091</td><td>$1,613</td><td style="color:var(--green)">$216,666</td></tr>
+                <tr class="rg"><td>PATIENT</td><td class="cur">$614,262</td><td>$21,295</td><td>$95,233</td><td>$70,145</td><td>$59,942</td><td>$119,190</td><td>$248,457</td><td style="color:var(--green)">$135,138</td></tr>
+                <tr class="rg"><td>Oscar</td><td class="cur">$412,567</td><td>$462,841</td><td>-$1,767</td><td>-$6,458</td><td>-$10,607</td><td>-$7,054</td><td>-$24,387</td><td style="color:var(--green)">$90,765</td></tr>
+                <tr class="rg"><td>Humana</td><td class="cur">$285,484</td><td>$301,895</td><td>$1,486</td><td>-$7,908</td><td>$1,548</td><td>$4,010</td><td>-$15,547</td><td style="color:var(--green)">$62,806</td></tr>
+                <tr class="rg"><td>Medicare</td><td class="cur">$257,772</td><td>$211,629</td><td>$12,304</td><td>$12,591</td><td>$2,012</td><td>$19,192</td><td>$44</td><td style="color:var(--green)">$56,710</td></tr>
+                <tr class="rg"><td>Workers Comp</td><td class="cur">$191,920</td><td>$76,381</td><td>$26,944</td><td>$19,175</td><td>$13,260</td><td>$5,651</td><td>$50,509</td><td style="color:var(--green)">$42,222</td></tr>
+                <tr class="rg"><td>United</td><td class="cur">$174,100</td><td>$126,391</td><td>$87,033</td><td>-$1,512</td><td>$72</td><td>-$10,839</td><td>-$27,045</td><td style="color:var(--green)">$38,302</td></tr>
+              </tbody>
+            </table></div>
+          </div>
+        </div>
+        <div style="margin-top:10px;padding:8px 12px;background:rgba(40,153,170,.06);border-radius:4px;border-left:3px solid var(--blue);font-size:12px;color:var(--t2)">
+          <strong>Metodolog&iacute;a:</strong> Balance neto = suma del campo Balance de los registros de <em>cargo</em> (RecordType C), agrupado por mes de servicio (aging). Misma f&oacute;rmula que agosto, validada reproduciendo sus $7,114,977 exactos. Incluye CMS + ZEN. Cobro Esp. = Neto &times; 22% (tasa esperada). Fuente: Pivot CMS + ZEN Septiembre (cach&eacute;).
+        </div>
+      </div><!-- /sb-balance-sep -->
       <div id="sb-denials-sep" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Denials Sep 2026 &mdash; Pendiente</div></div></div>
+    
+      <!-- BREAKDOWN PANEL SEP -->
+      <div class="breakdown" id="breakdown-panel-sep" hidden>
+        <div class="bd-header">
+          <div class="bd-title">Breakdown &mdash; <em id="bd-metric-label-sep">Billing</em></div>
+          <div class="bd-spacer"></div>
+          <div class="toggle-group" id="dim-toggle-sep">
+            <div class="tgl on" onclick="setDim9('by_modality',this)">By Modality</div>
+            <div class="tgl" onclick="setDim9('by_payer',this)">By Payer</div>
+          </div>
+          <div class="toggle-group" id="period-toggle-sep">
+            <div class="tgl on" onclick="setPeriod9('current',this)">Sep 2026</div>
+            <div class="tgl" onclick="setPeriod9('ytd',this)">YTD 2026</div>
+          </div>
+          <div class="toggle-group metric-group" id="metric-toggle-sep">
+            <div class="tgl on-b" onclick="setMetric9('billing',this)">Billing</div>
+            <div class="tgl" onclick="setMetric9('collections',this)">Collections</div>
+            <div class="tgl" onclick="setMetric9('balance',this)">Balance</div>
+          </div>
+        </div>
+        <div class="bar-chart" id="bd-bars-sep"></div>
+        <div class="dt-wrap"><table id="bd-table-sep">
+          <thead><tr>
+            <th style="text-align:left">Name</th>
+            <th>Billing</th><th>Collections</th><th>Balance</th><th>Rate</th>
+          </tr></thead>
+          <tbody id="bd-tbody-sep"></tbody>
+        </table></div>
+      </div>
     </div><!-- /billing-sep -->
 
     <!-- OPERATIVOS SEP -->
@@ -5904,7 +6081,8 @@ const DD_apr = {"current":{"by_modality":[{"name":"PET","billing":3517623,"colle
 const DD_jun = {"current":{"by_modality":[{"name":"PET","billing":3054921,"collections":651255,"balance":2727795,"rate":21.3},{"name":"US","billing":365407,"collections":124651,"balance":242096,"rate":34.1},{"name":"MRI","billing":332465,"collections":114727,"balance":238979,"rate":34.5},{"name":"NM","billing":262040,"collections":63996,"balance":177370,"rate":24.4},{"name":"MG","billing":181605,"collections":58095,"balance":100275,"rate":32.0},{"name":"CT","billing":175392,"collections":62486,"balance":107310,"rate":35.6},{"name":"SL","billing":115304,"collections":36668,"balance":76126,"rate":31.8},{"name":"NCV","billing":115302,"collections":38887,"balance":96179,"rate":33.7},{"name":"XRAY","billing":51027,"collections":24065,"balance":24605,"rate":47.2},{"name":"MRA","billing":20754,"collections":6556,"balance":17137,"rate":31.6},{"name":"DEXA","billing":17424,"collections":5452,"balance":7624,"rate":31.3},{"name":"EEG","billing":7215,"collections":529,"balance":6450,"rate":7.3}],"by_payer":[{"name":"OSCAR HEALTH INSURANCE","billing":718283,"collections":117159,"balance":329961,"rate":16.3},{"name":"PREFERRED CARE PARTNERS DUAL","billing":607911,"collections":97695,"balance":521229,"rate":16.1},{"name":"HUMANA","billing":550859,"collections":71539,"balance":423429,"rate":13.0},{"name":"PREFERRED CARE NETWORK","billing":447651,"collections":122619,"balance":443386,"rate":27.4},{"name":"MEDICARE-PART B","billing":337732,"collections":158112,"balance":209195,"rate":46.8},{"name":"BCBS OF FLORIDA","billing":252784,"collections":78700,"balance":139522,"rate":31.1},{"name":"DOCTORS HEALTHCARE PLANS INC.","billing":222296,"collections":39537,"balance":203974,"rate":17.8},{"name":"PREFERRED CARE PARTNERS","billing":216372,"collections":42484,"balance":215172,"rate":19.6},{"name":"United Health Care","billing":172109,"collections":45706,"balance":134739,"rate":26.6},{"name":"CAREPLUS","billing":169120,"collections":28852,"balance":139475,"rate":17.1},{"name":"Solis Health Plans","billing":153773,"collections":28344,"balance":153763,"rate":18.4},{"name":"LEON MEDICAL CENTER","billing":140481,"collections":57422,"balance":75906,"rate":40.9},{"name":"AETNA","billing":134093,"collections":26720,"balance":69462,"rate":19.9},{"name":"SIMPLY an Anthem Company MCR MCD","billing":94801,"collections":18188,"balance":63524,"rate":19.2},{"name":"Patient","billing":62158,"collections":183216,"balance":321413,"rate":294.8}]},"ytd":{"by_modality":[{"name":"PET","billing":19262818,"collections":3647800,"balance":3423004,"rate":18.9},{"name":"US","billing":2008785,"collections":644913,"balance":335318,"rate":32.1},{"name":"MRI","billing":1960521,"collections":614428,"balance":325577,"rate":31.3},{"name":"NM","billing":1651130,"collections":343863,"balance":318247,"rate":20.8},{"name":"CT","billing":1012248,"collections":301374,"balance":190382,"rate":29.8},{"name":"MG","billing":1010215,"collections":308643,"balance":84617,"rate":30.6},{"name":"SL","billing":903403,"collections":264834,"balance":136525,"rate":29.3},{"name":"NCV","billing":836767,"collections":306132,"balance":123840,"rate":36.6},{"name":"XRAY","billing":310443,"collections":124919,"balance":-10247,"rate":40.2},{"name":"DEXA","billing":102778,"collections":35247,"balance":-7581,"rate":34.3},{"name":"MRA","billing":101096,"collections":24646,"balance":33474,"rate":24.4},{"name":"EEG","billing":30350,"collections":7019,"balance":14126,"rate":23.1}],"by_payer":[{"name":"OSCAR HEALTH INSURANCE","billing":4094548,"collections":751074,"balance":353149,"rate":18.3},{"name":"HUMANA","billing":2985826,"collections":530415,"balance":423357,"rate":17.8},{"name":"PREFERRED CARE PARTNERS DUAL","billing":2916061,"collections":601786,"balance":631506,"rate":20.6},{"name":"PREFERRED CARE NETWORK","billing":2904384,"collections":596905,"balance":560644,"rate":20.6},{"name":"LEON MEDICAL CENTER","billing":2415508,"collections":251519,"balance":39242,"rate":10.4},{"name":"BCBS OF FLORIDA","billing":2110227,"collections":482947,"balance":133628,"rate":22.9},{"name":"MEDICARE-PART B","billing":1990954,"collections":571302,"balance":360501,"rate":28.7},{"name":"PREFERRED CARE PARTNERS","billing":1255171,"collections":236528,"balance":323770,"rate":18.8},{"name":"DOCTORS HEALTHCARE PLANS INC.","billing":1160782,"collections":198511,"balance":257587,"rate":17.1},{"name":"Solis Health Plans","billing":1108295,"collections":206654,"balance":300270,"rate":18.6},{"name":"United Health Care","billing":1027184,"collections":271946,"balance":205097,"rate":26.5},{"name":"CAREPLUS","billing":885536,"collections":141514,"balance":171466,"rate":16.0},{"name":"AETNA","billing":745960,"collections":103581,"balance":87252,"rate":13.9},{"name":"SIMPLY an Anthem Company MCR MCD","billing":543987,"collections":100209,"balance":108419,"rate":18.4},{"name":"HEALTHSUN HEALTH PLANS INC","billing":439801,"collections":91149,"balance":34633,"rate":20.7}]}};
 const DD_jul = {"current": {"by_modality": [{"name": "PET", "billing": 4156954, "collections": 730076, "balance": 3019749, "rate": 17.6}, {"name": "US", "billing": 381684, "collections": 128532, "balance": 191920, "rate": 33.7}, {"name": "MRI", "billing": 352832, "collections": 101524, "balance": 218148, "rate": 28.8}, {"name": "MG", "billing": 310860, "collections": 89091, "balance": 151625, "rate": 28.7}, {"name": "CT", "billing": 240986, "collections": 64386, "balance": 140929, "rate": 26.7}, {"name": "SL", "billing": 227575, "collections": 61245, "balance": 162499, "rate": 26.9}, {"name": "NCV", "billing": 168204, "collections": 29264, "balance": 139311, "rate": 17.4}, {"name": "NM", "billing": 99766, "collections": 24661, "balance": 65975, "rate": 24.7}, {"name": "XRAY", "billing": 78926, "collections": 31928, "balance": 47420, "rate": 40.5}, {"name": "MRA", "billing": 20276, "collections": 5191, "balance": 12818, "rate": 25.6}, {"name": "DEXA", "billing": 17760, "collections": 6406, "balance": 9241, "rate": 36.1}, {"name": "EEG", "billing": 5685, "collections": 2908, "balance": 4420, "rate": 51.2}], "by_payer": [{"name": "OSCAR HEALTH INSURANCE", "billing": 1059426, "collections": 192715, "balance": 329808, "rate": 18.2}, {"name": "PREFERRED CARE PARTNERS DUAL", "billing": 752682, "collections": 128500, "balance": 586722, "rate": 17.1}, {"name": "PREFERRED CARE NETWORK", "billing": 573360, "collections": 104967, "balance": 567365, "rate": 18.3}, {"name": "HUMANA", "billing": 540551, "collections": 116892, "balance": 304129, "rate": 21.6}, {"name": "Solis Health Plans", "billing": 447280, "collections": 12483, "balance": 447240, "rate": 2.8}, {"name": "BCBS OF FLORIDA", "billing": 358542, "collections": 67779, "balance": 210588, "rate": 18.9}, {"name": "MEDICARE-PART B", "billing": 314243, "collections": 97623, "balance": 249591, "rate": 31.1}, {"name": "DOCTORS HEALTHCARE PLANS INC.", "billing": 250465, "collections": 35627, "balance": 219160, "rate": 14.2}, {"name": "UNITED HEALTH CARE", "billing": 235964, "collections": 52949, "balance": 177031, "rate": 22.4}, {"name": "CAREPLUS", "billing": 223294, "collections": 28691, "balance": 111815, "rate": 12.8}, {"name": "PREFERRED CARE PARTNERS", "billing": 214691, "collections": 56778, "balance": 212991, "rate": 26.4}, {"name": "AETNA", "billing": 150623, "collections": 20791, "balance": 76533, "rate": 13.8}, {"name": "HEALTHSUN HEALTH PLANS INC", "billing": 129954, "collections": 14398, "balance": 96141, "rate": 11.1}, {"name": "LEON MEDICAL CENTER", "billing": 100759, "collections": 13641, "balance": 100759, "rate": 13.5}, {"name": "MEDSOLUTIONS", "billing": 97248, "collections": 16233, "balance": 52531, "rate": 16.7}]}, "ytd": {"by_modality": [{"name": "PET", "billing": 24175586, "collections": 4502060, "balance": 5381363, "rate": 18.6}, {"name": "US", "billing": 2407214, "collections": 778036, "balance": 305447, "rate": 32.3}, {"name": "MRI", "billing": 2376020, "collections": 724093, "balance": 356635, "rate": 30.5}, {"name": "MG", "billing": 1906285, "collections": 497291, "balance": 171393, "rate": 26.1}, {"name": "SL", "billing": 1357959, "collections": 383691, "balance": 214523, "rate": 28.3}, {"name": "CT", "billing": 1277809, "collections": 371952, "balance": 222188, "rate": 29.1}, {"name": "NCV", "billing": 1021769, "collections": 335660, "balance": 207192, "rate": 32.9}, {"name": "XRAY", "billing": 586366, "collections": 219549, "balance": 61969, "rate": 37.4}, {"name": "NM", "billing": 563151, "collections": 157988, "balance": 84663, "rate": 28.1}, {"name": "MRA", "billing": 122114, "collections": 29456, "balance": 21553, "rate": 24.1}, {"name": "DEXA", "billing": 121858, "collections": 41948, "balance": 5295, "rate": 34.4}, {"name": "EEG", "billing": 36035, "collections": 9927, "balance": 7792, "rate": 27.5}], "by_payer": [{"name": "OSCAR HEALTH INSURANCE", "billing": 5195487, "collections": 943689, "balance": 307925, "rate": 18.2}, {"name": "PREFERRED CARE PARTNERS DUAL", "billing": 3691638, "collections": 730286, "balance": 778771, "rate": 19.8}, {"name": "HUMANA", "billing": 3559798, "collections": 647250, "balance": 331602, "rate": 18.2}, {"name": "PREFERRED CARE NETWORK", "billing": 3485615, "collections": 701873, "balance": 658091, "rate": 20.1}, {"name": "LEON MEDICAL CENTER", "billing": 2532290, "collections": 265160, "balance": 1708934, "rate": 10.5}, {"name": "BCBS OF FLORIDA", "billing": 2492304, "collections": 550726, "balance": 197989, "rate": 22.1}, {"name": "MEDICARE-PART B", "billing": 2339331, "collections": 668204, "balance": 305651, "rate": 28.6}, {"name": "Solis Health Plans", "billing": 1576590, "collections": 219137, "balance": 764080, "rate": 13.9}, {"name": "PREFERRED CARE PARTNERS", "billing": 1481437, "collections": 293306, "balance": 222432, "rate": 19.8}, {"name": "DOCTORS HEALTHCARE PLANS INC.", "billing": 1414322, "collections": 234138, "balance": 301214, "rate": 16.6}, {"name": "UNITED HEALTH CARE", "billing": 1280985, "collections": 324781, "balance": 197567, "rate": 25.4}, {"name": "CAREPLUS", "billing": 1131927, "collections": 170205, "balance": 178941, "rate": 15.0}, {"name": "AETNA", "billing": 900797, "collections": 124371, "balance": 88132, "rate": 13.8}, {"name": "SIMPLY an Anthem Company MCR  MCD", "billing": 631439, "collections": 119487, "balance": 62752, "rate": 18.9}, {"name": "HEALTHSUN HEALTH PLANS INC", "billing": 583742, "collections": 109102, "balance": 104259, "rate": 18.7}]}};
 const DD_aug = {"current": {"by_modality": [{"name": "PET", "billing": 3151338, "collections": 654758, "balance": 2411191, "rate": 20.8}, {"name": "MRI", "billing": 367511, "collections": 112061, "balance": 225020, "rate": 30.5}, {"name": "US", "billing": 362598, "collections": 121820, "balance": 209826, "rate": 33.6}, {"name": "MG", "billing": 273740, "collections": 75063, "balance": 145625, "rate": 27.4}, {"name": "SL", "billing": 236234, "collections": 63399, "balance": 173038, "rate": 26.8}, {"name": "CT", "billing": 211734, "collections": 61293, "balance": 132889, "rate": 28.9}, {"name": "NCV", "billing": 113132, "collections": 75650, "balance": 87332, "rate": 66.9}, {"name": "NM", "billing": 108142, "collections": 28319, "balance": 72438, "rate": 26.2}, {"name": "XRAY", "billing": 85837, "collections": 33550, "balance": 56680, "rate": 39.1}, {"name": "MRA", "billing": 19950, "collections": 3395, "balance": 15970, "rate": 17.0}, {"name": "DEXA", "billing": 16971, "collections": 5546, "balance": 9475, "rate": 32.7}, {"name": "EEG", "billing": 6152, "collections": 1277, "balance": 3747, "rate": 20.8}], "by_payer": [{"name": "OSCAR HEALTH INSURANCE", "billing": 778217, "collections": 150779, "balance": 369071, "rate": 19.4}, {"name": "PREFERRED CARE PARTNERS DUAL", "billing": 534136, "collections": 109061, "balance": 457897, "rate": 20.4}, {"name": "HUMANA", "billing": 484204, "collections": 104040, "balance": 272440, "rate": 21.5}, {"name": "MEDICARE-PART B", "billing": 404001, "collections": 94920, "balance": 297638, "rate": 23.5}, {"name": "PREFERRED CARE NETWORK", "billing": 386292, "collections": 100114, "balance": 381625, "rate": 25.9}, {"name": "BCBS OF FLORIDA", "billing": 283352, "collections": 84187, "balance": 127288, "rate": 29.7}, {"name": "DOCTORS HEALTHCARE PLANS INC.", "billing": 262618, "collections": 21452, "balance": 213124, "rate": 8.2}, {"name": "Solis Health Plans", "billing": 214848, "collections": 43223, "balance": 214808, "rate": 20.1}, {"name": "HEALTHSUN HEALTH PLANS INC", "billing": 198179, "collections": 13125, "balance": 177357, "rate": 6.6}, {"name": "UNITED HEALTH CARE", "billing": 180342, "collections": 40676, "balance": 159144, "rate": 22.6}, {"name": "PREFERRED CARE PARTNERS", "billing": 147297, "collections": 38262, "balance": 145521, "rate": 26.0}, {"name": "AETNA", "billing": 141686, "collections": 28399, "balance": 44205, "rate": 20.0}, {"name": "CAREPLUS", "billing": 135417, "collections": 27453, "balance": 102081, "rate": 20.3}, {"name": "MEDSOLUTIONS", "billing": 90452, "collections": 26753, "balance": 46606, "rate": 29.6}, {"name": "LEON MEDICAL CENTER", "billing": 86440, "collections": 61637, "balance": 73227, "rate": 71.3}]}, "ytd": {"by_modality": [{"name": "PET", "billing": 27326924, "collections": 5182905, "balance": 5330309, "rate": 19.0}, {"name": "US", "billing": 2770552, "collections": 907653, "balance": 313976, "rate": 32.8}, {"name": "MRI", "billing": 2745426, "collections": 852529, "balance": 362277, "rate": 31.1}, {"name": "MG", "billing": 2180055, "collections": 571158, "balance": 166838, "rate": 26.2}, {"name": "SL", "billing": 1606073, "collections": 451360, "balance": 261470, "rate": 28.1}, {"name": "CT", "billing": 1489668, "collections": 451162, "balance": 237501, "rate": 30.3}, {"name": "NCV", "billing": 1134609, "collections": 412105, "balance": 119074, "rate": 36.3}, {"name": "XRAY", "billing": 672123, "collections": 254817, "balance": 67950, "rate": 37.9}, {"name": "NM", "billing": 671293, "collections": 185778, "balance": 106825, "rate": 27.7}, {"name": "MRA", "billing": 139040, "collections": 33307, "balance": 25056, "rate": 24.0}, {"name": "DEXA", "billing": 138829, "collections": 47995, "balance": 4996, "rate": 34.6}, {"name": "EEG", "billing": 42187, "collections": 11264, "balance": 8599, "rate": 26.7}], "by_payer": [{"name": "OSCAR HEALTH INSURANCE", "billing": 5974775, "collections": 1094468, "balance": 340671, "rate": 18.3}, {"name": "PREFERRED CARE PARTNERS DUAL", "billing": 4231084, "collections": 839347, "balance": 836754, "rate": 19.8}, {"name": "HUMANA", "billing": 4045586, "collections": 751290, "balance": 283838, "rate": 18.6}, {"name": "PREFERRED CARE NETWORK", "billing": 3870610, "collections": 801987, "balance": 526288, "rate": 20.7}, {"name": "BCBS OF FLORIDA", "billing": 2764287, "collections": 634913, "balance": 91186, "rate": 23.0}, {"name": "MEDICARE-PART B", "billing": 2754615, "collections": 763024, "balance": 361964, "rate": 27.7}, {"name": "LEON MEDICAL CENTER", "billing": 2619363, "collections": 326797, "balance": 1581723, "rate": 12.5}, {"name": "Solis Health Plans", "billing": 1783277, "collections": 262360, "balance": 818862, "rate": 14.7}, {"name": "DOCTORS HEALTHCARE PLANS INC.", "billing": 1676940, "collections": 255590, "balance": 470145, "rate": 15.2}, {"name": "PREFERRED CARE PARTNERS", "billing": 1630054, "collections": 331568, "balance": 211815, "rate": 20.3}, {"name": "UNITED HEALTH CARE", "billing": 1461004, "collections": 365457, "balance": 186208, "rate": 25.0}, {"name": "CAREPLUS", "billing": 1265548, "collections": 197658, "balance": 106340, "rate": 15.6}, {"name": "AETNA", "billing": 1053355, "collections": 152538, "balance": 52525, "rate": 14.5}, {"name": "HEALTHSUN HEALTH PLANS INC", "billing": 781921, "collections": 129717, "balance": 189986, "rate": 16.6}, {"name": "SIMPLY an Anthem Company MCR  MCD", "billing": 706730, "collections": 128748, "balance": 93975, "rate": 18.2}]}};
-const DD_MAP = {'': DD, '-apr': DD_apr, '-jun': DD_jun, '-jul': DD_jul, '-aug': DD_aug};
+const DD_sep = {"current": {"by_modality": [{"name": "PET", "billing": 3191067, "collections": 914693, "balance": 2258658, "rate": 28.7}, {"name": "MRI", "billing": 384572, "collections": 125209, "balance": 218233, "rate": 32.6}, {"name": "US", "billing": 376818, "collections": 117357, "balance": 220145, "rate": 31.1}, {"name": "MG", "billing": 262390, "collections": 72106, "balance": 140136, "rate": 27.5}, {"name": "SL", "billing": 251425, "collections": 98095, "balance": 191503, "rate": 39.0}, {"name": "CT", "billing": 200468, "collections": 81019, "balance": 117744, "rate": 40.4}, {"name": "NCV", "billing": 146928, "collections": 49486, "balance": 100411, "rate": 33.7}, {"name": "NM", "billing": 106699, "collections": 35141, "balance": 63186, "rate": 32.9}, {"name": "XRAY", "billing": 53756, "collections": 21431, "balance": 28481, "rate": 39.9}, {"name": "MRA", "billing": 23146, "collections": 5253, "balance": 15113, "rate": 22.7}, {"name": "DEXA", "billing": 21038, "collections": 4716, "balance": 15267, "rate": 22.4}, {"name": "EEG", "billing": 6560, "collections": 1789, "balance": 4280, "rate": 27.3}], "by_payer": [{"name": "OSCAR HEALTH INSURANCE", "billing": 951949, "collections": 153449, "balance": 452130, "rate": 16.1}, {"name": "HUMANA", "billing": 626271, "collections": 110934, "balance": 302576, "rate": 17.7}, {"name": "PREFERRED CARE NETWORK", "billing": 511576, "collections": 103785, "balance": 505651, "rate": 20.3}, {"name": "PREFERRED CARE PARTNERS DUAL", "billing": 506762, "collections": 104403, "balance": 459305, "rate": 20.6}, {"name": "MEDICARE-PART B", "billing": 307850, "collections": 114088, "balance": 212359, "rate": 37.1}, {"name": "BCBS OF FLORIDA", "billing": 268475, "collections": 67325, "balance": 141242, "rate": 25.1}, {"name": "Solis Health Plans", "billing": 267549, "collections": 183083, "balance": 247357, "rate": 68.4}, {"name": "UNITED HEALTH CARE", "billing": 216526, "collections": 60379, "balance": 116234, "rate": 27.9}, {"name": "DOCTORS HEALTHCARE PLANS INC.", "billing": 192772, "collections": 48333, "balance": 146444, "rate": 25.1}, {"name": "AETNA", "billing": 131072, "collections": 14419, "balance": 81933, "rate": 11.0}, {"name": "PREFERRED CARE PARTNERS", "billing": 119529, "collections": 33623, "balance": 118424, "rate": 28.1}, {"name": "SIMPLY an Anthem Company MCR  MCD", "billing": 114477, "collections": 24427, "balance": 36269, "rate": 21.3}, {"name": "LEON MEDICAL CENTER", "billing": 100260, "collections": 188788, "balance": 81078, "rate": 188.3}, {"name": "CAREPLUS", "billing": 87369, "collections": 27215, "balance": 21848, "rate": 31.1}, {"name": "HEALTHSUN HEALTH PLANS INC", "billing": 80153, "collections": 39309, "balance": 29087, "rate": 49.0}]}, "ytd": {"by_modality": [{"name": "PET", "billing": 30471510, "collections": 6123818, "balance": 3091943, "rate": 20.1}, {"name": "US", "billing": 3147635, "collections": 1035311, "balance": 324064, "rate": 32.9}, {"name": "MRI", "billing": 3130627, "collections": 986526, "balance": 326359, "rate": 31.5}, {"name": "MG", "billing": 2442445, "collections": 644909, "balance": 153308, "rate": 26.4}, {"name": "SL", "billing": 2116518, "collections": 629753, "balance": 257394, "rate": 29.8}, {"name": "CT", "billing": 1690736, "collections": 538979, "balance": 195541, "rate": 31.9}, {"name": "NCV", "billing": 1282803, "collections": 463649, "balance": 126753, "rate": 36.1}, {"name": "NM", "billing": 775282, "collections": 222858, "balance": 87405, "rate": 28.7}, {"name": "XRAY", "billing": 474753, "collections": 199913, "balance": 21045, "rate": 42.1}, {"name": "MRA", "billing": 162186, "collections": 38396, "balance": 22054, "rate": 23.7}, {"name": "DEXA", "billing": 159867, "collections": 53292, "balance": 9386, "rate": 33.3}, {"name": "EEG", "billing": 48747, "collections": 13265, "balance": 9089, "rate": 27.2}], "by_payer": [{"name": "OSCAR HEALTH INSURANCE", "billing": 6924207, "collections": 1247917, "balance": 424640, "rate": 18.0}, {"name": "PREFERRED CARE PARTNERS DUAL", "billing": 4688262, "collections": 943750, "balance": 804991, "rate": 20.1}, {"name": "HUMANA", "billing": 4669401, "collections": 862224, "balance": 299963, "rate": 18.5}, {"name": "PREFERRED CARE NETWORK", "billing": 4383506, "collections": 905772, "balance": 586522, "rate": 20.7}, {"name": "MEDICARE-PART B", "billing": 3084848, "collections": 877112, "balance": 302232, "rate": 28.4}, {"name": "BCBS OF FLORIDA", "billing": 3041981, "collections": 702238, "balance": 100853, "rate": 23.1}, {"name": "LEON MEDICAL CENTER", "billing": 2720256, "collections": 515585, "balance": 85596, "rate": 19.0}, {"name": "Solis Health Plans", "billing": 2051065, "collections": 445443, "balance": 289400, "rate": 21.7}, {"name": "DOCTORS HEALTHCARE PLANS INC.", "billing": 1870183, "collections": 341551, "balance": 200242, "rate": 18.3}, {"name": "PREFERRED CARE PARTNERS", "billing": 1749583, "collections": 365191, "balance": 184525, "rate": 20.9}, {"name": "UNITED HEALTH CARE", "billing": 1676804, "collections": 425836, "balance": 172395, "rate": 25.4}, {"name": "CAREPLUS", "billing": 1353343, "collections": 224874, "balance": 20737, "rate": 16.6}, {"name": "AETNA", "billing": 1184427, "collections": 166957, "balance": 89695, "rate": 14.1}, {"name": "HEALTHSUN HEALTH PLANS INC", "billing": 862048, "collections": 169026, "balance": 41417, "rate": 19.6}, {"name": "SIMPLY an Anthem Company MCR  MCD", "billing": 804549, "collections": 153175, "balance": 56474, "rate": 19.0}]}};
+const DD_MAP = {'': DD, '-apr': DD_apr, '-jun': DD_jun, '-jul': DD_jul, '-aug': DD_aug, '-sep': DD_sep};
 
 
 const METRIC_COLOR = {billing:'var(--blue)',collections:'var(--green)',balance:'var(--amber)'};
@@ -6113,6 +6291,33 @@ function setDim8(dim,el) { stateA8.dim=dim; document.querySelectorAll('#dim-togg
 function setPeriod8(p,el) { stateA8.period=p; document.querySelectorAll('#period-toggle-aug .tgl').forEach(b=>b.classList.remove('on')); el.classList.add('on'); renderBreakdownA8(); }
 function setMetric8(m,el) { stateA8.metric=m; renderBreakdownA8(); }
 
+let stateA9 = {dim:'by_modality', period:'current', metric:'billing'};
+function renderBreakdownA9() {
+  const data = DD_sep[stateA9.period][stateA9.dim];
+  const m = stateA9.metric;
+  const color = METRIC_COLOR[m];
+  const items = (m !== 'balance') ? data.filter(d => d.billing > 0) : data;
+  const sorted = [...items].sort((a,b) => Math.abs(b[m]) - Math.abs(a[m]));
+  const maxVal = Math.max(...sorted.map(d => Math.abs(d[m])), 1);
+  const barsEl = document.getElementById('bd-bars-sep');
+  if (barsEl) barsEl.innerHTML = sorted.map(d => {
+    const val = d[m], pct = Math.abs(val)/maxVal*100, isNeg = val < 0;
+    return `<div class="bar-row"><div class="bar-name" title="${d.name}">${d.name}</div><div class="bar-track"><div class="bar-fill" style="width:${pct.toFixed(1)}%;background:${isNeg?'var(--neg)':color};opacity:${isNeg?0.6:1}"></div></div><div class="bar-val">${fmt(val)}</div><div class="bar-rate ${rateClass(d.rate)}">${d.rate>0?d.rate+'%':'\u2014'}</div></div>`;
+  }).join('');
+  const tbody = document.getElementById('bd-tbody-sep');
+  if (tbody) tbody.innerHTML = sorted.map(d => `<tr><td style="font-family:var(--sans);text-align:left;padding-left:12px;color:var(--t2)">${d.name}</td><td>${fmtFull(d.billing)}</td><td>${fmtFull(d.collections)}</td><td style="color:${d.balance<0?'var(--pos)':d.balance>500000?'var(--neg)':'inherit'}">${fmtFull(d.balance)}</td><td><span class="bar-rate ${rateClass(d.rate)}">${d.rate>0?d.rate+'%':'\u2014'}</span></td></tr>`).join('');
+  const lbl = document.getElementById('bd-metric-label-sep');
+  if (lbl) lbl.textContent = METRIC_LABEL[m];
+  document.querySelectorAll('#metric-toggle-sep .tgl').forEach((btn,i) => {
+    btn.classList.remove('on-b','on-g','on-a');
+    const keys=['billing','collections','balance'], cls=['on-b','on-g','on-a'];
+    if (keys[i]===m) btn.classList.add(cls[i]);
+  });
+}
+function setDim9(dim,el) { stateA9.dim=dim; document.querySelectorAll('#dim-toggle-sep .tgl').forEach(b=>b.classList.remove('on')); el.classList.add('on'); renderBreakdownA9(); }
+function setPeriod9(p,el) { stateA9.period=p; document.querySelectorAll('#period-toggle-sep .tgl').forEach(b=>b.classList.remove('on')); el.classList.add('on'); renderBreakdownA9(); }
+function setMetric9(m,el) { stateA9.metric=m; renderBreakdownA9(); }
+
 let center = 'cms';
 let sfx = '-aug';
 let activeCmsSection = 'billing';
@@ -6211,6 +6416,7 @@ function showSub(id, defaultMetric, el) {
       else if (sfx === '-jun') { stateJ.metric = defaultMetric; renderBreakdownJ(); }
       else if (sfx === '-jul') { stateJ7.metric = defaultMetric; renderBreakdown7(); }
       else if (sfx === '-aug') { stateA8.metric = defaultMetric; renderBreakdownA8(); }
+      else if (sfx === '-sep') { stateA9.metric = defaultMetric; renderBreakdownA9(); }
     else { state.metric = defaultMetric; renderBreakdown(); }
   }
   else if (bp) { bp.hidden = true; }
