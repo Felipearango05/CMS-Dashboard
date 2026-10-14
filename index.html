@@ -5891,7 +5891,7 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
         </div>
         <script>
         (function() {
-          const HDC_DAILY = {1:{total:111,mod:{US:[30,0,0,0,1],MG:[29,0,0,0,2],MRI:[3,0,2,0,0],XRAY:[16,0,0,0,1],CT:[12,0,0,0,1],DEXA:[10,0,0,0,1],PET:[3,0,0,0,0]}},2:{total:125,mod:{US:[29,0,0,0,0],MG:[30,0,0,0,0],MRI:[0,2,4,0,1],XRAY:[21,0,0,0,3],CT:[17,0,0,0,4],DEXA:[13,0,0,0,0],PET:[1,0,0,0,0]}},3:{total:26,mod:{US:[15,0,0,0,0],MRI:[6,3,0,0,0],PET:[2,0,0,0,0]}},5:{total:112,mod:{US:[39,0,0,0,0],MG:[24,0,0,0,0],MRI:[6,3,0,0,0],XRAY:[12,0,0,0,3],CT:[8,0,0,0,0],DEXA:[15,0,0,0,0],PET:[2,0,0,0,0]}},6:{total:86,mod:{US:[40,0,0,0,2],MG:[16,0,0,0,1],MRI:[9,3,2,0,0],CT:[9,2,1,0,0],PET:[1,0,0,0,0]}},7:{total:117,mod:{US:[36,1,0,0,0],MG:[23,0,0,0,1],MRI:[12,3,3,0,0],XRAY:[13,1,0,0,0],CT:[13,0,0,0,0],DEXA:[9,0,0,0,0],PET:[2,0,0,0,0]}},8:{total:150,mod:{US:[44,0,0,0,1],MG:[35,0,0,0,3],MRI:[12,5,3,0,1],XRAY:[15,0,0,0,0],CT:[13,1,0,0,1],DEXA:[15,0,0,0,0],PET:[1,0,0,0,0]}},9:{total:130,mod:{US:[40,0,0,0,2],MG:[21,0,0,0,1],MRI:[14,0,0,2,0],XRAY:[22,1,0,0,1],CT:[15,0,0,0,0],DEXA:[9,0,0,0,0],PET:[2,0,0,0,0]}},10:{total:50,mod:{US:[22,1,0,0,0],MG:[13,1,0,0,1],MRI:[7,2,0,0,0],CT:[1,0,0,0,1],PET:[1,0,0,0,0]}},12:{total:125,mod:{US:[34,2,0,0,1],MG:[31,0,0,0,1],MRI:[9,1,0,0,0],XRAY:[22,1,0,0,0],CT:[7,1,0,0,0],DEXA:[14,0,0,0,0],PET:[1,0,0,0,0]}},13:{total:90,mod:{US:[37,0,0,0,1],MG:[24,0,0,0,0],MRI:[6,4,2,0,0],CT:[15,0,0,0,0],PET:[1,0,0,0,0]}}};
+          const HDC_DAILY = {1:{total:111,mod:{US:[30,0,0,0,1],MG:[29,0,0,0,2],MRI:[3,0,2,0,0],XRAY:[16,0,0,0,1],CT:[12,0,0,0,1],DEXA:[10,0,0,0,1],PET:[3,0,0,0,0]}},2:{total:125,mod:{US:[29,0,0,0,0],MG:[30,0,0,0,0],MRI:[0,2,4,0,1],XRAY:[21,0,0,0,3],CT:[17,0,0,0,4],DEXA:[13,0,0,0,0],PET:[1,0,0,0,0]}},3:{total:26,mod:{US:[15,0,0,0,0],MRI:[6,3,0,0,0],PET:[2,0,0,0,0]}},5:{total:112,mod:{US:[39,0,0,0,0],MG:[24,0,0,0,0],MRI:[6,3,0,0,0],XRAY:[12,0,0,0,3],CT:[8,0,0,0,0],DEXA:[15,0,0,0,0],PET:[2,0,0,0,0]}},6:{total:86,mod:{US:[40,0,0,0,2],MG:[16,0,0,0,1],MRI:[9,3,2,0,0],CT:[9,2,1,0,0],PET:[1,0,0,0,0]}},7:{total:127,mod:{US:[39],MG:[24],MRI:[22],XRAY:[26],CT:[14],PET:[2]}},8:{total:162,mod:{US:[48],MG:[41],MRI:[23],XRAY:[32],CT:[17],PET:[1]}},9:{total:144,mod:{US:[46],MG:[26],MRI:[19],XRAY:[35],CT:[16],PET:[2]}},10:{total:52,mod:{US:[24],MG:[15],MRI:[10],CT:[2],PET:[1]}},12:{total:154,mod:{US:[44],MG:[36],MRI:[23],XRAY:[39],CT:[11],PET:[1]}},13:{total:105,mod:{US:[44],MG:[28],MRI:[13],XRAY:[3],CT:[16],PET:[1]}}};
           const grid = document.getElementById('hdc-octcal-grid');
           const panel = document.getElementById('hdc-octday-detail');
           const titulo = document.getElementById('hdc-octday-detail-title');
@@ -5925,17 +5925,26 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
             let filas = '', tot = [0, 0, 0, 0, 0];
             Object.keys(data.mod).forEach(function(m) {
               const v = data.mod[m];
+              // vector de largo 1 = dia que viene del Daily Report, que no
+              // trae el cruce con linea de negocio
+              const sinLob = v.length === 1;
               let t = 0;
-              for (let i = 0; i < 5; i++) { t += v[i]; tot[i] += v[i]; }
+              if (sinLob) { t = v[0]; }
+              else { for (let i = 0; i < 5; i++) { t += v[i]; tot[i] += v[i]; } }
+              const celdas = sinLob
+                ? '<td colspan="5" style="color:var(--t3);font-size:11px">sin desglose en el Daily Report</td>'
+                : '<td>' + dash(v[0]) + '</td><td>' + dash(v[1]) + '</td><td>' + dash(v[2]) + '</td>' +
+                  '<td>' + dash(v[3]) + '</td><td>' + dash(v[4]) + '</td>';
               filas += '<tr><td style="text-align:left">' + m + '</td>' +
-                '<td class="cur" style="font-weight:700">' + t + '</td>' +
-                '<td>' + dash(v[0]) + '</td><td>' + dash(v[1]) + '</td><td>' + dash(v[2]) + '</td>' +
-                '<td>' + dash(v[3]) + '</td><td>' + dash(v[4]) + '</td></tr>';
+                '<td class="cur" style="font-weight:700">' + t + '</td>' + celdas + '</tr>';
             });
+            const hayLob = tot.some(x => x > 0);
             filas += '<tr style="font-weight:700;border-top:2px solid var(--bd)"><td style="text-align:left">TOTAL</td>' +
               '<td class="cur">' + data.total + '</td>' +
-              '<td>' + dash(tot[0]) + '</td><td>' + dash(tot[1]) + '</td><td>' + dash(tot[2]) + '</td>' +
-              '<td>' + dash(tot[3]) + '</td><td>' + dash(tot[4]) + '</td></tr>';
+              (hayLob
+                ? '<td>' + dash(tot[0]) + '</td><td>' + dash(tot[1]) + '</td><td>' + dash(tot[2]) + '</td>' +
+                  '<td>' + dash(tot[3]) + '</td><td>' + dash(tot[4]) + '</td>'
+                : '<td colspan="5"></td>') + '</tr>';
             tbody.innerHTML = filas;
             panel.style.display = 'block';
           }
