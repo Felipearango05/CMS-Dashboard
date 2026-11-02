@@ -286,6 +286,7 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
         <button class="period-btn active" onclick="switchPeriod('aug-2026',this)">Aug 2026</button>
         <button class="period-btn" onclick="switchPeriod('sep-2026',this)">Sep 2026</button>
         <button class="period-btn" onclick="switchPeriod('oct-2026',this)">Oct 2026</button>
+        <button class="period-btn" onclick="switchPeriod('nov-2026',this)">Nov 2026</button>
       </div>
       <div class="period-pill"><span class="dot"></span> <span id="active-period-label">Aug 2026</span></div>
     </div>
@@ -6494,6 +6495,524 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
     </div><!-- /ris-oct -->
 
   </div><!-- /pd-oct-2026 -->
+
+  <div class="period-data" id="pd-nov-2026">
+      <div id="hdc-ris-nov" hidden>
+        <div class="sec-hdr">
+          <div class="sec-eye" style="color:#7c3aed">HDC &middot; Live</div>
+          <div class="sec-title">RIS Actual &mdash; HDC</div>
+          <div class="sec-desc">Procedimientos del mes &mdash; Nov 2026 &middot; Fuente: ABLE RIS (Modality Detail Report) &middot; l&iacute;nea de negocio derivada de la aseguradora.</div>
+        </div>
+        <div class="kpi-grid" style="margin-bottom:20px">
+          <div class="kpi" style="border-top:3px solid #7c3aed"><div class="kpi-lbl">Total Procedimientos</div><div class="kpi-val">0</div><div class="kpi-foot"><span class="badge">Noviembre 2026</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--blue)"><div class="kpi-lbl">Primary Insurance</div><div class="kpi-val">0</div><div class="kpi-foot"><span class="badge">0% del total</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--amber)"><div class="kpi-lbl">PIP &middot; LOP</div><div class="kpi-val">0</div><div class="kpi-foot"><span class="badge">PIP 0 &middot; LOP 0</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--t3)"><div class="kpi-lbl">Self Pay &middot; Workers Comp</div><div class="kpi-val">0</div><div class="kpi-foot"><span class="badge">Self 0 &middot; WC 0</span></div></div>
+        </div>
+        <div class="div-row"><span class="div-lbl">Procedimientos por Modalidad y L&iacute;nea de Negocio &mdash; Noviembre 2026</span><div class="div-rule"></div></div>
+        <div class="table-wrap">
+          <table class="data-tbl">
+            <thead><tr>
+              <th style="text-align:left">Modalidad</th>
+              <th class="cur">Total</th>
+              <th>Primary Insurance</th>
+              <th>PIP</th>
+              <th>LOP</th>
+              <th>Workers Comp</th>
+              <th>Self Pay</th>
+            </tr></thead>
+            <tbody>
+                                                                                                                                                                                                                  <tr><td colspan="7" style="text-align:left;color:var(--t3)">Sin datos todav&iacute;a</td></tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <!-- HDC-CALENDAR-nov-START -->
+        <div class="div-row" style="margin-top:20px"><span class="div-lbl">Procedimientos por D&iacute;a &mdash; Nov 2026</span><div class="div-rule"></div><span style="font-size:11px;color:var(--t3)">Espicha un d&iacute;a para ver el detalle</span></div>
+        <div class="table-wrap" style="padding:20px 24px">
+          <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:6px;text-align:center">
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Lun</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Mar</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Mié</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Jue</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Vie</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Sáb</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Dom</div>
+          </div>
+          <div id="hdc-novcal-grid" style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;text-align:center"></div>
+          <div id="hdc-novday-detail" style="display:none;margin-top:16px;padding:16px 20px;background:var(--bg);border-radius:var(--r);border:1px solid var(--bd)">
+            <div id="hdc-novday-detail-title" style="font-weight:700;font-size:13px;margin-bottom:10px"></div>
+            <table class="data-tbl">
+              <thead><tr>
+                <th style="text-align:left">Modalidad</th><th class="cur">Total</th>
+                <th>Primary Insurance</th><th>PIP</th><th>LOP</th><th>Workers Comp</th><th>Self Pay</th>
+              </tr></thead>
+              <tbody id="hdc-novday-detail-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+        <script>
+        (function() {
+          const HDC_DAILY = {};
+          const grid = document.getElementById('hdc-novcal-grid');
+          const panel = document.getElementById('hdc-novday-detail');
+          const titulo = document.getElementById('hdc-novday-detail-title');
+          const tbody = document.getElementById('hdc-novday-detail-tbody');
+          let activeDay = null;
+          for (let i = 0; i < 3; i++) grid.appendChild(document.createElement('div'));
+          for (let d = 1; d <= 31; d++) {
+            const data = HDC_DAILY[d] && HDC_DAILY[d].total > 0 ? HDC_DAILY[d] : null;
+            const cell = document.createElement('div');
+            cell.style.cssText = ['border-radius:8px','padding:6px 2px','min-height:54px','display:flex',
+              'flex-direction:column','align-items:center','justify-content:center','gap:3px',
+              'transition:transform .1s, box-shadow .1s',
+              data ? 'cursor:pointer;background:#7c3aed;color:#fff' : 'cursor:default;background:var(--bg2);color:var(--t4)'
+            ].join(';');
+            cell.innerHTML = '<span style="font-size:12px;font-weight:700">' + d + '</span>' +
+              (data ? '<span style="font-size:11px;opacity:.85;font-variant-numeric:tabular-nums">' + data.total + '</span>' : '');
+            if (data) {
+              cell.addEventListener('click', (function(dd) { return function() { mostrar(dd); }; })(d));
+              cell.addEventListener('mouseover', function() { if (activeDay !== d) { this.style.transform = 'scale(1.07)'; this.style.boxShadow = '0 4px 12px rgba(124,58,237,.35)'; } });
+              cell.addEventListener('mouseout', function() { this.style.transform = ''; this.style.boxShadow = ''; });
+            }
+            cell.id = 'hdc-novcal-grid-' + d;
+            grid.appendChild(cell);
+          }
+          function dash(v) { return v ? v : '&mdash;'; }
+          function mostrar(d) {
+            if (activeDay === d) { panel.style.display = 'none'; activeDay = null; pintar(); return; }
+            activeDay = d; pintar();
+            const data = HDC_DAILY[d];
+            titulo.innerHTML = 'Nov ' + (d < 10 ? '0' + d : d) + ' &mdash; ' + data.total + ' procedimientos';
+            let filas = '', tot = [0, 0, 0, 0, 0];
+            Object.keys(data.mod).forEach(function(m) {
+              const v = data.mod[m];
+              // vector de largo 1 = dia que viene del Daily Report, que no
+              // trae el cruce con linea de negocio
+              const sinLob = v.length === 1;
+              let t = 0;
+              if (sinLob) { t = v[0]; }
+              else { for (let i = 0; i < 5; i++) { t += v[i]; tot[i] += v[i]; } }
+              const celdas = sinLob
+                ? '<td colspan="5" style="color:var(--t3);font-size:11px">sin desglose en el Daily Report</td>'
+                : '<td>' + dash(v[0]) + '</td><td>' + dash(v[1]) + '</td><td>' + dash(v[2]) + '</td>' +
+                  '<td>' + dash(v[3]) + '</td><td>' + dash(v[4]) + '</td>';
+              filas += '<tr><td style="text-align:left">' + m + '</td>' +
+                '<td class="cur" style="font-weight:700">' + t + '</td>' + celdas + '</tr>';
+            });
+            const hayLob = tot.some(x => x > 0);
+            filas += '<tr style="font-weight:700;border-top:2px solid var(--bd)"><td style="text-align:left">TOTAL</td>' +
+              '<td class="cur">' + data.total + '</td>' +
+              (hayLob
+                ? '<td>' + dash(tot[0]) + '</td><td>' + dash(tot[1]) + '</td><td>' + dash(tot[2]) + '</td>' +
+                  '<td>' + dash(tot[3]) + '</td><td>' + dash(tot[4]) + '</td>'
+                : '<td colspan="5"></td>') + '</tr>';
+            tbody.innerHTML = filas;
+            panel.style.display = 'block';
+          }
+          function pintar() {
+            for (let d = 1; d <= 31; d++) {
+              const c = document.getElementById('hdc-novcal-grid-' + d);
+              if (!c) continue;
+              const data = HDC_DAILY[d] && HDC_DAILY[d].total > 0;
+              c.style.outline = (activeDay === d) ? '2px solid #7c3aed' : '';
+              c.style.outlineOffset = (activeDay === d) ? '2px' : '';
+              if (data && activeDay !== d) c.style.background = '#7c3aed';
+            }
+          }
+        })();
+        </script>
+        <!-- HDC-CALENDAR-nov-END -->
+
+        <div style="margin-top:12px;font-size:11px;color:var(--t3)">US = todas las salas &middot; MRI = Open + Closed &middot; MG = MG + MG 2 &middot; XRAY = DX &middot; PET = PT CT. Fuente: ABLE RIS PACS.</div>
+      </div>
+
+      <div id="hdc-pagos-nov" hidden>
+        <div class="sec-hdr">
+          <div class="sec-eye" style="color:#7c3aed">HDC</div>
+          <div class="sec-title">Pagos Esperados</div>
+          <div class="sec-desc">Estimado de pago por modalidad y l&iacute;nea de negocio &mdash; Noviembre 2026 &middot; Volumen &times; Promedio Actual Payment.</div>
+        </div>
+        <div class="empty-state" style="margin-top:40px"><div class="empty-icon">&#128203;</div><div class="empty-title">Pagos Esperados Nov 2026 &mdash; Pendiente</div></div>
+      </div><!-- /hdc-pagos-nov -->
+
+      <div id="hdc-cap-nov" hidden>
+        <div class="sec-hdr">
+          <div class="sec-eye" style="color:#7c3aed">HDC &middot; Live</div>
+          <div class="sec-title">Capacidad &mdash; HDC</div>
+          <div class="sec-desc">Horas de sala, cobertura de t&eacute;cnico y ocupaci&oacute;n &mdash; Noviembre 2026 &middot; Fuente: ABLE RIS (Daily Report).</div>
+        </div>
+        <div class="kpi-grid" style="margin-bottom:20px">
+          <div class="kpi" style="border-top:3px solid #7c3aed"><div class="kpi-lbl">Horas Muertas</div><div class="kpi-val">&mdash;</div><div class="kpi-foot"><span class="badge">sin d&iacute;as capturados</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--blue)"><div class="kpi-lbl">Utilizaci&oacute;n</div><div class="kpi-val">&mdash;</div><div class="kpi-foot"><span class="badge">&mdash;</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--amber)"><div class="kpi-lbl">Sin T&eacute;cnico &middot; 14 d&iacute;as</div><div class="kpi-val">&mdash;</div><div class="kpi-foot"><span class="badge">turnos abiertos por cubrir</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--amber)"><div class="kpi-lbl">No-Show del Mes</div><div class="kpi-val">&mdash;</div><div class="kpi-foot"><span class="badge">&mdash;</span></div></div>
+        </div>
+
+        <div class="div-row"><span class="div-lbl">Acumulado del Mes por Sala</span><div class="div-rule"></div></div>
+        <div class="table-wrap">
+          <table class="data-tbl">
+            <thead><tr>
+              <th style="text-align:left">Sala</th><th class="cur">Estudios</th>
+              <th>Abierta</th><th>Con T&eacute;cnico</th><th>Reservada</th>
+              <th>Muerta</th><th>Utilizaci&oacute;n</th>
+            </tr></thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="font-size:12px;color:var(--t3);margin-bottom:20px">Diagn&oacute;stico de salas vac&iacute;as y turnos sin cubrir de noviembre: pendiente.</div>
+
+        <div class="div-row"><span class="div-lbl">Detalle Diario</span><div class="div-rule"></div></div>
+        <div id="hdc-capcal-nov" class="cal-grid" style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:12px"></div>
+        <div id="hdc-capday-nov" style="display:none;border:1px solid var(--bd);border-radius:8px;padding:14px">
+          <div id="hdc-capday-nov-title" style="font-weight:700;margin-bottom:10px"></div>
+          <div class="table-wrap">
+            <table class="data-tbl">
+              <thead><tr><th style="text-align:left">Sala</th><th class="cur">Estudios</th><th>Abierta</th><th>Con T&eacute;cnico</th><th>Reservada</th><th>Muerta</th></tr></thead>
+              <tbody id="hdc-capday-nov-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+        <div style="font-size:11px;color:var(--t3);margin-top:14px">
+          El Daily Report del RIS solo conserva los &uacute;ltimos d&iacute;as; el acumulado arranca el primer d&iacute;a capturado.
+        </div>
+
+        <script>
+        (function() {
+          const CAP = {};
+          const grid = document.getElementById('hdc-capcal-nov');
+          const panel = document.getElementById('hdc-capday-nov');
+          const titulo = document.getElementById('hdc-capday-nov-title');
+          const tbody = document.getElementById('hdc-capday-nov-tbody');
+          const hs = v => !v ? '&mdash;' : (Number.isInteger(v) ? v + ' h' : v.toFixed(1) + ' h');
+          const dias = Object.keys(CAP).map(Number).sort((a, b) => a - b);
+          ['Lun','Mar','Mi\u00e9','Jue','Vie','S\u00e1b','Dom'].forEach(n => {
+            const e = document.createElement('div');
+            e.style.cssText = 'font-size:10px;color:var(--t3);text-align:center;font-weight:600';
+            e.textContent = n; grid.appendChild(e);
+          });
+          const primero = new Date(2026, 11 - 1, 1).getDay();
+          for (let i = 0; i < (primero === 0 ? 6 : primero - 1); i++) grid.appendChild(document.createElement('div'));
+          for (let d = 1; d <= new Date(2026, 11, 0).getDate(); d++) {
+            const c = document.createElement('div');
+            const v = CAP[d];
+            c.style.cssText = 'border:1px solid var(--bd);border-radius:6px;padding:6px 4px;text-align:center;min-height:52px' +
+              (v ? ';cursor:pointer' : ';opacity:.35');
+            c.innerHTML = '<div style="font-size:10px;color:var(--t3)">' + d + '</div>' +
+              (v ? '<div style="font-weight:700;font-size:13px">' + v.estudios + '</div>' +
+                   '<div style="font-size:9px;color:var(--t3)">' + hs(v.muerta) + ' muertas</div>' : '');
+            if (v) c.onclick = () => mostrar(d);
+            grid.appendChild(c);
+          }
+          function mostrar(d) {
+            const v = CAP[d];
+            titulo.innerHTML = 'Noviembre ' + d + ' &mdash; ' + v.estudios + ' estudios &middot; ' +
+              hs(v.reservada) + ' reservadas de ' + hs(v.tecnico) + ' con t\u00e9cnico';
+            tbody.innerHTML = Object.entries(v.salas).map(([s, a]) =>
+              '<tr><td style="text-align:left">' + s + '</td>' +
+              '<td class="cur" style="font-weight:700">' + a[4] + '</td>' +
+              '<td>' + hs(a[0]) + '</td><td>' + hs(a[1]) + '</td>' +
+              '<td>' + hs(a[2]) + '</td><td>' + hs(a[3]) + '</td></tr>').join('');
+            panel.style.display = 'block';
+          }
+          if (dias.length) mostrar(dias[dias.length - 1]);
+        })();
+        </script>
+      </div><!-- /hdc-cap-nov -->
+<!-- /hdc-pagos-nov -->
+
+    <!-- BILLING SEP -->
+    <div id="billing-nov">
+      <div class="sec-hdr">
+        <div class="sec-eye">Section 1</div>
+        <div class="sec-title">Billing</div>
+        <div class="sec-desc">Charges, collections, and balance &mdash; Nov 2026.</div>
+      </div>
+      <div class="sub-nav">
+        <div class="sub-tab active" onclick="showSub('sb-billing','',this)">Billing</div>
+        <div class="sub-tab" onclick="showSub('sb-collections','',this)">Collections</div>
+        <div class="sub-tab" onclick="showSub('sb-balance','',this)">Balance</div>
+        <div class="sub-tab" onclick="showSub('sb-denials','',this)">Denials</div>
+      </div>
+      <div id="sb-billing-nov">
+        <div class="empty-state" style="margin-top:40px">
+          <div class="empty-icon">&#128203;</div>
+          <div class="empty-title">Billing Nov 2026 &mdash; Pendiente</div>
+          <div class="empty-sub">Mes en curso. Datos al cierre de mes.</div>
+        </div>
+      </div>
+      <div id="sb-collections-nov" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Collections Nov 2026 &mdash; Pendiente</div></div></div>
+      <div id="sb-balance-nov" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Balance Nov 2026 &mdash; Pendiente</div></div></div>
+      <div id="sb-denials-nov" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Denials Nov 2026 &mdash; Pendiente</div></div></div>
+    </div><!-- /billing-nov -->
+
+    <!-- OPERATIVOS SEP -->
+    <div id="operativos-nov" hidden>
+      <div class="sec-hdr">
+        <div class="sec-eye">Section 2</div>
+        <div class="sec-title">Resultados Operativos</div>
+        <div class="sec-desc">Procedimientos, referidos, revenue, KPIs &mdash; Nov 2026.</div>
+      </div>
+      <div class="sub-nav">
+        <div class="sub-tab op-tab active" onclick="showOpSub('op-procs',this)">Procedures x Modality</div>
+        <div class="sub-tab op-tab" onclick="showOpSub('op-referrals',this)">Top Referrals</div>
+        <div class="sub-tab op-tab" onclick="showOpSub('op-rev',this)">Rev y Contribuci&oacute;n</div>
+        <div class="sub-tab op-tab" onclick="showOpSub('op-kpis',this)">KPIs</div>
+        <div class="sub-tab op-tab" onclick="showOpSub('op-comerciales',this)">Comerciales y Top 200</div>
+      </div>
+      <div id="op-procs-nov"><div class="empty-state" style="margin-top:40px"><div class="empty-icon">&#128203;</div><div class="empty-title">Procedimientos Nov 2026 &mdash; Pendiente</div><div class="empty-sub">Mes en curso.</div></div></div>
+      <div id="op-referrals-nov" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Top Referrals Nov &mdash; Pendiente</div></div></div>
+      <div id="op-rev-nov" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Revenue Nov &mdash; Pendiente</div></div></div>
+      <div id="op-kpis-nov" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">KPIs Nov &mdash; Pendiente</div></div></div>
+      <div id="op-comerciales-nov" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">Comerciales Nov &mdash; Pendiente</div></div></div>
+    </div><!-- /operativos-nov -->
+
+    <!-- ADMIN SEP -->
+    <div id="admin-nov" hidden>
+      <div class="sec-hdr">
+        <div class="sec-eye">Section 3</div>
+        <div class="sec-title">Admin</div>
+        <div class="sec-desc">P&amp;L y n&oacute;mina &mdash; Nov 2026.</div>
+      </div>
+      <div class="sub-nav">
+        <div class="sub-tab adm-tab active" onclick="showAdmSub('adm-pl',this)">P&amp;L</div>
+        <div class="sub-tab adm-tab" onclick="showAdmSub('adm-nomina',this)">N&oacute;mina</div>
+      </div>
+      <div id="adm-pl-nov"><div class="empty-state" style="margin-top:40px"><div class="empty-icon">&#128203;</div><div class="empty-title">P&amp;L Nov 2026 &mdash; Pendiente</div></div></div>
+      <div id="adm-nomina-nov" hidden><div class="empty-state" style="margin-top:40px"><div class="empty-title">N&oacute;mina Nov &mdash; Pendiente</div></div></div>
+    </div><!-- /admin-nov -->
+
+    <!-- COMPLIANCE SEP -->
+    <div id="compliance-nov" hidden>
+      <div class="sec-hdr">
+        <div class="sec-eye">Section 4</div>
+        <div class="sec-title">Compliance</div>
+        <div class="sec-desc">Licencias y permisos &mdash; Nov 2026.</div>
+      </div>
+      <div class="div-row"><span class="div-lbl">Compliance &amp; Licencias &mdash; Estado al 3 de septiembre 2026</span><div class="div-rule"></div></div>
+      <div class="kpi-grid kpi-grid-4" style="margin-bottom:20px">
+        <div class="kpi" style="border-top:3px solid #e53935">
+          <div class="kpi-lbl">Vencidas</div>
+          <div class="kpi-val" style="color:#e53935">0</div>
+          <div class="kpi-foot"><span class="badge" style="background:rgba(229,57,53,.12);color:#e53935">Ninguna</span></div>
+        </div>
+        <div class="kpi" style="border-top:3px solid #e53935">
+          <div class="kpi-lbl">Cr&iacute;ticas <span style="font-weight:400;font-size:11px">&lt;30d</span></div>
+          <div class="kpi-val" style="color:#e53935">2</div>
+          <div class="kpi-foot"><span class="badge" style="background:rgba(229,57,53,.12);color:#e53935">Renovar urgente</span></div>
+        </div>
+        <div class="kpi" style="border-top:3px solid var(--amber)">
+          <div class="kpi-lbl">Advertencia <span style="font-weight:400;font-size:11px">&lt;90d</span></div>
+          <div class="kpi-val" style="color:var(--amber)">3</div>
+          <div class="kpi-foot"><span class="badge" style="background:rgba(204,119,0,.12);color:var(--amber)">Renovar pronto</span></div>
+        </div>
+        <div class="kpi" style="border-top:3px solid var(--pos)">
+          <div class="kpi-lbl">Activas</div>
+          <div class="kpi-val" style="color:var(--pos)">17</div>
+          <div class="kpi-foot"><span class="badge dp">23 licencias total</span></div>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table style="font-variant-numeric:tabular-nums;width:100%">
+          <thead>
+            <tr>
+              <th style="text-align:left;min-width:200px">Licencia / Agencia</th>
+              <th style="text-align:left;min-width:120px">ID / N&uacute;mero</th>
+              <th style="text-align:center;min-width:100px">Vencimiento</th>
+              <th style="text-align:center;min-width:80px">D&iacute;as</th>
+              <th style="text-align:center;min-width:90px">Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:rgba(27,58,92,.06)"><td colspan="5" style="text-align:left;font-weight:700;font-size:11px;letter-spacing:.06em;color:var(--t3);padding:7px 12px;text-transform:uppercase">Acreditaci&oacute;n</td></tr>
+            <tr class="ra" ><td style="text-align:left">AHCA <span title="El tracker sigue marcando esta fecha con la nota interna 'Renewed - update date' — la fecha ya figura como 2027 pero nunca se confirmo formalmente" style="color:var(--amber);cursor:help">&dagger;</span></td><td style="text-align:left;color:var(--t3);font-size:12px">#5026 / CERT #49615</td><td style="text-align:center">May 11, 2027</td><td style="text-align:center">250</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr class="ra"><td style="text-align:left">ACR</td><td style="text-align:left;color:var(--t3);font-size:12px">&mdash;</td><td style="text-align:center;color:var(--t3)">N/A</td><td style="text-align:center;color:var(--t3)">N/A</td><td style="text-align:center"><span class="badge" style="font-size:11px;background:rgba(0,0,0,.06);color:var(--t3)">N/A</span></td></tr>
+            <tr class="ra" ><td style="text-align:left">CMS &ndash; CLIA Waiver</td><td style="text-align:left;color:var(--t3);font-size:12px">#10D2061864</td><td style="text-align:center">Jul 7, 2027</td><td style="text-align:center">307</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr class="ra" ><td style="text-align:left">State of FL &ndash; DBPR</td><td style="text-align:left;color:var(--t3);font-size:12px">#603511</td><td style="text-align:center">Apr 30, 2028</td><td style="text-align:center">605</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr class="ra" ><td style="text-align:left">U.S. FDA Mammography Facility</td><td style="text-align:left;color:var(--t3);font-size:12px">Facility ID #238054</td><td style="text-align:center">Jul 24, 2029</td><td style="text-align:center">1,055</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr style="background:rgba(27,58,92,.06)"><td colspan="5" style="text-align:left;font-weight:700;font-size:11px;letter-spacing:.06em;color:var(--t3);padding:7px 12px;text-transform:uppercase">Im&aacute;genes</td></tr>
+            <tr class="ra" ><td style="text-align:left">Mammography &ndash; Room 1 <span title="Renovada hasta 2029, igual que Room 2. Se mantiene consistente desde julio — probable renovacion real, aun sin confirmacion formal" style="color:var(--amber);cursor:help">&dagger;</span></td><td style="text-align:left;color:var(--t3);font-size:12px">MAP #16744-03 DBT #06</td><td style="text-align:center">Jul 24, 2029</td><td style="text-align:center">1,055</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr class="ra" style="background:rgba(204,119,0,.05)"><td style="text-align:left;font-weight:600">DOH &ndash; Radiation Machine Reg.</td><td style="text-align:left;color:var(--t3);font-size:12px">Lic #JR 39745000</td><td style="text-align:center;font-weight:600;color:var(--amber)">Oct 28, 2026</td><td style="text-align:center;font-weight:700;color:var(--amber)">55</td><td style="text-align:center"><span style="font-size:11px;background:rgba(204,119,0,.15);color:var(--amber);font-weight:700">AVISO</span></td></tr>
+            <tr class="ra" style="background:rgba(204,119,0,.05)"><td style="text-align:left;font-weight:600">DOH &ndash; Mammography Radiation Reg.</td><td style="text-align:left;color:var(--t3);font-size:12px">Lic #JR 42938000</td><td style="text-align:center;font-weight:600;color:var(--amber)">Oct 28, 2026</td><td style="text-align:center;font-weight:700;color:var(--amber)">55</td><td style="text-align:center"><span style="font-size:11px;background:rgba(204,119,0,.15);color:var(--amber);font-weight:700">AVISO</span></td></tr>
+            <tr class="ra" ><td style="text-align:left">PET &ndash; Cardiac, Oncology</td><td style="text-align:left;color:var(--t3);font-size:12px">PETAP #50253-02</td><td style="text-align:center">Dec 17, 2026</td><td style="text-align:center">105</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr class="ra" ><td style="text-align:left">CT</td><td style="text-align:left;color:var(--t3);font-size:12px">CTAP #01532-02</td><td style="text-align:center">Oct 24, 2027</td><td style="text-align:center">386</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr class="ra" ><td style="text-align:left">NM &ndash; Nuclear, Planar</td><td style="text-align:left;color:var(--t3);font-size:12px">NMAP #50639-03</td><td style="text-align:center">Mar 22, 2028</td><td style="text-align:center">566</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr class="ra" ><td style="text-align:left">Ultrasound</td><td style="text-align:left;color:var(--t3);font-size:12px">UAP #03450</td><td style="text-align:center">Apr 4, 2028</td><td style="text-align:center">579</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr class="ra" ><td style="text-align:left">MRI &ndash; 3 Tesla</td><td style="text-align:left;color:var(--t3);font-size:12px">MRAP #04023-02</td><td style="text-align:center">Aug 2, 2028</td><td style="text-align:center">699</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr class="ra" ><td style="text-align:left">MRI &ndash; Open</td><td style="text-align:left;color:var(--t3);font-size:12px">MRAP #04023-03</td><td style="text-align:center">Aug 2, 2028</td><td style="text-align:center">699</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr class="ra" ><td style="text-align:left">Mammography &ndash; Room 2</td><td style="text-align:left;color:var(--t3);font-size:12px">MAP #16744-03 DBT #04</td><td style="text-align:center">Jul 24, 2029</td><td style="text-align:center">1,055</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr style="background:rgba(27,58,92,.06)"><td colspan="5" style="text-align:left;font-weight:700;font-size:11px;letter-spacing:.06em;color:var(--t3);padding:7px 12px;text-transform:uppercase">Permisos &amp; Impuestos</td></tr>
+            <tr class="ra" style="background:rgba(229,57,53,.06)"><td style="text-align:left;font-weight:600">Local Business Tax</td><td style="text-align:left;color:var(--t3);font-size:12px">#3354446</td><td style="text-align:center;font-weight:700;color:#e53935">Oct 30, 2026</td><td style="text-align:center;font-weight:700;color:#e53935">27</td><td style="text-align:center"><span style="font-size:11px;background:rgba(229,57,53,.15);color:#e53935;font-weight:700">CR&Iacute;TICO</span></td></tr>
+            <tr class="ra" style="background:rgba(229,57,53,.06)"><td style="text-align:left;font-weight:600">State of Florida Biomedical Waste</td><td style="text-align:left;color:var(--t3);font-size:12px">Permit #13-64-3000329</td><td style="text-align:center;font-weight:700;color:#e53935">Oct 30, 2026</td><td style="text-align:center;font-weight:700;color:#e53935">27</td><td style="text-align:center"><span style="font-size:11px;background:rgba(229,57,53,.15);color:#e53935;font-weight:700">CR&Iacute;TICO</span></td></tr>
+            <tr class="ra" style="background:rgba(204,119,0,.05)"><td style="text-align:left;font-weight:600">Miami-Dade Fire Operating Permit</td><td style="text-align:left;color:var(--t3);font-size:12px">Permit #16126-00280</td><td style="text-align:center;font-weight:600;color:var(--amber)">Nov 30, 2026</td><td style="text-align:center;font-weight:700;color:var(--amber)">88</td><td style="text-align:center"><span style="font-size:11px;background:rgba(204,119,0,.15);color:var(--amber);font-weight:700">AVISO</span></td></tr>
+            <tr style="background:rgba(27,58,92,.06)"><td colspan="5" style="text-align:left;font-weight:700;font-size:11px;letter-spacing:.06em;color:var(--t3);padding:7px 12px;text-transform:uppercase">Seguros</td></tr>
+            <tr class="ra" ><td style="text-align:left">Workers&#39; Compensation</td><td style="text-align:left;color:var(--t3);font-size:12px">UB3K7655032542G</td><td style="text-align:center">Mar 2, 2027</td><td style="text-align:center">180</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr class="ra" ><td style="text-align:left">General Liability &amp; Building</td><td style="text-align:left;color:var(--t3);font-size:12px">Policy #CCP 1122751</td><td style="text-align:center">Apr 1, 2027</td><td style="text-align:center">210</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr class="ra" ><td style="text-align:left">Professional Liability</td><td style="text-align:left;color:var(--t3);font-size:12px">Policy #LHM856524</td><td style="text-align:center">Apr 1, 2027</td><td style="text-align:center">210</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr style="background:rgba(27,58,92,.06)"><td colspan="5" style="text-align:left;font-weight:700;font-size:11px;letter-spacing:.06em;color:var(--t3);padding:7px 12px;text-transform:uppercase">Otros</td></tr>
+            <tr class="ra" ><td style="text-align:left">OSHA</td><td style="text-align:left;color:var(--t3);font-size:12px">&mdash;</td><td style="text-align:center">Dec 12, 2026</td><td style="text-align:center">100</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+            <tr class="ra" ><td style="text-align:left">Radioactive Materials License (RAM)</td><td style="text-align:left;color:var(--t3);font-size:12px">License #4098-1</td><td style="text-align:center">Mar 31, 2028</td><td style="text-align:center">575</td><td style="text-align:center"><span class="badge dp" style="font-size:11px">ACTIVA</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-top:14px;font-size:11px;color:var(--t3);text-align:right">
+        Fuente: Google Sheet &mdash; Compliance License Tracker &nbsp;&middot;&nbsp; D&iacute;as calculados al 3 de septiembre de 2026
+      </div>
+    </div><!-- /compliance-nov -->
+
+    <!-- RIS SEP 2026 — LIVE -->
+    <div id="ris-nov" hidden>
+      <div class="sec-hdr">
+        <div class="sec-eye">Live</div>
+        <div class="sec-title">RIS Actual</div>
+        <div class="sec-desc">Procedimientos del mes corrido &mdash; Fuente: Abbadox RIS, actualizado autom&aacute;ticamente.</div>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="kpi" style="border-top:3px solid var(--blue)">
+          <div class="kpi-lbl">Per&iacute;odo</div>
+          <div class="kpi-val" style="font-size:18px">&mdash;</div>
+          <div class="kpi-foot"><span class="badge">Mes corrido 2026</span></div>
+        </div>
+        <div class="kpi" style="border-top:3px solid var(--green)">
+          <div class="kpi-lbl">D&iacute;as H&aacute;biles</div>
+          <div class="kpi-val">0</div>
+          <div class="kpi-foot"><span class="badge">&mdash;</span></div>
+        </div>
+        <div class="kpi" style="border-top:3px solid var(--blue)">
+          <div class="kpi-lbl">Total Procedimientos</div>
+          <div class="kpi-val">0</div>
+          <div class="kpi-foot"><span class="badge">Complete + TechComplete &middot; sin courtesy</span></div>
+        </div>
+        <div class="kpi" style="border-top:3px solid var(--amber)">
+          <div class="kpi-lbl">Promedio Diario</div>
+          <div class="kpi-val">0</div>
+          <div class="kpi-foot"><span class="badge">Procs / d&iacute;a h&aacute;bil</span></div>
+        </div>
+      </div>
+
+      <div class="div-row"><span class="div-lbl">Procedimientos por Modalidad</span><div class="div-rule"></div><span style="font-size:11px;color:var(--t3)">Solo Complete &middot; TechComplete &middot; sin courtesy</span></div>
+      <div class="table-wrap" style="padding:20px 24px">
+        <div class="ris-mod-bars">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </div>
+        <div style="margin-top:16px;padding-top:12px;border-top:2px solid var(--bd);display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:13px;font-weight:700;color:var(--t1)">TOTAL MES</span>
+          <span style="font-size:15px;font-weight:700;color:var(--t1);font-variant-numeric:tabular-nums">0</span>
+        </div>
+      </div>
+
+      <div class="div-row" style="margin-top:20px"><span class="div-lbl">Procedimientos por D&iacute;a &mdash; November 2026</span><div class="div-rule"></div><span style="font-size:11px;color:var(--t3)">Espicha un d&iacute;a para ver el detalle</span></div>
+      <div class="table-wrap" style="padding:20px 24px">
+        <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:6px;text-align:center">
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Lun</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Mar</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Mi&eacute;</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Jue</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Vie</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">S&aacute;b</div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);padding:4px">Dom</div>
+        </div>
+        <div id="ris-11cal-grid" style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;text-align:center"></div>
+        <div id="ris-11day-detail" style="display:none;margin-top:16px;padding:16px 20px;background:var(--bg);border-radius:var(--r);border:1px solid var(--bd)">
+          <div id="ris-11detail-title" style="font-size:14px;font-weight:700;color:var(--t1);margin-bottom:14px"></div>
+          <div id="ris-11detail-bars"></div>
+        </div>
+        <div style="margin-top:16px;padding-top:12px;border-top:2px solid var(--bd);display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:13px;font-weight:700;color:var(--t1)">TOTAL MES</span>
+          <span style="font-size:15px;font-weight:700;color:var(--t1);font-variant-numeric:tabular-nums">0</span>
+        </div>
+      </div>
+
+      <script>
+      (function() {
+        const RIS_DAILY = {};
+        const grid = document.getElementById('ris-11cal-grid');
+        let activeDay = null;
+        for (let i=0;i<6;i++) grid.appendChild(document.createElement('div'));
+        for (let d=1;d<=30;d++) {
+          const data = RIS_DAILY[d] && RIS_DAILY[d].total>0 ? RIS_DAILY[d] : null;
+          const cell = document.createElement('div');
+          const isToday = d===0;
+          cell.style.cssText = ['border-radius:8px','padding:6px 2px','min-height:54px','display:flex',
+            'flex-direction:column','align-items:center','justify-content:center','gap:3px',
+            'transition:transform .1s, box-shadow .1s',
+            data?'cursor:pointer;background:var(--blue);color:#fff':'cursor:default;background:var(--bg2);color:var(--t4)',
+            isToday?'outline:2px solid var(--amber);outline-offset:2px':''
+          ].join(';');
+          cell.innerHTML='<span style="font-size:12px;font-weight:700">'+d+'</span>'+(data?'<span style="font-size:11px;opacity:.85;font-variant-numeric:tabular-nums">'+data.total+'</span>':'');
+          if(data){
+            cell.addEventListener('click',(function(dd){return function(){toggle11Day(dd);};})(d));
+            cell.addEventListener('mouseover',function(){if(activeDay!==d){this.style.transform='scale(1.07)';this.style.boxShadow='0 4px 12px rgba(40,153,170,.35)';}});
+            cell.addEventListener('mouseout',function(){this.style.transform='';this.style.boxShadow='';});
+          }
+          cell.id='ris-11day-'+d;
+          grid.appendChild(cell);
+        }
+        for(let i=0;i<6;i++) grid.appendChild(document.createElement('div'));
+        function toggle11Day(d){
+          const data=RIS_DAILY[d];if(!data||data.total===0)return;
+          const detail=document.getElementById('ris-11day-detail');
+          if(activeDay!==null){const prev=document.getElementById('ris-11day-'+activeDay);if(prev)prev.style.background='var(--blue)';}
+          if(activeDay===d){detail.style.display='none';activeDay=null;return;}
+          activeDay=d;
+          const cell=document.getElementById('ris-11day-'+d);if(cell)cell.style.background='var(--pos)';
+          document.getElementById('ris-11detail-title').innerHTML='Nov '+String(d).padStart(2,'0')+' &mdash; <span style="color:var(--blue)">'+data.total+' procedimientos</span>';
+          const maxVal=Math.max(...Object.values(data.m));
+          document.getElementById('ris-11detail-bars').innerHTML=Object.entries(data.m).map(function(e){
+            const mod=e[0],cnt=e[1];
+            return '<div style="display:grid;grid-template-columns:56px 1fr 64px;align-items:center;gap:10px;margin-bottom:9px">'
+              +'<span style="font-size:12px;color:var(--t2);font-weight:600">'+mod+'</span>'
+              +'<div style="height:9px;background:var(--bg2);border-radius:5px;overflow:hidden"><div style="height:100%;width:'+(cnt/maxVal*100).toFixed(1)+'%;background:var(--blue);border-radius:5px"></div></div>'
+              +'<span style="font-size:12px;color:var(--t1);font-variant-numeric:tabular-nums;text-align:right">'+cnt+' <span style="color:var(--t3)">'+(cnt/data.total*100).toFixed(0)+'%</span></span></div>';
+          }).join('');
+          detail.style.display='block';detail.scrollIntoView({behavior:'smooth',block:'nearest'});
+        }
+      })();
+      </script>
+
+      <div style="margin-top:14px;font-size:11px;color:var(--t3);text-align:right">
+        Fuente: Abbadox RIS &nbsp;&middot;&nbsp; Actualizado autom&aacute;ticamente cada ma&ntilde;ana
+      </div>
+    </div><!-- /ris-nov -->
+
+  </div><!-- /pd-nov-2026 -->
 
     </div><!-- /content -->
 </div><!-- /main -->
