@@ -6586,7 +6586,7 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
         </div>
         <script>
         (function() {
-          const HDC_DAILY = {2:{total:125,mod:{US:[38,0,0,0,0],MG:[28,0,0,0,1],MRI:[15,0,2,2,0],XRAY:[6,2,0,0,0],CT:[12,0,4,0,0],DEXA:[11,1,0,0,0],PET:[3,0,0,0,0]}}};
+          const HDC_DAILY = {2:{total:133,mod:{US:[42],MG:[30],MRI:[21],XRAY:[8],CT:[17],DEXA:[12],PET:[3]}}};
           const grid = document.getElementById('hdc-novcal-grid');
           const panel = document.getElementById('hdc-novday-detail');
           const titulo = document.getElementById('hdc-novday-detail-title');
@@ -6676,10 +6676,10 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
           <div class="sec-desc">Horas de sala, cobertura de t&eacute;cnico y ocupaci&oacute;n &mdash; Noviembre 2026 &middot; Fuente: ABLE RIS (Daily Report).</div>
         </div>
         <div class="kpi-grid" style="margin-bottom:20px">
-          <div class="kpi" style="border-top:3px solid #7c3aed"><div class="kpi-lbl">Horas Muertas</div><div class="kpi-val">&mdash;</div><div class="kpi-foot"><span class="badge">sin d&iacute;as capturados</span></div></div>
-          <div class="kpi" style="border-top:3px solid var(--blue)"><div class="kpi-lbl">Utilizaci&oacute;n</div><div class="kpi-val">&mdash;</div><div class="kpi-foot"><span class="badge">&mdash;</span></div></div>
-          <div class="kpi" style="border-top:3px solid var(--amber)"><div class="kpi-lbl">Sin T&eacute;cnico &middot; 14 d&iacute;as</div><div class="kpi-val">&mdash;</div><div class="kpi-foot"><span class="badge">turnos abiertos por cubrir</span></div></div>
-          <div class="kpi" style="border-top:3px solid var(--amber)"><div class="kpi-lbl">No-Show del Mes</div><div class="kpi-val">&mdash;</div><div class="kpi-foot"><span class="badge">&mdash;</span></div></div>
+          <div class="kpi" style="border-top:3px solid #7c3aed"><div class="kpi-lbl">Horas Muertas</div><div class="kpi-val">44.4 h</div><div class="kpi-foot"><span class="badge">1 d&iacute;a(s): 2</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--blue)"><div class="kpi-lbl">Utilizaci&oacute;n</div><div class="kpi-val">60%</div><div class="kpi-foot"><span class="badge">52.6 h de 87.3 h con t&eacute;cnico</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--amber)"><div class="kpi-lbl">Sin T&eacute;cnico &middot; 14 d&iacute;as</div><div class="kpi-val">221.0 h</div><div class="kpi-foot"><span class="badge">turnos abiertos por cubrir</span></div></div>
+          <div class="kpi" style="border-top:3px solid var(--amber)"><div class="kpi-lbl">No-Show del Mes</div><div class="kpi-val">12%</div><div class="kpi-foot"><span class="badge">8 cancelados en el mes</span></div></div>
         </div>
 
         <div class="div-row"><span class="div-lbl">Acumulado del Mes por Sala</span><div class="div-rule"></div></div>
@@ -6691,6 +6691,17 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
               <th>Muerta</th><th>Utilizaci&oacute;n</th>
             </tr></thead>
             <tbody>
+              <tr><td style="text-align:left">MRI</td><td class="cur" style="font-weight:700">18</td><td>11.5 h</td><td>11.5 h</td><td>9.8 h</td><td>1.8 h</td><td><span class="badge dp">85%</span></td></tr>
+              <tr><td style="text-align:left">CT</td><td class="cur" style="font-weight:700">17</td><td>7.5 h</td><td>7.5 h</td><td>5.3 h</td><td>2.3 h</td><td><span class="badge dp">71%</span></td></tr>
+              <tr><td style="text-align:left">US3</td><td class="cur" style="font-weight:700">16</td><td>9.5 h</td><td>8.5 h</td><td>6.8 h</td><td>2.8 h</td><td><span class="badge dp">80%</span></td></tr>
+              <tr><td style="text-align:left">MG1</td><td class="cur" style="font-weight:700">16</td><td>9.3 h</td><td>7.3 h</td><td>5 h</td><td>4.3 h</td><td><span class="badge dp">68%</span></td></tr>
+              <tr><td style="text-align:left">US1</td><td class="cur" style="font-weight:700">14</td><td>8 h</td><td>8 h</td><td>6.3 h</td><td>1.8 h</td><td><span class="badge dp">79%</span></td></tr>
+              <tr><td style="text-align:left">MG2</td><td class="cur" style="font-weight:700">14</td><td>8 h</td><td>8 h</td><td>4.8 h</td><td>3.3 h</td><td><span class="badge dp">60%</span></td></tr>
+              <tr><td style="text-align:left">US2</td><td class="cur" style="font-weight:700">12</td><td>8 h</td><td>8 h</td><td>5.3 h</td><td>2.8 h</td><td><span class="badge dp">66%</span></td></tr>
+              <tr><td style="text-align:left">DEXA</td><td class="cur" style="font-weight:700">12</td><td>8 h</td><td>8 h</td><td>3 h</td><td>5 h</td><td><span class="badge dn">38%</span></td></tr>
+              <tr><td style="text-align:left">DX</td><td class="cur" style="font-weight:700">8</td><td>7.5 h</td><td>7.5 h</td><td>2 h</td><td>5.5 h</td><td><span class="badge dn">27%</span></td></tr>
+              <tr><td style="text-align:left">MRI-Open</td><td class="cur" style="font-weight:700">3</td><td>11.5 h</td><td>5.5 h</td><td>2 h</td><td>9.5 h</td><td><span class="badge dn">36%</span></td></tr>
+              <tr><td style="text-align:left">PT CT</td><td class="cur" style="font-weight:700">3</td><td>7.5 h</td><td>7.5 h</td><td>2.3 h</td><td>5.3 h</td><td><span class="badge dn">31%</span></td></tr>
             </tbody>
           </table>
         </div>
@@ -6709,12 +6720,12 @@ tr:hover td.cur{background:rgba(40,153,170,.15)!important}
           </div>
         </div>
         <div style="font-size:11px;color:var(--t3);margin-top:14px">
-          El Daily Report del RIS solo conserva los &uacute;ltimos d&iacute;as; el acumulado arranca el primer d&iacute;a capturado.
+          El Daily Report del RIS solo conserva los &uacute;ltimos d&iacute;as; el acumulado arranca el Noviembre 2.
         </div>
 
         <script>
         (function() {
-          const CAP = {};
+          const CAP = {"2": {"muerta": 44.4, "reservada": 52.6, "tecnico": 87.3, "estudios": 133, "salas": {"MRI-Open": [11.5, 5.5, 2.0, 9.5, 3], "MRI": [11.5, 11.5, 9.8, 1.8, 18], "US3": [9.5, 8.5, 6.8, 2.8, 16], "MG1": [9.3, 7.3, 5.0, 4.3, 16], "US1": [8.0, 8.0, 6.3, 1.8, 14], "US2": [8.0, 8.0, 5.3, 2.8, 12], "MG2": [8.0, 8.0, 4.8, 3.3, 14], "CT": [7.5, 7.5, 5.3, 2.3, 17], "DEXA": [8.0, 8.0, 3.0, 5.0, 12], "DX": [7.5, 7.5, 2.0, 5.5, 8], "PT CT": [7.5, 7.5, 2.3, 5.3, 3]}}};
           const grid = document.getElementById('hdc-capcal-nov');
           const panel = document.getElementById('hdc-capday-nov');
           const titulo = document.getElementById('hdc-capday-nov-title');
