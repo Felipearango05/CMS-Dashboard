@@ -7719,6 +7719,7 @@ tr:hover td{background:#E6F4F7!important}
           
           
           
+          
           <div class="pl-bar-row"><span class="pl-bar-lbl">US</span><div class="pl-bar-track"><div class="pl-bar-fill" style="width:100.0%;background:var(--blue)"></div></div><span class="pl-bar-val">1348 <span class="pl-bar-pct">30.8%</span></span></div>
           <div class="pl-bar-row"><span class="pl-bar-lbl">XRAY</span><div class="pl-bar-track"><div class="pl-bar-fill" style="width:52.2%;background:var(--blue)"></div></div><span class="pl-bar-val">703 <span class="pl-bar-pct">16.1%</span></span></div>
           <div class="pl-bar-row"><span class="pl-bar-lbl">MG</span><div class="pl-bar-track"><div class="pl-bar-fill" style="width:40.4%;background:var(--blue)"></div></div><span class="pl-bar-val">544 <span class="pl-bar-pct">12.4%</span></span></div>
@@ -7732,6 +7733,7 @@ tr:hover td{background:#E6F4F7!important}
           <div class="pl-bar-row"><span class="pl-bar-lbl">EKG</span><div class="pl-bar-track"><div class="pl-bar-fill" style="width:6.0%;background:var(--blue)"></div></div><span class="pl-bar-val">81 <span class="pl-bar-pct">1.9%</span></span></div>
           <div class="pl-bar-row"><span class="pl-bar-lbl">NM</span><div class="pl-bar-track"><div class="pl-bar-fill" style="width:5.6%;background:var(--blue)"></div></div><span class="pl-bar-val">76 <span class="pl-bar-pct">1.7%</span></span></div>
           <div class="pl-bar-row"><span class="pl-bar-lbl">EEG</span><div class="pl-bar-track"><div class="pl-bar-fill" style="width:0.8%;background:var(--blue)"></div></div><span class="pl-bar-val">11 <span class="pl-bar-pct">0.3%</span></span></div>
+        
         
         
         
@@ -7819,7 +7821,7 @@ tr:hover td{background:#E6F4F7!important}
         for (let d=1;d<=30;d++) {
           const data = RIS_DAILY[d] && RIS_DAILY[d].total>0 ? RIS_DAILY[d] : null;
           const cell = document.createElement('div');
-          const isToday = d===26;
+          const isToday = d===27;
           cell.style.cssText = ['border-radius:8px','padding:6px 2px','min-height:54px','display:flex',
             'flex-direction:column','align-items:center','justify-content:center','gap:3px',
             'transition:transform .1s, box-shadow .1s',
